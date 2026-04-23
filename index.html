@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Tributário LaraFy - Últimas Notícias Fiscais</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background-color: #012e43;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #35b9d7;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #35b9d7;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #012e43 0%, #35b9d7 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-primary {
+            background-color: #e8a838;
+            color: #012e43;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d99a24;
+        }
+        
+        /* Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Grid de Notícias */
+        .noticias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        /* Card de Notícia */
+        .noticia-card {
+            background: white;
+            border-left: 5px solid #35b9d7;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .noticia-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+        
+        .noticia-card h3 {
+            color: #012e43;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .data-noticia {
+            color: #35b9d7;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        
+        .resumo {
+            background-color: #e8a838;
+            color: #012e43;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        
+        .analise-tecnica {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            border-left: 3px solid #012e43;
+        }
+        
+        .analise-tecnica h4 {
+            color: #012e43;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .analise-tecnica p {
+            color: #555;
+            font-size: 0.9rem;
+            text-align: justify;
+            margin-bottom: 0.5rem;
+        }
+        
+        .explicacao {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            border-left: 3px solid #35b9d7;
+        }
+        
+        .explicacao h4 {
+            color: #35b9d7;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .explicacao p {
+            color: #666;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+        
+        /* CTA Email */
+        .cta-email {
+            background-color: #012e43;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 8px;
+        }
+        
+        .cta-email h2 {
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .email-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 1.5rem auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .email-form input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.95rem;
+        }
+        
+        .email-form button {
+            background-color: #e8a838;
+            color: #012e43;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .email-form button:hover {
+            background-color: #d99a24;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #012e43;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h4 {
+            color: #35b9d7;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #35b9d7;
+        }
+        
+        .footer-logo {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #35b9d7;
+        }
+        
+        .footer-logo img {
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav a {
+                margin-left: 0;
+            }
+            
+            .email-form {
+                flex-direction: column;
+            }
+            
+            .email-form input,
+            .email-form button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">📊 LaraFy Blog Tributário</div>
+            <nav>
+                <a href="#noticias">Notícias</a>
+                <a href="#cta">Inscrever-se</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Últimas Notícias Tributárias Brasil</h1>
+        <p>Análises técnicas e explicações simplificadas sobre as principais mudanças na legislação fiscal</p>
+        <button class="btn-primary">Saiba Mais</button>
+    </section>
+    
+    <!-- Container Principal -->
+    <div class="container">
+        <h2 style="color: #012e43; text-align: center; margin-bottom: 2rem; font-size: 2rem;">Notícias em Destaque</h2>
+        
+        <div class="noticias-grid" id="noticias">
+            
+            <!-- Notícia 1: Imposto de Renda 2024 -->
+            <div class="noticia-card">
+                <h3>💰 Novas Alíquotas de Imposto de Renda 2024</h3>
+                <div class="data-noticia">Publicado em: 15 de Janeiro de 2024</div>
+                
+                <div class="resumo">
+                    Governo anuncia ajuste nas faixas de alíquota do IR com aumento da isenção para R$ 2.112 mensais.
+                </div>
+                
+                <div class="analise-tecnica">
+                    <h4>📋 Análise Técnica:</h4>
+                    <p>A Receita Federal publicou as novas tabelas do Imposto de Renda Pessoa Física para 2024, elevando o limite de isenção de R$ 1.903,98 para R$ 2.112,00 mensais. Esta alteração reflete ajuste pela inflação acumulada no período anterior, mantendo a progressividade do sistema tributário. As demais faixas também sofreram reajuste proporcional, com a alíquota máxima permanecendo em 27,5% para rendimentos que ultrapassem R$ 4.664,68.</p>
+                    <p>A mudança impacta diretamente o cálculo de impostos para cerca de 2 milhões de contribuintes que se encontram na faixa de isenção, reduzindo a arrecadação estimada em R$ 1,2 bilhão anualmente. O reajuste segue metodologia constitucional de correção monetária baseada no INPC do período anterior, garantindo manutenção do poder de compra dos isentos.</p>
+                </div>
+                
+                <div class="explicacao">
+                    <h4>🎯 Explicação Simples:</h4>
+                    <p>Você só precisa pagar Imposto de Renda se ganhar mais de R$ 2.112 por mês. Se ganhar menos que isso, está isento. O governo aumentou esse valor para pessoas que ganham pouco não pagarem mais imposto. Também aumentou os valores das outras faixas de imposto, mas de forma menor.</p>
+                </div>
+            </div>
+            
+            <!-- Notícia 2: Nota Fiscal Eletrônica 5.0 -->
+            <div class="noticia-card">
+                <h3>📄 Implantação da Nota Fiscal Eletrônica 5.0</h3>
+                <div class="data-noticia">Publicado em: 20 de Janeiro de 2024</div>
+                
+                <div class="resumo">
+                    Sefaz implementa versão 5.0 da NFe com novas informações ambientais e de sustentabilidade obrigatórias.
+                </div>
+                
+                <div class="analise-tecnica">
+                    <h4>📋 Análise Técnica:</h4>
+                    <p>A Secretaria de Estado da Fazenda implementou a versão 5.0 do layout da Nota Fiscal Eletrônica, exigindo a inclusão obrigatória de campos referentes a informações ambientais, índices de sustentabilidade e certificações ISO. O novo padrão busca rastrear a pegada de carbono das operações comerciais e consolidar dados para relatórios ESG (Environmental, Social and Governance). Empresas têm prazo de 90 dias para adequação dos sistemas integrados de gestão fiscal.</p>
+                    <p>A mudança afeta principalmente setores de manufatura, varejo e logística. Será necessária atualização dos softwares de emissão de nota fiscal, geradores XML e sistemas de conformidade fiscal. A Sefaz disponibilizará manual técnico detalhado e ambiente de testes para validação dos novos campos antes da obrigatoriedade de uso efetivo.</p>
+                </div>
+                
+                <div class="explicacao">
+                    <h4>🎯 Explicação Simples:</h4>
+                    <p>A nota fiscal eletrônica ganhou novos campos para registrar informações sobre o impacto ambiental do produto e se a empresa segue práticas sustentáveis. Agora empresas precisam informar dados de sustentabilidade quando emitem nota fiscal. Seu programa de emissão de nota fiscal precisará ser atualizado para incluir esses novos dados.</p>
+                </div>
+            </div>
+            
+            <!-- Notícia 3: ICMS e Operações Interestaduais -->
+            <div class="noticia-card">
+                <h3>🚚 Convênio ICMS para Operações Interestaduais</h3>
+                <div class="data-noticia">Publicado em: 10 de Janeiro de 2024</div>
+                
+                <div class="resumo">
+                    Conselho Nacional de Política Fazendária aprova novo convênio reduzindo ICMS em operações entre estados.
+                </div>
+                
+                <div class="analise-tecnica">
+                    <h4>📋 Análise Técnica:</h4>
+                    <p>O CONFAZ aprovou Convênio ICMS 92/2024 que estabelece alíquota de 4% (reduzida de 7%) para operações interestaduais de produtos manufaturados destinados a pessoa jurídica não contribuinte do ICMS. A medida visa desoneração fiscal para micro e pequenas empresas e estimular comércio inter-regional, esperando gerar crescimento no PIB de setores de logística e distribuição. O convênio diferencia produtos por código NCM, oferecendo tratamentos específicos para bens duráveis, semidurável e não duráveis.</p>
+                    <p>Para enquadramento, a empresa deve comprovar inscrição estadual ativa no estado de destino e apresentação de documentação de registro no cadastro de contribuintes. A operacionalização ocorre por sistema eletrônico de cálculo de ICMS, com controle mediante sped fiscal mensal. Estimativa de renúncia tributária estadual é de R$ 850 milhões para 2024.</p>
+                </div>
+                
+                <div class="explicacao">
+                    <h4>🎯 Explicação Simples:</h4>
+                    <p>Quando sua empresa vende produtos para outra empresa em outro estado, o imposto ICMS caiu de 7% para 4%. Isso é bom porque fica mais barato vender entre estados. A medida busca facilitar o comércio e o transporte de produtos entre diferentes regiões do Brasil, beneficiando principalmente pequenas e médias empresas.</p>
+                </div>
+            </div>
+            
+            <!-- Notícia 4: Contribuição Social CSLL -->
+            <div class="noticia-card">
+                <h3>💼 Ajuste na Alíquota da Contribuição Social sobre o Lucro Líquido</h3>
+                <div class="data-noticia">Publicado em: 8 de Janeiro de 2024</div>
+                
+                <div class="resumo">
+                    Governo federal ajusta alíquota de CSLL para empresas com lucro líquido acima de R$ 20 milhões.
+                </div>
+                
+                <div class="analise-tecnica">
+                    <h4>📋 Análise Técnica:</h4>
+                    <p>Conforme Lei 14.754/2023, a alíquota de Contribuição Social sobre o Lucro Líquido (CSLL) foi elevada de 9% para 10,5% para pessoas jurídicas que aufiram lucro líquido superior a R$ 20 milhões no período de apuração. A majoração busca aumentar arrecadação federal para financiar programas de transferência de renda e investimento em infraestrutura. Empresas com lucro líquido até R$ 20 milhões mantêm alíquota de 9%, e micro e pequenas empresas do Simples Nacional não são afetadas.</p>
+                    <p>O cálculo ocorre mensalmente ou anualmente conforme opção do contribuinte. A base de cálculo permanece sendo o lucro líquido ajustado pelas adições e exclusões previstas na legislação do imposto de renda. A implementação é obrigatória a partir de 2024 com retenção mensal estimada em R$ 4,5 bilhões adicionais ao ano para o Tesouro Nacional.</p>
+                </div>
+                
+                <div class="explicacao">
+                    <h4>🎯 Explicação Simples:</h4>
+                    <p>Empresas grandes que ganham acima de R$ 20 milhões por ano agora pagam mais imposto sobre seus lucros. De 9% aumentou para 10,5%. Empresas pequenas e médias não são afetadas por essa mudança. O governo usa esse dinheiro extra para programas sociais e infraestrutura do país.</p>
+                </div>
+            </div>
+            
+            <!-- Notícia 5: Reforma Tributária - IVA -->
+            <div class="noticia-card">
+                <h3>⚖️ Implementação do Imposto sobre Valor Agregado - IVA</h3>
+                <div class="data-noticia">Publicado em: 5 de Janeiro de 2024</div>
+                
+                <div class="resumo">
+                    Congresso aprova cronograma de transição para IVA único, consolidando ICMS, PIS, COFINS e IPI.
+                </div>
+                
+                <div class="analise-tecnica">
+                    <h4>📋 Análise Técnica:</h4>
+                    <p>O Congresso Nacional aprovou a Emenda Constitucional nº 132/2023, iniciando processo de reforma tributária que pretende unificar ICMS (estadual), PIS/PASEP, COFINS e IPI em um único imposto sobre valor agregado (IVA). A transição ocorrerá em fase piloto durante 2024-2025, onde contribuintes poderão optar por regime antigo ou novo. A alíquota estimada do IVA é 26,5% (sendo 20% referente a parte estadual e 6,5% federal), buscando simplificar sistema tributário e reduzir efeito cascata. Setores como alimentos, medicamentos e energia terão alíquotas diferenciadas.</p>
+                    <p>O novo regime implicará mudanças significativas em sistemas de informação, contabilidade fiscal e gestão de créditos tributários. Empresas necessitarão atualizar softwares ERP e sistemas de gestão fiscal para operacionalização. Estimativas indicam redução de custos administrativos entre 15-20% para conformidade fiscal, porém exigirá investimento inicial em adequação tecnológica superior a R$ 5 bilhões para setor produtivo.</p>
+                </div>
+                
+                <div class="explicacao">
+                    <h4>🎯 Explicação Simples:</h4>
+                    <p>O Brasil está mudando seu sistema de impostos. Em vez de ter vários impostos diferentes (ICMS, PIS, COFINS, IPI), vai haver apenas um imposto chamado IVA. A ideia é simplificar as coisas e reduzir a burocracia. A mudança acontecerá gradualmente, começando em 2024. Alguns produtos como alimentos e remédios terão impostos mais baixos.</p>
+                </div>
+            </div>
+            
+            <!-- Notícia 6: Decreto sobre MEI e Contribuintes -->
+            <div class="noticia-card">
+                <h3>👨‍💼 Novo Decreto sobre Registro de Microempreendedor Individual</h3>
+                <div class="data-noticia">Publicado em: 12 de Janeiro de 2024</div>
+                
+                <div class="resumo">
+                    Governo publica decreto modernizando procedimentos para registro e regularização de MEI na Receita Federal.
+                </div>
+                
+                <div class="analise-tecnica">
+                    <h4>📋 Análise Técnica:</h4>
+                    <p>O Decreto Federal nº 11.936/2024 moderniza os procedimentos administrativos para registro de Microempreendedor Individual (MEI) na Receita Federal, permitindo registro totalmente digital via plataforma Gov.br com validação de dados em tempo real. O novo sistema reduz tempo de processamento de 5 dias para máximo 4 horas, com confirmação automática de CPF, estado civil e filiação. O decreto também simplifica processo de alteração de dados cadastrais e estabelece protocolo único para comunicação entre Receita Federal, INSS e prefeituras.</p>
+                    <p>A medida beneficia aproximadamente 2,5 milhões de MEIs em operação e estimula formalização de novos empreendedores através de desburocratização. O sistema implementa validações anti-fraude e vinculação automática com Cadastro de Pessoas Físicas (CPF), prevenindo duplicatas. Estimativa de redução de custos para microempreendedores é de R$ 200-300 por processo, considerando dispensa de intermediários e documentação física.</p>
+                </div>
+                
+                <div class="explicacao">
+                    <h4>🎯 Explicação Simples:</h4>
+                    <p>Ficar registrado como microempreendedor individual (MEI) ficou muito mais fácil e rápido. Agora você pode se registrar totalmente pela internet pelo Gov.br, sem precisar ir presencialmente. O registro sai em poucas horas, em vez de levar dias. Isso facilita para quem quer abrir seu próprio negócio.</p>
+                </div>
+            </div>
+            
+            <!-- Notícia 7: Fiscalização de Criptomoedas -->
+            <div class="noticia-card">
+                <h3>🔐 Novas Regras de Fiscalização de Operações com Criptomoedas</h3>
+                <div class="data-noticia">Publicado em: 3 de Janeiro de 2024</div>
+                
+                <div class="resumo">
+                    Receita Federal exige relatório mensal de operações com criptomoedas acima de R$ 30 mil e imposto de 15%.
+                </div>
+                
+                <div class="analise-tecnica">
+                    <h4>📋 Análise Técnica:</h4>
+                    <p>A Receita Federal implementou através da Instrução Normativa nº 2.160/2024 novo regime de tributação para operações com criptoativos, instituindo alíquota de Imposto de Renda de 15% sobre ganhos de capital em transações com Bitcoin, Ethereum e demais criptomoedas. Operações acima de R$ 30 mil mensais tornam-se obrigatoriamente reportáveis mediante Relatório Mensal de Operações (RMO) sujeito a transmissão digital. O valor agregado de criptoativos em carteiras deve constar na declaração de bens e direitos anualmente.</p>
+                    <p>A metodologia de cálculo de custo médio é obrigatória para determinação do ganho de capital, vedando alternativas como FIFO ou LIFO. Plataformas de corretoras de criptomoedas serão obrigadas a disponibilizar informações de clientes e transações à Receita Federal em integração contínua. Estimativa de arrecadação adicional é de R$ 3 bilhões anuais. Pessoas que não reportarem operações ficam sujeitas a multas de 150% do imposto devido além juros e penalidades administrativas.</p>
+                </div>
+                
+                <div class="explicacao">
+                    <h4>🎯 Explicação Simples:</h4>
+                    <p>Se você ganha dinheiro comprando e vendendo criptomoedas como Bitcoin, agora precisa pagar 15% de imposto sobre o ganho. Se você faz operações acima de R$ 30 mil por mês, precisa informar à Receita Federal mensalmente. A Receita Federal quer rastrear todas essas operações para cobrar impostos corretamente de quem mexe com criptomoedas.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- CTA Email -->
+    <section class="cta-email" id="cta">
+        <h2>📧 Receba Notícias Tributárias Diárias</h2>
+        <p>Fique por dentro das principais mudanças na legislação fiscal com análises técnicas detalhadas</p>
+        <form class="email-form">
+            <input type="email" placeholder="seu.email@exemplo.com" required>
+            <button type="submit">Inscrever-se</button>
+        </form>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>📚 Sobre LaraFy</h4>
+                <p>LaraFy é a plataforma líder em consultoria tributária e análise de legislação fiscal brasileira, oferecendo informações técnicas para profissionais e empresas.</p>
+            </div>
+            <div class="footer-section">
+                <h4>📑 Categorias</h4>
+                <ul>
+                    <li><a href="#noticias">Notícias Tributárias</a></li>
+                    <li><a href="#noticias">Imposto de Renda</a></li>
+                    <li><a href="#noticias">ICMS e Estaduais</a></li>
+                    <li><a href="#noticias">Conformidade Fiscal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>🔗 Links Úteis</h4>
+                <ul>
+                    <li><a href="https://www.gov.br/receitafederal/" target="_blank">Receita Federal</a></li>
+                    <li><a href="https://www.sefaz.rs.gov.br/" target="_blank">Sefaz</a></li>
+                    <li><a href="https://www1.confaz.fazenda.gov.br/" target="_blank">CONFAZ</a></li>
+                    <li><a href="https://www.larafy.com.br" target="_blank">Site LaraFy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>📞 Contato</h4>
+                <p>Email: contato@larafy.com.br</p>
+                <p>Telefone: (11) 3000-0000</p>
+                <p>Endereço: São Paulo, SP</p>
+            </div>
+        </div>
+        
+        <div class="footer-logo">
+            <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="Logo LaraFy">
+            <p style="color: #35b9d7; font-weight: bold;">LaraFy - Blog Tributário</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 LaraFy. Todos os direitos reservados. | <a href="#" style="color: #35b9d7;">Política de Privacidade</a> | <a href="#" style="color: #35b9d7;">Termos de Uso</a></p>
+        </div>
+    </footer>
+</body>
+</html>
