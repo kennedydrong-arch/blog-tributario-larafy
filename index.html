@@ -1,0 +1,334 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Inteligência Tributária | LaraFy</title>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { font-family: 'Segoe UI', sans-serif; background: #f7fafc; color: #1a1a1a; line-height: 1.6; }
+        
+        .navbar { background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 24px; font-weight: 700; color: #012e43; text-decoration: none; }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-link { color: #4a5568; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        .nav-link:hover { color: #35b9d7; }
+        .nav-cta { background: linear-gradient(135deg, #35b9d7, #012e43); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
+        .nav-cta:hover { transform: translateY(-2px); }
+        
+        .hero { background: linear-gradient(135deg, #012e43, #035a7a); color: white; padding: 80px 20px; text-align: center; }
+        .hero-title { color: #35b9d7; font-size: 48px; font-weight: 700; margin-bottom: 15px; }
+        .hero-subtitle { font-size: 20px; opacity: 0.9; margin-bottom: 30px; }
+        .hero-meta { background: rgba(53,185,215,0.2); padding: 10px 20px; border-radius: 20px; display: inline-block; font-size: 14px; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        
+        .summary { background: linear-gradient(135deg, #fffbeb, #fef3c7); border-left: 4px solid #e8a838; padding: 30px; margin-bottom: 50px; border-radius: 12px; }
+        .summary h2 { color: #92400e; font-size: 24px; margin-bottom: 15px; }
+        .summary p { color: #78350f; line-height: 1.8; }
+        
+        .section-title { color: #012e43; font-size: 36px; font-weight: 700; margin-bottom: 40px; text-align: center; }
+        
+        .news-card { background: white; padding: 30px; margin-bottom: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid #35b9d7; transition: transform 0.3s, box-shadow 0.3s; }
+        .news-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        
+        .news-meta { display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; }
+        .news-date { background: linear-gradient(135deg, #35b9d7, #012e43); color: white; padding: 6px 12px; border-radius: 15px; font-size: 12px; font-weight: 600; }
+        .news-source { background: #e8f6fa; color: #012e43; padding: 6px 12px; border-radius: 15px; font-size: 12px; font-weight: 500; }
+        
+        .news-title { color: #012e43; font-size: 24px; margin-bottom: 15px; font-weight: 700; line-height: 1.3; }
+        .news-summary { color: #4a5568; margin-bottom: 20px; font-size: 15px; }
+        
+        .analysis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .analysis-block { padding: 20px; border-radius: 10px; }
+        .tech-block { background: #f7fbfd; border-left: 4px solid #012e43; }
+        .strategic-block { background: #fffbeb; border-left: 4px solid #e8a838; }
+        .analysis-title { font-weight: 700; margin-bottom: 12px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .tech-block .analysis-title { color: #012e43; }
+        .strategic-block .analysis-title { color: #92400e; }
+        .analysis-block p { font-size: 14px; line-height: 1.6; color: #4a5568; }
+        
+        .news-source-link { color: #35b9d7; text-decoration: none; font-weight: 600; font-size: 13px; display: inline-block; margin-top: 15px; }
+        .news-source-link:hover { text-decoration: underline; }
+        
+        .cta { background: linear-gradient(135deg, #012e43, #035a7a); color: white; padding: 40px; text-align: center; border-radius: 15px; margin: 50px 0; }
+        .cta h3 { color: #35b9d7; font-size: 24px; margin-bottom: 15px; }
+        .cta p { font-size: 16px; margin-bottom: 25px; opacity: 0.95; }
+        .cta-button { background: #35b9d7; color: #012e43; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: background 0.3s; }
+        .cta-button:hover { background: #2a9bb5; }
+        
+        .footer { background: #1a1a1a; color: white; padding: 40px 20px; text-align: center; font-size: 14px; }
+        
+        @media (max-width: 768px) { 
+            .nav-links { display: none; }
+            .hero-title { font-size: 32px; }
+            .analysis-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 28px; }
+            .news-title { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">LaraFy</a>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Sobre</a>
+                <a href="#" class="nav-link">Reforma Tributária</a>
+                <a href="#" class="nav-link">Soluções</a>
+                <a href="#" class="nav-cta">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 class="hero-title">Centro de Inteligência Tributária</h1>
+        <p class="hero-subtitle">Análises estratégicas com inteligência artificial</p>
+        <div class="hero-meta">📰 Atualizado 23 de Abril, 2026</div>
+    </section>
+
+    <div class="container">
+        <section class="summary">
+            <h2>⚡ Resumo Executivo do Dia</h2>
+            <p>A semana foi marcada por avanços significativos na Reforma Tributária com implementação de novos regulamentos sobre IBS e CBS, além da liberação de R$ 592 milhões em restituições do IR. Estados enfrentam pressão para devolver R$ 58,8 bilhões em créditos de ICMS, enquanto operações da Receita Federal intensificam fiscalização em fronteiras. Produtores rurais do Rio Grande do Sul têm prazo final para migração para emissão eletrônica de notas fiscais a partir de maio.</p>
+        </section>
+
+        <h2 class="section-title">📊 Análises Tributárias</h2>
+
+        <!-- NOTÍCIA 1 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">Receita Federal</span>
+            </div>
+            <h3 class="news-title">🚨 Operação OncoJuris: Fraude Processual e Desvio de Recursos Públicos</h3>
+            <p class="news-summary">Receita Federal, Polícia Civil, Ministério Público e Defensoria Pública do Estado de Mato Grosso do Sul desencadearam a operação "OncoJuris" contra organização criminosa acusada de fraude processual para desvio de recursos públicos e fornecimento irregular de medicamentos.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>Investigação coordenada envolvendo múltiplos órgãos federais. Foco em conformidade processual e regularização de fornecedores. Impacto direto em processos de auditoria e compliance de entidades públicas.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Reforça necessidade de controles internos robustos em organizações. Demonstra intensificação de fiscalização em setores críticos. Contribuinte deve revisar documentação processual e fiscal.</p>
+                </div>
+            </div>
+            <a href="https://www.gov.br" class="news-source-link">→ Fonte Oficial</a>
+        </article>
+
+        <!-- NOTÍCIA 2 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">Migalhas</span>
+            </div>
+            <h3 class="news-title">⚖️ Fim da Substituição Tributária em SP: Impactos no ICMS</h3>
+            <p class="news-summary">Mudanças significativas no regime de substituição tributária em São Paulo alteram dinâmica de apuração de ICMS para contribuintes. Impactará fornecedores, distribuidoras e varejistas em toda cadeia produtiva.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>Alteração no fluxo de apuração e recolhimento de ICMS. Empresas precisam revisar sistemática de cálculo de créditos. Impacto imediato em fluxo de caixa e conformidade fiscal.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Reorganização de processos contábeis necessária. Planejamento tributário deve ser revisado. Oportunidade de otimizar cadeias logísticas considerando novo regime.</p>
+                </div>
+            </div>
+            <a href="https://www.migalhas.com.br" class="news-source-link">→ Ler Análise Completa</a>
+        </article>
+
+        <!-- NOTÍCIA 3 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">Receita Federal</span>
+            </div>
+            <h3 class="news-title">💰 Receita Federal Libera 415 Mil Restituições Retidas</h3>
+            <p class="news-summary">Receita Federal liberou 415 mil restituições retidas de anos anteriores, totalizando R$ 592 milhões em recursos. Procedimento integra ações de desobstrução administrativa e conformidade com contribuintes.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>Lote residual de restituição liberado para consulta. Abrange períodos anteriores com pendências resolvidas. Sistema de consulta disponível no portal da Receita Federal.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Melhoria na relação Fisco-contribuinte. Fluxo de caixa positivo para empresas com saldos retidos. Sintetiza compromisso com resolução de débitos históricos.</p>
+                </div>
+            </div>
+            <a href="https://www.gov.br" class="news-source-link">→ Consultar Restituição</a>
+        </article>
+
+        <!-- NOTÍCIA 4 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">Valor Econômico</span>
+            </div>
+            <h3 class="news-title">📈 Dezesseis Estados Têm R$ 58,8 Bilhões em ICMS a Devolver</h3>
+            <p class="news-summary">Dezesseis estados acumulam R$ 58,8 bilhões em créditos de ICMS a devolver para empresas. Situação reflete desequilíbrios em sistemas estaduais e pressiona orçamentos públicos.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>Acúmulo de créditos resulta de operações interestadais e sistemática de apuração. Estados sob pressão para normalizar devolução. Impacto direto em fluxo de caixa do agronegócio e indústria.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Reforma Tributária deve resolver parte desses créditos via IBS. Empresas devem acompanhar cronogramas estaduais de devolução. Oportunidade de renegociação de dívidas e parcelamentos.</p>
+                </div>
+            </div>
+            <a href="https://valor.globo.com" class="news-source-link">→ Acompanhe Detalhes</a>
+        </article>
+
+        <!-- NOTÍCIA 5 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">Agência Brasil</span>
+            </div>
+            <h3 class="news-title">🎯 Reforma Tributária: Impactos nas PMEs e Startups</h3>
+            <p class="news-summary">Reforma Tributária gera novo impacto invisível nas avaliações de PMEs e startups. Mudanças em valuation decorrem de alterações em carga tributária e fluxos de caixa esperados.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>IBS e CBS alteram projeções de fluxo de caixa. Valuation deve ser recalculado considerando novo regime. Impacto varia por segmento e modelo de negócio.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Startups em fase de captação devem revisar pitch decks. M&A exigirá due diligence revisada. Oportunidade de melhoria de posição competitiva via otimização tributária.</p>
+                </div>
+            </div>
+            <a href="https://www.gov.br" class="news-source-link">→ Saiba Mais</a>
+        </article>
+
+        <!-- NOTÍCIA 6 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">SEMADESC MS</span>
+            </div>
+            <h3 class="news-title">🏢 Mato Grosso do Sul: Estratégias para Manter Atratividade Fiscal</h3>
+            <p class="news-summary">Empresários e técnicos de Mato Grosso do Sul discutem estratégias para manter estado atrativo a investimentos após reforma tributária. Enfoque em incentivos fiscais competitivos.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>Incentivos estaduais serão reavaliados sob novo regime. SUDENE e sucontas devem se adequar à arquitetura tributária. Planejamento regional em fase crítica de ajuste.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Estados competem por investimentos. MS apresenta oportunidades para indústrias intensivas em capital. Relocação de operações pode ser avaliada considerando novo cenário fiscal.</p>
+                </div>
+            </div>
+            <a href="https://www.semadesc.ms.gov.br" class="news-source-link">→ Conheça Mais</a>
+        </article>
+
+        <!-- NOTÍCIA 7 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">Consultor Jurídico</span>
+            </div>
+            <h3 class="news-title">⚖️ Nova Teoria da Obrigação Tributária para IBS e CBS</h3>
+            <p class="news-summary">Ensaio propõe revisão conceitual da obrigação tributária sob novo regime de IBS e CBS. Fundamentos jurídicos ressignificam relação Fisco-contribuinte em fase de transição.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>Estrutura de obrigação se altera com regime de não-cumulatividade do IBS. Base de cálculo diferencia-se do ICMS/PIS/COFINS. Interpretação jurisprudencial ainda em desenvolvimento.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Litígios fiscais possuem novas linhas de argumentação. Compliance deve considerar novas jurisprudências. Oportunidade de revisão de posições defensivas em processos.</p>
+                </div>
+            </div>
+            <a href="https://www.conjur.com.br" class="news-source-link">→ Ler Ensaio</a>
+        </article>
+
+        <!-- NOTÍCIA 8 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">NeoFeed</span>
+            </div>
+            <h3 class="news-title">🏗️ Reforma Tributária Chega ao "Tijolo": Setor Imobiliário em Foco</h3>
+            <p class="news-summary">Reforma tributária atinge fase crítica de implementação em setor imobiliário. Investidores retomam planilhas para recalcular viabilidade de empreendimentos sob nova carga tributária.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>IBS incide em operações com bens e serviços. Alíquota padrão de 26,5% impacta margem de contribuição. Redações transitórias e benefícios parciais alteram cenário por segmento.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Preços de imóveis devem ser reavaliados. Lançamentos de empreendimentos podem ser adiados. Oportunidades em segmentos de menor carga tributária e incentivados.</p>
+                </div>
+            </div>
+            <a href="https://neofeed.com.br" class="news-source-link">→ Assistir Análise</a>
+        </article>
+
+        <!-- NOTÍCIA 9 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">23 de Abril</span>
+                <span class="news-source">Carta Capital</span>
+            </div>
+            <h3 class="news-title">⚠️ Seis Erros de Gestão que Corroem Caixa na Transição</h3>
+            <p class="news-summary">Pesquisa identifica seis erros críticos de gestão que já danificam fluxo de caixa de empresas durante transição tributária. Omissões em planejamento criam exposição desnecessária.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>Erros incluem: falta de mapeamento de operações sujeitas a regimes distintos; não aproveitamento de créditos transicionais; inadequação de sistemas. Remediação exige auditoria completa.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Diagnóstico imediato essencial. Implementação de trilhos de transição reduz riscos. CFOs devem priorizar gestão de caixa nesse período crítico.</p>
+                </div>
+            </div>
+            <a href="https://www.cartacapital.com.br" class="news-source-link">→ Ler Análise</a>
+        </article>
+
+        <!-- NOTÍCIA 10 -->
+        <article class="news-card">
+            <div class="news-meta">
+                <span class="news-date">22 de Abril</span>
+                <span class="news-source">Portal Contábeis</span>
+            </div>
+            <h3 class="news-title">♻️ Venda de Materiais Reciclados Retoma Isenção de PIS/Cofins</h3>
+            <p class="news-summary">Governo sanciona lei garantindo crédito tributário ao comprador de materiais recicláveis. Isenção de PIS/Cofins retomada para operações com catadores e cooperativas de reciclagem.</p>
+            
+            <div class="analysis-grid">
+                <div class="analysis-block tech-block">
+                    <div class="analysis-title">🔬 Análise Técnica</div>
+                    <p>Isenção aplicável a PIS e Cofins em aquisições de materiais recicláveis. Documentação deve comprovar origem. Benefício não se estende a produtos manufaturados.</p>
+                </div>
+                <div class="analysis-block strategic-block">
+                    <div class="analysis-title">💼 Impacto Estratégico</div>
+                    <p>Impulsiona economia circular e formalização de catadores. Reduz custo de aquisição de insumos reciclados. Alinha-se com ESG e sustentabilidade corporativa.</p>
+                </div>
+            </div>
+            <a href="https://valor.globo.com" class="news-source-link">→ Detalhes da Lei</a>
+        </article>
+
+        <section class="cta">
+            <h3>Acompanhe a Reforma Tributária em Tempo Real</h3>
+            <p>Receba análises diárias com impacto estratégico para sua empresa</p>
+            <a href="mailto:contato@larafy.com.br?subject=Quero acompanhar análises tributárias" class="cta-button">📧 Assinar Gratuitamente</a>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 LaraFy Consultoria Tributária | Inteligência Fiscal com IA</p>
+    </footer>
+</body>
+</html>
+```
