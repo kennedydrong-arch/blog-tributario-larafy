@@ -1,0 +1,992 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsTAX | Centro de Inteligência Tributária LaraFy</title>
+    <meta name="description" content="Análises tributárias estratégicas com inteligência artificial - LaraFy Consultoria">
+    <meta property="og:title" content="NewsTAX | Centro de Inteligência Tributária LaraFy">
+    <meta property="og:description" content="Análises tributárias estratégicas com IA">
+    <meta property="og:image" content="https://www.larafy.com.br/assets/images/larafy.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #012e43;
+            --teal: #035a7a;
+            --cyan: #35b9d7;
+            --gold: #e8a838;
+            --text: #1a202c;
+            --text-light: #4a5568;
+            --bg: #f0f4f8;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 32px rgba(1,46,67,0.12);
+            --shadow-xl: 0 24px 48px rgba(1,46,67,0.16);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 3px; }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .navbar:hover { box-shadow: var(--shadow-md); }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 42px;
+            width: auto;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .logo:hover { transform: scale(1.04); filter: brightness(1.1); }
+
+        .nav-links { display: flex; gap: 36px; align-items: center; }
+
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: var(--cyan);
+            border-radius: 1px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover { color: var(--navy); }
+        .nav-link:hover::after { width: 100%; }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--cyan) 0%, var(--navy) 100%);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(53,185,215,0.3);
+        }
+
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(53,185,215,0.4); }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 60%, #047a9a 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 560px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0L0 0 0 20" fill="none" stroke="rgba(53,185,215,0.08)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23g)"/></svg>');
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0; right: 0;
+            height: 80px;
+            background: linear-gradient(to bottom, transparent, var(--bg));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 32px 120px;
+            text-align: center;
+            color: white;
+            width: 100%;
+        }
+
+        /* ── NEWS TAX TITLE ANIMATION ── */
+        .hero-eyebrow {
+            display: inline-block;
+            background: rgba(53,185,215,0.18);
+            border: 1px solid rgba(53,185,215,0.35);
+            color: var(--cyan);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            animation: fadeInDown 0.8s ease-out both;
+        }
+
+        .newstax-title {
+            font-size: 96px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .newstax-news {
+            color: white;
+            display: inline-block;
+            animation: slideInLeft 0.9s cubic-bezier(0.16,1,0.3,1) both;
+        }
+
+        .newstax-divider {
+            color: rgba(53,185,215,0.4);
+            font-weight: 300;
+            font-size: 80px;
+            animation: fadeIn 1s ease-out 0.4s both;
+        }
+
+        .newstax-tax {
+            color: var(--cyan);
+            display: inline-block;
+            position: relative;
+            animation: slideInRight 0.9s cubic-bezier(0.16,1,0.3,1) both;
+        }
+
+        .newstax-tax::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--cyan), rgba(53,185,215,0.3));
+            border-radius: 2px;
+            animation: expandLine 1s ease-out 0.8s both;
+            width: 0;
+        }
+
+        @keyframes expandLine {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .newstax-subtitle-label {
+            font-size: 15px;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: rgba(255,255,255,0.82);
+            margin-bottom: 56px;
+            margin-top: 24px;
+            font-weight: 400;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── STATS ── */
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .stat-item { text-align: center; padding: 24px 52px; position: relative; }
+
+        .stat-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0; top: 20%;
+            height: 60%; width: 1px;
+            background: rgba(53,185,215,0.3);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--cyan);
+            display: block;
+            margin-bottom: 6px;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.65);
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* ── MAIN ── */
+        .main-content { max-width: 1200px; margin: 0 auto; padding: 80px 32px 100px; }
+
+        /* ── EXECUTIVE SUMMARY ── */
+        .executive-summary {
+            background: white;
+            border-radius: 20px;
+            padding: 44px 48px;
+            margin-bottom: 72px;
+            position: relative;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(232,168,56,0.2);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .executive-summary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .executive-summary::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 5px; height: 100%;
+            background: linear-gradient(to bottom, var(--gold), #f5c842);
+        }
+
+        .exec-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .exec-label::before {
+            content: '';
+            display: inline-block;
+            width: 20px; height: 2px;
+            background: var(--gold);
+        }
+
+        .executive-summary h2 {
+            color: var(--navy);
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            letter-spacing: -0.02em;
+        }
+
+        .executive-summary p {
+            color: var(--text-light);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* ── SECTION HEADER ── */
+        .section-header { text-align: center; margin-bottom: 64px; }
+
+        .section-eyebrow {
+            display: inline-block;
+            color: var(--cyan);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 44px;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 20px;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .section-subtitle {
+            font-size: 19px;
+            color: var(--text-light);
+            max-width: 640px;
+            margin: 0 auto;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .section-divider {
+            width: 60px; height: 3px;
+            background: linear-gradient(90deg, var(--cyan), var(--navy));
+            margin: 0 auto 64px;
+            border-radius: 2px;
+        }
+
+        /* ── NEWS GRID ── */
+        .news-grid { display: grid; gap: 32px; margin-bottom: 80px; }
+
+        /* ── NEWS CARD ── */
+        .news-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 44px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
+                        box-shadow 0.35s cubic-bezier(0.4,0,0.2,1),
+                        border-color 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--cyan), var(--navy));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .news-card:hover::before { transform: scaleX(1); }
+
+        .news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(53,185,215,0.3);
+        }
+
+        .news-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+
+        .news-date {
+            background: linear-gradient(135deg, var(--cyan), var(--navy));
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .news-category {
+            background: #e8f6fa;
+            color: var(--teal);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border: 1px solid rgba(53,185,215,0.2);
+        }
+
+        .news-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 18px;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+        }
+
+        .news-summary {
+            color: var(--text-light);
+            margin-bottom: 36px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* ── ANALYSIS ── */
+        .analysis-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 12px;
+        }
+
+        .analysis-block {
+            padding: 28px;
+            border-radius: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .analysis-block:hover { transform: translateY(-2px); }
+
+        .technical-analysis {
+            background: linear-gradient(135deg, #f8fafc, #edf2f7);
+            border: 1px solid #cbd5e0;
+            border-left: 4px solid var(--navy);
+        }
+
+        .strategic-analysis {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            border: 1px solid #fbbf24;
+            border-left: 4px solid var(--gold);
+        }
+
+        .analysis-title {
+            font-size: 11px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .technical-analysis .analysis-title { color: var(--navy); }
+        .strategic-analysis .analysis-title { color: #92400e; }
+
+        .analysis-content { font-size: 14px; line-height: 1.75; color: var(--text-light); }
+        .analysis-content p { margin-bottom: 12px; }
+        .analysis-content p:last-child { margin-bottom: 0; }
+        .legal-base { font-weight: 600; color: var(--text); font-size: 13px; }
+
+        /* ── CTA ── */
+        .cta-section {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 60%, #047a9a 100%);
+            border-radius: 24px;
+            padding: 72px 48px;
+            text-align: center;
+            color: white;
+            margin: 0 0 80px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g2" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0L0 0 0 20" fill="none" stroke="rgba(53,185,215,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23g2)"/></svg>');
+        }
+
+        .cta-inner { position: relative; z-index: 2; }
+
+        .cta-eyebrow {
+            display: inline-block;
+            background: rgba(53,185,215,0.18);
+            border: 1px solid rgba(53,185,215,0.35);
+            color: var(--cyan);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .cta-title {
+            font-size: 38px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-title span { color: var(--cyan); }
+
+        .cta-description {
+            font-size: 18px;
+            margin-bottom: 16px;
+            opacity: 0.85;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-form {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 36px;
+        }
+
+        .cta-input {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: inherit;
+            width: 240px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .cta-input::placeholder { color: rgba(255,255,255,0.55); }
+
+        .cta-input:focus {
+            background: rgba(255,255,255,0.18);
+            border-color: var(--cyan);
+            box-shadow: 0 0 0 3px rgba(53,185,215,0.2);
+        }
+
+        .cta-button {
+            background: var(--cyan);
+            color: var(--navy);
+            padding: 16px 36px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 800;
+            font-size: 15px;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 16px rgba(53,185,215,0.35);
+        }
+
+        .cta-button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(53,185,215,0.4);
+        }
+
+        .cta-privacy { font-size: 13px; opacity: 0.6; margin-top: 16px; }
+
+        /* ── FOOTER ── */
+        .footer { background: #0d1f2d; color: white; padding: 64px 32px 40px; }
+        .footer-content { max-width: 1200px; margin: 0 auto; }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 48px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand img {
+            height: 36px;
+            margin-bottom: 16px;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+        }
+
+        .footer-brand p { font-size: 14px; opacity: 0.65; max-width: 280px; line-height: 1.7; }
+
+        .footer-links-group h4 {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            margin-bottom: 20px;
+        }
+
+        .footer-links-group a {
+            display: block;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 12px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links-group a:hover { color: var(--cyan); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p { font-size: 13px; opacity: 0.5; }
+        .footer-cities { font-size: 13px; opacity: 0.4; letter-spacing: 0.05em; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .newstax-title { font-size: 64px; }
+            .hero-stats { flex-direction: column; gap: 0; }
+            .stat-item { padding: 20px 32px; }
+            .stat-item::after { display: none; }
+            .main-content { padding: 60px 20px; }
+            .news-card { padding: 28px; }
+            .analysis-section { grid-template-columns: 1fr; }
+            .section-title { font-size: 32px; }
+            .cta-section { padding: 48px 24px; }
+            .cta-title { font-size: 28px; }
+            .cta-input { width: 100%; }
+            .cta-form { flex-direction: column; align-items: center; }
+            .footer-top { flex-direction: column; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .executive-summary { padding: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="https://www.larafy.com.br/">
+                <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="https://www.larafy.com.br/quem-somos" class="nav-link">Sobre Nós</a>
+                <a href="#reforma" class="nav-link">Reforma Tributária</a>
+                <a href="https://laratax.com.br/" class="nav-link" target="_blank">LaraTAX</a>
+                <a href="https://www.larafy.com.br/contato" class="nav-link">Contato</a>
+                <a href="https://api.whatsapp.com/send/?phone=5541984004549" class="nav-cta">Falar com Especialista</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-eyebrow">Inteligência Tributária</span>
+            <div class="newstax-title">
+                <span class="newstax-news">NEWS</span>
+                <span class="newstax-divider">/</span>
+                <span class="newstax-tax">TAX</span>
+            </div>
+            <p class="newstax-subtitle-label">Centro de Análises Fiscais Estratégicas</p>
+            <p class="hero-subtitle">Insights do cenário tributário brasileiro com tecnologia de inteligência artificial aplicada à gestão fiscal corporativa</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">1B+</span>
+                    <span class="stat-label">Cenários Analisados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Monitoramento</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5min</span>
+                    <span class="stat-label">Análise Prévia</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Seguro e Confiável</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- EXECUTIVE SUMMARY -->
+        <section class="executive-summary">
+            <div class="exec-label">Resumo do Dia</div>
+            <h2>⚡ Resumo Executivo Estratégico</h2>
+            <p>Operação OncoJuris potencializa compliance fiscal com investigações setoriais. Reforma tributária e logística regulada emergem como eixo competitivo crítico. Receita Federal libera R$58,8B em ICMS em 16 estados com impacto de fluxo de caixa. Educação fiscal municipal fortalece conformidade tributária de base. Esteja preparado para retenções contingenciais operacionais.</p>
+        </section>
+
+        <!-- SECTION HEADER -->
+        <div class="section-header">
+            <span class="section-eyebrow">Análises do Dia</span>
+            <h2 class="section-title">Análises Tributárias Estratégicas</h2>
+            <p class="section-subtitle">Inteligência artificial aplicada ao cenário fiscal brasileiro para decisões corporativas assertivas</p>
+        </div>
+        <div class="section-divider"></div>
+
+        <!-- NEWS GRID -->
+        <div class="news-grid">
+
+            <!-- NOTÍCIA 1 -->
+            <article class="news-card">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Compliance Fiscal</span>
+                </div>
+                <h3 class="news-title">🔍 Operação OncoJuris: Escalada de Investigações Conjuntas contra Fraudes Tributárias</h3>
+                <p class="news-summary">Receita Federal, Polícia Civil, Ministério Público e Defensoria Pública de Mato Grosso do Sul integram esforços em operação estratégica contra fraudes tributárias no setor de saúde. A ação sinaliza aumento significativo de fiscalizações coordenadas com foco em conformidade tributária setorial.</p>
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title"><span>🔬</span> Análise Técnica</div>
+                        <div class="analysis-content">
+                            <p>A Operação OncoJuris evidencia estratégia de enforçamento integrado entre órgãos federais, estaduais e municipais. O procedimento utiliza operações conjuntas para maior efetividade investigativa e redução de margem de contestação administrativo-judicial.</p>
+                            <p>Setores críticos como healthcare, previdência complementar e cadeia farmacêutica enfrentam risco elevado. Recomenda-se auditoria interna de conformidade tributária em ICMS, PIS/COFINS e contribuição previdenciária.</p>
+                            <p class="legal-base">Base legal: Lei 9.613/1998 (Lavagem de Dinheiro), Decreto 70.235/1972 (RIR), Procedimentos de Fiscalização da RFB</p>
+                        </div>
+                    </div>
+                    <div class="analysis-block strategic-analysis">
+                        <div class="analysis-title"><span>💼</span> Impacto Estratégico</div>
+                        <div class="analysis-content">
+                            <p>Operações integradas reduzem vulnerabilidades de defesa fiscal. Prepare documentação de due diligence tributária, registros de apurações SPED-Fiscal e controles internos de integridade fiscal.</p>
+                            <p><strong>Recomendação:</strong> Realizar compliance assessment setorial com foco em conformidade fiscal operacional e documentação de compliance para mitigar riscos de responsabilização solidária de administradores e controladoras.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 2 -->
+            <article class="news-card">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Reforma Tributária</span>
+                </div>
+                <h3 class="news-title">🔄 Reforma Tributária e Logística Regulada: Eixos Estratégicos da Competitividade Brasileiro</h3>
+                <p class="news-summary">Reforma tributária integrada com regulamentação de logística consolida-se como estratégia de reposicionamento competitivo. Debate concentra-se em simplificação de base tributária, harmonização ICMS e eficiência de custos operacionais setoriais.</p>
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title"><span>🔬</span> Análise Técnica</div>
+                        <div class="analysis-content">
+                            <p>A convergência de reforma tributária com regulação logística visa reduzir distorções de alíquotas ICMS interestadual e harmonizar regime de CRÉDITO E DÉBITO em cadeia reversa. Impacto direto em cálculo de carga tributária efetiva e planejamento de fluxo operacional.</p>
+                            <p>Setores de logística, varejo, manufatura e comércio eletrônico enfrentam reposicionamento de carga tributária. Simulações de impacto de potenciais alíquotas unificadas ICMS 17-20% são críticas.</p>
+                            <p class="legal-base">Base legal: Emenda Constitucional 132/2023 (Reforma Tributária em Trâmite), CONFAZ, Legislação de ICMS Estadual</p>
+                        </div>
+                    </div>
+                    <div class="analysis-block strategic-analysis">
+                        <div class="analysis-title"><span>💼</span> Impacto Estratégico</div>
+                        <div class="analysis-content">
+                            <p>Reforma tributária e logística regulada impactam precificação, margens operacionais e estrutura de custos. Window de planejamento fiscal é crítica para investimentos e decisões de localização produtiva.</p>
+                            <p><strong>Recomendação:</strong> Modelar cenários de impacto com 3-5 potenciais alíquotas de ICMS e simular efeitos em fluxo de caixa, ROI de investimentos e estratégia de supply chain. Preparar contingency plans de pricing e hedging tributário.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 3 -->
+            <article class="news-card">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Restituições Fiscais</span>
+                </div>
+                <h3 class="news-title">💰 Receita Federal Libera R$ 415 Milhões em Restituições Retidas de Anos Anteriores</h3>
+                <p class="news-summary">Liberação de 415 mil restituições retidas de exercícios anteriores representa reconhecimento de passivos fiscais acumulados. Decisão sinaliza fluxo de caixa positivo para compliance contribuintes e redução de contencioso administrativo-judicial tributário.</p>
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title"><span>🔬</span> Análise Técnica</div>
+                        <div class="analysis-content">
+                            <p>Liberação de restituições retidas de exercícios passados (possivelmente 2020-2023) reduz exposição de litígio fiscal e reconhece posições de crédito tributário consolidadas. Procedimento reflete modernização de processamento administrativo da RFB com recurso de tecnologia.</p>
+                            <p>Contribuintes que aguardam restituições de períodos de apuração 2020+ devem verificar status de pedidos junto ao e-CAC RFB. Impacto de fluxo de caixa é material para PME e empresas com ciclo operacional curto.</p>
+                            <p class="legal-base">Base legal: Lei 9.430/1996 (Restituições), RIR 1999, Instrução Normativa RFB 2.191/2021</p>
+                        </div>
+                    </div>
+                    <div class="analysis-block strategic-analysis">
+                        <div class="analysis-title"><span>💼</span> Impacto Estratégico</div>
+                        <div class="analysis-content">
+                            <p>Liberação de R$ 415M de restituições libera capital de giro para operações, investimentos e redução de passivos. Oportunidade de otimizar reinvestimento de fluxo e rebalancear estrutura de capital corporativa.</p>
+                            <p><strong>Recomendação:</strong> Verificar status de restituições pendentes via e-CAC, validar documentação de apoio, e antecipar recebimento via descontos operacionais com fornecedores. Considerar impacto positivo no fluxo de caixa livre para planejamento de investimentos.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 4 -->
+            <article class="news-card">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Educação Fiscal</span>
+                </div>
+                <h3 class="news-title">📋 Prefeitura de Aracaju Promove Formação em Cidadania e Educação Fiscal para Fortalecer Compliance Municipal</h3>
+                <p class="news-summary">Programa de educação fiscal para docentes da rede municipal de ensino reforça conformidade tributária de base. Iniciativa sinaliza tendência de reforço de compliance fiscal em esfera municipal e impacto em consciência de conformidade tributária da sociedade.</p>
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title"><span>🔬</span> Análise Técnica</div>
+                        <div class="analysis-content">
+                            <p>Programa de educação fiscal municipal reflete alinhamento com políticas de compliance de renda de base federais. Currículo de educação fiscal em escolas municipais reforça conformidade tributária geracional e reduz evasão fiscal futura.</p>
+                            <p>Empresas operando em municípios com programas de educação fiscal observam aumento de exigências de conformidade. Verificar alinhamento de políticas de compliance fiscal corporativa com diretrizes municipais de conformidade tributária.</p>
+                            <p class="legal-base">Base legal: Lei 13.456/2017 (Educação Fiscal), Decreto 1.143/1994, Diretrizes de Educação Fiscal do SEFAZ</p>
+                        </div>
+                    </div>
+                    <div class="analysis-block strategic-analysis">
+                        <div class="analysis-title"><span>💼</span> Impacto Estratégico</div>
+                        <div class="analysis-content">
+                            <p>Educação fiscal de base reduz fraude tributária geracional e reforça legitimidade de conformidade fiscal corporativa. Empresas com reputação de conformidade observam vantagens em licitações municipais e programas de incentivo.</p>
+                            <p><strong>Recomendação:</strong> Participe de programas de educação fiscal municipal, reforce políticas internas de compliance com tendências de educação fiscal de base, e prepare narrativa corporativa de conformidade tributária para stakeholders municipais e estaduais.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- NOTÍCIA 5 -->
+            <article class="news-card">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">ICMS</span>
+                </div>
+                <h3 class="news-title">⚖️ Dezesseis Estados Acumulam R$ 58,8 Bilhões em Créditos de ICMS a Devolver</h3>
+                <p class="news-summary">Passivo tributário de 16 estados em créditos ICMS a devolver atinge R$ 58,8B, evidenciando desequilíbrio de caixa estatal. Situação sinaliza riscos de inadimplência de restituições estaduais e impactos de fluxo de caixa para empresas com créditos tributários acumulados.</p>
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title"><span>🔬</span> Análise Técnica</div>
+                        <div class="analysis-content">
+                            <p>Créditos ICMS acumulados de R$ 58,8B refletem desequilíbrio de receitas estaduais e retenções operacionais de fluxo de compensação ICMS. Contribuintes com créditos tributários em estados críticos enfrentam riscos de atraso ou restrição de restituições via sistemática de ICMS.</p>
+                            <p>Estados com maior déficit ICMS: São Paulo, Minas Gerais, Rio de Janeiro, Paraná, Rio Grande do Sul. Verificar status de créditos estaduais acumulados e avaliar contingência de operações em estados de maior risco fiscal.</p>
+                            <p class="legal-base">Base legal: Lei Complementar 87/1996 (Lei Kandir), Convênios CONFAZ, Legislação de ICMS por Estado</p>
+                        </div>
+                    </div>
+                    <div class="analysis-block strategic-analysis">
+                        <div class="analysis-title"><span>💼</span> Impacto Estratégico</div>
+                        <div class="analysis-content">
+                            <p>Desequilíbrio ICMS estadual impacta fluxo de caixa de contribuintes com créditos acumulados. Atrasos em restituições ICMS reduzem liquidez operacional e afetam planejamento financeiro de curto prazo em estados críticos.</p>
+                            <p><strong>Recomendação:</strong> Modelar impacto de atraso em restituições ICMS por estado, considerar operações de factoring de créditos ICMS para otimizar fluxo de caixa, e diversificar base de operações em estados com menor déficit de caixa ICMS.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- CTA WITH FORM -->
+        <section class="cta-section" id="reforma">
+            <div class="cta-inner">
+                <span class="cta-eyebrow">Newsletter Exclusiva</span>
+                <h3 class="cta-title">Receba <span>análises exclusivas</span><br>diariamente</h3>
+                <p class="cta-description">Insights tributários estratégicos direto na sua caixa de entrada, todos os dias úteis com inteligência artificial aplicada ao compliance</p>
+                <form class="cta-form" id="subscribeForm" onsubmit="handleSubmit(event)">
+                    <input type="text" class="cta-input" id="nameInput" placeholder="Seu nome completo" required>
+                    <input type="email" class="cta-input" id="emailInput" placeholder="Seu melhor email" required>
+                    <button type="submit" class="cta-button" id="submitBtn">Assinar Gratuitamente</button>
+                </form>
+                <p class="cta-privacy">🔒 Seus dados estão seguros. Sem spam, cancele quando quiser.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy">
+                    <p>Revolucionamos a gestão tributária corporativa com tecnologia de última geração, oferecendo análises preditivas e insights estratégicos para conformidade fiscal de classe mundial.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Plataforma</h4>
+                    <a href="https://www.larafy.com.br/">LaraFy.com.br</a>
+                    <a href="https://laratax.com.br/" target="_blank">LaraTAX Platform</a>
+                    <a href="https://www.larafy.com.br/quem-somos">Sobre Nós</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4>Contato</h4>
+                    <a href="mailto:contato@larafy.com.br">contato@larafy.com.br</a>
+                    <a href="tel:+554131465868">+55 (41) 3146-5868</a>
+                    <a href="https://api.whatsapp.com/send/?phone=5541984004549">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright 2026 © LaraFy Consultoria Tributária. Todos os direitos reservados. | CNPJ 40.762.656/0001-66</p>
+                <p class="footer-cities">Curitiba • São Paulo • Brasília • Rio de Janeiro</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        const nome = document.getElementById('nameInput').value;
+        const email = document.getElementById('emailInput').value;
+        btn.textContent = 'Enviando...';
+        btn.disabled = true;
+        try {
+            await fetch('WEBHOOK_URL_AQUI', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({nome, email}),
+                mode: 'no-cors'
+            });
+        } catch(err) {}
+        btn.textContent = '✅ Inscrito com sucesso!';
+        document.getElementById('nameInput').value = '';
+        document.getElementById('emailInput').value = '';
+        setTimeout(() => {
+            btn.textContent = 'Assinar Gratuitamente';
+            btn.disabled = false;
+        }, 4000);
+    }
+    </script>
+
+</body>
+</html>
+```
