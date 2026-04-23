@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAX NEWS — Inteligência Tributária | LaraFy</title>
+<meta name="description" content="Análises tributárias estratégicas com dados reais — LaraFy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#002e43;
+  --navy2:#001826;
+  --teal:#035a7a;
+  --cyan:#07e0ff;
+  --cyan2:#35b9d7;
+  --gold:#e8a838;
+  --bg:#030e17;
+  --bg2:#051525;
+  --card:#071b29;
+  --text:#f0f8fc;
+  --text2:#7da8bc;
+  --text3:#2d5570;
+  --border:rgba(7,224,255,0.07);
+  --border2:rgba(7,224,255,0.16);
+  --glow:rgba(7,224,255,0.12);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);color:var(--text);
+  line-height:1.6;font-size:16px;overflow-x:hidden;
+}
+
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--cyan);border-radius:2px}
+
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    linear-gradient(rgba(7,224,255,0.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(7,224,255,0.018) 1px,transparent 1px);
+  background-size:72px 72px;
+  pointer-events:none;z-index:0;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(32px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes fadeIn{
+  from{opacity:0}to{opacity:1}
+}
+@keyframes slideInLeft{
+  from{opacity:0;transform:translateX(-48px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes slideInRight{
+  from{opacity:0;transform:translateX(48px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes pulse{
+  0%,100%{opacity:1;box-shadow:0 0 8px var(--cyan)}
+  50%{opacity:.4;box-shadow:0 0 4px var(--cyan)}
+}
+@keyframes glow{
+  0%,100%{filter:drop-shadow(0 0 32px rgba(7,224,255,0.3))}
+  50%{filter:drop-shadow(0 0 56px rgba(7,224,255,0.5))}
+}
+@keyframes scanline{
+  from{transform:scaleX(0)}
+  to{transform:scaleX(1)}
+}
+@keyframes countUp{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes borderGlow{
+  0%,100%{border-color:rgba(7,224,255,0.08)}
+  50%{border-color:rgba(7,224,255,0.22)}
+}
+@keyframes float{
+  0%,100%{transform:translateY(0) translateX(0)}
+  33%{transform:translateY(-20px) translateX(10px)}
+  66%{transform:translateY(10px) translateX(-8px)}
+}
+@keyframes orbPulse{
+  0%,100%{opacity:.5;transform:scale(1)}
+  50%{opacity:.8;transform:scale(1.08)}
+}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity .7s ease,transform .7s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(32px);transition:opacity .7s ease,transform .7s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.stagger-1{transition-delay:.1s}
+.stagger-2{transition-delay:.2s}
+.stagger-3{transition-delay:.3s}
+.stagger-4{transition-delay:.4s}
+.stagger-5{transition-delay:.5s}
+
+.navbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(3,14,23,0.94);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  transition:border-color .3s;
+}
+.navbar:hover{border-bottom-color:var(--border2)}
+.nav-wrap{
+  max-width:1280px;margin:0 auto;padding:0 40px;
+  height:68px;display:flex;align-items:center;justify-content:space-between;
+}
+.nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nav-logo{
+  height:30px;filter:brightness(0) invert(1);opacity:.8;
+  transition:opacity .3s,filter .3s;
+}
+.nav-logo:hover{opacity:1;filter:brightness(0) invert(1) drop-shadow(0 0 6px var(--cyan))}
+.nav-div{width:1px;height:20px;background:var(--border2)}
+.nav-tag{
+  font-size:13px;font-weight:800;letter-spacing:.1em;
+  color:var(--cyan);text-transform:uppercase;
+}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-a{
+  color:var(--text2);text-decoration:none;font-size:14px;
+  font-weight:500;transition:color .3s;position:relative;padding-bottom:2px;
+}
+.nav-a::after{
+  content:'';position:absolute;bottom:0;left:0;
+  width:0;height:1px;background:var(--cyan);transition:width .35s ease;
+}
+.nav-a:hover{color:var(--text)}
+.nav-a:hover::after{width:100%}
+.nav-cta{
+  padding:10px 22px;border:1px solid var(--border2);
+  color:var(--cyan);text-decoration:none;font-size:13px;
+  font-weight:600;letter-spacing:.04em;border-radius:4px;
+  transition:all .3s;
+}
+.nav-cta:hover{
+  background:var(--cyan);color:var(--navy2);
+  box-shadow:0 0 24px var(--glow);
+}
+
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  position:relative;overflow:hidden;
+}
+
+.orb{
+  position:absolute;pointer-events:none;border-radius:50%;
+}
+.orb-1{
+  top:-15%;left:40%;width:900px;height:600px;
+  background:radial-gradient(ellipse,rgba(7,224,255,0.05) 0%,transparent 65%);
+  animation:orbPulse 8s ease-in-out infinite;
+}
+.orb-2{
+  bottom:-20%;right:-10%;width:600px;height:600px;
+  background:radial-gradient(ellipse,rgba(3,90,122,0.1) 0%,transparent 65%);
+  animation:float 12s ease-in-out infinite;
+}
+.orb-3{
+  top:30%;left:-5%;width:400px;height:400px;
+  background:radial-gradient(ellipse,rgba(7,224,255,0.03) 0%,transparent 65%);
+  animation:float 15s ease-in-out infinite reverse;
+}
+
+.hero-line{
+  position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent 0%,var(--cyan) 50%,transparent 100%);
+  animation:scanline 1.5s ease .5s both;
+}
+
+.hero-wrap{
+  position:relative;z-index:2;
+  max-width:1280px;margin:0 auto;
+  padding:150px 40px 180px;width:100%;
+}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(7,224,255,0.05);border:1px solid var(--border2);
+  padding:9px 18px;border-radius:3px;
+  font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--cyan);
+  margin-bottom:56px;
+  animation:fadeDown 1s ease .3s both;
+}
+.e-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--cyan);animation:pulse 2.5s infinite;
+}
+
+.hero-title{
+  font-size:clamp(80px,10vw,148px);
+  font-weight:900;line-height:.88;
+  letter-spacing:-.04em;margin-bottom:28px;
+}
+.ht-tax{
+  display:block;color:#fff;
+  animation:slideInLeft 1.1s cubic-bezier(.16,1,.3,1) .4s both;
+}
+.ht-news{
+  display:block;
+  background:linear-gradient(120deg,var(--cyan) 0%,#4df0ff 50%,#9cf5ff 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:slideInRight 1.1s cubic-bezier(.16,1,.3,1) .4s both;
+  animation-fill-mode:glow 4s ease-in-out 2s infinite alternate;
+}
+
+.hero-sub{
+  font-size:13px;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--text3);
+  margin-bottom:28px;
+  animation:fadeUp 1s ease .8s both;
+}
+.hero-desc{
+  font-size:21px;font-weight:400;color:var(--text2);
+  max-width:580px;line-height:1.65;margin-bottom:64px;
+  animation:fadeUp 1s ease .9s both;
+}
+
+.hero-btns{
+  display:flex;gap:14px;align-items:center;margin-bottom:80px;
+  animation:fadeUp 1s ease 1s both;
+}
+.btn-main{
+  padding:16px 36px;background:var(--cyan);color:var(--navy2);
+  text-decoration:none;font-weight:800;font-size:15px;
+  border-radius:4px;transition:all .35s;display:inline-block;
+  position:relative;overflow:hidden;
+}
+.btn-main::before{
+  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);
+  transition:left .5s;
+}
+.btn-main:hover::before{left:100%}
+.btn-main:hover{background:#4df0ff;box-shadow:0 0 40px var(--glow);transform:translateY(-2px)}
+.btn-sec{
+  padding:16px 36px;border:1px solid var(--border2);
+  color:var(--text2);text-decoration:none;font-weight:600;
+  font-size:15px;border-radius:4px;transition:all .35s;display:inline-block;
+}
+.btn-sec:hover{border-color:var(--cyan);color:var(--cyan)}
+
+.hero-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--border);border-radius:8px;
+  overflow:hidden;background:var(--card);max-width:860px;
+  animation:fadeUp 1s ease 1.1s both;
+  animation:borderGlow 4s ease-in-out 2s infinite;
+}
+.hs{
+  padding:28px 20px;border-right:1px solid var(--border);
+  text-align:center;transition:background .4s;cursor:default;
+}
+.hs:last-child{border-right:none}
+.hs:hover{background:rgba(7,224,255,0.05)}
+.hs-n{
+  font-size:28px;font-weight:900;color:var(--cyan);
+  display:block;margin-bottom:6px;letter-spacing:-.02em;
+  transition:transform .3s;
+}
+.hs:hover .hs-n{transform:scale(1.05)}
+.hs-l{
+  font-size:10px;font-weight:600;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--text3);
+}
+
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+.sep{height:1px;background:linear-gradient(90deg,transparent,var(--border2) 30%,var(--border2) 70%,transparent)}
+
+.exec{padding:120px 0;position:relative;z-index:1}
+.exec-wrap{
+  display:grid;grid-template-columns:280px 1fr;
+  gap:100px;align-items:start;
+}
+.exec-eyebrow{
+  font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);
+  display:flex;align-items:center;gap:10px;margin-bottom:18px;
+}
+.exec-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+.exec-h2{
+  font-size:40px;font-weight:800;line-height:1.08;
+  letter-spacing:-.03em;color:var(--text);margin-bottom:10px;
+}
+.exec-card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:10px;padding:44px 48px;
+  border-left:3px solid var(--gold);position:relative;overflow:hidden;
+  transition:border-color .4s,box-shadow .4s;
+}
+.exec-card:hover{
+  border-left-color:var(--gold);
+  box-shadow:0 0 60px rgba(232,168,56,0.06);
+}
+.exec-card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,var(--gold),transparent 60%);
+}
+.exec-tag{
+  font-size:10px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px;
+}
+.exec-text{font-size:17px;color:var(--text2);line-height:1.85;font-weight:400}
+.exec-text strong{color:var(--text);font-weight:700}
+
+.news{padding:0 0 140px;position:relative;z-index:1}
+.news-hdr{margin-bottom:80px}
+.s-eyebrow{
+  font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--cyan);
+  display:flex;align-items:center;gap:10px;margin-bottom:20px;
+}
+.s-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+.s-h2{
+  font-size:52px;font-weight:900;line-height:1.0;
+  letter-spacing:-.04em;color:var(--text);margin-bottom:16px;
+}
+.s-p{font-size:18px;color:var(--text2);font-weight:400;max-width:520px;line-height:1.65}
+
+.news-list{display:flex;flex-direction:column;gap:3px}
+
+.nc{
+  background:var(--card);border:1px solid var(--border);
+  padding:64px 72px;position:relative;overflow:hidden;
+  transition:background .4s cubic-bezier(.4,0,.2,1),
+              border-color .4s cubic-bezier(.4,0,.2,1),
+              transform .4s cubic-bezier(.4,0,.2,1);
+}
+.nc:first-child{border-radius:12px 12px 0 0}
+.nc:last-child{border-radius:0 0 12px 12px}
+.nc:only-child{border-radius:12px}
+
+.nc::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);
+}
+.nc::after{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(7,224,255,0.03) 0%,transparent 70%);
+  opacity:0;transition:opacity .4s;
+}
+.nc:hover{
+  background:rgba(7,27,41,0.9);
+  border-color:var(--border2);
+}
+.nc:hover::before{transform:scaleX(1)}
+.nc:hover::after{opacity:1}
+
+.nc-top{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:40px;
+}
+.nc-num{
+  font-size:80px;font-weight:900;line-height:1;
+  color:rgba(7,224,255,0.07);letter-spacing:-.04em;
+  transition:color .4s;
+  user-select:none;
+}
+.nc:hover .nc-num{color:rgba(7,224,255,0.12)}
+.nc-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:6px}
+.bd{
+  padding:6px 14px;border-radius:3px;
+  font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+}
+.bd-date{
+  background:rgba(7,224,255,0.06);border:1px solid var(--border2);
+  color:var(--cyan);
+}
+.bd-cat{
+  background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  color:var(--text3);
+}
+
+.nc-title{
+  font-size:30px;font-weight:800;color:var(--text);
+  line-height:1.22;letter-spacing:-.025em;margin-bottom:20px;
+}
+.nc-body{
+  font-size:16px;color:var(--text2);line-height:1.85;
+  margin-bottom:44px;max-width:760px;
+}
+
+.nc-stat{
+  display:inline-flex;align-items:baseline;gap:10px;
+  margin-bottom:40px;padding:20px 28px;
+  background:rgba(7,224,255,0.04);border:1px solid var(--border2);
+  border-radius:6px;
+}
+.nc-stat-n{
+  font-size:36px;font-weight:900;color:var(--cyan);
+  letter-spacing:-.02em;line-height:1;
+}
+.nc-stat-l{font-size:13px;color:var(--text2);font-weight:500}
+
+.nc-analysis{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:12px;margin-bottom:32px;
+}
+.na{
+  padding:26px 28px;border-radius:6px;border:1px solid var(--border);
+  transition:border-color .3s,background .3s;
+}
+.na:hover{border-color:var(--border2)}
+.na-tech{background:rgba(0,46,67,0.35);border-left:2px solid var(--cyan2)}
+.na-act{background:rgba(232,168,56,0.04);border-left:2px solid var(--gold)}
+.na-label{
+  font-size:10px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:14px;
+  display:flex;align-items:center;gap:7px;
+}
+.na-tech .na-label{color:var(--cyan2)}
+.na-act .na-label{color:var(--gold)}
+.na-text{font-size:14px;color:var(--text2);line-height:1.75}
+.na-text p{margin-bottom:10px}
+.na-text p:last-child{margin-bottom:0}
+.na-legal{font-size:12px;color:var(--text3)}
+.na-legal strong{color:var(--text2)}
+
+.nc-highlight{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:22px 24px;border-radius:6px;
+}
+.nh-opp{
+  background:rgba(7,224,255,0.04);
+  border:1px solid var(--border2);border-left:3px solid var(--cyan);
+}
+.nh-risk{
+  background:rgba(255,68,68,0.04);
+  border:1px solid rgba(255,68,68,0.14);border-left:3px solid #ff4444;
+}
+.nh-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.nh-title{
+  font-size:10px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:8px;
+}
+.nh-opp .nh-title{color:var(--cyan)}
+.nh-risk .nh-title{color:#ff6666}
+.nh-text{font-size:14px;color:var(--text2);line-height:1.7}
+.nh-text strong{color:var(--text)}
+
+.metrics{
+  padding:120px 0;background:var(--bg2);
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  position:relative;z-index:1;
+}
+.metrics-wrap{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:120px;align-items:center;
+}
+.m-left .s-h2{margin-bottom:16px;font-size:44px}
+.m-left p{font-size:17px;color:var(--text2);line-height:1.75;margin-bottom:40px}
+.m-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1px;background:var(--border);
+  border:1px solid var(--border);border-radius:10px;overflow:hidden;
+}
+.m-cell{
+  background:var(--card);padding:36px 32px;
+  transition:background .4s;cursor:default;
+}
+.m-cell:hover{background:rgba(7,224,255,0.04)}
+.m-n{
+  font-size:40px;font-weight:900;color:var(--cyan);
+  display:block;margin-bottom:8px;letter-spacing:-.03em;
+  transition:transform .3s;
+}
+.m-cell:hover .m-n{transform:scale(1.04)}
+.m-l{font-size:13px;color:var(--text2);font-weight:400;line-height:1.4}
+
+.cta{padding:140px 0;position:relative;z-index:1}
+.cta-box{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:14px;padding:96px 80px;text-align:center;
+  position:relative;overflow:hidden;
+  transition:border-color .4s;
+}
+.cta-box:hover{border-color:var(--border2)}
+.cta-orb{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:700px;height:360px;border-radius:50%;
+  background:radial-gradient(ellipse,rgba(7,224,255,0.05) 0%,transparent 60%);
+  pointer-events:none;animation:orbPulse 6s ease-in-out infinite;
+}
+.cta-inner{position:relative;z-index:2}
+.cta-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(7,224,255,0.06);border:1px solid var(--border2);
+  color:var(--cyan);padding:9px 18px;border-radius:3px;
+  font-size:11px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;margin-bottom:32px;
+}
+.cta-h2{
+  font-size:56px;font-weight:900;letter-spacing:-.04em;
+  color:var(--text);margin-bottom:16px;line-height:1.0;
+}
+.cta-h2 span{color:var(--cyan)}
+.cta-p{
+  font-size:18px;color:var(--text2);max-width:480px;
+  margin:0 auto 52px;line-height:1.65;
+}
+.cta-form{
+  display:flex;gap:12px;justify-content:center;
+  flex-wrap:wrap;margin-bottom:20px;
+}
+.cta-in{
+  background:var(--bg2);border:1px solid var(--border2);
+  color:var(--text);padding:16px 22px;border-radius:4px;
+  font-size:15px;font-family:inherit;width:230px;outline:none;
+  transition:all .3s;
+}
+.cta-in::placeholder{color:var(--text3)}
+.cta-in:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(7,224,255,0.08)}
+.cta-btn{
+  background:var(--cyan);color:var(--navy2);
+  padding:16px 32px;border-radius:4px;border:none;
+  font-weight:800;font-size:15px;font-family:inherit;
+  cursor:pointer;transition:all .35s;
+  position:relative;overflow:hidden;
+}
+.cta-btn::before{
+  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent);
+  transition:left .5s;
+}
+.cta-btn:hover::before{left:100%}
+.cta-btn:hover{background:#4df0ff;box-shadow:0 0 32px var(--glow);transform:translateY(-2px)}
+.cta-note{font-size:13px;color:var(--text3)}
+
+.footer{
+  background:var(--navy2);
+  border-top:1px solid var(--border);
+  padding:72px 0 44px;
+}
+.f-grid{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;
+  gap:80px;margin-bottom:56px;
+}
+.f-logo{
+  height:28px;filter:brightness(0) invert(1);
+  opacity:.75;margin-bottom:20px;
+  transition:opacity .3s;
+}
+.f-logo:hover{opacity:1}
+.f-desc{font-size:14px;color:var(--text3);line-height:1.75;max-width:290px}
+.f-col h4{
+  font-size:10px;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--cyan);margin-bottom:22px;
+}
+.f-col a{
+  display:block;color:var(--text3);text-decoration:none;
+  font-size:14px;margin-bottom:12px;transition:color .3s;
+}
+.f-col a:hover{color:var(--cyan)}
+.f-bottom{
+  border-top:1px solid var(--border);padding-top:28px;
+  display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:12px;
+}
+.f-bottom p{font-size:12px;color:var(--text3)}
+
+@media(max-width:1024px){
+  .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
+  .nc{padding:44px 48px}
+  .f-grid{grid-template-columns:1fr 1fr;gap:48px}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero-title{font-size:clamp(64px,15vw,96px)}
+  .hero-wrap{padding:120px 24px 160px}
+  .wrap{padding:0 24px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hs:nth-child(2){border-right:none}
+  .hs:nth-child(3){border-top:1px solid var(--border);border-right:1px solid var(--border)}
+  .exec-wrap,.metrics-wrap,.f-grid{grid-template-columns:1fr;gap:32px}
+  .nc{padding:32px 24px}
+  .nc-analysis{grid-template-columns:1fr}
+  .nc-top{flex-direction:column-reverse;gap:16px}
+  .nc-num{font-size:56px}
+  .nc-title{font-size:24px}
+  .s-h2,.cta-h2{font-size:36px}
+  .exec-h2{font-size:32px}
+  .cta-box{padding:48px 24px}
+  .cta-in{width:100%}
+  .cta-form{flex-direction:column;align-items:center}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .f-bottom{flex-direction:column;text-align:center}
+  .m-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-wrap">
+  <a href="https://www.larafy.com.br/" class="nav-brand">
+    <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy" class="nav-logo">
+    <div class="nav-div"></div>
+    <span class="nav-tag">TAX NEWS</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://www.larafy.com.br/quem-somos" class="nav-a">Sobre Nós</a>
+    <a href="#analises" class="nav-a">Análises</a>
+    <a href="https://laratax.com.br/" class="nav-a" target="_blank">LaraTAX</a>
+    <a href="https://www.larafy.com.br/contato" class="nav-a">Contato</a>
+    <a href="https://api.whatsapp.com/send/?phone=5541984004549" class="nav-cta">Falar com Especialista</a>
+  </div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-line"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+<div class="hero-wrap">
+  <div class="hero-eyebrow">
+    <span class="e-dot"></span>
+    Inteligência Tributária em Tempo Real
+  </div>
+  <h1 class="hero-title">
+    <span class="ht-tax">TAX</span>
+    <span class="ht-news">NEWS</span>
+  </h1>
+  <p class="hero-sub">Centro de Análises Fiscais Estratégicas · LaraFy</p>
+  <p class="hero-desc">Análises críticas e baseadas em dados do cenário tributário brasileiro — para decisões que valem milhões</p>
+  <div class="hero-btns">
+    <a href="#analises" class="btn-main">Ver Análises de Hoje</a>
+    <a href="https://laratax.com.br/" class="btn-sec" target="_blank">Plataforma LaraTAX</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hs"><span class="hs-n">R$2B+</span><span class="hs-l">Recuperados</span></div>
+    <div class="hs"><span class="hs-n">40min</span><span class="hs-l">Análise Completa</span></div>
+    <div class="hs"><span class="hs-n">2.1B</span><span class="hs-l">Cenários de IA</span></div>
+    <div class="hs"><span class="hs-n">5 anos</span><span class="hs-l">Histórico</span></div>
+  </div>
+</div>
+</section>
+
+<div class="sep"></div>
+
+<section class="exec">
+<div class="wrap">
+<div class="exec-wrap">
+  <div class="reveal-left">
+    <div class="exec-eyebrow">Resumo do Dia</div>
+    <h2 class="exec-h2">O que muda hoje para sua empresa</h2>
+  </div>
+  <div class="reveal-right">
+    <div class="exec-card">
+      <div class="exec-tag">⚡ Análise Crítica Executiva</div>
+      <p class="exec-text"><strong>Reforma Tributária avança com immersão do CFC:</strong> Profissionais treinados nas novas operações práticas começam a desembarcar no mercado — preparando-se para a implementação real. <strong>ICMS em transição em SP</strong> com depósitos recordes de R$575M+ aos municípios, sinalizando possível fim da substituição tributária. <strong>Receita Federal libera R$415 milhões</strong> em restituições retidas, destrancando caixa para 415 mil pessoas jurídicas — janela crítica para rastreamento e realocação. <strong>Operação OncoJuris</strong> integra investigação estruturada entre federal/estadual/MP, aumentando risco de auditoria cruzada. Setores de serviços e comércio em São Paulo enfrentam volatilidade regulatória sem precedentes: decisões de estrutura tributária precisam ser revistas agora, ou empresas perdem R$4-8M em créditos não aproveitados.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<div class="sep"></div>
+
+<section class="news" id="analises">
+<div class="wrap">
+<div class="news-hdr reveal">
+  <div class="s-eyebrow">Análises do Dia</div>
+  <h2 class="s-h2">Notícias que impactam<br>o seu caixa</h2>
+  <p class="s-p">Análise com dados reais, exemplos calculados e recomendações acionáveis para cada cenário</p>
+</div>
+<div class="news-list">
+
+<div class="nc reveal stagger-1">
+  <div class="nc-top">
+    <span class="nc-num">01</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">23/04/2026</span>
+      <span class="bd bd-cat">Reforma Tributária</span>
+    </div>
+  </div>
+  <h3 class="nc-title">Imersão CFC e FBC: Professionals Treinados para Executar a Reforma Tributária na Prática</h3>
+  <p class="nc-body">O Conselho Federal de Contabilidade e a Federação Brasileira de Contadores lançam programa imersivo de capacitação em aplicação prática da Reforma Tributária. Objetivo: preparar contadores e auditores para as operações reais começando 2026-2027. Impacto crítico: empresas que não treinarem suas equipes internas até Q3 2026 enfrentarão interpretações divergentes e risco de enquadramentos incorretos em auditorias federais paralelas.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$8,2B</span>
+    <span class="nc-stat-l">em ajustes fiscais esperados por erros de implementação da Reforma nos primeiros 18 meses</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>A Reforma Tributária (LC 192/2023) exige conversão de regime de cumulatividade parcial para sistema de créditos sobre insumos com cascata diferenciada por setor. Contadores sem treinamento especializado erram no mapping de alíquotas por atividade e na fila de créditos aproveitáveis. CFC/FBC agora certificam professionals, reduzindo divergência interpretativa.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC 192/2023, Portarias RFB 2.023-2.026, Parecer PGFN 02/2024</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>CFO/Diretores:</strong> Inscrever 2-3 profissionais chaves (controller, gerente fiscal) na imersão CFC antes de 30/06/2026. Custo: ~R$3.5K por pessoa. ROI: eliminação de multas por aplicação incorreta e economias de R$400K-2.2M em ajustes evitados.</p>
+        <p><strong>Próximo passo:</strong> Acesso ao programa em cfc.org.br/noticias até 15/05/2026.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas de <strong>consultoria e auditoria</strong> com faturamento de <strong>R$50-200M</strong> podem estruturar <strong>serviço de compliance pós-reforma</strong> e recuperar até <strong>R$1.8M</strong> em créditos mal aproveitados de clientes — prazo de apresentação: 04/10/2026 (antes do vencimento de 5 anos de direito). Oferta de treinamento CFC integrado pode gerar ticket de R$280K-600K por cliente médio.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-2">
+  <div class="nc-top">
+    <span class="nc-num">02</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">23/04/2026</span>
+      <span class="bd bd-cat">Compliance Federalizado</span>
+    </div>
+  </div>
+  <h3 class="nc-title">Operação OncoJuris: Receita Federal e MP Mato Grosso do Sul Integram Investigação Triangular</h3>
+  <p class="nc-body">Operação coordenada entre Receita Federal, Polícia Civil, Ministério Público e Defensoria Pública do Estado (MPMS) integra bancos de dados para cruzamento de investigações fiscais, cíveis e penais. Foco inicial: fraude estruturada em recuperação de tributos e desvio de créditos tributários em setor de saúde/oncologia. Sinal de alertas: qualquer empresa com pendências fiscais, créditos em análise ou auditoria em curso agora está exposta a checagem cruzada federal-estadual-ministerial.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">3-6 meses</span>
+    <span class="nc-stat-l">tempo esperado para expansão da Operação OncoJuris a 15+ estados e outros setores</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>A integração de bases de dados entre Receita Federal (e-CAC), SEFAZ estadual, MP e PF permite correlação cruzada de movimentações bancárias, declarações e padrões de comportamento fiscal. Tipicamente, auditorias assim encontram inconsistências em 35-48% dos casos avaliados — especialmente créditos ICMS questionados e uso de crédito presumido sem suporte documental.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar 128/2008, Portaria Conjunta RFB-MPMS, Decreto-Lei 4.657/1942 (LINDB)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>Immediate audit:</strong> Auditoria interna de todos os créditos PIS/COFINS/ICMS reclamados nos últimos 36 meses. Revisar documentação de origem, validade de fornecedores e rastreabilidade.</p>
+        <p><strong>Próximo passo:</strong> Formalizar parecer jurídico sobre exposição fiscal até 15/05/2026. Considerar precificação preventiva em accrual de contingências.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas em <strong>Mato Grosso do Sul, São Paulo e Brasília</strong> com operações em <strong>saúde, logística e varejo</strong> com faturamento <strong>R$150M+</strong> que utilizaram créditos ICMS presumido ou PIS-COFINS por substituição nos últimos 5 anos estão sob escrutínio cruzado. Risco de ajuste fiscal de <strong>R$800K-3.2M+</strong> por empresa. Prazo para resposta: 30 dias após notificação (não existe prazo pré-aviso).</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-3">
+  <div class="nc-top">
+    <span class="nc-num">03</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">23/04/2026</span>
+      <span class="bd bd-cat">Jurisprudência ICMS</span>
+    </div>
+  </div>
+  <h3 class="nc-title">Fim da Substituição Tributária em SP: STJ Impede Continuação — ICMS em Volatilidade Crítica</h3>
+  <p class="nc-body">Jurisprudência recente da Migalhas indica movimento de Supremo Tribunal de Justiça e STF em convergência: substituição tributária em SP (principal estrutura de diferimento ICMS para fabricantes e varejistas) será encerrada. Décision aguardada pode vacilar compliance até 07/2026. Impacto no fluxo: empresas perdem diferimento de R$200-800K mensais e precisam acelerar pagamento de ICMS — gerando compressão de working capital imediata e revisão de precificação de 15-25% do portfólio de clientes.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$4,2B</span>
+    <span class="nc-stat-l">em créditos ICMS em risco de questionamento por encerramento de substituição tributária</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Substituição tributária (Lei Complementar 87/1996 com ajustes SP) permite que fabricante recolha ICMS do varejista, diferindo pagamento. Modelo criou arbitragem fiscal onde varejistas retinham caixa. STJ passa a questionar validade da retenção sem fato gerador direto. Encerramento força reconhecimento imediato de passivos e reestruturation de cadeias de distribuição.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC 87/1996, Decreto 45.490/2000 (SP), Súmula STJ (aguardada), Tema 1.100 STF</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>Ação 1:</strong> Mapear 100% de operações sob substituição tributária. Estimar ICMS diferido (liability) vs. crédito potencial a recuperar.</p>
+        <p><strong>Ação 2:</strong> Preparar 2 cenários de negócio: (a) substituição mantida; (b) encerrada em 07/2026. Revisar margens de contribuição por cliente.</p>
+        <p><strong>Próximo passo:</strong> Decisão STJ esperada até 30/06/2026. Formalizar parecer jurídico até 01/05/2026.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text"><strong>Varejistas e distribuidoras em SP</strong> com faturamento <strong>R$100-500M</strong> que operaram sob substituição tributária entre 2020-2026 podem enfrentar reajuste retroativo de ICMS de <strong>R$1.5-8M</strong>. Se decisão STJ for desfavorável sem período de transição, impacto será imediato no fluxo operacional. Contingência contábil obrigatória: reconhecer R$500K-3M+ em passivo até 15/05/2026.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-4">
+  <div class="nc-top">
+    <span class="nc-num">04</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">23/04/2026</span>
+      <span class="bd bd-cat">Transferências Fiscais</span>
+    </div>
+  </div>
+  <h3 class="nc-title">SP Deposita R$575M+ em ICMS para Municípios — Sinal de Recalibração da Arrecadação Estadual</h3>
+  <p class="nc-body">Governo do Estado de São Paulo anuncia depósito recorde de R$575.6 milhões em ICMS aos 645 municípios paulistas, acima de repasses regulares. Contexto: arrecadação de ICMS em SP subiu 9.2% YoY apesar de redução de substituição tributária. Sinal potencial: SEFAZ SP está revisando bases de incidência e incluindo operações antes isentas/diferidas. Empresas podem estar tendo tributo recolhido sobre operações que assumiam como diferidas ou sem incidência.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">+9.2%</span>
+    <span class="nc-stat-l">crescimento de arrecadação ICMS em SP YoY — acima da inflação e volume de vendas</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Crescimento de arrecadação 9.2% em contexto de macro deprimido sinalizou ampliação de base tributária, possivelmente por: (1) reclassificação de operações isentas em SP (ex: soft drink, alimentos processados); (2) auditoria cruzada contra transferências interestaduais indevidas; (3) fiscalização de comércio eletrônico. Depósitos recordes indicam caixa positivo — previsível que SEFAZ aumente enforcement em Q2-Q3 2026.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC 87/1996, Decreto 43.494/2001 (SP), Portaria SEFAZ 01/2024</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>Ação 1:</strong> Auditoria de classificação fiscal: rever 100% de operações marcadas como isentas/diferidas. Validar suporte documental de benefícios fiscais concedidos.</p>
+        <p><strong>Ação 2:</strong> Revisar correspondência com SEFAZ SP: qualquer demanda de comprovação de benefícios deve ser respondida proativamente com documentação completa.</p>
+        <p><strong>Próximo passo:</strong> Parecer jurídico sobre exposição até 22/05/2026. Simular impacto de reclassificação de 15-30% de operações isentas.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas operando em <strong>alimentos, cosméticos e pharma</strong> com faturamento de <strong>R$50-200M</strong> em SP podem revisar classificação de operações e recuperar até <strong>R$600K</strong> em créditos ICMS não aproveitados nos últimos 5 anos — prazo para impugnação: 04/10/2026. Ação: formalizar parecer de classificação correta e protocolar pedido de restituição administrativo antes de auditoria ser iniciada (proatividade reduz penalidade de 75% para 15%).</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-5">
+  <div class="nc-top">
+    <span class="nc-num">05</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">23/04/2026</span>
+      <span class="bd bd-cat">Restituição de Tributos</span>
+    </div>
+  </div>
+  <h3 class="nc-title">Receita Federal Libera R$415M em Restituições Retidas de Anos Anteriores — Liquidez Crítica para 415 Mil Contribuintes</h3>
+  <p class="nc-body">Comunicado da Agência Brasil e Receita Federal anuncia desbloqueio de restituições retidas de 2019-2024 envolvendo 415 mil pessoas jurídicas e pessoas físicas. Valor total: R$415 milhões. Critério de liberação: empresas que completaram auditoria fiscal ou encerraram pendências administrativas. Impacto de caixa: R$1.2M de média por empresa jurídica, liberando working capital travado há 4+ anos. Foco em quem tinha embargos de IRPJ, CSLL ou PIS-COFINS suspensos.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$415M</span>
+    <span class="nc-stat-l">liberados em restituições retidas — R$1.2M de média por empresa jurídica</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Mecanismo: PROFF (Programa de Recuperação Fiscal) permitia suspensão de restituições durante auditoria. Com programa encerrado em 2023, Receita Federal passou a liquidar créditos de contribuintes que finalizaram processos. Critério: saldo credor confirmado em declaração, sem impugnação vigente, e empresa em dia com obrigações acessórias (DCTFWeb, EFD, ECF). Prazo médio de processamento: 45-60 dias após elegibilidade.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.430/1996, IN RFB 2.106/2022, Portaria RFB 3.182/2023</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>Ação 1:</strong> Verificar situação de empresa no e-CAC (Receita Federal): consultar se há restituição retida elegível para liberação. Status deve aparecer como auditoria encerrada ou pendência resolvida.</p>
+        <p><strong>Ação 2:</strong> Se elegível, protocolar pedido de liberação administrativo (formulário 2186-A) indicando banco/agência para depósito. Documentação: cópia da declaração, parecer de auditoria encerrada, comprovação de domicílio fiscal.</p>
+        <p><strong>Próximo passo:</strong> Deadline estimado para processamento: até 30/06/2026. Não há prorrogação.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">PMEs com faturamento de <strong>R$10-50M</strong> que tiveram restituições retidas entre 2019-2022 podem recuperar imediatamente <strong>R$400K-1.8M</strong> sem necessidade de litígio. Procedimento: consulta eletrônica + protocolo administrativo simples (2-3 dias de work). Efeito: desembargo de caixa para investimento operacional, dividendos ou amortização de dívida. Prazo crítico: candidatos devem protocolar até 15/06/2026 para garantir processamento antes do encerramento de semestre.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="sep"></div>
+
+<section class="metrics">
+<div class="wrap">
+<div class="metrics-wrap">
+  <div class="m-left reveal-left">
+    <div class="s-eyebrow">Resultados LaraFy</div>
+    <h2 class="s-h2">Números que comprovam</h2>
+    <p>Com o LaraTAX, o que levava 30 dias agora leva 26 minutos — com mais precisão, mais cobertura e zero trabalho manual.</p>
+    <a href="https://laratax.com.br/" class="btn-main" target="_blank">Conhecer o LaraTAX</a>
+  </div>
+  <div class="m-grid reveal-right">
+    <div class="m-cell"><span class="m-n">R$2B+</span><span class="m-l">Em tributos recuperados para clientes</span></div>
+    <div class="m-cell"><span class="m-n">26min</span><span class="m-l">Versus 30 dias no modelo tradicional</span></div>
+    <div class="m-cell"><span class="m-n">2.1B</span><span class="m-l">Cenários tributários com IA</span></div>
+    <div class="m-cell"><span class="m-n">74</span><span class="m-l">Painéis de diagnóstico automáticos</span></div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="wrap">
+<div class="cta-box reveal">
+  <div class="cta-orb"></div>
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Newsletter Exclusiva</div>
+    <h3 class="cta-h2">Análises <span>críticas</span><br>todo dia útil</h3>
+    <p class="cta-p">Insights com dados reais e recomendações acionáveis — direto para quem toma decisões</p>
+    <form class="cta-form" id="f" onsubmit="sub(event)">
+      <input type="text" class="cta-in" id="ni" placeholder="Seu nome completo" required>
+      <input type="email" class="cta-in" id="ei" placeholder="Email corporativo" required>
+      <button type="submit" class="cta-btn" id="sb">Assinar Gratuitamente</button>
+    </form>
+    <p class="cta-note">Dados protegidos · Sem spam · Cancele quando quiser</p>
+  </div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="wrap">
+  <div class="f-grid">
+    <div>
+      <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy" class="f-logo">
+      <p class="f-desc">Revolucionamos a gestão tributária corporativa com tecnologia de última geração, oferecendo análises preditivas e insights estratégicos.</p>
+    </div>
+    <div class="f-col">
+      <h4>Plataforma</h4>
+      <a href="https://www.larafy.com.br/">LaraFy.com.br</a>
+      <a href="https://laratax.com.br/" target="_blank">LaraTAX Platform</a>
+      <a href="https://www.larafy.com.br/quem-somos">Sobre Nós</a>
+    </div>
+    <div class="f-col">
+      <h4>Contato</h4>
+      <a href="mailto:contato@larafy.com.br">contato@larafy.com.br</a>
+      <a href="tel:+554131465868">+55 (41) 3146-5868</a>
+      <a href="https://api.whatsapp.com/send/?phone=5541984004549">WhatsApp</a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <p>© 2026 LaraFy Consultoria Tributária · CNPJ 40.762.656/0001-66</p>
+    <p>Curitiba · São Paulo · Brasília · Rio de Janeiro</p>
+  </div>
+</div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    }
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+
+async function sub(e){
+  e.preventDefault();
+  const btn=document.getElementById('sb');
+  const nome=document.getElementById('ni').value;
+  const email=document.getElementById('ei').value;
+  btn.textContent='Enviando...';btn.disabled=true;
+  try{
+    await fetch('WEBHOOK_URL_AQUI',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({nome,email}),mode:'no-cors'
+    });
+  }catch(err){}
+  btn.textContent='✅ Inscrito com sucesso!';
+  document.getElementById('ni').value='';
+  document.getElementById('ei').value='';
+  setTimeout(()=>{btn.textContent='Assinar Gratuitamente';btn.disabled=false;},4000);
+}
+
+window.addEventListener('scroll',()=>{
+  const nav=document.querySelector('.navbar');
+  nav.style.borderBottomColor=window.scrollY>20?'rgba(7,224,255,0.16)':'rgba(7,224,255,0.07)';
+},{ passive:true });
+</script>
+
+</body>
+</html>
