@@ -1,0 +1,1211 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Inteligência Tributária | LaraFy</title>
+    <meta name="description" content="Análises tributárias estratégicas com inteligência artificial - LaraFy Consultoria">
+    <meta name="keywords" content="tributário, fiscal, reforma tributária, LaraFy, consultoria, inteligência artificial">
+    <meta name="author" content="LaraFy Consultoria Tributária">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Centro de Inteligência Tributária | LaraFy">
+    <meta property="og:description" content="Análises tributárias estratégicas com inteligência artificial">
+    <meta property="og:image" content="https://www.larafy.com.br/assets/images/larafy.png">
+    <meta property="og:url" content="https://kennedydrong-arch.github.io/blog-tributario-larafy/">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-navy: #012e43;
+            --primary-teal: #035a7a;
+            --accent-cyan: #35b9d7;
+            --accent-gold: #e8a838;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f7fafc;
+            --bg-tertiary: #edf2f7;
+            --border-light: #e2e8f0;
+            --border-medium: #cbd5e0;
+            --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            --gradient-primary: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-teal) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-cyan) 0%, var(--primary-navy) 100%);
+            --gradient-warm: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+        }
+
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(53, 185, 215, 0.3);
+            border-top: 3px solid var(--accent-cyan);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Navigation com backdrop blur */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            height: 36px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 0.025em;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-cyan);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-cyan);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-cta:hover::before {
+            left: 100%;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hero Section com partículas animadas */
+        .hero {
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(53,185,215,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 24px 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(53, 185, 215, 0.15);
+            border: 1px solid rgba(53, 185, 215, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+
+        .hero-title {
+            font-size: 52px;
+            font-weight: 900;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            animation: slideInUp 1s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 22px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 50px;
+            animation: slideInUp 1s ease-out 0.4s both;
+        }
+
+        .stat-item {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* Executive Summary com animação */
+        .executive-summary {
+            background: var(--gradient-warm);
+            border: 1px solid #f59e0b;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+            transition: all 0.4s ease;
+        }
+
+        .executive-summary:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .executive-summary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-gold);
+        }
+
+        .executive-summary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(232,168,56,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .summary-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .executive-summary h2 {
+            color: #92400e;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .executive-summary p {
+            color: var(--text-primary);
+            font-size: 18px;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+
+        /* Section Headers com animação */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+            letter-spacing: -0.025em;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* News Grid com animações escalonadas */
+        .news-grid {
+            display: grid;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        /* News Card Premium */
+        .news-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(0);
+        }
+
+        .news-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-cyan);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-cyan);
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .news-date {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .news-category {
+            background: #e0f2fe;
+            color: var(--primary-navy);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .news-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+            line-height: 1.3;
+            letter-spacing: -0.025em;
+        }
+
+        .news-summary {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* Analysis Blocks com efeitos avançados */
+        .analysis-section {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .analysis-block {
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .analysis-block::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .analysis-block:hover::before {
+            transform: translateX(100%);
+        }
+
+        .technical-analysis {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-left: 4px solid var(--primary-navy);
+        }
+
+        .accessible-analysis {
+            background: var(--gradient-warm);
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .analysis-title {
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .technical-analysis .analysis-title {
+            color: var(--primary-navy);
+        }
+
+        .accessible-analysis .analysis-title {
+            color: #92400e;
+        }
+
+        .analysis-content {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .analysis-content p {
+            margin-bottom: 14px;
+        }
+
+        .legal-base {
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* CTA Section Premium */
+        .cta-section {
+            background: var(--gradient-primary);
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
+            color: white;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(53,185,215,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            margin-bottom: 20px;
+        }
+
+        .cta-description {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: var(--accent-cyan);
+            color: var(--primary-navy);
+            padding: 18px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(1,46,67,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Footer Premium */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 60px 24px 40px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .footer-description {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 32px;
+        }
+
+        .footer-link {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: white;
+        }
+
+        .footer-link:hover::after {
+            width: 100%;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 32px;
+            font-size: 14px;
+            opacity: 0.6;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design Premium */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .main-content {
+                padding: 60px 20px;
+            }
+
+            .news-card {
+                padding: 28px;
+            }
+
+            .analysis-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .executive-summary {
+                padding: 28px;
+            }
+
+            .cta-section {
+                padding: 40px 24px;
+            }
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-tertiary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent-cyan);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-navy);
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="https://www.larafy.com.br/">
+                    <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy" class="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="https://www.larafy.com.br/quem-somos" class="nav-link">Sobre Nós</a>
+                <a href="#reforma-tributaria" class="nav-link">Reforma Tributária</a>
+                <a href="https://laratax.com.br/" class="nav-link" target="_blank">LaraTAX</a>
+                <a href="https://www.larafy.com.br/contato" class="nav-link">Contato</a>
+                <a href="https://api.whatsapp.com/send/?phone=5541984004549" class="nav-cta">Falar com Especialista</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🤖</span>
+                Powered by Artificial Intelligence
+            </div>
+            <h1 class="hero-title">Centro de Inteligência Tributária</h1>
+            <p class="hero-subtitle">Análises estratégicas e insights do cenário fiscal brasileiro com tecnologia de última geração</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Notícias Monitoradas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Análise Contínua</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15min</span>
+                    <span class="stat-label">Tempo Médio Insight</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Executive Summary -->
+        <section class="executive-summary reveal">
+            <div class="summary-content">
+                <h2>⚡ Resumo Executivo Estratégico</h2>
+                <p>A semana fiscal apresenta dinâmica intensa com foco em três frentes críticas: (1) Operação OncoJuris que reúne Receita Federal, Polícia Civil e MP contra fraudes processuais; (2) Implementação acelerada da Reforma Tributária com impactos diretos em ICMS, IBS e CBS para 2026-2033; (3) Liberação de R$ 592 milhões em restituições de IR e créditos de ICMS de 16 Estados totalizando R$ 58,8 bilhões. Empresas devem priorizar atualização de compliance fiscal, revisão de estruturas tributárias e implementação de sistemas para IVA Dual.</p>
+            </div>
+        </section>
+
+        <!-- Section Header -->
+        <div class="section-header reveal">
+            <h2 class="section-title">Análises Tributárias Estratégicas</h2>
+            <p class="section-subtitle">Inteligência artificial aplicada ao cenário fiscal brasileiro para decisões corporativas assertivas</p>
+        </div>
+
+        <!-- News Grid -->
+        <div class="news-grid">
+            <!-- Card 1 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Compliance Fiscal</span>
+                </div>
+                <h3 class="news-title">⚖️ Operação OncoJuris: Combate Integrado a Fraudes Tributárias e Processuais</h3>
+                <p class="news-summary">Receita Federal, Polícia Civil, Ministério Público e Defensoria Pública do Mato Grosso do Sul deflagaram operação coordenada contra organização criminosa que promovia fraude processual para desvio de recursos públicos. Ação demonstra intensificação da fiscalização federal com abordagem multidisciplinar.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>A operação integra esforços de diferentes órgãos (Receita Federal, Polícia Civil, Ministério Público e Defensoria) contra práticas criminosas que envolvem: (1) fraude processual como instrumento para desvio de recursos; (2) fraude fiscal estruturada via transações simuladas; (3) lavagem de ativos obtidos ilicitamente. Demonstra evolução da estratégia de combate ao crime tributário com foco em quadrilhas organizadas.</p>
+                            <p>Implicações para compliance: Empresas devem intensificar due diligence em transações com contrapartes, especialmente em setores sensíveis, e revisar estruturas de governança para evitar envolvimento involuntário em esquemas criminosos. Recomenda-se documentação robusta de operações e fluxos de caixa para defesa em eventual fiscalização.</p>
+                            <p class="legal-base">Base legal: Lei 10.406/2002 (CC), Lei 12.846/2013 (Lei Anticorrupção), Lei 8.078/1990 (CDC), Decreto 5.045/2004 (Plano Nacional de Combate ao Lavagem de Dinheiro)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Operações coordenadas como OncoJuris sinalizam novo padrão de fiscalização fiscal com colaboração interfederativa e multidisciplinar. Empresas devem reconhecer que o risco tributário agora inclui exposição criminal de executivos e responsáveis. Aqueles com operações em MS ou com contrapartes na região enfrentam escrutínio ampliado.</p>
+                            <p><strong>Recomendação para C-Level:</strong> Revisar programas de compliance criminal e revisão de relacionamentos comerciais de alto risco. Implementar controles em Departamento Jurídico para validação de contrapartes em transações vultuosas e estabelecer protocolo de resposta rápida a notificações fiscais.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Reforma Tributária</span>
+                </div>
+                <h3 class="news-title">🔄 Fim da Substituição Tributária em SP: Impactos Críticos no ICMS</h3>
+                <p class="news-summary">Término do regime de substituição tributária em São Paulo reorganiza dinamicamente a cadeia de ICMS. Empresas do setor devem se preparar para mudanças estruturais em fluxo de caixa, gestão de créditos e conformidade fiscal durante transição para IVA Dual.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>A substituição tributária (ST) no ICMS funcionava como mecanismo de concentração de obrigação tributária no elo final da cadeia. Fim dessa prática em SP significa: (1) restauração de responsabilidade tributária distribuída entre contribuintes; (2) alteração de fluxos de crédito e débito de ICMS; (3) mudança em gestão de estoque de créditos fiscais acumulados. Transição deve considerar provisões contábeis.</p>
+                            <p>Prática anterior: ST concentrava incidência no varejista/distribuidor. Nova prática: cada elo responde por sua operação. Implicação: retenção e compensação de créditos exigem reengenharia de processos fiscais, sistemas ERP e estrutura de tributação corporativa. Prazos devem ser observados rigorosamente.</p>
+                            <p class="legal-base">Base legal: Lei Complementar 87/1996 (Lei Kandir), RICMS/SP, Convênio CONFAZ, Comunicado SEF/SP 2026</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Impacto imediato em fluxo de caixa para distribuidoras e varejistas em SP. Aqueles com operações que antes aproveitavam ST devem revisar provisões de ICMS e planejar absorção de carga tributária anterior concentrada no elo final. Requer análise de pricing e margens para viabilidade comercial.</p>
+                            <p><strong>Recomendação:</strong> CFO deve solicitar auditoria interna de créditos de ICMS retidos em regime de ST, com plano de utilização ou compensação. IT deve validar processamento correto em sistemas de faturamento e gestão fiscal. Negociação com fornecedores sobre ajustes de preço deve acontecer antes da entrada em vigor.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Política Tributária</span>
+                </div>
+                <h3 class="news-title">💰 Receita Federal Libera 415 Mil Restituições Retidas: R$ 592 Milhões em Circulação</h3>
+                <p class="news-summary">Liberação de lote residual de 415 mil restituições de Imposto de Renda com valor total de R$ 592 milhões. Ação reforça compromisso da Receita com redução de estoque de restituições e melhora fluxo de caixa de contribuintes pessoa física e jurídica.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>Lote residual de 415 mil declarantes representa processamento de restituições que ficaram pendentes em exercícios anteriores (2024-2025). Liberação ordeira indica: (1) modernização de sistemas de processamento da Receita; (2) priorização de restituições de anos anteriores que ampliam a margem fiscal dos contribuintes; (3) redução de contencioso administrativo relacionado a atrasos. Contribuintes podem consultar status em sistema e solicitar créditos retidos.</p>
+                            <p>Procedimentos: Restituições são depositadas em conta bancária do CPF/CNPJ. Pessoa física pode consultar via e-CAC (Receita Digital). Empresas devem reconciliar com registros contábeis e de caixa. Algumas restituições podem estar associadas a revisões de malha fina resolvidas ou compensações já realizadas.</p>
+                            <p class="legal-base">Base legal: Lei 9.430/1996, Instrução Normativa RFB 2.100/2022, Portaria RFB 2.026/2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Para pessoas jurídicas com restituições pendentes, essa liberação representa recuperação de caixa relevante. Empresas devem verificar se há créditos em aberto que podem ser utilizados para compensação de débitos com Receita ou outras autarquias federais, otimizando posição de caixa.</p>
+                            <p><strong>Recomendação:</strong> CFO deve solicitar ao departamento fiscal auditoria de restituições pendentes desde 2023. Cross-check com guias de pagamento e compensações já realizadas. Se houver créditos disponíveis, priorize utilização para débitos de CSLL, PIS/Cofins ou IRPJ de períodos atuais, maximizando fluxo.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Compliance Fiscal</span>
+                </div>
+                <h3 class="news-title">📊 16 Estados Acumulam R$ 58,8 Bilhões em Créditos de ICMS a Devolver</h3>
+                <p class="news-summary">Auditoria revela que dezesseis Estados brasileiros têm obrigação de devolver R$ 58,8 bilhões em créditos de ICMS a empresas. Magnitude do passivo tributário estadual exige ajustes orçamentários e abre discussão sobre viabilidade de fluxo de caixa dos Estados durante Reforma Tributária.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>Créditos de ICMS a devolver representam débito de Estados perante contribuintes que geraram direito de crédito no regime de origem (produção) ou em transações que geram crédito presumido. Estados retêm esses créditos para fins de fluxo de caixa, violando Lei Kandir. Montante de R$ 58,8 bilhões reflete acúmulo de anos de reterção indevida.</p>
+                            <p>Implicações fiscais: Empresas com créditos vultosos deverão planejar recebimento que pode ser: (1) em dinheiro (raro); (2) em títulos da dívida pública estadual; (3) via compensação com débitos de ICMS futuro. Transição para IBS complicará recuperação, pois ICMS desaparecerá em 2033. Estados enfrentarão pressão orçamentária significativa.</p>
+                            <p class="legal-base">Base legal: Lei Complementar 87/1996 (Lei Kandir), Constituição Federal Art. 155, Lei Complementar 192/2022 (Reforma Tributária)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Empresas com créditos de ICMS expressivos devem acelerar ações para recuperação antes da transição para IBS. Risco: crédito de ICMS pode ser perdido se não utilizado até 2033. Recomenda-se engajamento em tribunais de contas e ações judiciais para priorizar devolução antes de fim do regime.</p>
+                            <p><strong>Recomendação para Tesouraria:</strong> Mapeie créditos de ICMS retidos por Estado. Para aqueles com devolução oficializada, estruture recebimento em títulos públicos estaduais com rentabilidade adequada. Avalie ações judiciais junto a escritório especializado se Estado ignora obrigação de devolução. Inclua expectativa de recebimento em fluxo de caixa com cenários conservador, realista e otimista.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Regulamentação</span>
+                </div>
+                <h3 class="news-title">📋 Implementação da Reforma Tributária: Transição Acelerada em MS e Impactos Logísticos</h3>
+                <p class="news-summary">Empresários e técnicos em Mato Grosso do Sul discutem estratégias para manter Estado atrativo a investimentos após Reforma Tributária. Foco em ajustes competitivos e preparação operacional para IBS/CBS que alteram fundamentalmente estrutura de tributação estadual e fluxo de mercadorias.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>Transição para Reforma Tributária em MS envolve: (1) substituição gradual de ICMS por IBS (imposto sobre valor adicionado); (2) implementação de CBS (contribuição sobre bens e serviços) em paralelo; (3) alteração de mecanismo de crédito tributário de origem para destino; (4) impactos em logística e remessas interestaduais. Estados competem para reter receita durante transição ofertando incentivos.</p>
+                            <p>Estrutura técnica: IBS terá alíquota uniforme nacional (estimada 7,5-8,5%); CBS será federal (variável); ICMS será eliminado gradualmente. Empresas em MS com operações logísticas deverão revisar: fluxo de remessas interestaduais, crédito de ICMS acumulado, estrutura de preços para destino, conformidade EFD-PVA e e-Lalur.</p>
+                            <p class="legal-base">Base legal: Lei Complementar 192/2022, Lei Complementar 194/2022, Emenda Constitucional 132/2023, Decretos de Regulamentação em Elaboração</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Para empresas logísticas e distribuidoras em MS, Reforma oferece oportunidades de arbitragem temporal (aproveitar período de transição para otimizar posicionamento). Competição entre Estados por investimentos deve resultar em pacotes de incentivos fiscais e infraestrutura. MS está ativamente buscando reter grandes varejistas e operadores logísticos.</p>
+                            <p><strong>Recomendação para Diretoria Executiva:</strong> Se empresa planeja expansão ou mudança de base operacional em MS, negocie incentivos ICMS com autoridades estaduais antes da entrada em vigor de novo regime. Estruture investimento com subsídios de Reforma para melhorar ROI. Internamente, reengenharie supply chain para aproveitar mecanismo de destino (menor retenção de ICMS em origem).</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Reforma Tributária</span>
+                </div>
+                <h3 class="news-title">💼 Reforma Tributária e Valuation: O Novo Impacto Invisível em PMEs e Startups</h3>
+                <p class="news-summary">Reforma Tributária impacta valuation de PMEs e startups por alterar estrutura de margem operacional, fluxo de caixa e posicionamento competitivo. Investidores e gestores devem recalcular projeções financeiras considerando mudanças em carga tributária marginal e prazos de implementação.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>Valuation de PMEs/startups é afetado pela Reforma em múltiplas dimensões: (1) alteração de alíquota efetiva de impostos (IBS 7,5-8,5% vs ICMS variável 7-18%); (2) mudança de mecanismo de crédito (destino vs origem impacta fluxo de caixa); (3) implementação de CBS que amplia base tributária; (4) transição de 2026-2033 cria assimetrias competitivas entre empresas. Modelos de DCF devem incorporar cenários de carga tributária transicional.</p>
+                            <p>Para startups de e-commerce: redução de ICMS estadual pode beneficiar operações, mas CBS amplo aumentará tributação. Para PMEs tradicionais: IBS uniforme melhora previsibilidade, mas se atualmente gozam de incentivos ICMS estaduais, haverá perda relativa. Prazo de transição (até 2033) oferece janela para adaptação competitiva.</p>
+                            <p class="legal-base">Base legal: Lei Complementar 192/2022, Lei Complementar 194/2022, Guidelines BNDES para Avaliação em Contexto de Reforma</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Investidores avaliam PMEs/startups com desconto por risco regulatório elevado durante Reforma. Empresas que proativamente ajustam modelos de negócio para novo regime obtêm prêmio de avaliação. Recomenda-se que gestores incorporem Reforma em cenários de planejamento estratégico e comuniquem com investidores/credores sobre adaptação planejada.</p>
+                            <p><strong>Recomendação para CEO/CFO:</strong> Encargue equipe de Planejamento Tributário de atualizar projeções financeiras com três cenários de carga tributária (conservador: carga sobe 2-3%; realista: neutro; otimista: carga cai 1-2%). Apresente ao board análise de sensibilidade de valuation. Se empresa busca investimento ou IPO, melhore storytelling sobre preparação para Reforma.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 7 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Compliance Fiscal</span>
+                </div>
+                <h3 class="news-title">⚡ Malha Fina IR 2026: Por Que Tantos Contribuintes Caem na Rede?</h3>
+                <p class="news-summary">Análise reveladora da Receita Federal aponta que nem sempre o erro é do contribuinte ao cair na malha fina. Mudanças em sistemas e processos da Receita geraram aumento de seleções automáticas de declarações para análise. Contribuintes devem adotar postura defensiva em documentação e comprovação.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>Seleção para malha fina é feita por: (1) algoritmos de análise de risco da Receita (inconsistências, deduções elevadas, renda anômala); (2) batimento com dados de terceiros (empregadores, bancos, operadoras de cartão); (3) tributação de rendimentos duplicados ou não declarados; (4) uso de pré-preenchimento incorreto de dados anteriores. Mudanças em sistemas da Receita intensificaram seleções automáticas porque algoritmos agora capturam mais inconsistências.</p>
+                            <p>Defesa: Contribuinte deve possuir documentação robusta (notas fiscais, extratos bancários, contratos de aluguel/venda, recibos de doação, etc.). Erro comum: omitir rendimentos que já foram informativos à Receita. Resposta a notificação de malha fina deve ser minuciosa e bem documentada, evitando minimalismo na explicação.</p>
+                            <p class="legal-base">Base legal: Lei 9.250/1995, Instrução Normativa RFB 1.500/2014, Portaria RFB 1.464/2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Contribuintes devem adotar postura de conformidade preventiva: manter documentação de todas as operações, revisar previamente declaração antes de enviar, validar consistência de dados informados. Se receber notificação de malha fina, procure especialista para resposta adequada. Automático reconhecimento de erro pode prejudicar futuros negócios (concessões, crédito público).</p>
+                            <p><strong>Recomendação para Contribuintes PF/PJ:</strong> Mantenha pasta digital com documentação de suporte (extratos, notas, contratos) organizada por tipo de renda. Revise declaração com especialista antes de envio. Se receber notificação, não tente resolver sozinho; contrate contador ou advogado tributarista para defesa. Tempo de resposta é crítico; não deixe vencer prazos.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 8 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Regulamentação</span>
+                </div>
+                <h3 class="news-title">📋 Nota Fiscal Eletrônica Obrigatória para Produtores Rurais: Fim do Papel em RS</h3>
+                <p class="news-summary">Rio Grande do Sul determina que produtores rurais não poderão mais emitir notas fiscais em papel a partir de maio de 2026. Transição para NF-e ou RPA-e exige modernização de infraestrutura tecnológica no agronegócio gaúcho e impõe custo de adaptação.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>Obrigatoriedade de NF-e para produtores rurais em RS elimina regime de "Recibo de Produtor" (RPA) em papel. Transição exige: (1) certificado digital (e-CPF ou e-CNPJ); (2) acesso a sistema de emissão de NF-e (próprio, webservice autorizado ou serviço de terceiros); (3) conectividade internet (crítico em zonas rurais); (4) treinamento de equipe operacional. Produtor pequeno será desafiado pela infraestrutura tecnológica.</p>
+                            <p>Mecanismo alternativo: RPA-e (Recibo de Produtor Rural Eletrônico) permite sistema simplificado com menor burocracia. Produtor deve escolher plataforma de emissão compatível com SEFAZ-RS. Prazos: Implementação gradual com período de tolerância até junho de 2026 para ajuste operacional.</p>
+                            <p class="legal-base">Base legal: Lei Complementar 87/1996, RICMS-RS, Portaria SEFAZ-RS 2026, Lei de Informatização Fiscal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Impacto em cadeia agrícola do RS é significativo. Cooperativas rurais e associações de produtores devem oferecer suporte tecnológico ou serviço de emissão centralizada. Governo RS deveria oferecer subsídios para adoção de tecnologia em pequenas propriedades, mas capacidade é limitada.</p>
+                            <p><strong>Recomendação para Produtores e Cooperativas:</strong> Escolha plataforma de emissão de NF-e confiável com suporte ao RPA-e. Obtenha certificado digital antes do prazo limite. Estabeleça fluxo operacional para emissão (quem responsável?, como validar dados?, como armazenar?). Treine equipe. Se é produtor pequeno sem IT, considere contratar serviço de terceiro especializado em agronegócio. Não ignore prazo: multas por não conformidade serão aplicadas rigorosamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 9 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Jurisprudência</span>
+                </div>
+                <h3 class="news-title">⚖️ STJ: Execução Fiscal Frustrada Pode Levar à Falência Empresarial</h3>
+                <p class="news-summary">Superior Tribunal de Justiça intensifica jurisprudência sobre execução fiscal: empresas que não cumprem obrigações tributárias podem ser levadas à falência mesmo com processo judicial pendente. Precedente reforça necessidade de gestão ativa de débitos tributários.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>STJ consolidou entendimento de que execução fiscal é instrumento ágil de cobrança administrativa que não está sujeito aos mesmos prazos processuais que execução comum. Credores tributários (Receita Federal, Estados, Municípios) têm privilégio na execução, podendo requerer falência de devedor mesmo enquanto há discussão judicial sobre débito. Decisão impede que empresa use tática dilatória via processo para postergar pagamento.</p>
+                            <p>Implicações: Débitos tributários consolidados (principal + multa + juros) não devem ser ignorados, pois execução será eficaz e rápida. Empresa deve priorizar: (1) negociação de transação tributária; (2) parcelamento administrativo; (3) ação judicial preventiva para suspender execução se há vício processual. Passividade não é estratégia defensável.</p>
+                            <p class="legal-base">Base legal: Lei 6.830/1980 (Lei de Execução Fiscal), Lei 11.101/2005 (Lei de Falência), Jurisprudência STJ Recente (2024-2026)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-block accessible-analysis">
+                        <div class="analysis-title">
+                            <span>💼</span>
+                            Impacto Estratégico
+                        </div>
+                        <div class="analysis-content">
+                            <p>Empresas com débitos tributários vultosos devem adotar postura urgente de regularização. STJ sinaliza que judiciário não será salvação para inadimplentes tributários. Credores (Receita, Estados) usarão execução fiscal agressivamente para cobrar.</p>
+                            <p><strong>Recomendação para Diretoria Executiva e Tesouraria:</strong> Mapeie todos os débitos tributários em aberto (Receita, Estados, Municípios, INSS). Priorize negociação de parcelamento ou transação para débitos altos. Se há questão jurídica legítima (erro administrativo, vício processual), contrate escritório especializado em execução fiscal para contestação rápida. Não deixe débitos crescerem com juros e multas. Inclua em planejamento de caixa a possibilidade de execução iminente e faça provisões contábeis adequadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 10 -->
+            <article class="news-card reveal">
+                <div class="news-meta">
+                    <span class="news-date">23 ABR 2026</span>
+                    <span class="news-category">Política Tributária</span>
+                </div>
+                <h3 class="news-title">🏛️ Lei Sancionada: Crédito Tributário para Comprador de Materiais Recicláveis</h3>
+                <p class="news-summary">Presidente Lula sanciona lei que garante crédito de PIS/Cofins para empresas que adquirem materiais recicláveis. Política fiscal de incentivo à economia circular amplia dedutibilidade de custos e oferece benefício tributário para operadores logísticos e indústrias que utilizam matéria-prima reciclada.</p>
+                
+                <div class="analysis-section">
+                    <div class="analysis-block technical-analysis">
+                        <div class="analysis-title">
+                            <span>🔬</span>
+                            Análise Técnica
+                        </div>
+                        <div class="analysis-content">
+                            <p>Nova lei estabelece que comprador de materiais recicláveis obtém direito ao crédito de PIS/Cofins sobre o valor de aquisição. Mecanismo: (1) comprador deduz de sua receita bruta a aquisição de material reciclável; (2) Dire
