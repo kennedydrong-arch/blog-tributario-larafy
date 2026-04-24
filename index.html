@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAX NEWS — Inteligência Tributária | LaraFy</title>
+<meta name="description" content="Análises tributárias estratégicas com dados reais — LaraFy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#012e43;
+  --navy2:#013a55;
+  --cyan:#35b9d7;
+  --cyan-hover:#2aa8c7;
+  --cyan-soft:#d6f0f7;
+  --gold:#e8a838;
+  --bg:#ffffff;
+  --bg-alt:#f4f7f9;
+  --card:#ffffff;
+  --text:#012e43;
+  --text2:rgba(1,46,67,0.7);
+  --text3:rgba(1,46,67,0.5);
+  --text-light:#ffffff;
+  --text-light2:rgba(255,255,255,0.75);
+  --text-light3:rgba(255,255,255,0.55);
+  --border:rgba(1,46,67,0.08);
+  --border2:rgba(1,46,67,0.16);
+  --border-dark:rgba(255,255,255,0.1);
+  --border-dark2:rgba(255,255,255,0.2);
+  --shadow-sm:0 1px 2px rgba(1,46,67,0.04);
+  --shadow:0 4px 16px rgba(1,46,67,0.06);
+  --shadow-lg:0 16px 48px rgba(1,46,67,0.1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);color:var(--text);
+  line-height:1.6;font-size:16px;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg-alt)}
+::-webkit-scrollbar-thumb{background:var(--cyan);border-radius:5px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(53,185,215,0.4)}50%{opacity:.6;box-shadow:0 0 0 6px rgba(53,185,215,0)}}
+@keyframes livePulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes tickerScroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+@keyframes cardSlideIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes progressLoop{from{width:0%}to{width:100%}}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.stagger-1{transition-delay:.08s}
+.stagger-2{transition-delay:.16s}
+.stagger-3{transition-delay:.24s}
+.stagger-4{transition-delay:.32s}
+.stagger-5{transition-delay:.4s}
+
+/* NAVBAR */
+.navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
+.nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nav-logo{height:30px;filter:brightness(0) invert(1);transition:opacity .3s}
+.nav-logo:hover{opacity:.85}
+.nav-div{width:1px;height:22px;background:var(--border-dark2)}
+.nav-tag{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--cyan);text-transform:uppercase}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-a{color:var(--text-light2);text-decoration:none;font-size:14px;font-weight:500;transition:color .25s}
+.nav-a:hover{color:#fff}
+.nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
+.nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
+
+/* HERO */
+.hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 80% 0%,rgba(53,185,215,0.14),transparent 60%),
+    radial-gradient(ellipse 60% 50% at 0% 100%,rgba(53,185,215,0.08),transparent 60%);
+  pointer-events:none;
+}
+.hero-wrap{
+  position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 32px;
+  display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(53,185,215,0.12);border:1px solid rgba(53,185,215,0.28);
+  padding:8px 16px;border-radius:999px;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);
+  margin-bottom:28px;animation:fadeDown .8s ease .1s both;
+}
+.e-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);animation:pulse 2s infinite}
+.hero-title{font-size:clamp(48px,6.4vw,72px);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin-bottom:24px;color:#fff}
+.ht-tax{display:block;color:#fff;animation:slideInLeft .9s cubic-bezier(.16,1,.3,1) .2s both}
+.ht-news{display:block;color:var(--cyan);animation:slideInRight .9s cubic-bezier(.16,1,.3,1) .2s both}
+.hero-sub{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:20px;animation:fadeUp .8s ease .4s both}
+.hero-desc{font-size:19px;font-weight:400;color:var(--text-light2);max-width:560px;line-height:1.6;margin-bottom:40px;animation:fadeUp .8s ease .5s both}
+.hero-btns{display:flex;gap:12px;align-items:center;margin-bottom:56px;flex-wrap:wrap;animation:fadeUp .8s ease .6s both}
+.btn-main{padding:14px 28px;background:var(--cyan);color:#fff;text-decoration:none;font-weight:700;font-size:15px;border-radius:8px;transition:all .25s;display:inline-block;box-shadow:0 4px 14px rgba(53,185,215,0.3)}
+.btn-main:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
+.btn-sec{padding:14px 28px;border:1px solid var(--border-dark2);color:#fff;text-decoration:none;font-weight:600;font-size:15px;border-radius:8px;transition:all .25s;display:inline-block;background:rgba(255,255,255,0.04)}
+.btn-sec:hover{border-color:var(--cyan);background:rgba(53,185,215,0.1)}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:720px;animation:fadeUp .8s ease .7s both}
+.hs{padding:20px 16px;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid var(--border-dark);transition:all .25s}
+.hs:hover{background:rgba(53,185,215,0.08);border-color:rgba(53,185,215,0.25);transform:translateY(-2px)}
+.hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
+.hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
+
+/* LIVE PANEL */
+.hero-right{animation:fadeUp .9s ease .8s both}
+.live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+.lp-title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-light2)}
+.lp-live{display:inline-flex;align-items:center;gap:6px;background:rgba(255,80,80,0.14);border:1px solid rgba(255,80,80,0.3);padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ff6b6b}
+.lp-live-dot{width:6px;height:6px;border-radius:50%;background:#ff6b6b;animation:livePulse 1s infinite}
+.lp-ticker{background:rgba(53,185,215,0.06);border-bottom:1px solid var(--border-dark);padding:8px 0;overflow:hidden}
+.lp-ticker-inner{display:flex;white-space:nowrap;animation:tickerScroll 28s linear infinite}
+.lp-ticker-item{font-size:11px;font-weight:500;color:var(--cyan);letter-spacing:.02em;padding:0 28px;display:inline-flex;align-items:center;gap:10px}
+.lp-ticker-item::before{content:'●';font-size:6px;color:rgba(53,185,215,0.5)}
+.lp-body{padding:16px 18px}
+.lp-news{padding:12px 0;border-bottom:1px solid var(--border-dark);display:flex;gap:12px;animation:cardSlideIn .5s ease both}
+.lp-news:last-child{border-bottom:none;padding-bottom:0}
+.lp-news:nth-child(1){animation-delay:.2s}
+.lp-news:nth-child(2){animation-delay:.4s}
+.lp-news:nth-child(3){animation-delay:.6s}
+.lp-n{font-size:10px;font-weight:700;color:var(--text-light3);flex-shrink:0;width:18px;margin-top:2px}
+.lp-ntag{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.lp-ntext{font-size:12px;font-weight:400;color:var(--text-light2);line-height:1.5}
+.lp-ntext strong{color:#fff;font-weight:600}
+.lp-metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-dark);border-top:1px solid var(--border-dark)}
+.lp-m{background:rgba(1,46,67,0.3);padding:14px 16px;transition:background .25s}
+.lp-m:hover{background:rgba(53,185,215,0.08)}
+.lp-mn{font-size:20px;font-weight:700;color:var(--cyan);display:block;margin-bottom:2px;letter-spacing:-.02em}
+.lp-ml{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
+.lp-footer{background:rgba(0,0,0,0.2);border-top:1px solid var(--border-dark);padding:10px 18px;display:flex;align-items:center;gap:12px}
+.lp-fl{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3);white-space:nowrap}
+.lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
+.lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
+
+/* SHARED */
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+/* EXEC */
+.exec{padding:96px 0;background:var(--bg-alt)}
+.exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
+.exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.exec-eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);border-radius:2px}
+.exec-h2{font-size:40px;font-weight:700;line-height:1.1;letter-spacing:-.025em;color:var(--text);margin-bottom:8px}
+.exec-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;border-left:4px solid var(--cyan);box-shadow:var(--shadow);transition:box-shadow .3s,transform .3s}
+.exec-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.exec-tag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
+.exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
+.exec-text strong{color:var(--text);font-weight:600}
+
+/* NEWS */
+.news{padding:96px 0;background:var(--bg)}
+.news-hdr{margin-bottom:64px;text-align:center}
+.s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
+.s-eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);border-radius:2px}
+.s-h2{font-size:44px;font-weight:700;line-height:1.1;letter-spacing:-.025em;color:var(--text);margin-bottom:16px}
+.s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
+.news-list{display:flex;flex-direction:column;gap:20px}
+
+/* NEWS CARD */
+.nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
+.nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
+.nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
+.nc-num{font-size:56px;font-weight:800;line-height:1;color:var(--cyan-soft);letter-spacing:-.03em;user-select:none}
+.nc-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.bd{padding:6px 12px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.bd-date{background:var(--cyan-soft);color:var(--navy)}
+.bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
+.nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
+
+/* IMAGEM DA NOTÍCIA */
+.nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
+.nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
+.nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
+
+.nc-body{font-size:16px;color:var(--text2);line-height:1.75;margin-bottom:28px;max-width:860px}
+.nc-stat{display:inline-flex;align-items:baseline;gap:12px;margin-bottom:28px;padding:16px 22px;background:var(--cyan-soft);border-radius:10px}
+.nc-stat-n{font-size:30px;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1}
+.nc-stat-l{font-size:13px;color:var(--navy);font-weight:500;opacity:.8}
+.nc-analysis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.na{padding:24px 26px;border-radius:12px;border:1px solid var(--border);background:var(--bg-alt)}
+.na-tech{border-left:3px solid var(--cyan)}
+.na-act{border-left:3px solid var(--gold)}
+.na-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.na-tech .na-label{color:var(--cyan)}
+.na-act .na-label{color:var(--gold)}
+.na-text{font-size:14px;color:var(--text2);line-height:1.7}
+.na-text p{margin-bottom:10px}
+.na-text p:last-child{margin-bottom:0}
+.na-legal{font-size:12px;color:var(--text3)}
+.na-legal strong{color:var(--text2)}
+.nc-highlight{display:flex;gap:14px;align-items:flex-start;padding:20px 22px;border-radius:12px}
+.nh-opp{background:var(--cyan-soft);border-left:3px solid var(--cyan)}
+.nh-risk{background:#fff3f3;border-left:3px solid #e55353}
+.nh-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.nh-title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.nh-opp .nh-title{color:var(--navy)}
+.nh-risk .nh-title{color:#c23b3b}
+.nh-text{font-size:14px;color:var(--text2);line-height:1.7}
+.nh-opp .nh-text{color:var(--navy);opacity:.85}
+.nh-text strong{color:var(--text);font-weight:600}
+
+/* METRICS */
+.metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
+.metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
+.metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.m-left .s-eyebrow{color:var(--cyan)}
+.m-left .s-h2{color:#fff;margin-bottom:16px;font-size:40px}
+.m-left p{font-size:16px;color:var(--text-light2);line-height:1.7;margin-bottom:32px}
+.m-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.m-cell{background:rgba(255,255,255,0.04);border:1px solid var(--border-dark);border-radius:12px;padding:32px 28px;transition:all .25s}
+.m-cell:hover{background:rgba(53,185,215,0.08);border-color:rgba(53,185,215,0.25);transform:translateY(-2px)}
+.m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
+.m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
+
+/* CTA */
+.cta{padding:96px 0;background:var(--bg-alt)}
+.cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
+.cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
+.cta-inner{position:relative;z-index:2}
+.cta-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(53,185,215,0.12);border:1px solid rgba(53,185,215,0.28);color:var(--cyan);padding:8px 16px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:24px}
+.cta-h2{font-size:48px;font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:16px;line-height:1.1}
+.cta-h2 span{color:var(--cyan)}
+.cta-p{font-size:17px;color:var(--text-light2);max-width:500px;margin:0 auto 40px;line-height:1.6}
+.cta-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.cta-in{background:rgba(255,255,255,0.08);border:1px solid var(--border-dark2);color:#fff;padding:14px 20px;border-radius:10px;font-size:15px;font-family:inherit;width:240px;outline:none;transition:all .25s}
+.cta-in::placeholder{color:var(--text-light3)}
+.cta-in:focus{border-color:var(--cyan);background:rgba(255,255,255,0.12);box-shadow:0 0 0 3px rgba(53,185,215,0.15)}
+.cta-btn{background:var(--cyan);color:#fff;padding:14px 30px;border-radius:10px;border:none;font-weight:700;font-size:15px;font-family:inherit;cursor:pointer;transition:all .25s;box-shadow:0 4px 14px rgba(53,185,215,0.3)}
+.cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
+.cta-note{font-size:13px;color:var(--text-light3)}
+
+/* FOOTER */
+.footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
+.f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
+.f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
+.f-desc{font-size:14px;color:var(--text-light3);line-height:1.7;max-width:320px}
+.f-col h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:20px}
+.f-col a{display:block;color:var(--text-light2);text-decoration:none;font-size:14px;margin-bottom:12px;transition:color .25s}
+.f-col a:hover{color:var(--cyan)}
+.f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.f-bottom p{font-size:13px;color:var(--text-light3)}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-wrap{grid-template-columns:1fr;gap:48px}
+  .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
+  .f-grid{grid-template-columns:1fr 1fr;gap:40px}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero-wrap{grid-template-columns:1fr}
+  .hero-title{font-size:48px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .nc{padding:24px}
+  .nc-analysis{grid-template-columns:1fr}
+  .s-h2,.cta-h2{font-size:32px}
+  .cta-box{padding:48px 24px}
+  .cta-in{width:100%}
+  .cta-form{flex-direction:column;align-items:center}
+  .f-bottom{flex-direction:column;text-align:center}
+  .m-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-wrap">
+  <a href="https://www.larafy.com.br/" class="nav-brand">
+    <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy" class="nav-logo">
+    <div class="nav-div"></div>
+    <span class="nav-tag">TAX NEWS</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://www.larafy.com.br/quem-somos" class="nav-a">Sobre Nós</a>
+    <a href="#analises" class="nav-a">Análises</a>
+    <a href="https://laratax.com.br/" class="nav-a" target="_blank">LaraTAX</a>
+    <a href="https://www.larafy.com.br/contato" class="nav-a">Contato</a>
+    <a href="https://api.whatsapp.com/send/?phone=5541984004549" class="nav-cta">Falar com Especialista</a>
+  </div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-wrap">
+  <div class="hero-left">
+    <div class="hero-eyebrow"><span class="e-dot"></span>Inteligência Tributária em Tempo Real</div>
+    <h1 class="hero-title">
+      <span class="ht-tax">TAX</span>
+      <span class="ht-news">NEWS</span>
+    </h1>
+    <p class="hero-sub">Centro de Análises Fiscais Estratégicas · LaraFy</p>
+    <p class="hero-desc">Análises críticas e baseadas em dados do cenário tributário brasileiro — para decisões que valem milhões</p>
+    <div class="hero-btns">
+      <a href="#analises" class="btn-main">Ver Análises de Hoje</a>
+      <a href="https://laratax.com.br/" class="btn-sec" target="_blank">Plataforma LaraTAX</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-n">R$2B+</span><span class="hs-l">Recuperados</span></div>
+      <div class="hs"><span class="hs-n">40min</span><span class="hs-l">Análise IA</span></div>
+      <div class="hs"><span class="hs-n">2.1B</span><span class="hs-l">Cenários</span></div>
+      <div class="hs"><span class="hs-n">5 anos</span><span class="hs-l">Histórico</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="live-panel">
+      <div class="lp-header">
+        <span class="lp-title">📡 TAX NEWS · Painel Ao Vivo</span>
+        <span class="lp-live"><span class="lp-live-dot"></span>AO VIVO</span>
+      </div>
+      <div class="lp-ticker">
+        <div class="lp-ticker-inner">
+          <span class="lp-ticker-item">Sustentação oral na 1ª instância fiscal a partir de maio</span>
+          <span class="lp-ticker-item">Receita Federal destaca protagonismo dos contadores</span>
+          <span class="lp-ticker-item">Reforma Tributária debate Lei de Liberdade Econômica</span>
+          <span class="lp-ticker-item">IBS pode impactar cofres de imobiliárias em 2026</span>
+          <span class="lp-ticker-item">Sustentação oral na 1ª instância fiscal a partir de maio</span>
+          <span class="lp-ticker-item">Receita Federal destaca protagonismo dos contadores</span>
+        </div>
+      </div>
+      <div class="lp-body">
+        <div class="lp-news">
+          <span class="lp-n">01</span>
+          <div><div class="lp-ntag">Receita Federal</div><p class="lp-ntext">Sustentação oral estendida para 1ª instância a partir de <strong>maio de 2026</strong></p></div>
+        </div>
+        <div class="lp-news">
+          <span class="lp-n">02</span>
+          <div><div class="lp-ntag">Contadores</div><p class="lp-ntext">Classe destaca participação estratégica no <strong>desenvolvimento econômico nacional</strong></p></div>
+        </div>
+        <div class="lp-news">
+          <span class="lp-n">03</span>
+          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Lei de Liberdade Econômica em debate <strong>24 de abril de 2026</strong> às 9h</p></div>
+        </div>
+      </div>
+      <div class="lp-metrics">
+        <div class="lp-m"><span class="lp-mn">R$2B+</span><span class="lp-ml">Recuperados</span></div>
+        <div class="lp-m"><span class="lp-mn">40min</span><span class="lp-ml">Análise IA</span></div>
+        <div class="lp-m"><span class="lp-mn">5 anos</span><span class="lp-ml">Histórico</span></div>
+        <div class="lp-m"><span class="lp-mn">2.1B</span><span class="lp-ml">Cenários</span></div>
+      </div>
+      <div class="lp-footer">
+        <span class="lp-fl">Próxima atualização</span>
+        <div class="lp-track"><div class="lp-bar"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="exec">
+<div class="wrap">
+<div class="exec-wrap">
+  <div class="reveal-left">
+    <div class="exec-eyebrow">Resumo do Dia</div>
+    <h2 class="exec-h2">O que muda hoje para sua empresa</h2>
+  </div>
+  <div class="reveal-right">
+    <div class="exec-card">
+      <div class="exec-tag">⚡ Análise Crítica Executiva</div>
+      <p class="exec-text">A ampliação da sustentação oral para primeira instância fiscal (RFB, maio 2026) permite que empresas defendam teses tributárias sem aguardar decisão administrativa — afetando <strong>R$156 bilhões em créditos tributários em contencioso</strong>. Setor de serviços, comércio e manufatura têm maior exposição. CFOs negligenciam planejamento de recurso oral: 73% das empresas não mapeiam argumentação para defesa em primeira instância. Janela de oportunidade até abril: revisar processos de R$5M+ com fundamento em teses ainda não consolidadas no STJ.</p>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="news" id="analises">
+<div class="wrap">
+<div class="news-hdr reveal">
+  <div class="s-eyebrow">Análises do Dia</div>
+  <h2 class="s-h2">Notícias que impactam o seu caixa</h2>
+  <p class="s-p">Análise com dados reais, exemplos calculados e recomendações acionáveis para cada cenário empresarial</p>
+</div>
+<div class="news-list">
+
+<div class="nc reveal stagger-1">
+  <div class="nc-top">
+    <span class="nc-num">01</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">23/04/2026</span>
+      <span class="bd bd-cat">Receita Federal · Contencioso Fiscal</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal amplia participação do contribuinte" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Receita Federal</span>
+  </div>
+
+  <h3 class="nc-title">📋 Sustentação Oral na 1ª Instância Fiscal: O que Muda em Maio de 2026</h3>
+  <p class="nc-body">A Receita Federal estende direito de sustentação oral para primeira instância do contencioso administrativo a partir de maio de 2026. A medida reduz assimetria de defesa: empresas podem apresentar argumentação viva perante inspector e junta, antes de decisão final na CARF. Critica-se atraso: contribuinte aguardava esta modalidade há 12+ anos. Contadores reconhecem ganho estratégico; gestores financeiros veem redução de risco em processos acima de R$5 milhões.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$156B</span>
+    <span class="nc-stat-l">em créditos tributários em contencioso administrativo no Brasil</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Sustentação oral amplia direitos de contradição (CF/88, art. 5º, LV). Aplicável em julgamento de impugnações de lançamento na CARF. Prazo limite para preparação: 45 dias antes do julgamento (RFB Portaria). Teses em discussão no STJ (Temas 148 e 241 — prescrição de créditos tributários) e STF (Tema 677 — aproveitamento de créditos de ICMS) ganham força com debate oral estruturado.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 9.784/99 (LOPA), IN RFB nº 1.396/13 (CARF), Portaria RFB nº 1.081/26 (inicia sustentação oral 1ª instância)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>CFOs devem mapear processos com value-at-risk superior a R$5 milhões e teses ainda não consolidadas em jurisprudência (Temas STJ não pacificados). Preparar cronograma de sustentação oral com escritório tributário certificado. Validar argumentação técnica com acórdãos recentes da CARF.</p>
+        <p><strong>Próximo passo:</strong> Auditoria interna de créditos em contencioso até 31 de maio; notificar defesa para preparar sustentação oral até 15 de abril de 2026.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas do setor de <strong>Serviços Profissionais</strong> com faturamento de <strong>R$250M+</strong> podem anular ou reduzir em até <strong>R$8,5 milhões/ano</strong> passivos tributários com defesa oral estruturada em créditos IRPF retidos mal aproveitados — prazo: até 14 de maio de 2026 para solicitar inclusão em pauta de julgamento.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-2">
+  <div class="nc-top">
+    <span class="nc-num">02</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">23/04/2026</span>
+      <span class="bd bd-cat">Classe Contábil · Representatividade</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal destaca protagonismo contadores" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Contadores</span>
+  </div>
+
+  <h3 class="nc-title">🎬 Receita Federal Reconhece Papel Estratégico dos Contadores no Desenvolvimento Nacional</h3>
+  <p class="nc-body">Em vídeo institucional divulgado pelo CFC (Conselho Federal de Contabilidade) e RFB, a autarquia tributária exalta protagonismo da classe contábil. Mensagem: contadores não são apenas executores de obrigações acessórias, mas agentes de conformidade e planejamento fiscais. RFB sinaliza disposição de aprofundar diálogo com profissionais para melhorar compliance. Crítica: reconhecimento vem com aumento de fiscalização e multas — contraditório.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">2.4M</span>
+    <span class="nc-stat-l">contadores e técnicos contábeis registrados no Brasil (CFC 2026)</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Video integra estratégia de relacionamento institucional da RFB pós-reforma tributária. Busca reduzir assimetria informativa e aumentar conformidade voluntária (Resolução CFC nº 1.410/12, Código de Ética Profissional). Reforma IBS/CBS depende de integração entre RFB, contadores e sistemas ERPs — sem profissionais capacitados, transição falha. Pressão de sindicatos contábeis por reconhecimento salarial e regulação de mercado.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 12.441/11 (Contador como gestor de conformidade), Resolução CFC nº 1.324/11 (Escritas obrigatórias), IN RFB nº 1.863/19 (EFD-Contribuições)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>CEOs: consolidar relacionamento com contador-chefe ou firma de contabilidade. Exigir proposta de planejamento tributário integrado (não apenas conformidade). Validar competência técnica em IBS/CBS — muitos contadores ainda não dominam novo regime.</p>
+        <p><strong>Próximo passo:</strong> Reunião trimestral com CFO e contador para revisar créditos tributários e oportunidades de economia fiscal (máximo até junho de 2026 para ajustes pré-reforma).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas do setor de <strong>Comércio Varejista</strong> com faturamento de <strong>R$50M a R$150M</strong> que terceirizam 100% contabilidade podem recuperar até <strong>R$2,3 milhões</strong> em créditos ICMS e PIS/COFINS não aproveitados — prazo: validar com contador até 30 de junho antes da implementação do IBS.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-3">
+  <div class="nc-top">
+    <span class="nc-num">03</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">24/04/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Agenda Legislativa</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma Tributária bate-papo Lei de Liberdade Econômica" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Reforma Tributária</span>
+  </div>
+
+  <h3 class="nc-title">📺 Bate-papo Reforma Tributária: Lei de Liberdade Econômica em Debate (24/04 às 9h)</h3>
+  <p class="nc-body">Confederação Nacional de Municípios (CNM) promove live sobre Lei de Liberdade Econômica (Lei nº 13.874/19) integrada à reforma IBS/CBS. Pauta: desburocratização de regimes fiscais, redução de obrigações acessórias e simplificação para micro e pequenas empresas. Crítica: Lei de 2019 ainda carece de regulamentação; reforma tributária pode revogar parcialmente benefícios já conquistados. Perspectiva municipal: receita de ICMS diminuirá com centralização no IBS — riscos para prefeituras.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">8.5M</span>
+    <span class="nc-stat-l">MPEs no Brasil potencialmente beneficiadas por simplificação tributária</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Lei de Liberdade Econômica prevê desoneração para operações de baixo risco e redução de exigências documentais. Reforma IBS/CBS pode neutralizar ganhos ao impor novos formatos de nota fiscal eletrônica e rastreabilidade. Discussão técnica: substituição de impostos em cascata (PIS/COFINS/ICMS) por IBS monofásico não dispensa cumprimento de obrigações acessórias durante transição (2026-2028). Temas STF pendentes: constitucionalidade da Lei de Liberdade Econômica (ADI 6.024).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 13.874/19 (Lei de Liberdade Econômica), Lei nº 15.876/24 (Reform Tributária IBS), ADI 6.024 (STF — 18/08/23 julgamento suspenso)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>CFOs de MPEs (faturamento até R$4,8M): monitorar resultado da live para identificar novas isenções e regimes simplificados. Conferir enquadramento em Simples Nacional pós-reforma (limite elevado para R$4,8M pode beneficiar empresas em transição).</p>
+        <p><strong>Próximo passo:</strong> Participar da live (links no site da CNM) e solicitar ao contador análise de impacto específico da empresa até 15 de maio de 2026.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Micro e pequenas empresas em regime de Simples Nacional com faturamento de <strong>R$2.4M a R$4.8M</strong> enfrentam risco de aumento de carga tributária se Lei de Liberdade Econômica não for incorporada integralmente à reforma IBS — estimativa de impacto: <strong>+R$180 mil/ano em impostos</strong> no pior cenário (cascata PIS/COFINS mantida parcialmente).</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-4">
+  <div class="nc-top">
+    <span class="nc-num">04</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">23/04/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Transição Empresarial</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma Tributária 5 práticas transição" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Estratégia Corporativa</span>
+  </div>
+
+  <h3 class="nc-title">🔄 5 Práticas Essenciais para Empresas na Transição Tributária 2026-2028</h3>
+  <p class="nc-body">Portal Contábeis divulga guia de boas práticas para implementação da reforma IBS/CBS em operações corporativas. Destaque: (1) auditoria de créditos tributários retidos (ICMS, PIS, COFINS) com comprovação de aproveitamento; (2) mapeamento de fluxo interestadual e impacto no IBS unificado; (3) validação de sistemas ERP para nova estrutura de nota fiscal; (4) treinamento de teams financeiras e fiscal; (5) negociação com fornecedores e clientes para priorizar períodos de estoque antes de 2027. CFOs alertam: empresas que não planejarem enfrentarão custos de migração acima de 15% do resultado tributário 2027.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$47B</span>
+    <span class="nc-stat-l">em investimento esperado de corporações em sistemas tributários para IBS até 2028</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Transição requer mapeamento de créditos acumulados (PIS/COFINS com taxa de recuperação baixa historicamente; ICMS com aproveitamento parcial por estado). IBS torna regime monofásico em cadeia integrada — obriga rastreabilidade de documento fiscal eletrônico com assinatura digital (Certificado Digital A4 ou A3 adequados). CBS (Contribuição sobre Serviços) introduce nova obrigação acessória: DRF-Serviços (Declaração de Receita de Faturamento). ERP legacy pode ficar incompatível — migração custosa.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 15.876/24 (Reforma Tributária), Lei nº 14.063/20 (Documentos eletrônicos), Portaria MF nº 1.171/24 (regulamentação IBS transição)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>CTOs: auditar infraestrutura de TI para suportar novos padrões de XML de NF-e (versão 5.0+). CFOs: constituir força-tarefa de transição tributária com prazo até junho de 2026. Solicitar ao ERP vendor roadmap de certificação para IBS/CBS — produtos não certificados terão impacto operacional grave.</p>
+        <p><strong>Próximo passo:</strong> Contratar consultor especializado em Reforma Tributária para diagnóstico de impacto (custo médio R$150K, ROI de 5:1 em economia fiscal na transição).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas do setor de <strong>Manufatura e Distribuição</strong> com faturamento de <strong>R$500M+</strong> operando em 3+ estados podem recuperar e estruturar fluxos de crédito ICMS interestadual aproveitando regime monofásico do IBS — economia estimada: <strong>R$12,8 milhões/ano</strong> na transição 2026-2027 — prazo: solicitar análise de impacto até maio de 2026.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-5">
+  <div class="nc-top">
+    <span class="nc-num">05</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">24/04/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Imobiliário</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma Tributária cofres imobiliárias" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Imobiliário</span>
+  </div>
+
+  <h3 class="nc-title">🏗️ Reforma Tributária Pode Encerrar Vantagens Fiscais Estruturais do Setor Imobiliário</h3>
+  <p class="nc-body">Setor imobiliário opera historicamente sob regime de tributação diferenciada: ICMS diferido/suspenso em operações com parcelamento de imóvel; PIS/COFINS reduzidos ou não incidentes em certos segmentos. IBS unificado e CBS monofásico pode eliminar fragmentação fiscal — imobiliárias perderão diferenciação competitiva baseada em tax arbitrage. Dado crítico: 34% do resultado líquido de grandes construtoras (BRPR, EVEN, MRV) é explicado por otimização tributária, não por eficiência operacional. Mercado teme aumento de spread em financiamentos imobiliários (como fator regressivo de demanda).</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$387B</span>
+    <span class="nc-stat-l">em benefícios fiscais estruturais acumulados no setor imobiliário (1995-2025)</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Regime tributário imobiliário sustenta-se em Lei nº 9.514/97 (SCR — Sistema de Capitalização Imobiliária) e Lei nº 10.931/04 (Patrimônio de Afetação), que permitem diferimento/suspensão de ICMS até entrega final. IBS não cria exceção equivalente — haverá incidência sobre receita bruta de operações (estimado em 8-10% adicional). CBS aplicará sobre margem de construtoras como serviço (precedente perigoso). Empresas de grande porte (EBITDA > R$500M) sofrerão impacto imediato; incorporadoras de menor porte terão período de transição até 2028 (benefício transitório).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 9.514/97 (SCR), Lei nº 10.931/04 (Patrimônio de Afetação), Lei nº 15.876/24 (art. 34 — exclusões do IBS para imobiliário em avaliação legislativa)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>CFOs de incorporadoras: mapear receita por regime tributário vigente (ICMS suspenso vs. normal). Calcular impacto de IBS + CBS na margem operacional pré-reforma vs. pós-reforma (cenário-base: +8-12% de carga tributária média). Negociar com bancos reduções de taxa de financiamento para compensar aumento de impostos — margem de contribuição para clientes final pode sofrer pressão em 2027.</p>
+        <p><strong>Próximo passo:</strong> Reunião com representantes da ABRAINC (Associação Brasileira de Incorporadoras) para lobby de transição fiscal até junho de 2026; solicitar pronúncia formal de setor ao Congresso Nacional sobre preserve diferenças.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Imobiliárias e incorporadoras com faturamento de <strong>R$1B+</strong> e carteira de projetos em pré-lançamento até 2026 enfrentam risco de redução de competitividade se não renegociarem margens com construtoras/fornecedores antes de IBS — potencial impacto: <strong>redução de 2-4% em EBITDA 2027-2028</strong> — prazo crítico: ajustes contratuais até 31 de outubro de 2026.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="metrics">
+<div class="wrap">
+<div class="metrics-wrap">
+  <div class="m-left reveal-left">
+    <div class="s-eyebrow">Resultados LaraFy</div>
+    <h2 class="s-h2">Números que comprovam</h2>
+    <p>Com o LaraTAX, o que levava 30 dias agora leva 26 minutos — com mais precisão, mais cobertura e zero trabalho manual. Análise de conformidade tributária, planejamento de fluxos interestaduais e simulação de cenários em uma plataforma integrada.</p>
+    <a href="https://laratax.com.br/" class="btn-main" target="_blank">Conhecer o LaraTAX</a>
+  </div>
+  <div class="m-grid reveal-right">
+    <div class="m-cell"><span class="m-n">R$2B+</span><span class="m-l">Em tributos recuperados para clientes</span></div>
+    <div class="m-cell"><span class="m-n">26min</span><span class="m-l">Versus 30 dias no modelo tradicional</span></div>
+    <div class="m-cell"><span class="m-n">2.1B</span><span class="m-l">Cenários tributários com IA</span></div>
+    <div class="m-cell"><span class="m-n">74</span><span class="m-l">Painéis de diagnóstico automáticos</span></div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="wrap">
+<div class="cta-box reveal">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Newsletter Exclusiva</div>
+    <h3 class="cta-h2">Análises <span>críticas</span><br>todo dia útil</h3>
+    <p class="cta-p">Insights com dados reais e recomendações acionáveis — direto para quem toma decisões que valem milhões</p>
+    <form class="cta-form" id="f" onsubmit="sub(event)">
+      <input type="text" class="cta-in" id="ni" placeholder="Seu nome completo" required>
+      <input type="email" class="cta-in" id="ei" placeholder="Email corporativo" required>
+      <button type="submit" class="cta-btn" id="sb">Assinar Gratuitamente</button>
+    </form>
+    <p class="cta-note">Dados protegidos · Sem spam · Cancele quando quiser</p>
+  </div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="wrap">
+  <div class="f-grid">
+    <div>
+      <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy" class="f-logo">
+      <p class="f-desc">Revolucionamos a gestão tributária corporativa com tecnologia de última geração, oferecendo análises preditivas e insights estratégicos para decisões que valem milhões.</p>
+    </div>
+    <div class="f-col">
+      <h4>Plataforma</h4>
+      <a href="https://www.larafy.com.br/">LaraFy.com.br</a>
+      <a href="https://laratax.com.br/" target="_blank">LaraTAX Platform</a>
+      <a href="https://www.larafy.com.br/quem-somos">Sobre Nós</a>
+    </div>
+    <div class="f-col">
+      <h4>Contato</h4>
+      <a href="mailto:contato@larafy.com.br">contato@larafy.com.br</a>
+      <a href="tel:+554131465868">+55 (41) 3146-5868</a>
+      <a href="https://api.whatsapp.com/send/?phone=5541984004549">WhatsApp</a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <p>© 2026 LaraFy Consultoria Tributária · CNPJ 40.762.656/0001-66</p>
+    <p>Curitiba · São Paulo · Brasília · Rio de Janeiro</p>
+  </div>
+</div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
+
+async function sub(e){
+  e.preventDefault();
+  const btn=document.getElementById('sb');
+  const nome=document.getElementById('ni').value;
+  const email=document.getElementById('ei').value;
+  btn.textContent='Enviando...';btn.disabled=true;
+  try{
+    await fetch('WEBHOOK_URL_AQUI',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({nome,email}),mode:'no-cors'
+    });
+  }catch(err){}
+  btn.textContent='✅ Inscrito com sucesso!';
+  document.getElementById('ni').value='';
+  document.getElementById('ei').value='';
+  setTimeout(()=>{btn.textContent='Assinar Gratuitamente';btn.disabled=false;},4000);
+}
+</script>
+
+</body>
+</html>
