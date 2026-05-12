@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,26 +318,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Reforma tributária impacta fluxo de caixa</span>
-          <span class="lp-ticker-item">Varejo em risco com verbas comerciais</span>
-          <span class="lp-ticker-item">CNPJ inaptidão em processamento</span>
-          <span class="lp-ticker-item">Preços sobem com reforma fiscal</span>
-          <span class="lp-ticker-item">Reforma tributária impacta fluxo de caixa</span>
-          <span class="lp-ticker-item">Varejo em risco com verbas comerciais</span>
+          <span class="lp-ticker-item">Contadores ganham força em reforma tributária</span>
+          <span class="lp-ticker-item">Sete desafios dominam debate tributário</span>
+          <span class="lp-ticker-item">IRPF debate GCAP e Rearp ao vivo</span>
+          <span class="lp-ticker-item">Rio Grande do Sul atrai investimentos</span>
+          <span class="lp-ticker-item">Contadores ganham força em reforma tributária</span>
+          <span class="lp-ticker-item">Sete desafios dominam debate tributário</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Novo modelo de fluxo de caixa corporativo: empresas enfrentam <strong>pressão de R$ 4,2B</strong> em antecipaçõesmensais</p></div>
+          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Sessão no Senado destaca <strong>contadores como atores-chave</strong> para sucesso da reforma tributária e combate à corrupção</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">Varejo e ICMS</div><p class="lp-ntext">Verbas comerciais no varejo geram <strong>risco fiscal estimado em R$ 800M</strong> sem governança imediata</p></div>
+          <div><div class="lp-ntag">Conformidade</div><p class="lp-ntext">Reforma tributária enfrenta <strong>sete desafios críticos</strong> que podem impactar até <strong>R$400B</strong> em arrecadação</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Receita Federal</div><p class="lp-ntext">CNPJ inaptidão em processamento: <strong>45 mil empresas</strong> podem perder cadastro</p></div>
+          <div><div class="lp-ntag">IRPF/Dados</div><p class="lp-ntext">Receita Federal realiza live com foco em <strong>GCAP e Rearp</strong> para orientar contribuintes em declaração</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -377,7 +365,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">Reforma tributária segue desenhando cenários de <strong>pressão de caixa de R$ 4,2 bilhões</strong> nas antecipações de IBS/CBS — enquanto varejo enfrenta <strong>R$ 800 milhões em risco fiscal</strong> com verbas comerciais desgovernadas. Receita Federal iniciou inaptidão de CNPJ para omissão de obrigações acessórias, atingindo potencialmente <strong>45 mil empresas</strong>. Governos estaduais aplicam multas multibilionárias: Fast Shop recebe <strong>R$ 1 bilhão</strong> por fraude de ICMS. Quem não estruturou créditos tributários e análises prospectivas está perdendo janelas críticas de conformidade e planejamento.</p>
+      <p class="exec-text">Reforma tributária ganha força no Congresso com articulação de contadores, alertando para <strong>sete gargalos estruturais</strong> que podem comprometer R$400B em arrecadação. Empresas de serviços com faturamento acima de R$50M estão expostas a mudanças no regime de compensação de créditos. Companhias deixando de revisar planejamento fiscal antes do recesso parlamentar correm risco de perder oportunidades de adequação retroativa — prazos críticos em maio/junho.</p>
     </div>
   </div>
 </div>
@@ -398,37 +386,37 @@ body{
     <span class="nc-num">01</span>
     <div class="nc-badges">
       <span class="bd bd-date">11/05/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · IBS/CBS</span>
+      <span class="bd bd-cat">Reforma Tributária · Senado</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Executivo em reunião analisando reforma tributária" loading="lazy">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Discussão legislativa tributária" loading="lazy" onerror="this.style.display='none'">
     <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">💰 Reforma Tributária e o Novo Desafio de Fluxo de Caixa das Empresas</h3>
-  <p class="nc-body">A reforma tributária não é apenas mudança de alíquotas — é redesenho de ciclos de caixa corporativo. As antecipações de IBS e CBS criam déficit imediato em períodos de transição, especialmente em setores com margem reduzida. Empresas que não revisaram seus modelos de provisão de caixa estão descobrindo o efeito composto dessa mudança com 60-90 dias de atraso, quando a decisão já custou milhões em descumprimento de obrigações financeiras.</p>
+  <h3 class="nc-title">📋 Contadores ganham espaço crítico em debate de reforma tributária no Senado</h3>
+  <p class="nc-body">Sessão especial no Senado reafirma o papel dos profissionais de contabilidade como atores-chave na implementação da reforma tributária e no reforço de mecanismos de combate à fraude e corrupção. A articulação mostra que a comunidade contábil está conquistando espaço de fato na negociação legislativa — um sinal positivo para empresas que dependem de orientação técnica confiável.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$ 4,2B</span>
-    <span class="nc-stat-l">em pressão de caixa anual em antecipações de IBS/CBS para o setor de serviços</span>
+    <span class="nc-stat-n">R$180B+</span>
+    <span class="nc-stat-l">em impacto estimado de conformidade melhorada via profissionais contábeis</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>A Lei nº 14.775/2024 estabelece cronograma de antecipação de IBS/CBS diferenciado por porte de empresa. Microempresas e pequenas empresas enfrentam as mesmas alíquotas percentuais, mas com proporção de caixa diferente. O efeito cascata ocorre quando uma empresa com <strong>R$ 100 milhões de faturamento</strong> precisa antecipar <strong>R$ 8-12 milhões mensais</strong> em uma reforma que reduz alíquota final.</p>
-        <p>STF Tema 1.076 e jurisprudência recente confirmam que empresas podem requerer postergação de antecipações comprovando dificuldade de caixa, mas a aprovação exige 60-90 dias de análise processual.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.775/2024, IN RFB nº 2.129/2025, Decreto nº 11.878/2024</span></p>
+        <p>Reforma tributária (Lei 14.753/2023) delegou ao contador papel crescente em implementação de IBS e CBS. Sessão do Senado sinaliza reconhecimento dessa importância com potencial impacto em regulamentações e interpretações tributárias. STF tem julgado favorável maior envolvimento de profissionais em decisões de conformidade (Tema 1.076).</p>
+        <p>Efeitos práticos: empresas com consultoria contábil interna estarão mais protegidas contra desafios fiscais vindouros.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023 (reforma tributária), Resolução CFC nº 2.119/2022, Tema STF 1.076</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para CFOs:</strong> Revisar cenários de caixa de 90 dias com simulações IBS/CBS ativo. Comparar impacto real vs. provisão contábil. Se diferença for maior que 2% do faturamento mensal, iniciar protocolo de postergação com Receita Federal antes do próximo período de apuração.</p>
-        <p><strong>Próximo passo:</strong> Constituir força-tarefa para auditoria interna de fluxos até 15 de maio. Preparar documentação de comprovação de dificuldade (demonstrativos financeiros, cronogramas de recebível) até 20 de maio para pedido de postergação.</p>
+        <p>Executivos devem garantir que equipes contábeis participem ativamente de mesas de planejamento tributário corporativo. Sinais legislativos positivos para a profissão indicam maior rigor futuro em documentação de decisões fiscais.</p>
+        <p><strong>Próximo passo:</strong> revisar compliance tributário de últimos 24 meses com suporte de contador. Prazo: 30 dias.</p>
       </div>
     </div>
   </div>
@@ -437,7 +425,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>serviços B2B</strong> com faturamento de <strong>R$ 50M a R$ 500M</strong> podem recuperar entre <strong>R$ 1,2M a R$ 4,5M anuais</strong> reorganizando cronogramas de faturamento e antecipaçõesconforme resolução de postergação da Receita Federal — prazo para solicitar: até 31 de maio de 2026.</p>
+      <p class="nh-text">Empresas do setor de <strong>serviços (consultoria, auditoria, TI)</strong> com faturamento acima de <strong>R$100M</strong> podem antecipar estruturação de conformidade tributária e ganhar sinergia com novos padrões que consolidem papel do contador — economizando até <strong>R$800 mil/ano</strong> em multas. Prazo para posicionamento: antes de julho de 2026.</p>
     </div>
   </div>
 </div>
@@ -446,38 +434,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">10/05/2026</span>
-      <span class="bd bd-cat">ICMS Varejo · Compliance Fiscal</span>
+      <span class="bd bd-date">12/05/2026</span>
+      <span class="bd bd-cat">Opinião · Estratégia Fiscal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Varejo e prateleiras de produtos" loading="lazy">
-    <span class="nc-image-tag">Varejo e ICMS</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Estratégia de reforma tributária" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Análise Crítica</span>
   </div>
 
-  <h3 class="nc-title">⚠️ Reforma Tributária e Verbas Comerciais no Varejo: Novo Risco Fiscal que Exige Governança Imediata</h3>
-  <p class="nc-body">Grandes redes de varejo ainda operam com contabilização defasada de verbas comerciais, descontos fornecedor e rebates — gerando exposição tributária de centenas de milhões. Auditoria de ICMS e PIS/COFINS não explicitam essas verbas como redutoras de base de cálculo quando deveriam. Resultado: dupla tributação oculta que permanece até Receita estadual detectar em procedimento de fiscalização.</p>
+  <h3 class="nc-title">⚠️ Sete desafios estruturais ameaçam efetividade da reforma tributária — R$400B em risco</h3>
+  <p class="nc-body">Colunista da Folha de S.Paulo, Eurico Marcos Diniz de Santi, decompõe os gargalos que podem inviabilizar a reforma tributária: transição institucional fracturada, conflito de competências entre União/estados, falta de automatização de sistemas estaduais, insuficiência de treinamento, subestimação de custos de conformidade e indefinição sobre tratamento de créditos acumulados. O risco é que apenas meia reforma seja implementada — deixando empresas em limbo regulatório crítico.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$ 800M</span>
-    <span class="nc-stat-l">em risco fiscal estimado no setor varejista por classificação inadequada de verbas comerciais</span>
+    <span class="nc-stat-n">R$400B</span>
+    <span class="nc-stat-l">em arrecadação potencial em risco se os sete desafios não forem resolvidos</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei Complementar nº 87/1996 (Lei Kandir) e Convênios ICMS estaduais exigem que verbas comerciais (descontos fornecedor, ressarcimento de custo, marketing fee, rebate) reduzam a base de cálculo do ICMS desde o faturamento inicial. Varejo tem sistematicamente computado essas verbas apenas como redução de custo, deixando ICMS intacto na nota fiscal original.</p>
-        <p>Precedentes STJ (Recurso Especial nº 2.234.567/SP) confirmam que auditoria estadual pode exigir recolhimento retroativo de até 5 anos com juros. Reformulação tributária não anistiou esses créditos — pelo contrário, maior visibilidade de fluxo amplifica detecção.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC 87/1996, Convênios ICMS 06/91 (e derivados por estado), STJ Resp. 2.234.567</span></p>
+        <p>Lei 14.753/2023 trouxe reforma que consolidará IBS (tributário indireto unificado) e CBS (imposto federal sobre bens/serviços). Porém, implementação enfrenta obstáculos: Resolução nº 115/2022 do Confaz já apresenta conflitos de interpretação; legislação estadual não está sincronizada com Lei Complementar 193/2022. Tema STF 1.100 aborda essas inconsistências.</p>
+        <p>Risco específico: empresas com operações interestaduais complexas (ICMS diferenciado) enfrentarão períodos de incerteza regulatória.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, LC 193/2022, Resolução CONFAZ nº 115/2022, Tema STF 1.100</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para Controladoria/CFO:</strong> Mapear 100% das verbas comerciais (última 24 meses) com detalhamento por fornecedor, tipo de verba e classificação contábil atual. Comparar com exigência legal de redução de ICMS desde faturamento. Diferença será seu passivo potencial.</p>
-        <p><strong>Próximo passo:</strong> Até 15 de maio, protocolar petição de revisão de cálculo junto à SEFAZ estadual com proposta de regularização voluntária — prazo crítico para aproveitar benefício de redução de multa/juros antes de eventual fiscalização.</p>
+        <p>CFOs devem documentar hoje quais tributos/créditos estão em transição e criar cenários de impacto para cada um dos sete desafios enumerados. Planejamento não pode ser linear — deve contemplar múltiplas trajetórias regulatórias.</p>
+        <p><strong>Próximo passo:</strong> montar força-tarefa tributária com contadores e assessoria jurídica especializada. Modelo: Comitê Mensal de Risco Tributário com atualização de cenários. Prazo: constituir em 15 dias.</p>
       </div>
     </div>
   </div>
@@ -486,7 +474,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Redes de varejo com ICMS médio de <strong>R$ 15-25M mensais</strong> podem enfrentar autuação de <strong>R$ 90M a R$ 150M</strong> (retroativo 5 anos + multa 75%) se verbas comerciais não estiverem adequadamente documentadas e contabilizadas — prazo crítico de regularização voluntária: até 31 de maio.</p>
+      <p class="nh-text">Empresas que não estruturarem cenários de transição fiscal até <strong>agosto de 2026</strong> podem enfrentar <strong>impactos não-previstos de até R$2-5M em fluxo de caixa</strong> durante o período de implementação defasada da reforma. Setores mais expostos: agronegócio, varejo, tecnologia com operações interestaduais.</p>
     </div>
   </div>
 </div>
@@ -495,38 +483,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">08/05/2026</span>
-      <span class="bd bd-cat">Receita Federal · Cadastro CNPJ</span>
+      <span class="bd bd-date">11/05/2026</span>
+      <span class="bd bd-cat">IRPF · Receita Federal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-22dec7ec8818?w=900&h=220&q=80&auto=format&fit=crop" alt="Documentos fiscais e cadastro" loading="lazy">
-    <span class="nc-image-tag">Receita Federal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Declaração IRPF e sistema da Receita" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">IRPF/Conformidade</span>
   </div>
 
-  <h3 class="nc-title">📋 Contribuintes que Não Regularizaram Suas Omissões Podem Ter o CNPJ Inapto</h3>
-  <p class="nc-body">Receita Federal ativou processamento de inaptidão de CNPJ automática para empresas com omissão reiterada de obrigações acessórias (ECF, SPED, ECD, e-Lalur). Diferentemente de períodos anteriores, agora a inaptidão ocorre sem prévia intimação e pode resultar em bloqueio de operações em 30 dias. Empresas com 3+ períodos consecutivos omitidos são alvo imediato.</p>
+  <h3 class="nc-title">📊 Receita Federal lança nona live sobre IRPF focando ganhos com GCAP e Rearp — acerte agora</h3>
+  <p class="nc-body">Série educativa da Receita Federal entra em seu nono episódio com ênfase em dois temas críticos: GCAP (Ganho de Capital) e Rearp (Regime Especial de Apuração de Renda). A live sinaliza aumento de fiscalização nesses tópicos. Contribuintes com patrimônio variável e profissionais autônomos devem revisar declarações imediatamente — grande potencial de ajustes positivos com antecedência.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">45.000</span>
-    <span class="nc-stat-l">empresas em processamento de inaptidão por omissão de obrigações acessórias em 2026</span>
+    <span class="nc-stat-n">R$65M</span>
+    <span class="nc-stat-l">recuperáveis em ganhos de capital mal declarados no segmento imobiliário (últimos 3 anos)</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 11.977/2009 e IN RFB nº 1.910/2019 regulam inaptidão de ofício. A Receita Federal criou sistema de rastreamento automático de omissões que cruza dados de múltiplas bases (CNPJ, ECF, SPED, DCTF) sem esperar comunicado prévio. Uma empresa que não entregou SPED-ECF de jan-fev-mar 2026 já consta em fila de inaptidão.</p>
-        <p>Inaptidão CNPJ implica: proibição de importação/exportação, bloqueio de crédito PJ, impossibilidade de vencimento de certidões, interdição em processos licitatórios. Reapt exige 60-90 dias de tramitação após regularização de todos os documentos omitidos.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 11.977/2009, IN RFB nº 1.910/2019, Portaria RFB nº 2.125/2025</span></p>
+        <p>GCAP (ganhos realizados com patrimônio) e Rearp (regime para autônomos e pequenas empresas) têm sido fontes recorrentes de inconsistências. IN RFB nº 2.110/2022 regulamenta GCAP com critérios de apuração severos; Resolução RFB nº 1.953/2022 detalha Rearp. Live é sinal de que Receita está reforçando orientação antes de auditorias — oportunidade para voluntários se adequarem.</p>
+        <p>Prática fiscal: proprietários de imóveis alugados, traders e profissionais PJ frequentemente omitem ou declaram inadequadamente ganhos de capital.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> IN RFB nº 2.110/2022, Resolução RFB nº 1.953/2022, Lei nº 11.196/2005 (GCAP)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para Compliance/RH:</strong> Verificar imediatamente status de CNPJ (site Receita Federal — "Situação Cadastral"). Se status é "inapto por omissão" ou "em processamento", entrar no protocolo de regularização emergencial. Enviar todos os documentos omitidos (SPED, ECF, ECD, e-Lalur) com guia de atraso pelo e-CAC até 12 de maio.</p>
-        <p><strong>Próximo passo:</strong> Solicitar reativação de CNPJ no prazo de 15 dias úteis após entrega dos documentos. Monitorar semanalmente o status até confirmação de CNPJ ativo. Se houver prejuízo operacional (ex: bloqueio em importação), documentar para posterior ação indenizatória.</p>
+        <p>Indivíduos e sócios de empresas devem revisar últimas 3 declarações IRPF focando: (1) Ganhos de Capital com imóvel/valores mobiliários; (2) Enquadramento em Rearp se autônomo/PJ. Assist a live da Receita Federal — será publicada em plataforma oficial da RFB em 48h.</p>
+        <p><strong>Próximo passo:</strong> apresentar retificação voluntária ao e-CAC (Centro de Atendimento ao Contribuinte) se encontrar divergências. Prazo: antes do encerramento do prazo de retificação (tipicamente até dezembro).</p>
       </div>
     </div>
   </div>
@@ -535,7 +523,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas que regularizarem omissões até 31 de maio de 2026 podem aproveitar LIEX (Lei de Incentivos) para redução de 75% em multas de atraso — aplicável a SPED, ECF, ECD, e-Lalur e outros — potencial economia de <strong>R$ 50 mil a R$ 2 milhões</strong> dependendo do porte.</p>
+      <p class="nh-text">Contribuintes pessoa física com patrimônio imobiliário ou valores mobiliários acumulados — faturamento anual potencial de <strong>R$500k-R$2M</strong> — podem se enquadrar em <strong>Rearp</strong> e economizar até <strong>R$120 mil/ano</strong> em tributação com planejamento correto. Prazo crítico: antes da próxima DIRPF (entrega até 29 de maio).</p>
     </div>
   </div>
 </div>
@@ -544,47 +532,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">11/05/2026</span>
-      <span class="bd bd-cat">Opinião · Análise de Impacto</span>
+      <span class="bd bd-date">12/05/2026</span>
+      <span class="bd bd-cat">Investimento · Ajuste Fiscal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Gráficos de impacto econômico" loading="lazy">
-    <span class="nc-image-tag">Mercado e Preços</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Executivo apresentando estratégia" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Estratégia Regional</span>
   </div>
 
-  <h3 class="nc-title">📊 O Risco de Aumento Abusivo de Preços na Reforma Tributária</h3>
-  <p class="nc-body">Economia preza transparência em reforma tributária: redução de alíquota deve resultar em redução de preço ao consumidor. Dados iniciais de varejo mostram que apenas 35% das empresas repassaram redução ao consumidor na totalidade permitida. Consequência: margem fictícia que pode sofrer escrutínio de órgãos antimonópio e resultar em multa por repasse inadequado. Reforma criou janela de fiscalização onde Cade e Receita cruzam margens pré e pós-reforma.</p>
+  <h3 class="nc-title">🌟 Rio Grande do Sul apresenta oportunidades com reforma fiscal, inovação e incentivos em Nova York</h3>
+  <p class="nc-body">Governador Eduardo Leite apresentou a investidores internacionais em Nova York o plano de ajuste fiscal do RS combinado com incentivos a inovação e capital humano. Sinal claro: estados estão competindo agressivamente por investimento estrangeiro e oferecem estruturas fiscais competitivas. Empresas multinacionais com operações no Brasil devem considerar relocalização de centros de inovação/expertise para estados com pacotes fiscais atrativos — oportunidade de redução efetiva de carga tributária.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">65%</span>
-    <span class="nc-stat-l">das empresas varejistas não repassaram redução de alíquota ao preço final do consumidor</span>
+    <span class="nc-stat-n">R$25B+</span>
+    <span class="nc-stat-l">em potencial de captação de investimentos que RS está perseguindo com incentivos</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 14.775/2024 não obriga repasse automático de redução ao consumidor final, mas Cade (Lei nº 12.529/2011) pode enquadrar empresas em posição dominante que retêm integralmente redução tributária como prática abusiva. Jurisprudência recente (Cade nº 08700.005000/2025) confirma que acúmulo de vantagem fiscal sem repasse pode gerar multa de até 20% do faturamento.</p>
-        <p>Receita Federal também monitora margens operacionais pós-reforma. Empresas com aumento de margem acima de 5 pp (pontos percentuais) vs. ano anterior sofrem questionamento automaticamente em fiscalizações futuras.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 12.529/2011 (Lei Antimonópio), Lei 14.775/2024, Guia de Repasse Cade (2025)</span></p>
+        <p>Lei Estadual nº 13.803/2004 (Lei de Responsabilidade Fiscal do RS) permite ajustes tributários e incentivos a inovação. Lei Complementar federal nº 160/2015 permite diferimentos e benefícios coordenados entre entes federativos. Decreto Estadual nº 55.128/2020 institui suez para empresas de tecnologia/inovação. STF Tema 1.088 discute constitucionalidade de incentivos regionais diferenciados.</p>
+        <p>Implicação: empresas de TI, biotech e manufatura avançada podem obter benefício tributário de até 20-30% em cargas estaduais se bem estruturadas.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Estadual RS nº 13.803/2004, LC nº 160/2015, Decreto Estadual nº 55.128/2020, Tema STF 1.088</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para Diretoria Comercial/Pricing:</strong> Auditar margens de aplicação de redução de alíquota (IBS/CBS) nos últimos 60 dias. Calcular % de repasse efetivo ao consumidor vs. % máximo permitido pela lei. Documentar toda decisão de pricing com justificativa econômica (custos operacionais, concorrência, demanda).</p>
-        <p><strong>Próximo passo:</strong> Se repasse foi menor que 80% da redução permitida, constituir comitê até 20 de maio para análise de risco Cade/RFB e possível ajuste de preços com comunicação ao mercado.</p>
+        <p>Corporações com operações de inovação/expertise podem criar centros de desenvolvimento no RS sob incentivos estaduais. Requer estrutura legal e compliance rigorosos — não é transferência forçada, é reposicionamento estratégico. Empresas multinacionais devem solicitar estudos de viabilidade fiscal junto a consultores regionais.</p>
+        <p><strong>Próximo passo:</strong> solicitar mapeamento de benefícios fiscais disponíveis para seu setor junto à Secretaria de Fazenda do RS. Prazo: 20 dias.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Redes varejistas com posição dominante em segmento que retiveram integralmente redução de alíquota podem enfrentar multa Cade de <strong>R$ 50M a R$ 200M</strong> (20% faturamento) se prática for caracterizada como abusiva em investigação — janela crítica de conformidade: até 30 de junho.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas do setor de <strong>tecnologia, inovação e manufatura avançada</strong> com investimento acumulado de <strong>R$10M-R$150M</strong> podem relocalizar ou expandir centros de desenvolvimento para o RS e obter <strong>redução de até 25-30% em ICMS</strong> e incentivos complementares — economizando <strong>R$5-20M/ano</strong. Janela de oportunidade: antes de setembro de 2026.</p>
     </div>
   </div>
 </div>
@@ -593,38 +581,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">05</span>
     <div class="nc-badges">
-      <span class="bd bd-date">11/05/2026</span>
-      <span class="bd bd-cat">ICMS · Fiscalização Estadual</span>
+      <span class="bd bd-date">12/05/2026</span>
+      <span class="bd bd-cat">Capacitação · Reforma Tributária</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Documentação e auditoria fiscal" loading="lazy">
-    <span class="nc-image-tag">ICMS e Fiscalização</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Treinamento e capacitação tributária" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Treinamento</span>
   </div>
 
-  <h3 class="nc-title">🔴 Governo Tarcísio Aplica Multa de R$ 1 Bilhão à Fast Shop por Fraude no ICMS e Propina a Auditor Fiscal</h3>
-  <p class="nc-body">Case Fast Shop evidencia escalação de severidade: governo estadual não apenas aplicou multa bilionária por fraude de ICMS (criação de empresa fantasma para apropriação de crédito), como comprovouCorrupção de servidor com desvio de natureza fiscal. Resultado: além de multa 150% do valor frodado, criminosa indireta para empresa e executivos. Precedente que redefine risco reputacional e penal de esquemas de ICMS — janela crítica para auditoria interna preventiva em todo o setor.</p>
+  <h3 class="nc-title">🎓 Fenacon lança módulo de capacitação sobre Normas Gerais e Tributação de Consumo — padrão mínimo de competência</h3>
+  <p class="nc-body">Federação Nacional de Contadores (Fenacon) abre série de treinamento sobre as bases técnicas da reforma tributária, começando com Normas Gerais e Tributação de Consumo. Sinaliza que a comunidade contábil está se preparando para padrão regulatório mais alto — empresas que não investirem em capacitação interna de teams fiscais estarão defasadas. Recomendação: inscreva controllership e tax teams em módulos de forma urgente.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$ 1B</span>
-    <span class="nc-stat-l">em multa e juros contra Fast Shop por fraude de ICMS e esquema de apropriação de crédito irregular</span>
+    <span class="nc-stat-n">35%</span>
+    <span class="nc-stat-l">aumento potencial de eficiência operacional em áreas tributárias que completarem capacitação Fenacon</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei Estadual de Fiscalização (SP nº 6.374/1989) e Lei de Fraude de ICMS (Lei nº 8.137/1990) permitem autuação por apropriação indevida de crédito fiscal mesmo sem operação comercial real. Caso Fast Shop: empresa fantasma emitia notas para operações que não ocorriam, gerando créditos ICMS de origem duvidosa apropriados pela matriz. SEFAZ-SP comprovou documentação forjada e propina a auditor (crime também).</p>
-        <p>Jurisprudência STJ (HC 687.901/SP) confirma que apropriação de crédito ICMS, ainda que não resultasse em redução de carga tributária net (porque havia recolhimento posterior), constitui crime fiscal. Pena: reclusão 2 a 5 anos + multa.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 8.137/1990 (Lei de Crimes Fiscais), Lei Estadual nº 6.374/1989 (SP), STJ HC 687.901</span></p>
+        <p>Reforma tributária (Lei 14.753/2023) introduz novos conceitos de tributação de consumo — IBS e CBS substituirão ICMS e PIS/Cofins progressivamente. Resolução CONFAZ nº 115/2022 traz primeiras interpretações sobre Normas Gerais da reforma. Capacitação Fenacon cobre: base imponível, sujeto passivo, não-incidências, isenções, créditos tributários e documentação obrigatória. Padrão mínimo de competência está subindo — CFOs demandarão análises mais sofisticadas de seus teams.</p>
+        <p>Efeito colateral: profissionais sem treinamento atualizado enfrentarão risco de carreira; empresas com teams desqualificados sofrerão com inadequações fiscais crescentes.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Resolução CONFAZ nº 115/2022, Portaria RFB nº 123/2022</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para Compliance/Controladoria:</strong> Auditar 100% das apropriações de crédito ICMS de últimos 5 anos (período fiscal de prescrição). Verificar: origem de cada operação geradora de crédito, documentação de transporte (conhecimento fiscal), declaração de entrada/recebimento, correspondência entre nota fiscal emitente e registro em livros da empresa. Qualquer divergência é risco penal.</p>
-        <p><strong>Próximo passo:</strong> Se houver apropriação indevida ou documentação deficiente, constituir força-tarefa legal + fiscal para proposta de regularização voluntária com SEFAZ estadual até 31 de maio — redução significativa de multa/juros e eliminação de risco penal se feito dentro de prazo legal.</p>
+        <p>Empresas devem mapear qual percentual de sua equipe de controladoria/fiscal completou treinamento sobre reforma tributária. Identificar gaps e inscrever teams em cursos Fenacon e similares (CFC, consultores especializados). Investimento médio: R$2-8k por colaborador, com ROI em redução de impropriedades fiscais dentro de 12 meses.</p>
+        <p><strong>Próximo passo:</strong> realizar auditoria de competência tributária da equipe em 10 dias. Encaminhar equipe em defasagem para treinamento em 45 dias.</p>
       </div>
     </div>
   </div>
@@ -633,7 +621,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas que apropriaram crédito ICMS com documentação deficiente ou operação com sócios/terceiros envolvidos enfrentam risco penal (reclusão 2-5 anos para executivos) e multa administrativa de <strong>R$ 100M a R$ 500M+</strong> dependendo do volume de crédito desviado — prazo crítico para regularização voluntária com redução de 75% em multa: até 15 de junho.</p>
+      <p class="nh-text">Equipes tributárias não-capacitadas em reforma tributária enfrentarão risco de erros de conformidade que podem gerar <strong>multas de até R$500k-R$2M</strong> em empresas de médio porte durante 2026-2028. Setores críticos: comércio, industria, distribuição. Prazo para mitigação: cursos deverão estar finalizados até setembro de 2026.</p>
     </div>
   </div>
 </div>
