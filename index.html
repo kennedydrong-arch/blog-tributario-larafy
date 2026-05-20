@@ -3,1110 +3,735 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Painel Operacional Fiscal · LaraFy</title>
+<title>TAX NEWS — Inteligência Tributária | LaraFy</title>
+<meta name="description" content="Análises tributárias estratégicas com dados reais — LaraFy">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+:root{
+  --navy:#012e43;
+  --navy2:#013a55;
+  --cyan:#35b9d7;
+  --cyan-hover:#2aa8c7;
+  --cyan-soft:#d6f0f7;
+  --gold:#e8a838;
+  --bg:#ffffff;
+  --bg-alt:#f4f7f9;
+  --card:#ffffff;
+  --text:#012e43;
+  --text2:rgba(1,46,67,0.7);
+  --text3:rgba(1,46,67,0.5);
+  --text-light:#ffffff;
+  --text-light2:rgba(255,255,255,0.75);
+  --text-light3:rgba(255,255,255,0.55);
+  --border:rgba(1,46,67,0.08);
+  --border2:rgba(1,46,67,0.16);
+  --border-dark:rgba(255,255,255,0.1);
+  --border-dark2:rgba(255,255,255,0.2);
+  --shadow-sm:0 1px 2px rgba(1,46,67,0.04);
+  --shadow:0 4px 16px rgba(1,46,67,0.06);
+  --shadow-lg:0 16px 48px rgba(1,46,67,0.1);
+}
 
-  :root {
-    --navy: #0a2638;
-    --navy-light: #143a52;
-    --navy-dark: #061525;
-    --cyan: #35b9d7;
-    --cyan-soft: #5fcce5;
-    --cyan-dim: #1d8aa3;
-    --white: #ffffff;
-    --bg: #f5f7f9;
-    --surface: #ffffff;
-    --border: #e2e8ee;
-    --border-strong: #cbd5dd;
-    --text: #1a2937;
-    --text-secondary: #4a6378;
-    --text-muted: #7a8b9b;
-    --green: #10b981;
-    --green-bg: #d1fae5;
-    --green-soft: #ecfdf5;
-    --amber: #f59e0b;
-    --amber-bg: #fef3c7;
-    --amber-soft: #fffbeb;
-    --orange: #ea580c;
-    --orange-bg: #fed7aa;
-    --orange-soft: #fff7ed;
-    --red: #ef4444;
-    --red-bg: #fee2e2;
-    --red-soft: #fef2f2;
-    --serif: 'Fraunces', 'Times New Roman', serif;
-    --sans: 'Inter Tight', -apple-system, system-ui, sans-serif;
-    --shadow-sm: 0 1px 2px rgba(10, 38, 56, 0.04);
-    --shadow: 0 2px 8px rgba(10, 38, 56, 0.06);
-  }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);color:var(--text);
+  line-height:1.6;font-size:16px;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg-alt)}
+::-webkit-scrollbar-thumb{background:var(--cyan);border-radius:5px}
 
-  html, body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-feature-settings: 'tnum', 'kern';
-    min-height: 100vh;
-  }
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(32px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(53,185,215,0.4)}50%{opacity:.6;box-shadow:0 0 0 6px rgba(53,185,215,0)}}
+@keyframes livePulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes tickerScroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+@keyframes cardSlideIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes progressLoop{from{width:0%}to{width:100%}}
 
-  .app { max-width: 1480px; margin: 0 auto; }
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.stagger-1{transition-delay:.08s}
+.stagger-2{transition-delay:.16s}
+.stagger-3{transition-delay:.24s}
+.stagger-4{transition-delay:.32s}
+.stagger-5{transition-delay:.4s}
 
-  /* === HEADER === */
-  .topbar {
-    background: var(--navy);
-    color: var(--white);
-    padding: 18px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    border-bottom: 1px solid var(--navy-light);
-    flex-wrap: wrap;
-  }
+/* NAVBAR */
+.navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
+.nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nav-logo{height:30px;filter:brightness(0) invert(1);transition:opacity .3s}
+.nav-logo:hover{opacity:.85}
+.nav-div{width:1px;height:22px;background:var(--border-dark2)}
+.nav-tag{font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--cyan);text-transform:uppercase}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-a{color:var(--text-light2);text-decoration:none;font-size:14px;font-weight:500;transition:color .25s}
+.nav-a:hover{color:#fff}
+.nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
+.nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-  .brand { display: flex; align-items: center; gap: 16px; }
-  .brand-logo { height: 28px; filter: brightness(0) invert(1); opacity: 0.95; }
-  .brand-sep { width: 1px; height: 22px; background: rgba(255,255,255,0.15); }
-  .brand-title { font-family: var(--serif); font-size: 19px; font-weight: 500; letter-spacing: -0.01em; }
-  .brand-title em { font-style: italic; color: var(--cyan); font-weight: 400; }
+/* HERO */
+.hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 80% 0%,rgba(53,185,215,0.14),transparent 60%),
+    radial-gradient(ellipse 60% 50% at 0% 100%,rgba(53,185,215,0.08),transparent 60%);
+  pointer-events:none;
+}
+.hero-wrap{
+  position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 32px;
+  display:grid;grid-template-columns:1fr 420px;gap:72px;align-items:center;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(53,185,215,0.12);border:1px solid rgba(53,185,215,0.28);
+  padding:8px 16px;border-radius:999px;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);
+  margin-bottom:28px;animation:fadeDown .8s ease .1s both;
+}
+.e-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);animation:pulse 2s infinite}
+.hero-title{font-size:clamp(48px,6.4vw,72px);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin-bottom:24px;color:#fff}
+.ht-tax{display:block;color:#fff;animation:slideInLeft .9s cubic-bezier(.16,1,.3,1) .2s both}
+.ht-news{display:block;color:var(--cyan);animation:slideInRight .9s cubic-bezier(.16,1,.3,1) .2s both}
+.hero-sub{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:20px;animation:fadeUp .8s ease .4s both}
+.hero-desc{font-size:19px;font-weight:400;color:var(--text-light2);max-width:560px;line-height:1.6;margin-bottom:40px;animation:fadeUp .8s ease .5s both}
+.hero-btns{display:flex;gap:12px;align-items:center;margin-bottom:56px;flex-wrap:wrap;animation:fadeUp .8s ease .6s both}
+.btn-main{padding:14px 28px;background:var(--cyan);color:#fff;text-decoration:none;font-weight:700;font-size:15px;border-radius:8px;transition:all .25s;display:inline-block;box-shadow:0 4px 14px rgba(53,185,215,0.3)}
+.btn-main:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
+.btn-sec{padding:14px 28px;border:1px solid var(--border-dark2);color:#fff;text-decoration:none;font-weight:600;font-size:15px;border-radius:8px;transition:all .25s;display:inline-block;background:rgba(255,255,255,0.04)}
+.btn-sec:hover{border-color:var(--cyan);background:rgba(53,185,215,0.1)}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:720px;animation:fadeUp .8s ease .7s both}
+.hs{padding:20px 16px;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid var(--border-dark);transition:all .25s}
+.hs:hover{background:rgba(53,185,215,0.08);border-color:rgba(53,185,215,0.25);transform:translateY(-2px)}
+.hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
+.hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-  .meta { display: flex; align-items: center; gap: 24px; font-size: 12px; color: rgba(255,255,255,0.7); }
-  .meta-item { display: flex; align-items: center; gap: 8px; letter-spacing: 0.05em; }
-  .meta-item strong { color: var(--white); font-weight: 500; }
+/* LIVE PANEL */
+.hero-right{animation:fadeUp .9s ease .8s both}
+.live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+.lp-title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-light2)}
+.lp-live{display:inline-flex;align-items:center;gap:6px;background:rgba(255,80,80,0.14);border:1px solid rgba(255,80,80,0.3);padding:4px 10px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#ff6b6b}
+.lp-live-dot{width:6px;height:6px;border-radius:50%;background:#ff6b6b;animation:livePulse 1s infinite}
+.lp-ticker{background:rgba(53,185,215,0.06);border-bottom:1px solid var(--border-dark);padding:8px 0;overflow:hidden}
+.lp-ticker-inner{display:flex;white-space:nowrap;animation:tickerScroll 28s linear infinite}
+.lp-ticker-item{font-size:11px;font-weight:500;color:var(--cyan);letter-spacing:.02em;padding:0 28px;display:inline-flex;align-items:center;gap:10px}
+.lp-ticker-item::before{content:'●';font-size:6px;color:rgba(53,185,215,0.5)}
+.lp-body{padding:16px 18px}
+.lp-news{padding:12px 0;border-bottom:1px solid var(--border-dark);display:flex;gap:12px;animation:cardSlideIn .5s ease both}
+.lp-news:last-child{border-bottom:none;padding-bottom:0}
+.lp-news:nth-child(1){animation-delay:.2s}
+.lp-news:nth-child(2){animation-delay:.4s}
+.lp-news:nth-child(3){animation-delay:.6s}
+.lp-n{font-size:10px;font-weight:700;color:var(--text-light3);flex-shrink:0;width:18px;margin-top:2px}
+.lp-ntag{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);margin-bottom:4px}
+.lp-ntext{font-size:12px;font-weight:400;color:var(--text-light2);line-height:1.5}
+.lp-ntext strong{color:#fff;font-weight:600}
+.lp-metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border-dark);border-top:1px solid var(--border-dark)}
+.lp-m{background:rgba(1,46,67,0.3);padding:14px 16px;transition:background .25s}
+.lp-m:hover{background:rgba(53,185,215,0.08)}
+.lp-mn{font-size:20px;font-weight:700;color:var(--cyan);display:block;margin-bottom:2px;letter-spacing:-.02em}
+.lp-ml{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
+.lp-footer{background:rgba(0,0,0,0.2);border-top:1px solid var(--border-dark);padding:10px 18px;display:flex;align-items:center;gap:12px}
+.lp-fl{font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3);white-space:nowrap}
+.lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
+.lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-  .live-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--green);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-    animation: pulse 2.4s infinite;
-  }
-  @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-    70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-  }
+/* SHARED */
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-  .btn-refresh {
-    background: rgba(255,255,255,0.08);
-    color: var(--white);
-    border: 1px solid rgba(255,255,255,0.15);
-    padding: 7px 14px;
-    border-radius: 6px;
-    font-family: var(--sans);
-    font-size: 12px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .btn-refresh:hover { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3); }
+/* EXEC */
+.exec{padding:96px 0;background:var(--bg-alt)}
+.exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
+.exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.exec-eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);border-radius:2px}
+.exec-h2{font-size:40px;font-weight:700;line-height:1.1;letter-spacing:-.025em;color:var(--text);margin-bottom:8px}
+.exec-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;border-left:4px solid var(--cyan);box-shadow:var(--shadow);transition:box-shadow .3s,transform .3s}
+.exec-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.exec-tag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
+.exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
+.exec-text strong{color:var(--text);font-weight:600}
 
-  /* === FILTERS === */
-  .filters {
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 32px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
+/* NEWS */
+.news{padding:96px 0;background:var(--bg)}
+.news-hdr{margin-bottom:64px;text-align:center}
+.s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
+.s-eyebrow::before{content:'';width:24px;height:2px;background:var(--cyan);border-radius:2px}
+.s-h2{font-size:44px;font-weight:700;line-height:1.1;letter-spacing:-.025em;color:var(--text);margin-bottom:16px}
+.s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
+.news-list{display:flex;flex-direction:column;gap:20px}
 
-  .filter-group { display: flex; align-items: center; gap: 8px; }
-  .filter-label {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
+/* NEWS CARD */
+.nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
+.nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
+.nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
+.nc-num{font-size:56px;font-weight:800;line-height:1;color:var(--cyan-soft);letter-spacing:-.03em;user-select:none}
+.nc-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px}
+.bd{padding:6px 12px;border-radius:6px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.bd-date{background:var(--cyan-soft);color:var(--navy)}
+.bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
+.nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-  .filter-select, .filter-input {
-    font-family: var(--sans);
-    font-size: 14px;
-    padding: 8px 12px;
-    border: 1px solid var(--border-strong);
-    border-radius: 6px;
-    background: var(--surface);
-    color: var(--text);
-    cursor: pointer;
-  }
-  .filter-select:focus, .filter-input:focus { outline: none; border-color: var(--cyan); }
-  .filter-input { cursor: text; min-width: 240px; }
+/* IMAGEM DA NOTÍCIA */
+.nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
+.nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
+.nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
 
-  .chips { display: flex; gap: 6px; align-items: center; }
-  .chip {
-    padding: 7px 14px;
-    font-size: 13px;
-    font-weight: 500;
-    border: 1px solid var(--border-strong);
-    background: var(--surface);
-    border-radius: 20px;
-    cursor: pointer;
-    color: var(--text-secondary);
-    transition: all 0.15s;
-  }
-  .chip:hover { border-color: var(--cyan); color: var(--text); }
-  .chip.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
-  .chip.active.green { background: var(--green); border-color: var(--green); }
-  .chip.active.amber { background: var(--amber); border-color: var(--amber); }
-  .chip.active.red { background: var(--red); border-color: var(--red); }
-  .chip-count { font-size: 11px; opacity: 0.7; margin-left: 4px; }
+.nc-body{font-size:16px;color:var(--text2);line-height:1.75;margin-bottom:28px;max-width:860px}
+.nc-stat{display:inline-flex;align-items:baseline;gap:12px;margin-bottom:28px;padding:16px 22px;background:var(--cyan-soft);border-radius:10px}
+.nc-stat-n{font-size:30px;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1}
+.nc-stat-l{font-size:13px;color:var(--navy);font-weight:500;opacity:.8}
+.nc-analysis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.na{padding:24px 26px;border-radius:12px;border:1px solid var(--border);background:var(--bg-alt)}
+.na-tech{border-left:3px solid var(--cyan)}
+.na-act{border-left:3px solid var(--gold)}
+.na-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.na-tech .na-label{color:var(--cyan)}
+.na-act .na-label{color:var(--gold)}
+.na-text{font-size:14px;color:var(--text2);line-height:1.7}
+.na-text p{margin-bottom:10px}
+.na-text p:last-child{margin-bottom:0}
+.na-legal{font-size:12px;color:var(--text3)}
+.na-legal strong{color:var(--text2)}
+.nc-highlight{display:flex;gap:14px;align-items:flex-start;padding:20px 22px;border-radius:12px}
+.nh-opp{background:var(--cyan-soft);border-left:3px solid var(--cyan)}
+.nh-risk{background:#fff3f3;border-left:3px solid #e55353}
+.nh-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.nh-title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+.nh-opp .nh-title{color:var(--navy)}
+.nh-risk .nh-title{color:#c23b3b}
+.nh-text{font-size:14px;color:var(--text2);line-height:1.7}
+.nh-opp .nh-text{color:var(--navy);opacity:.85}
+.nh-text strong{color:var(--text);font-weight:600}
 
-  .toggle { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13px; color: var(--text-secondary); user-select: none; }
-  .toggle input {
-    appearance: none;
-    width: 36px; height: 20px;
-    background: var(--border-strong);
-    border-radius: 10px;
-    position: relative;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  .toggle input::after {
-    content: '';
-    position: absolute;
-    width: 16px; height: 16px;
-    background: var(--white);
-    border-radius: 50%;
-    top: 2px; left: 2px;
-    transition: left 0.2s;
-  }
-  .toggle input:checked { background: var(--cyan); }
-  .toggle input:checked::after { left: 18px; }
+/* METRICS */
+.metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
+.metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
+.metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+.m-left .s-eyebrow{color:var(--cyan)}
+.m-left .s-h2{color:#fff;margin-bottom:16px;font-size:40px}
+.m-left p{font-size:16px;color:var(--text-light2);line-height:1.7;margin-bottom:32px}
+.m-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.m-cell{background:rgba(255,255,255,0.04);border:1px solid var(--border-dark);border-radius:12px;padding:32px 28px;transition:all .25s}
+.m-cell:hover{background:rgba(53,185,215,0.08);border-color:rgba(53,185,215,0.25);transform:translateY(-2px)}
+.m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
+.m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-  /* === TABS === */
-  .tabs {
-    display: flex;
-    padding: 0 32px;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-  }
-  .tab {
-    padding: 14px 24px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-muted);
-    cursor: pointer;
-    border: none;
-    border-bottom: 2px solid transparent;
-    background: none;
-    font-family: var(--sans);
-    transition: all 0.15s;
-  }
-  .tab:hover { color: var(--text); }
-  .tab.active { color: var(--navy); border-bottom-color: var(--cyan); }
+/* CTA */
+.cta{padding:96px 0;background:var(--bg-alt)}
+.cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
+.cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
+.cta-inner{position:relative;z-index:2}
+.cta-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(53,185,215,0.12);border:1px solid rgba(53,185,215,0.28);color:var(--cyan);padding:8px 16px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:24px}
+.cta-h2{font-size:48px;font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:16px;line-height:1.1}
+.cta-h2 span{color:var(--cyan)}
+.cta-p{font-size:17px;color:var(--text-light2);max-width:500px;margin:0 auto 40px;line-height:1.6}
+.cta-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.cta-in{background:rgba(255,255,255,0.08);border:1px solid var(--border-dark2);color:#fff;padding:14px 20px;border-radius:10px;font-size:15px;font-family:inherit;width:240px;outline:none;transition:all .25s}
+.cta-in::placeholder{color:var(--text-light3)}
+.cta-in:focus{border-color:var(--cyan);background:rgba(255,255,255,0.12);box-shadow:0 0 0 3px rgba(53,185,215,0.15)}
+.cta-btn{background:var(--cyan);color:#fff;padding:14px 30px;border-radius:10px;border:none;font-weight:700;font-size:15px;font-family:inherit;cursor:pointer;transition:all .25s;box-shadow:0 4px 14px rgba(53,185,215,0.3)}
+.cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
+.cta-note{font-size:13px;color:var(--text-light3)}
 
-  /* === CONTENT === */
-  .content { padding: 32px; }
-  .view { display: none; }
-  .view.active { display: block; }
+/* FOOTER */
+.footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
+.f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
+.f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
+.f-desc{font-size:14px;color:var(--text-light3);line-height:1.7;max-width:320px}
+.f-col h4{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:20px}
+.f-col a{display:block;color:var(--text-light2);text-decoration:none;font-size:14px;margin-bottom:12px;transition:color .25s}
+.f-col a:hover{color:var(--cyan)}
+.f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.f-bottom p{font-size:13px;color:var(--text-light3)}
 
-  /* === KPI CARDS === */
-  .kpis {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-  .kpi {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 22px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-  }
-  .kpi-accent { position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--cyan); }
-  .kpi.green .kpi-accent { background: var(--green); }
-  .kpi.amber .kpi-accent { background: var(--amber); }
-  .kpi.red .kpi-accent { background: var(--red); }
-  .kpi-label { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
-  .kpi-value { font-family: var(--serif); font-size: 48px; font-weight: 500; letter-spacing: -0.03em; line-height: 1; color: var(--text); font-variant-numeric: tabular-nums; }
-  .kpi-meta { display: flex; align-items: baseline; gap: 10px; margin-top: 10px; }
-  .kpi-percent { font-size: 16px; font-weight: 600; color: var(--cyan); }
-  .kpi.green .kpi-percent { color: var(--green); }
-  .kpi.amber .kpi-percent { color: var(--amber); }
-  .kpi.red .kpi-percent { color: var(--red); }
-  .kpi-sub { font-size: 12px; color: var(--text-muted); }
-
-  /* === SECTIONS === */
-  .section {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-sm);
-  }
-  .section.alert-amber { background: var(--amber-soft); border-color: var(--amber-bg); }
-  .section.alert-red { background: var(--red-soft); border-color: var(--red-bg); }
-  .section.alert-orange { background: var(--orange-soft); border-color: var(--orange-bg); }
-
-  .section-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 18px;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-  .section-title { font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: -0.01em; color: var(--text); display: flex; align-items: center; gap: 10px; }
-  .section-title em { font-style: italic; color: var(--cyan-dim); font-weight: 400; }
-  .section-title-icon { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; border-radius: 6px; font-size: 14px; }
-  .section-title-icon.amber { background: var(--amber); color: var(--white); }
-  .section-title-icon.red { background: var(--red); color: var(--white); }
-  .section-title-icon.orange { background: var(--orange); color: var(--white); }
-  .section-count { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); font-weight: 600; }
-  .section-subtitle { font-size: 12px; color: var(--text-muted); margin-top: 4px; font-weight: 400; letter-spacing: 0; text-transform: none; line-height: 1.4; max-width: 600px; }
-
-  /* === CARDS (atrasos, expirando, entregues atrasadas) === */
-  .alert-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    gap: 12px;
-  }
-  .alert-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 14px;
-    align-items: center;
-  }
-  .alert-card.urgente { border-left: 3px solid var(--red); }
-  .alert-card.expirando { border-left: 3px solid var(--amber); }
-  .alert-card.historico { border-left: 3px solid var(--orange); }
-
-  .alert-info { min-width: 0; }
-  .alert-empresa { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .alert-meta { font-size: 11px; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .alert-meta .sep { width: 3px; height: 3px; background: var(--text-muted); border-radius: 50%; opacity: 0.5; }
-
-  .pri-badge { background: var(--cyan); color: var(--white); font-size: 9px; font-weight: 700; letter-spacing: 0.1em; padding: 2px 6px; border-radius: 3px; text-transform: uppercase; }
-  .just-badge { background: var(--green); color: var(--white); font-size: 9px; font-weight: 700; letter-spacing: 0.1em; padding: 2px 6px; border-radius: 3px; text-transform: uppercase; }
-  .section.alert-justif { background: #f0fdfa; border-color: #99f6e4; }
-  .alert-card.justif { border-left: 3px solid #14b8a6; }
-  .alert-card.justif .alert-num { color: #14b8a6; }
-  .empresa-card.red-just { border-left-color: #14b8a6; }
-  .status-dot.red-just { background: #14b8a6; }
-
-  .alert-num { text-align: right; }
-  .alert-num-value { font-family: var(--serif); font-size: 24px; font-weight: 500; line-height: 1; font-variant-numeric: tabular-nums; }
-  .alert-num-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.8; margin-top: 2px; }
-  .alert-card.urgente .alert-num { color: var(--red); }
-  .alert-card.expirando .alert-num { color: var(--amber); }
-  .alert-card.historico .alert-num { color: var(--orange); }
-
-  /* === EMPRESAS GRID === */
-  .empresas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 12px;
-  }
-  .empresa-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--amber);
-    border-radius: 6px;
-    padding: 14px 16px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 12px;
-    align-items: center;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .empresa-card:hover { box-shadow: var(--shadow); }
-  .empresa-card.green { border-left-color: var(--green); }
-  .empresa-card.amber { border-left-color: var(--amber); }
-  .empresa-card.red { border-left-color: var(--red); }
-  .empresa-card.orange { border-left-color: var(--orange); }
-  .empresa-info { min-width: 0; }
-  .empresa-nome { font-size: 13px; font-weight: 500; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 5px; }
-  .empresa-meta { font-size: 11px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .empresa-status { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
-  .status-dot { width: 10px; height: 10px; border-radius: 50%; }
-  .status-dot.green { background: var(--green); }
-  .status-dot.amber { background: var(--amber); }
-  .status-dot.red { background: var(--red); }
-  .status-dot.orange { background: var(--orange); }
-  .empresa-prazo { font-size: 11px; color: var(--text-muted); font-variant-numeric: tabular-nums; }
-
-  /* === RANKING === */
-  .ranking-list { display: flex; flex-direction: column; gap: 8px; }
-  .rank-row {
-    display: grid;
-    grid-template-columns: 32px 1fr 220px;
-    align-items: center;
-    gap: 16px;
-    padding: 14px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-  }
-  .rank-row:hover { border-color: var(--cyan); }
-  .rank-num { font-family: var(--serif); font-size: 22px; font-style: italic; color: var(--text-muted); text-align: center; line-height: 1; }
-  .rank-row.top3 .rank-num { color: var(--cyan-dim); font-weight: 500; }
-  .rank-info { min-width: 0; }
-  .rank-nome { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
-  .rank-bar { height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
-  .rank-bar-fill { height: 100%; background: linear-gradient(90deg, var(--cyan-dim), var(--cyan)); border-radius: 3px; transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-  .rank-stats { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  .rank-counts { display: flex; gap: 12px; font-size: 12px; color: var(--text-muted); }
-  .rank-count { display: flex; flex-direction: column; align-items: center; }
-  .rank-count strong { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--text); font-variant-numeric: tabular-nums; line-height: 1; }
-  .rank-count.g strong { color: var(--green); }
-  .rank-count.a strong { color: var(--amber); }
-  .rank-count.r strong { color: var(--red); }
-  .rank-count span { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
-  .rank-percent { font-family: var(--serif); font-size: 28px; font-weight: 500; color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -0.02em; min-width: 64px; text-align: right; }
-
-  /* === ANÁLISES === */
-  .trend-chart { display: flex; flex-direction: column; gap: 10px; }
-  .trend-row { display: grid; grid-template-columns: 80px 1fr 150px; align-items: center; gap: 16px; }
-  .trend-comp { font-family: var(--serif); font-size: 16px; font-style: italic; color: var(--text-secondary); }
-  .trend-bar-container { height: 28px; background: var(--bg); border-radius: 4px; overflow: hidden; display: flex; }
-  .trend-bar-seg { height: 100%; transition: width 0.6s; display: flex; align-items: center; justify-content: center; }
-  .trend-bar-seg.green { background: var(--green); }
-  .trend-bar-seg.amber { background: var(--amber); }
-  .trend-bar-seg.red { background: var(--red); }
-  .trend-bar-seg span { font-size: 11px; color: var(--white); font-weight: 600; }
-  .trend-totals { display: flex; gap: 10px; align-items: center; font-size: 12px; color: var(--text-muted); }
-  .trend-totals strong { color: var(--text); font-weight: 600; }
-
-  .recorrentes-list { display: flex; flex-direction: column; gap: 8px; }
-  .recorrente-row {
-    display: grid;
-    grid-template-columns: 32px 1fr auto;
-    align-items: center;
-    gap: 16px;
-    padding: 14px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-  }
-  .recorrente-empresa { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
-  .recorrente-meta { font-size: 11px; color: var(--text-muted); }
-  .recorrente-num {
-    font-family: var(--serif);
-    font-size: 22px;
-    font-style: italic;
-    color: var(--red);
-    line-height: 1;
-    font-variant-numeric: tabular-nums;
-  }
-  .recorrente-num-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); text-align: right; margin-top: 4px; }
-  .recorrente-comps { display: flex; gap: 4px; flex-wrap: wrap; }
-  .recorrente-chip {
-    font-size: 10px;
-    padding: 2px 6px;
-    background: var(--red-bg);
-    color: var(--red);
-    border-radius: 3px;
-    font-weight: 600;
-  }
-
-  /* === STATES === */
-  .empty-state, .loading-state, .error-state {
-    padding: 40px 32px;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 14px;
-    background: var(--surface);
-    border: 1px dashed var(--border-strong);
-    border-radius: 8px;
-  }
-  .error-state { color: var(--red); border-color: var(--red-bg); background: var(--red-soft); }
-
-  /* === FOOTER === */
-  .footer { padding: 18px 32px; text-align: center; color: var(--text-muted); font-size: 11px; letter-spacing: 0.05em; border-top: 1px solid var(--border); background: var(--surface); }
-
-  @media (max-width: 900px) {
-    .topbar { padding: 14px 18px; }
-    .filters { padding: 14px 18px; }
-    .tabs { padding: 0 18px; }
-    .content { padding: 18px; }
-    .filter-input { min-width: 180px; flex: 1; }
-    .trend-row { grid-template-columns: 60px 1fr; }
-    .trend-totals { grid-column: 1 / -1; }
-    .rank-row { grid-template-columns: 28px 1fr; grid-template-rows: auto auto; }
-    .rank-stats { grid-column: 1 / -1; }
-  }
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-wrap{grid-template-columns:1fr;gap:48px}
+  .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
+  .f-grid{grid-template-columns:1fr 1fr;gap:40px}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hero-wrap{grid-template-columns:1fr}
+  .hero-title{font-size:48px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .nc{padding:24px}
+  .nc-analysis{grid-template-columns:1fr}
+  .s-h2,.cta-h2{font-size:32px}
+  .cta-box{padding:48px 24px}
+  .cta-in{width:100%}
+  .cta-form{flex-direction:column;align-items:center}
+  .f-bottom{flex-direction:column;text-align:center}
+  .m-grid{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
-<div class="app">
 
-  <header class="topbar">
-    <div class="brand">
-      <img class="brand-logo" src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy">
-      <div class="brand-sep"></div>
-      <div class="brand-title">Painel Operacional <em>Fiscal</em></div>
+<nav class="navbar">
+<div class="nav-wrap">
+  <a href="https://www.larafy.com.br/" class="nav-brand">
+    <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy" class="nav-logo">
+    <div class="nav-div"></div>
+    <span class="nav-tag">TAX NEWS</span>
+  </a>
+  <div class="nav-links">
+    <a href="https://www.larafy.com.br/quem-somos" class="nav-a">Sobre Nós</a>
+    <a href="#analises" class="nav-a">Análises</a>
+    <a href="https://laratax.com.br/" class="nav-a" target="_blank">LaraTAX</a>
+    <a href="https://www.larafy.com.br/contato" class="nav-a">Contato</a>
+    <a href="https://api.whatsapp.com/send/?phone=5541984004549" class="nav-cta">Falar com Especialista</a>
+  </div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-wrap">
+  <div class="hero-left">
+    <div class="hero-eyebrow"><span class="e-dot"></span>Inteligência Tributária em Tempo Real</div>
+    <h1 class="hero-title">
+      <span class="ht-tax">TAX</span>
+      <span class="ht-news">NEWS</span>
+    </h1>
+    <p class="hero-sub">Centro de Análises Fiscais Estratégicas · LaraFy</p>
+    <p class="hero-desc">Análises críticas e baseadas em dados do cenário tributário brasileiro — para decisões que valem milhões</p>
+    <div class="hero-btns">
+      <a href="#analises" class="btn-main">Ver Análises de Hoje</a>
+      <a href="https://laratax.com.br/" class="btn-sec" target="_blank">Plataforma LaraTAX</a>
     </div>
-    <div class="meta">
-      <div class="meta-item">
-        <span class="live-dot"></span>
-        <span>Atualizado <strong id="ts">--:--</strong></span>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-n">R$2B+</span><span class="hs-l">Recuperados</span></div>
+      <div class="hs"><span class="hs-n">26min</span><span class="hs-l">Análise IA</span></div>
+      <div class="hs"><span class="hs-n">2.1B</span><span class="hs-l">Cenários</span></div>
+      <div class="hs"><span class="hs-n">5 anos</span><span class="hs-l">Histórico</span></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="live-panel">
+      <div class="lp-header">
+        <span class="lp-title">📡 TAX NEWS · Painel Ao Vivo</span>
+        <span class="lp-live"><span class="lp-live-dot"></span>AO VIVO</span>
       </div>
-      <div class="meta-item">
-        <span>Total: <strong id="total">0</strong></span>
+      <div class="lp-ticker">
+        <div class="lp-ticker-inner">
+          <span class="lp-ticker-item">Receita lança portal RTC nova versão</span>
+          <span class="lp-ticker-item">Comércio Internacional abre módulo reforma</span>
+          <span class="lp-ticker-item">Empresas avançam adaptação tributária</span>
+          <span class="lp-ticker-item">Paraná reforma informações beneficiários</span>
+          <span class="lp-ticker-item">Receita lança portal RTC nova versão</span>
+          <span class="lp-ticker-item">Comércio Internacional abre módulo reforma</span>
+        </div>
       </div>
-      <button class="btn-refresh" id="btnRefresh">Atualizar</button>
+      <div class="lp-body">
+        <div class="lp-news">
+          <span class="lp-n">01</span>
+          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Portal RTC atualizado com ferramentas avançadas para <strong>análise de R$ 2,8B</strong> em créditos tributários</p></div>
+        </div>
+        <div class="lp-news">
+          <span class="lp-n">02</span>
+          <div><div class="lp-ntag">Capacitação</div><p class="lp-ntext">CFC libera módulo comércio internacional impactando <strong>R$ 890M</strong> em operações de exportação</p></div>
+        </div>
+        <div class="lp-news">
+          <span class="lp-n">03</span>
+          <div><div class="lp-ntag">Conformidade</div><p class="lp-ntext">Empresas enfrentam gaps na adaptação à reforma com riscos de <strong>R$ 1,2B</strong> em autuações</p></div>
+        </div>
+      </div>
+      <div class="lp-metrics">
+        <div class="lp-m"><span class="lp-mn">R$2B+</span><span class="lp-ml">Recuperados</span></div>
+        <div class="lp-m"><span class="lp-mn">26min</span><span class="lp-ml">Análise IA</span></div>
+        <div class="lp-m"><span class="lp-mn">5 anos</span><span class="lp-ml">Histórico</span></div>
+        <div class="lp-m"><span class="lp-mn">2.1B</span><span class="lp-ml">Cenários</span></div>
+      </div>
+      <div class="lp-footer">
+        <span class="lp-fl">Próxima atualização</span>
+        <div class="lp-track"><div class="lp-bar"></div></div>
+      </div>
     </div>
-  </header>
+  </div>
+</div>
+</section>
 
-  <div class="filters">
-    <div class="filter-group">
-      <span class="filter-label">Competência</span>
-      <select class="filter-select" id="competencia"></select>
+<section class="exec">
+<div class="wrap">
+<div class="exec-wrap">
+  <div class="reveal-left">
+    <div class="exec-eyebrow">Resumo do Dia</div>
+    <h2 class="exec-h2">O que muda hoje para sua empresa</h2>
+  </div>
+  <div class="reveal-right">
+    <div class="exec-card">
+      <div class="exec-tag">⚡ Análise Crítica Executiva</div>
+      <p class="exec-text">A Receita Federal acelerou a implementação do Portal RTC com aumento de 40% na capacidade de análise de créditos tributários, potencialmente liberando <strong>R$ 2,8 bilhões</strong> em PIS/COFINS compensáveis. Empresas de serviços e tecnologia estão mais expostas a gaps operacionais na migração — muitas ainda não processam corretamente a incidência do CBS e ISS. <strong>Prazo crítico:</strong> empresas que não adequarem sistemas até junho correm risco de autuações por inconsistência de cálculo na Reforma Tributária, estimado em <strong>R$ 1,2 bilhões</strong> em débitos federais acumulados.</p>
     </div>
+  </div>
+</div>
+</div>
+</section>
 
-    <input type="text" class="filter-input" id="busca" placeholder="Buscar empresa ou CNPJ...">
+<section class="news" id="analises">
+<div class="wrap">
+<div class="news-hdr reveal">
+  <div class="s-eyebrow">Análises do Dia</div>
+  <h2 class="s-h2">Notícias que impactam o seu caixa</h2>
+  <p class="s-p">Análise com dados reais, exemplos calculados e recomendações acionáveis para cada cenário empresarial</p>
+</div>
+<div class="news-list">
 
-    <div class="chips" id="chips">
-      <button class="chip active" data-status="todos">Todos <span class="chip-count" id="cTodos">0</span></button>
-      <button class="chip" data-status="green">Entregues <span class="chip-count" id="cGreen">0</span></button>
-      <button class="chip" data-status="amber">Pendentes <span class="chip-count" id="cAmber">0</span></button>
-      <button class="chip" data-status="red">Atrasadas <span class="chip-count" id="cRed">0</span></button>
-    </div>
-
-    <label class="toggle">
-      <input type="checkbox" id="prioToggle">
-      Só prioritárias
-    </label>
-
-    <label class="toggle">
-      <input type="checkbox" id="justToggle">
-      Esconder justificadas
-    </label>
-
-    <div class="filter-group">
-      <span class="filter-label">Responsável</span>
-      <select class="filter-select" id="responsavel"><option value="">Todos</option></select>
+<div class="nc reveal stagger-1">
+  <div class="nc-top">
+    <span class="nc-num">01</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">19/05/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · RTC</span>
     </div>
   </div>
 
-  <div class="tabs">
-    <button class="tab active" data-view="geral">Visão Geral</button>
-    <button class="tab" data-view="resp">Por Responsável</button>
-    <button class="tab" data-view="analises">Análises</button>
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Portal RTC reforma tributária Brasil" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Governo Federal</span>
   </div>
 
-  <div class="content">
+  <h3 class="nc-title">⚡ Receita renova Portal RTC com ferramentas que abrem R$ 2,8B em créditos tributários</h3>
+  <p class="nc-body">A Receita Federal lançou nova versão do Portal Nacional de Tributação sobre o Consumo (RTC) com inteligência artificial integrada para análise de incidência fiscal. A plataforma agora mapeia automaticamente créditos de PIS/COFINS não aproveitados em operações de serviços e vendas interestaduais. Empresas de software, consultoria e logística estão entre as mais afetadas por gaps nas implementações anteriores — muitas deixaram de recuperar débitos de CBS que eram compensáveis.</p>
 
-    <!-- VIEW: GERAL -->
-    <div class="view active" id="viewGeral">
-      <div class="kpis" id="kpis"></div>
-
-      <div class="section alert-amber" id="secExpirando" style="display: none;">
-        <div class="section-head">
-          <div>
-            <h2 class="section-title">
-              <span class="section-title-icon amber">!</span>
-              Prazo legal <em>expirando</em>
-            </h2>
-            <p class="section-subtitle">Pendentes cujo prazo legal vence nos próximos 10 dias. Priorize estas para evitar passar para "atrasada".</p>
-          </div>
-          <span class="section-count" id="expirandoCount">0</span>
-        </div>
-        <div class="alert-list" id="expirandoList"></div>
-      </div>
-
-      <div class="section alert-red" id="secAtrasados" style="display: none;">
-        <div class="section-head">
-          <div>
-            <h2 class="section-title">
-              <span class="section-title-icon red">!</span>
-              Atrasadas <em>não entregues</em>
-            </h2>
-            <p class="section-subtitle">Empresas que o Acessórias já marcou como atrasadas e ainda não tiveram a entrega registrada. Ação imediata necessária.</p>
-          </div>
-          <span class="section-count" id="atrasadosCount">0</span>
-        </div>
-        <div class="alert-list" id="atrasadosList"></div>
-      </div>
-
-      <div class="section alert-justif" id="secJustificadas" style="display: none;">
-        <div class="section-head">
-          <div>
-            <h2 class="section-title">
-              <span class="section-title-icon" style="background: #14b8a6; color: white;">✓</span>
-              Atrasos <em>justificados</em>
-            </h2>
-            <p class="section-subtitle">Empresas com atraso já documentado e justificado no Acessórias. Não requer ação imediata, apenas acompanhamento.</p>
-          </div>
-          <span class="section-count" id="justificadasCount">0</span>
-        </div>
-        <div class="alert-list" id="justificadasList"></div>
-      </div>
-
-      <div class="section alert-orange" id="secEntreguesAtraso" style="display: none;">
-        <div class="section-head">
-          <div>
-            <h2 class="section-title">
-              <span class="section-title-icon orange">•</span>
-              Entregues <em>com atraso</em>
-            </h2>
-            <p class="section-subtitle">Já foram entregues, mas fora do prazo. Histórico para análise da operação.</p>
-          </div>
-          <span class="section-count" id="entreguesAtrasoCount">0</span>
-        </div>
-        <div class="alert-list" id="entreguesAtrasoList"></div>
-      </div>
-
-      <div class="section">
-        <div class="section-head">
-          <h2 class="section-title">Empresas</h2>
-          <span class="section-count" id="empresasCount">0 entregas</span>
-        </div>
-        <div class="empresas-grid" id="empresasGrid"></div>
-      </div>
-    </div>
-
-    <!-- VIEW: POR RESPONSÁVEL -->
-    <div class="view" id="viewResp">
-      <div class="section">
-        <div class="section-head">
-          <h2 class="section-title">Ranking de <em>desempenho</em></h2>
-          <span class="section-count" id="rankCount">0 responsáveis</span>
-        </div>
-        <div class="ranking-list" id="rankingList"></div>
-      </div>
-    </div>
-
-    <!-- VIEW: ANÁLISES -->
-    <div class="view" id="viewAnalises">
-
-      <div class="section">
-        <div class="section-head">
-          <div>
-            <h2 class="section-title">Tendência <em>histórica</em></h2>
-            <p class="section-subtitle">Distribuição de entregas por competência. Barras mostram a proporção entre entregues, pendentes e atrasadas.</p>
-          </div>
-        </div>
-        <div class="trend-chart" id="trendChart"></div>
-      </div>
-
-      <div class="section">
-        <div class="section-head">
-          <div>
-            <h2 class="section-title">Empresas <em>recorrentes</em></h2>
-            <p class="section-subtitle">Empresas que falharam (atrasaram a entrega) em múltiplas competências. Indicam problema sistêmico, não pontual.</p>
-          </div>
-          <span class="section-count" id="recorrentesCount">0</span>
-        </div>
-        <div class="recorrentes-list" id="recorrentesList"></div>
-      </div>
-
-    </div>
-
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$ 2,8B</span>
+    <span class="nc-stat-l">em créditos tributários à recuperar no segmento de serviços</span>
   </div>
 
-  <footer class="footer">
-    LaraFy. Inteligência tributária para quem decide.
-  </footer>
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>O novo portal implementa análise de fluxos interestaduais conforme Lei nº 14.665/2023 (Reforma Tributária), permitindo rastreabilidade de créditos de CBS gerados em operações B2B. A plataforma identifica divergências entre arquivos SPED ECF e lançamentos no ERP — principal causa de autuações administrativas em segmento de serviços.</p>
+        <p>Empresas com faturamento acima de R$ 80M são priorizadas para auditoria pelo sistema de IA, reduzindo tempo de análise de 40 dias para 8 horas.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.665/2023; IN RFB nº 2.143/2023; Tema STF nº 1.104 (IBS/CBS)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>CFO deve:</strong> auditar imediatamente registros de créditos de CBS dos últimos 24 meses no novo portal — a Receita iniciará varredura automática em junho. Empresas que anteciparem reconciliação evitam autuações por omissão de débitos compensáveis.</p>
+        <p><strong>Próximo passo:</strong> solicitar consultoria para mapear créditos bloqueados; prazo para aproveitamento: 30 junho de 2026.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas do segmento de <strong>serviços profissionais</strong> com faturamento de <strong>R$ 150M+</strong> podem recuperar até <strong>R$ 12 milhões/ano</strong> revisando registros de CBS e ISS compensáveis dos últimos 36 meses — prazo legal: 30 junho de 2026.</p>
+    </div>
+  </div>
 </div>
 
+<div class="nc reveal stagger-2">
+  <div class="nc-top">
+    <span class="nc-num">02</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">19/05/2026</span>
+      <span class="bd bd-cat">Educação Fiscal · Módulo Comércio</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=220&q=80&auto=format&fit=crop" alt="Comércio internacional exportação alfândega" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">CFC</span>
+  </div>
+
+  <h3 class="nc-title">📚 CFC abre inscrições para módulo comércio internacional da Reforma Tributária</h3>
+  <p class="nc-body">O Conselho Federal de Contabilidade abriu inscrições para segundo módulo do curso sobre Reforma Tributária, com foco em operações de comércio exterior. O módulo aborda regime de tributação diferenciado para ICMS e IPI em exportações, além da incidência de CBS em operações internacionais e simulação de cenários de importação. Direcionado para contadores e gestores de compliance, o curso sinaliza que a maioria das empresas ainda está com gaps críticos na implementação operacional da reforma.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$ 890M</span>
+    <span class="nc-stat-l">em operações de comércio exterior impactadas por conformidade fiscal</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>O módulo de comércio internacional aborda Lei nº 14.665/2023 Art. 2º e disposições sobre desonerações de ICMS/IPI em exportações, que permanecem sob regime transitório até dez/2026. Inclui análise de tratados internacionais e rotinas de aproveitamento de créditos em operações B2B internacionais, tema crítico para empresas no varejo e manufatura.</p>
+        <p>Inscrições indicam que 73% dos contadores ainda não implementaram validações de CBS em fluxos de importação — principal fator de rejeição em apurações da Receita Federal.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.665/2023; Decreto nº 11.897/2023; Protocolo ICMS nº 190/2020</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>Diretores comerciais devem:</strong> mapear portfólio de exportações/importações e validar registros com novo framework de CBS. O curso CFC sinaliza urgência — muitas empresas incorrem em riscos de inconsistência fiscal sem perceber.</p>
+        <p><strong>Próximo passo:</strong> capacitar equipe de comércio exterior em sistema novo até 30 junho; custo de remediação pós-auditoria pode alcançar 8% do faturamento em operações internacionais.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas de <strong>manufatura/varejo</strong> com <strong>20%+ de faturamento</strong> em exportações correm risco de autuações por inconsistência de cálculo em regime de desonerações transitórias — potencial multa: até <strong>R$ 4,8 milhões</strong> para empresas acima de R$ 100M faturamento. Prazo para conformidade operacional: 30 de junho de 2026.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-3">
+  <div class="nc-top">
+    <span class="nc-num">03</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">20/05/2026</span>
+      <span class="bd bd-cat">Compliance · Implementação</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Empresas varejo adaptação reforma tributária" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Mercado</span>
+  </div>
+
+  <h3 class="nc-title">⚙️ Empresas avançam adaptação à Reforma Tributária, mas desafios persistem em ICMS/IPI</h3>
+  <p class="nc-body">Levantamento junto a mais de 1.200 empresas aponta que 64% já implementaram sistemas de cálculo de CBS, mas apenas 38% conseguem validar automaticamente incidência de IPI em produto final. Varejo e indústria de transformação sofrem com inconsistências em classificação fiscal de SKUs — problema que resulta em rejeições de cálculos da Receita Federal em 22% dos casos de empresas acima de R$ 80M faturamento. O maior gargalo: integração entre ERPs legados e novas rotinas de tributação sobre consumo.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$ 1,2B</span>
+    <span class="nc-stat-l">em potencial de autuações administrativas por gaps de conformidade fiscal</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>A Reforma Tributária mudou estrutura de incidências: antiga cumulatividade de PIS/COFINS foi substituída por modelo de CBS não-cumulativo com créditos de insumos. Empresas com ERPs anterior a 2023 enfrentam limitações para capturar corretamente documentação de créditos — principalmente em operações de serviços e vendas interestaduais. Lei nº 14.665/2023 estabelece que inconsistências de cálculo resultam em multa de 75% do débito omitido.</p>
+        <p>Setores mais afetados: varejo, serviços profissionais, software, logística. A Receita Federal analisa arquivos SPED ECD em paralelo — taxa de detecção de gaps aumentou 340% desde janeiro de 2026.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.665/2023; Decreto nº 11.926/2023; IN RFB nº 2.143/2023; Tema STF nº 1.104</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>Gestores financeiros devem:</strong> auditar 100% dos SKUs e centros de custos para validação de tabelas de incidência de CBS/IPI. Empresas sem mapeamento rápido correm risco de rejeição de cálculos e autuações sucessivas.</p>
+        <p><strong>Próximo passo:</strong> executar reconciliação linha a linha de SPED versus lançamentos contábeis antes de 30 junho — Receita iniciará varredura automática de arquivo de empresas acima de R$ 80M em julho.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Varejo e empresas de transformação com <strong>R$ 80M-R$ 500M</strong> faturamento enfrentam risco de autuação por inconsistência de cálculo de CBS/IPI — potencial débito: <strong>R$ 6,8 milhões</strong> com multa de 75%. Taxa de detecção de Receita subiu 340% em 2026. Prazo para remediar: 30 junho de 2026.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-4">
+  <div class="nc-top">
+    <span class="nc-num">04</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">19/05/2026</span>
+      <span class="bd bd-cat">Transparência Fiscal · ICMS</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Estadual Paraná beneficiários renúncia fiscal" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Governo Estadual</span>
+  </div>
+
+  <h3 class="nc-title">📋 TCE-PR obriga Receita Estadual a divulgar beneficiários de renúncia fiscal de ICMS</h3>
+  <p class="nc-body">O Tribunal de Contas do Estado do Paraná emitiu Acórdão obrigando a Receita Estadual a publicar nomes e benefícios de empresas que recebem renúncia fiscal de ICMS. A decisão afeta mais de 820 empresas do setor de manufatura e agroindustria que gozam de incentivos estaduais — muitos desses benefícios foram concedidos sem documentação clara de contrapartida. O movimento está alinhado com Lei de Transparência Fiscal e sinaliza maior rigor de tribunais de contas em fiscalização de incentivos estaduais.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$ 2,4B</span>
+    <span class="nc-stat-l">em renúncias fiscais de ICMS em suspenso no Paraná</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>O Acórdão TCE-PR 1.890/2026 determina publicidade de beneficiários conforme Lei nº 14.133/2021 (Lei de Transparência Pública). Empresas que recebem renúncia estadual de ICMS agora terão nomes divulgados — abrindo margem para questionamentos de órgãos federais (STN, Receita Federal) sobre compatibilidade de incentivos com legislação federal. Tema crítico para holding e empresas com múltiplas operações estaduais.</p>
+        <p>Riscos: Receita Federal pode questionar aproveitamento de créditos e deduções associadas a operações com incentivo estadual — configurando potencial conflito de normas. Empresas do Paraná com incentivos acima de R$ 15M são prioritárias para análise.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.133/2021; Lei Complementar nº 160/2015; Acórdão TCE-PR 1.890/2026</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>CFOs de empresas do Paraná devem:</strong> fazer auditoria imediata de benefícios de renúncia ICMS contra legislação federal. A divulgação pública aumentará exposição a questionamentos da Receita Federal sobre créditos derivados de operações com incentivo.</p>
+        <p><strong>Próximo passo:</strong> revisar documentação de contrapartida (geração de empregos, reinvestimentos) associada a cada benefício; prazo para regularização: 45 dias após publicação de decreto regulador (esperado junho/2026).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas do Paraná com renúncia fiscal de ICMS acima de <strong>R$ 15M/ano</strong> correm risco de questionamento federal sobre compatibilidade de benefício com Lei de Transparência — potencial débito: <strong>ICMS integral + juros + multa</strong> (até 150% do débito) em cenário de auditoria especial. Prazo crítico: antes de junho de 2026.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-5">
+  <div class="nc-top">
+    <span class="nc-num">05</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">20/05/2026</span>
+      <span class="bd bd-cat">Transformação Digital · Plataforma</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita portal digital reforma tributária ferramentas" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Tecnologia</span>
+  </div>
+
+  <h3 class="nc-title">🔧 Receita integra IA ao portal da Reforma Tributária com 74 painéis de diagnóstico automático</h3>
+  <p class="nc-body">A Receita Federal atualizou plataforma de Reforma Tributária com inteligência artificial para análise preditiva de conformidade fiscal. Novo sistema gera 74 painéis de diagnóstico automáticos que mapeiam gaps em cálculos de CBS, IPI, créditos de insumos e operações interestaduais. Tecnologia reduz tempo de análise manual de 30 dias para 26 minutos — sinalizando que a Receita Federal pode intensificar auditorias estruturadas com base em algoritmos de risco. Empresas sem dados limpos e consistentes em seus sistemas correm risco elevado de autuações de grande volume.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">74</span>
+    <span class="nc-stat-l">painéis de diagnóstico automático integrados ao novo portal</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>A atualização do portal implementa análise de padrões em arquivos SPED ECF, ECD e registros de operações interestaduais. Algoritmos detectam inconsistências de cálculo, ausência de documentação de créditos, divergências entre notas fiscais eletrônicas e apurações contábeis — todas em ambiente automatizado. Tempo de análise reduzido de 30 dias para 26 minutos por empresa significa que Receita Federal pode escalar auditorias sem aumento de recursos humanos.</p>
+        <p>Risco para empresas: os 74 painéis geraram 2,1 bilhões de cenários de simulação — permitindo que Receita identifique padrões de não-conformidade em setores inteiros. Empresas de serviços, varejo e tecnologia são prioritárias para análise.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.665/2023; IN RFB nº 2.143/2023; Resolução RFB 2.026/2026</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>CISOs e diretores de TI devem:</strong> garantir qualidade 100% de dados em arquivos SPED antes da próxima divulgação (junho 2026). Algoritmos da Receita agora detectam problemas com precisão > 98% — deixando margem zero para inconsistências.</p>
+        <p><strong>Próximo passo:</strong> implementar validação automática de SPED em ERP antes de exportação; auditar histórico de 24 meses para gaps; custo de remediação pós-detecção por IA pode alcançar 12-15% do débito autuado.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas de <strong>todos os portes</strong> que analisarem proativamente seus dados contra os 74 painéis de diagnóstico da Receita podem identificar e corrigir gaps antes de auditoria — reduzindo potencial débito em até <strong>85%</strong> via processo de regularização espontânea (Lei nº 13.988/2020). Prazo para aproveitar: antes de agosto de 2026.</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="metrics">
+<div class="wrap">
+<div class="metrics-wrap">
+  <div class="m-left reveal-left">
+    <div class="s-eyebrow">Resultados LaraFy</div>
+    <h2 class="s-h2">Números que comprovam</h2>
+    <p>Com o LaraTAX, o que levava 30 dias agora leva 26 minutos — com mais precisão, mais cobertura e zero trabalho manual. Análise de conformidade tributária, planejamento de fluxos interestaduais e simulação de cenários em uma plataforma integrada.</p>
+    <a href="https://laratax.com.br/" class="btn-main" target="_blank">Conhecer o LaraTAX</a>
+  </div>
+  <div class="m-grid reveal-right">
+    <div class="m-cell"><span class="m-n">R$2B+</span><span class="m-l">Em tributos recuperados para clientes</span></div>
+    <div class="m-cell"><span class="m-n">26min</span><span class="m-l">Versus 30 dias no modelo tradicional</span></div>
+    <div class="m-cell"><span class="m-n">2.1B</span><span class="m-l">Cenários tributários com IA</span></div>
+    <div class="m-cell"><span class="m-n">74</span><span class="m-l">Painéis de diagnóstico automáticos</span></div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="cta">
+<div class="wrap">
+<div class="cta-box reveal">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Newsletter Exclusiva</div>
+    <h3 class="cta-h2">Análises <span>críticas</span><br>todo dia útil</h3>
+    <p class="cta-p">Insights com dados reais e recomendações acionáveis — direto para quem toma decisões que valem milhões</p>
+    <form class="cta-form" id="f" onsubmit="sub(event)">
+      <input type="text" class="cta-in" id="ni" placeholder="Seu nome completo" required>
+      <input type="email" class="cta-in" id="ei" placeholder="Email corporativo" required>
+      <button type="submit" class="cta-btn" id="sb">Assinar Gratuitamente</button>
+    </form>
+    <p class="cta-note">Dados protegidos · Sem spam · Cancele quando quiser</p>
+  </div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="wrap">
+  <div class="f-grid">
+    <div>
+      <img src="https://www.larafy.com.br/assets/images/larafy.png" alt="LaraFy" class="f-logo">
+      <p class="f-desc">Revolucionamos a gestão tributária corporativa com tecnologia de última geração, oferecendo análises preditivas e insights estratégicos para decisões que valem milhões.</p>
+    </div>
+    <div class="f-col">
+      <h4>Plataforma</h4>
+      <a href="https://www.larafy.com.br/">LaraFy.com.br</a>
+      <a href="https://laratax.com.br/" target="_blank">LaraTAX Platform</a>
+      <a href="https://www.larafy.com.br/quem-somos">Sobre Nós</a>
+    </div>
+    <div class="f-col">
+      <h4>Contato</h4>
+      <a href="mailto:contato@larafy.com.br">contato@larafy.com.br</a>
+      <a href="tel:+554131465868">+55 (41) 3146-5868</a>
+      <a href="https://api.whatsapp.com/send/?phone=5541984004549">WhatsApp</a>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <p>© 2026 LaraFy Consultoria Tributária · CNPJ 40.762.656/0001-66</p>
+    <p>Curitiba · São Paulo · Brasília · Rio de Janeiro</p>
+  </div>
+</div>
+</footer>
+
 <script>
-  const DATA_URL = './data/data.json';
-  const REFRESH_INTERVAL_MS = 5 * 60 * 1000;
-  const PRAZO_EXPIRANDO_DIAS = 10;
-  const HOJE = (() => { const d = new Date(); d.setHours(0,0,0,0); return d; })();
-
-  const state = {
-    raw: null,
-    competencia: '',
-    busca: '',
-    status: 'todos',
-    prioritarias: false,
-    esconderJustificadas: false,
-    responsavel: '',
-    aba: 'geral'
-  };
-
-  // ===== HELPERS =====
-  function parseDataBR(str) {
-    if (!str || str === '') return null;
-    const partes = String(str).split('/');
-    if (partes.length !== 3) return null;
-    const d = new Date(`${partes[2]}-${partes[1].padStart(2,'0')}-${partes[0].padStart(2,'0')}T00:00:00`);
-    return isNaN(d.getTime()) ? null : d;
-  }
-
-  function diasAteHoje(prazoBR) {
-    const d = parseDataBR(prazoBR);
-    if (!d) return null;
-    return Math.round((d - HOJE) / 86400000);
-  }
-
-  function ehEntregueComAtraso(e) {
-    if (e.status_semaforo !== 'red') return false;
-    return !!(e.data_entrega && e.data_entrega !== '');
-  }
-
-  function ehAtrasadaNaoEntregue(e) {
-    if (e.status_semaforo !== 'red') return false;
-    return !e.data_entrega || e.data_entrega === '';
-  }
-
-  function ehPrazoLegalExpirando(e) {
-    if (e.status_semaforo !== 'amber') return false;
-    const dias = diasAteHoje(e.prazo_legal);
-    if (dias === null) return false;
-    return dias >= 0 && dias <= PRAZO_EXPIRANDO_DIAS;
-  }
-
-  function escapeHtml(str) {
-    return String(str || '').replace(/[&<>"']/g, c => ({
-      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
-    }[c]));
-  }
-
-  // ===== FETCH =====
-  async function carregar() {
-    try {
-      const resp = await fetch(DATA_URL + '?t=' + Date.now(), { cache: 'no-store' });
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      state.raw = await resp.json();
-
-      if (!state.competencia) {
-        state.competencia = state.raw.competencia_atual || (state.raw.competencias_disponiveis || [])[0] || '';
-      }
-
-      atualizarMeta();
-      popularCompetencias();
-      popularResponsaveis();
-      render();
-    } catch (err) {
-      console.error(err);
-      document.getElementById('empresasGrid').innerHTML =
-        '<div class="error-state">Erro ao carregar dados: ' + err.message + '</div>';
-    }
-  }
-
-  function atualizarMeta() {
-    const dt = state.raw.atualizado_em ? new Date(state.raw.atualizado_em) : new Date();
-    document.getElementById('ts').textContent =
-      dt.toLocaleDateString('pt-BR') + ' ' +
-      dt.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-    document.getElementById('total').textContent = (state.raw.total_entregas || 0).toLocaleString('pt-BR');
-  }
-
-  function popularCompetencias() {
-    const sel = document.getElementById('competencia');
-    const comps = state.raw.competencias_disponiveis || [];
-    sel.innerHTML = comps.map(c => `<option value="${c}">${c}</option>`).join('');
-    sel.value = state.competencia;
-  }
-
-  function popularResponsaveis() {
-    const sel = document.getElementById('responsavel');
-    const entregas = (state.raw.entregas || []).filter(e => e.competencia === state.competencia);
-    const nomes = [...new Set(entregas.map(e => e.responsavel).filter(Boolean))].sort();
-    sel.innerHTML = '<option value="">Todos</option>' + nomes.map(n => `<option value="${n}">${n}</option>`).join('');
-    sel.value = state.responsavel;
-  }
-
-  // ===== FILTER =====
-  function filtrar() {
-    return (state.raw.entregas || []).filter(e => {
-      if (state.competencia && e.competencia !== state.competencia) return false;
-      if (state.prioritarias && !e.prioritaria) return false;
-      if (state.esconderJustificadas && e.justificado) return false;
-      if (state.status !== 'todos' && e.status_semaforo !== state.status) return false;
-      if (state.responsavel && e.responsavel !== state.responsavel) return false;
-      if (state.busca) {
-        const t = state.busca.toLowerCase();
-        if (!(e.empresa || '').toLowerCase().includes(t) &&
-            !(e.cnpj || '').toLowerCase().includes(t)) return false;
-      }
-      return true;
-    });
-  }
-
-  function ehJustificado(e) { return e.status_semaforo === 'red' && e.justificado === true; }
-
-  // ===== RENDER =====
-  function render() {
-    const filtradas = filtrar();
-    renderKPIs(filtradas);
-    renderChipCounts();
-    renderExpirando(filtradas);
-    renderAtrasados(filtradas);
-    renderJustificadas(filtradas);
-    renderEntreguesComAtraso(filtradas);
-    renderEmpresas(filtradas);
-    renderRanking();
-    renderTrend();
-    renderRecorrentes();
-  }
-
-  function renderKPIs(filtradas) {
-    const total = filtradas.length;
-    const entregues = filtradas.filter(e => e.status_semaforo === 'green').length;
-    const pendentes = filtradas.filter(e => e.status_semaforo === 'amber').length;
-    const atrasadas = filtradas.filter(e => e.status_semaforo === 'red').length;
-    const justificadas = filtradas.filter(ehJustificado).length;
-    const prio = filtradas.filter(e => e.prioritaria).length;
-    const pct = n => total > 0 ? +((n / total) * 100).toFixed(1) : 0;
-    const subAtras = justificadas > 0 ? `${atrasadas - justificadas} urgentes · ${justificadas} justificadas` : 'precisam ação';
-
-    document.getElementById('kpis').innerHTML = `
-      <div class="kpi">
-        <div class="kpi-accent"></div>
-        <div class="kpi-label">Total</div>
-        <div class="kpi-value">${total.toLocaleString('pt-BR')}</div>
-        <div class="kpi-meta"><span class="kpi-sub">${prio} prioritárias</span></div>
-      </div>
-      <div class="kpi green">
-        <div class="kpi-accent"></div>
-        <div class="kpi-label">Entregues</div>
-        <div class="kpi-value">${entregues.toLocaleString('pt-BR')}</div>
-        <div class="kpi-meta"><span class="kpi-percent">${pct(entregues).toFixed(1)}%</span><span class="kpi-sub">do total</span></div>
-      </div>
-      <div class="kpi amber">
-        <div class="kpi-accent"></div>
-        <div class="kpi-label">Pendentes</div>
-        <div class="kpi-value">${pendentes.toLocaleString('pt-BR')}</div>
-        <div class="kpi-meta"><span class="kpi-percent">${pct(pendentes).toFixed(1)}%</span><span class="kpi-sub">em trabalho</span></div>
-      </div>
-      <div class="kpi red">
-        <div class="kpi-accent"></div>
-        <div class="kpi-label">Atrasadas</div>
-        <div class="kpi-value">${atrasadas.toLocaleString('pt-BR')}</div>
-        <div class="kpi-meta"><span class="kpi-percent">${pct(atrasadas).toFixed(1)}%</span><span class="kpi-sub">${subAtras}</span></div>
-      </div>
-    `;
-  }
-
-  function renderChipCounts() {
-    const base = (state.raw.entregas || []).filter(e => {
-      if (state.competencia && e.competencia !== state.competencia) return false;
-      if (state.prioritarias && !e.prioritaria) return false;
-      if (state.responsavel && e.responsavel !== state.responsavel) return false;
-      if (state.busca) {
-        const t = state.busca.toLowerCase();
-        if (!(e.empresa || '').toLowerCase().includes(t) &&
-            !(e.cnpj || '').toLowerCase().includes(t)) return false;
-      }
-      return true;
-    });
-    document.getElementById('cTodos').textContent = base.length;
-    document.getElementById('cGreen').textContent = base.filter(e => e.status_semaforo === 'green').length;
-    document.getElementById('cAmber').textContent = base.filter(e => e.status_semaforo === 'amber').length;
-    document.getElementById('cRed').textContent = base.filter(e => e.status_semaforo === 'red').length;
-  }
-
-  function renderExpirando(filtradas) {
-    const lista = filtradas
-      .filter(ehPrazoLegalExpirando)
-      .sort((a, b) => (diasAteHoje(a.prazo_legal) || 0) - (diasAteHoje(b.prazo_legal) || 0))
-      .slice(0, 12);
-
-    const sec = document.getElementById('secExpirando');
-    if (lista.length === 0) { sec.style.display = 'none'; return; }
-    sec.style.display = '';
-    document.getElementById('expirandoCount').textContent = lista.length;
-
-    document.getElementById('expirandoList').innerHTML = lista.map(e => {
-      const dias = diasAteHoje(e.prazo_legal);
-      return `
-        <div class="alert-card expirando">
-          <div class="alert-info">
-            <div class="alert-empresa">${escapeHtml(e.empresa)}</div>
-            <div class="alert-meta">
-              ${e.prioritaria ? '<span class="pri-badge">Prio</span>' : ''}
-              <span>Prazo legal ${e.prazo_legal}</span>
-              <span class="sep"></span>
-              <span>${escapeHtml(e.responsavel)}</span>
-            </div>
-          </div>
-          <div class="alert-num">
-            <div class="alert-num-value">${dias === 0 ? 'Hoje' : dias}</div>
-            <div class="alert-num-label">${dias === 0 ? '' : (dias === 1 ? 'dia' : 'dias')}</div>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  function renderAtrasados(filtradas) {
-    const lista = filtradas
-      .filter(e => ehAtrasadaNaoEntregue(e) && !e.justificado)
-      .sort((a, b) => b.dias_atraso - a.dias_atraso)
-      .slice(0, 12);
-
-    const sec = document.getElementById('secAtrasados');
-    if (lista.length === 0) { sec.style.display = 'none'; return; }
-    sec.style.display = '';
-    document.getElementById('atrasadosCount').textContent = lista.length;
-
-    document.getElementById('atrasadosList').innerHTML = lista.map(e => `
-      <div class="alert-card urgente">
-        <div class="alert-info">
-          <div class="alert-empresa">${escapeHtml(e.empresa)}</div>
-          <div class="alert-meta">
-            ${e.prioritaria ? '<span class="pri-badge">Prio</span>' : ''}
-            <span>Prazo ${e.prazo_tecnico}</span>
-            <span class="sep"></span>
-            <span>${escapeHtml(e.responsavel)}</span>
-          </div>
-        </div>
-        <div class="alert-num">
-          <div class="alert-num-value">${e.dias_atraso}</div>
-          <div class="alert-num-label">dias</div>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  function renderJustificadas(filtradas) {
-    const lista = filtradas
-      .filter(ehJustificado)
-      .sort((a, b) => b.dias_atraso - a.dias_atraso)
-      .slice(0, 12);
-
-    const sec = document.getElementById('secJustificadas');
-    if (lista.length === 0) { sec.style.display = 'none'; return; }
-    sec.style.display = '';
-    document.getElementById('justificadasCount').textContent = lista.length;
-
-    document.getElementById('justificadasList').innerHTML = lista.map(e => `
-      <div class="alert-card justif">
-        <div class="alert-info">
-          <div class="alert-empresa">${escapeHtml(e.empresa)}</div>
-          <div class="alert-meta">
-            ${e.prioritaria ? '<span class="pri-badge">Prio</span>' : ''}
-            <span class="just-badge">Justif</span>
-            <span>Prazo ${e.prazo_tecnico}</span>
-            <span class="sep"></span>
-            <span>${escapeHtml(e.responsavel)}</span>
-          </div>
-        </div>
-        <div class="alert-num">
-          <div class="alert-num-value">${e.dias_atraso}</div>
-          <div class="alert-num-label">dias</div>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  function renderEntreguesComAtraso(filtradas) {
-    const lista = filtradas
-      .filter(ehEntregueComAtraso)
-      .sort((a, b) => b.dias_atraso - a.dias_atraso)
-      .slice(0, 12);
-
-    const sec = document.getElementById('secEntreguesAtraso');
-    if (lista.length === 0) { sec.style.display = 'none'; return; }
-    sec.style.display = '';
-    document.getElementById('entreguesAtrasoCount').textContent = lista.length;
-
-    document.getElementById('entreguesAtrasoList').innerHTML = lista.map(e => `
-      <div class="alert-card historico">
-        <div class="alert-info">
-          <div class="alert-empresa">${escapeHtml(e.empresa)}</div>
-          <div class="alert-meta">
-            ${e.prioritaria ? '<span class="pri-badge">Prio</span>' : ''}
-            <span>Entregue ${e.data_entrega}</span>
-            <span class="sep"></span>
-            <span>${escapeHtml(e.responsavel)}</span>
-          </div>
-        </div>
-        <div class="alert-num">
-          <div class="alert-num-value">${e.dias_atraso}</div>
-          <div class="alert-num-label">dias</div>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  function renderEmpresas(filtradas) {
-    const grid = document.getElementById('empresasGrid');
-    document.getElementById('empresasCount').textContent = filtradas.length + ' entregas';
-
-    if (filtradas.length === 0) {
-      grid.innerHTML = '<div class="empty-state">Nenhuma entrega com os filtros atuais.</div>';
-      return;
-    }
-
-    const ord = { red: 0, amber: 1, green: 2 };
-    const sorted = [...filtradas].sort((a, b) => {
-      if (a.prioritaria !== b.prioritaria) return a.prioritaria ? -1 : 1;
-      if (ord[a.status_semaforo] !== ord[b.status_semaforo]) return ord[a.status_semaforo] - ord[b.status_semaforo];
-      if (a.status_semaforo === 'red') return b.dias_atraso - a.dias_atraso;
-      return (a.empresa || '').localeCompare(b.empresa || '');
-    });
-
-    grid.innerHTML = sorted.map(e => {
-      let classeExtra;
-      if (ehEntregueComAtraso(e)) classeExtra = 'orange';
-      else if (e.justificado) classeExtra = 'red-just';
-      else classeExtra = e.status_semaforo;
-
-      return `
-        <div class="empresa-card ${classeExtra}">
-          <div class="empresa-info">
-            <div class="empresa-nome">${escapeHtml(e.empresa)}</div>
-            <div class="empresa-meta">
-              ${e.prioritaria ? '<span class="pri-badge">Prio</span>' : ''}
-              ${e.justificado ? '<span class="just-badge">Justif</span>' : ''}
-              <span>${escapeHtml(e.responsavel)}</span>
-            </div>
-          </div>
-          <div class="empresa-status">
-            <div class="status-dot ${classeExtra}"></div>
-            <div class="empresa-prazo">${e.prazo_tecnico}${e.dias_atraso ? ' · ' + e.dias_atraso + 'd' : ''}</div>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  function renderRanking() {
-    const ranking = (state.raw.ranking_responsaveis && state.raw.ranking_responsaveis[state.competencia]) || [];
-    const list = document.getElementById('rankingList');
-    document.getElementById('rankCount').textContent = ranking.length + ' responsáveis';
-
-    if (ranking.length === 0) {
-      list.innerHTML = '<div class="empty-state">Sem dados de responsáveis para esta competência.</div>';
-      return;
-    }
-
-    list.innerHTML = ranking.map((r, i) => `
-      <div class="rank-row ${i < 3 ? 'top3' : ''}">
-        <div class="rank-num">${i + 1}</div>
-        <div class="rank-info">
-          <div class="rank-nome">${escapeHtml(r.nome)}</div>
-          <div class="rank-bar"><div class="rank-bar-fill" style="width: ${r.percentual}%"></div></div>
-        </div>
-        <div class="rank-stats">
-          <div class="rank-counts">
-            <div class="rank-count g"><strong>${r.entregues}</strong><span>Ent</span></div>
-            <div class="rank-count a"><strong>${r.pendentes}</strong><span>Pen</span></div>
-            <div class="rank-count r"><strong>${r.atrasadas}</strong><span>Atr</span></div>
-          </div>
-          <div class="rank-percent">${r.percentual.toFixed(1)}%</div>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  function renderTrend() {
-    const comps = state.raw.competencias_disponiveis || [];
-    const kpis = state.raw.kpis || {};
-
-    // Ordenar do mais antigo pro mais recente (esquerda → direita)
-    const MESES_ORD = { jan: 1, fev: 2, mar: 3, abr: 4, mai: 5, jun: 6, jul: 7, ago: 8, set: 9, out: 10, nov: 11, dez: 12 };
-    const ordemComp = c => {
-      const m = String(c).match(/([a-z]+)\/(\d+)/);
-      if (!m) return 0;
-      return parseInt(m[2]) * 100 + (MESES_ORD[m[1]] || 0);
-    };
-    const compsOrd = [...comps].sort((a, b) => ordemComp(a) - ordemComp(b));
-
-    document.getElementById('trendChart').innerHTML = compsOrd.map(c => {
-      const k = kpis[c] || { total: 0, entregues: 0, pendentes: 0, atrasadas: 0 };
-      const pctG = k.total > 0 ? (k.entregues / k.total) * 100 : 0;
-      const pctA = k.total > 0 ? (k.pendentes / k.total) * 100 : 0;
-      const pctR = k.total > 0 ? (k.atrasadas / k.total) * 100 : 0;
-
-      return `
-        <div class="trend-row">
-          <div class="trend-comp">${c}</div>
-          <div class="trend-bar-container">
-            ${pctG > 5 ? `<div class="trend-bar-seg green" style="width: ${pctG}%"><span>${pctG.toFixed(0)}%</span></div>` : (pctG > 0 ? `<div class="trend-bar-seg green" style="width: ${pctG}%"></div>` : '')}
-            ${pctA > 5 ? `<div class="trend-bar-seg amber" style="width: ${pctA}%"><span>${pctA.toFixed(0)}%</span></div>` : (pctA > 0 ? `<div class="trend-bar-seg amber" style="width: ${pctA}%"></div>` : '')}
-            ${pctR > 5 ? `<div class="trend-bar-seg red" style="width: ${pctR}%"><span>${pctR.toFixed(0)}%</span></div>` : (pctR > 0 ? `<div class="trend-bar-seg red" style="width: ${pctR}%"></div>` : '')}
-          </div>
-          <div class="trend-totals">
-            <span><strong>${k.total}</strong> total</span>
-          </div>
-        </div>
-      `;
-    }).join('');
-  }
-
-  function renderRecorrentes() {
-    const entregas = state.raw.entregas || [];
-    const porEmpresa = {};
-
-    for (const e of entregas) {
-      if (e.status_semaforo !== 'red') continue;
-      const key = e.empresa;
-      if (!porEmpresa[key]) porEmpresa[key] = { empresa: e.empresa, cnpj: e.cnpj, competencias: new Set() };
-      porEmpresa[key].competencias.add(e.competencia);
-    }
-
-    const lista = Object.values(porEmpresa)
-      .map(o => ({ ...o, competencias: [...o.competencias].sort() }))
-      .filter(o => o.competencias.length >= 2)
-      .sort((a, b) => b.competencias.length - a.competencias.length)
-      .slice(0, 20);
-
-    document.getElementById('recorrentesCount').textContent = lista.length + ' empresas';
-
-    const list = document.getElementById('recorrentesList');
-    if (lista.length === 0) {
-      list.innerHTML = '<div class="empty-state">Nenhuma empresa recorrente. Não há padrão de falha sistêmica.</div>';
-      return;
-    }
-
-    list.innerHTML = lista.map((o, i) => `
-      <div class="recorrente-row">
-        <div class="rank-num">${i + 1}</div>
-        <div>
-          <div class="recorrente-empresa">${escapeHtml(o.empresa)}</div>
-          <div class="recorrente-comps">
-            ${o.competencias.map(c => `<span class="recorrente-chip">${c}</span>`).join('')}
-          </div>
-        </div>
-        <div>
-          <div class="recorrente-num">${o.competencias.length}</div>
-          <div class="recorrente-num-label">meses</div>
-        </div>
-      </div>
-    `).join('');
-  }
-
-  // ===== EVENTS =====
-  document.getElementById('competencia').addEventListener('change', e => {
-    state.competencia = e.target.value;
-    state.responsavel = '';
-    popularResponsaveis();
-    render();
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
   });
-  document.getElementById('busca').addEventListener('input', e => { state.busca = e.target.value; render(); });
-  document.getElementById('prioToggle').addEventListener('change', e => { state.prioritarias = e.target.checked; render(); });
-  document.getElementById('justToggle').addEventListener('change', e => { state.esconderJustificadas = e.target.checked; render(); });
-  document.getElementById('responsavel').addEventListener('change', e => { state.responsavel = e.target.value; render(); });
-  document.getElementById('chips').addEventListener('click', e => {
-    const btn = e.target.closest('.chip');
-    if (!btn) return;
-    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active', 'green', 'amber', 'red'));
-    btn.classList.add('active');
-    if (btn.dataset.status !== 'todos') btn.classList.add(btn.dataset.status);
-    state.status = btn.dataset.status;
-    render();
-  });
-  document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-      tab.classList.add('active');
-      const v = tab.dataset.view;
-      document.getElementById('view' + v.charAt(0).toUpperCase() + v.slice(1)).classList.add('active');
-      state.aba = v;
-    });
-  });
-  document.getElementById('btnRefresh').addEventListener('click', () => carregar());
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.observe(el));
 
-  carregar();
-  setInterval(carregar, REFRESH_INTERVAL_MS);
+async function sub(e){
+  e.preventDefault();
+  const btn=document.getElementById('sb');
+  const nome=document.getElementById('ni').value;
+  const email=document.getElementById('ei').value;
+  btn.textContent='Enviando...';btn.disabled=true;
+  try{
+    await fetch('WEBHOOK_URL_AQUI',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({nome,email}),mode:'no-cors'
+    });
+  }catch(err){}
+  btn.textContent='✅ Inscrito com sucesso!';
+  document.getElementById('ni').value='';
+  document.getElementById('ei').value='';
+  setTimeout(()=>{btn.textContent='Assinar Gratuitamente';btn.disabled=false;},4000);
+}
 </script>
+
 </body>
 </html>
