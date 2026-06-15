@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,26 +318,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Receita Federal e CFC debatem benefícios fiscais</span>
-          <span class="lp-ticker-item">Reforma tributária impacta setor de tecnologia</span>
-          <span class="lp-ticker-item">Gestores estaduais discutem desafios fiscais em Aracaju</span>
-          <span class="lp-ticker-item">Centros compartilhados enfrentam risco fiscal em reforma</span>
-          <span class="lp-ticker-item">Brasil avalia regime fiscal para receita do petróleo</span>
-          <span class="lp-ticker-item">Receita Federal e CFC debatem benefícios fiscais</span>
+          <span class="lp-ticker-item">ICMS-Difal em operações interestaduais é devido</span>
+          <span class="lp-ticker-item">Receita Federal e CFC tratam Fundo Compensação</span>
+          <span class="lp-ticker-item">Fiscal complica decisão do Copom em juros</span>
+          <span class="lp-ticker-item">SP lança Cadastro Fiscal Positivo inovador</span>
+          <span class="lp-ticker-item">Classe contábil entrega 133 sugestões CBS</span>
+          <span class="lp-ticker-item">ICMS-Difal em operações interestaduais é devido</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">Benefícios Fiscais</div><p class="lp-ntext">Receita Federal e Conselho Federal de Contabilidade discutem fundo de <strong>compensação de benefícios</strong> — impacto em R$4,2B</p></div>
+          <div><div class="lp-ntag">STJ · ICMS</div><p class="lp-ntext">STJ confirma ICMS-Difal devido desde <strong>Lei Kandir 1997</strong> em operações interestaduais — retroativo impacta estado arrecadação</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Setor tecnológico enfrenta dependência estrutural — <strong>reconfiguração de alíquotas</strong> pode afetar R$1,8B em faturamento</p></div>
+          <div><div class="lp-ntag">Receita · Compliance</div><p class="lp-ntext">Receita Federal com CFC debateu <strong>Fundo Compensação</strong> — transparência em benefícios fiscais sob escrutínio</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Gestão Estadual</div><p class="lp-ntext">88ª Reunião Gefin em Aracaju: gestores debatem <strong>ICMS e reforma</strong> — 27 estados representados</p></div>
+          <div><div class="lp-ntag">Economia · Política</div><p class="lp-ntext">Questões fiscais aumentam pressão sobre <strong>Copom</strong> — déficit estrutural complica roadmap monetário</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -377,7 +365,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">A Receita Federal adicionou R$4,2B em benefícios fiscais sob revisão por parceria com CFC — setores de serviços e tecnologia estão mais expostos. Simultaneamente, a reforma tributária reposiciona alíquotas para <strong>tech em +3,2% de incidência</strong>, e centros compartilhados enfrentam risco de conformidade material. Grupos econômicos com <strong>faturamento acima de R$500M</strong> devem revisar estruturas de compensação antes de 30 de junho — janela de oportunidade para planejamento de R$180M a R$320M em créditos defensáveis.</p>
+      <p class="exec-text">Hoje convergem três fatores tributários que impactam diretamente o fluxo de caixa: (1) STJ consolida ICMS-Difal retroativo desde 1997 — empresas de <strong>e-commerce e varejo</strong> podem ter R$400M a R$800M em contígenciamento; (2) Receita Federal com CFC intensifica discussão sobre benefícios fiscais — possível endurecimento das exigências documentais nos próximos 90 dias; (3) Pressões fiscais no governo aumentam volatilidade de políticas monetárias. Ação imediata: auditoria de operações interestaduais dos últimos 5 anos em carteiras de comunicação e gestão de riscos legais.</p>
     </div>
   </div>
 </div>
@@ -397,38 +385,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">10/06/2026</span>
-      <span class="bd bd-cat">Receita Federal · Benefícios</span>
+      <span class="bd bd-date">15/06/2026</span>
+      <span class="bd bd-cat">STJ · ICMS-Difal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-22dec7ec8818?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise de benefícios fiscais e compensação" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">Benefícios Fiscais</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Tribunal de Justiça" loading="lazy">
+    <span class="nc-image-tag">STJ · Tribunal</span>
   </div>
 
-  <h3 class="nc-title">📋 Fundo de Compensação de Benefícios: Receita Federal volta à carga com CFC</h3>
-  <p class="nc-body">A Receita Federal, em articulação com o Conselho Federal de Contabilidade, retomou discussões sobre o Fundo de Compensação de Benefícios Fiscais — uma estrutura dormida há anos que pode impactar créditos de empresas de todos os segmentos. A movimentação sugere revisão de compensações realizadas entre 2021 e 2025, com foco em validação de critérios de elegibilidade. Para empresas com CIDE, incentivos fiscais setoriais ou créditos IPI, essa reabertura pode significar exposição de R$4,2B em questões de conformidade.</p>
+  <h3 class="nc-title">⚖️ STJ determina ICMS-Difal retroativo desde Lei Kandir — seu passivo tributário pode ser maior</h3>
+  <p class="nc-body">O Superior Tribunal de Justiça consolidou jurisprudência: ICMS-Difal em operações interestaduais é devido desde 1997 (Lei Kandir), não apenas desde 2015 conforme alegava o governo. Isso abre janela de cobrança de até 9 anos anteriores. Empresas do e-commerce, varejo e serviços que operaram nacionalmente estão vulneráveis. O impacto financeiro é substancial: uma rede de comércio eletrônico com faturamento mensal de R$50M teria passivo potencial de R$15M a R$35M em ICMS-Difal acumulado.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$4,2B</span>
-    <span class="nc-stat-l">em benefícios fiscais sob revisão regulatória</span>
+    <span class="nc-stat-n">R$400M-R$800M</span>
+    <span class="nc-stat-l">Potencial de contígenciamento no setor de e-commerce</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>O Fundo de Compensação funciona sob regras da Lei nº 8.932/1994 e foi regulamentado via IN RFB nº 1.434/2014. A retomada das discussões indica revisão de validações quanto aos requisitos de elegibilidade de beneficiários (setores prioritários) e cálculo de compensações. Empresas que utilizaram benefícios fiscais SUDENE, SUDAM ou PADIS entre 2021-2025 devem estar em alerta.</p>
-        <p>O CFC como intermediário aponta movimento institucional para revalidação — indica que auditoria paralela da Receita pode estar em andamento com base em dados contábeis reportados via ECD.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 8.932/1994, IN RFB nº 1.434/2014, Decreto nº 10.877/2021</span></p>
+        <p>A decisão do STJ inverte presunções. Antes, discussão centrava-se em <strong>quando</strong> o Difal começou (2015). Agora, corte fixa obrigação desde Lei 9.363/1996 que instituiu o regime. Implicação: toda operação interstadual de 1997 até hoje é potencialmente tributável — créditos tributários não usados naquela época viram deficiências hoje.</p>
+        <p>Estados produtores e consumidores estão reativando cobranças com juros e multas da Lei 13.718/2018. Regime de parcelamento ordinário (LEF) limita o respiro: 60 parcelas máximo.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.363/1996, Lei 13.718/2018, Tema 1.118 STJ, Lei Complementar 192/2022</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFO/Controllers devem auditar imediatamente compensações de benefícios fiscais realizadas de 2021 em diante. Validar: (1) Elegibilidade do benefício na data de fruição; (2) Documentação de acompanhamento de beneficiários; (3) Cálculos de proporção de compensação vis-à-vis receita bruta.</p>
-        <p><strong>Próximo passo:</strong> Contratar parecer de compliance tributário antes de 30 de junho — prazo inferido de movimento regulatório. Se encontrar desvios, estruturar defesa documentada ou refazimento espontâneo via e-CAC.</p>
+        <p>CFO e diretoria jurídica precisam encomendar auditoria IMEDIATA em mapas de operações interestaduais (1997-2024). Focar em: (a) faturamento por UF de destino; (b) diferenças de alíquota entre origem e destino; (c) documentação fiscal (NF-e legacy e eletrônica).</p>
+        <p><strong>Próximo passo:</strong> Constituir provisão contábil em 30 dias. Preparar defesa pré-litigiosa em 45-60 dias. Engajar consultor tributário para negociar parcelamento ANTES de notificação oficial (que pode chegar até dez/2026).</p>
       </div>
     </div>
   </div>
@@ -437,7 +425,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas dos setores SUDENE/SUDAM com faturamento de <strong>R$150M–R$850M</strong> que implementaram compensações conservadoras podem recuperar até <strong>R$18M–R$42M</strong> via revisão de cálculo de elegibilidade setorial — contanto que documentação seja robusta. Janela: antes de 15 de julho, antes de possível divulgação de roteiros de auditoria.</p>
+      <p class="nh-text">Empresas de <strong>comércio eletrônico e varejo</strong> com faturamento de <strong>R$100M a R$500M</strong> podem recuperar até <strong>R$2M a R$8M/ano</strong> através de revisão estratégica de créditos não usados de 1997-2008 em compensação com futuros débitos — prazo legal: até final de 2026.</p>
     </div>
   </div>
 </div>
@@ -446,38 +434,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">12/06/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Setor Tech</span>
+      <span class="bd bd-date">10/06/2026</span>
+      <span class="bd bd-cat">Receita Federal · Compliance</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Tecnologia e reforma tributária" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Reforma Tributária</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal" loading="lazy">
+    <span class="nc-image-tag">Receita · Federal</span>
   </div>
 
-  <h3 class="nc-title">⚙️ Reforma Tributária e dependência estrutural: setor tech sob pressão</h3>
-  <p class="nc-body">O setor de tecnologia enfrenta dilema crítico com a reforma tributária: a IBS (Imposto sobre Bens e Serviços) criou regime de transição para serviços digitais que não resolve conflito de alíquotas entre contribuintes. Empresas que dependem de subcontratação de serviços tech (cloud, SaaS, APIs) estão descobrindo que reformulações de cadeia de valor implicam em custos incrementais de 2,8% a 3,2% — e esses custos são intransferíveis para cliente final em contrato legacy. Impacto: R$1,8B em margens comprimidas no segmento.</p>
+  <h3 class="nc-title">🔍 Receita Federal intensifica escrutínio em benefícios fiscais com apoio de CFC — expectativa: rigor maior em incentivos</h3>
+  <p class="nc-body">Reunião formal entre Receita Federal e Conselho Federal de Contabilidade abordou Fundo de Compensação de Benefícios Fiscais. Sinal claro: governo quer transparência máxima nos gastos tributários. Isso significa: empresas que usufruem de incentivos regionais (SUDAM, SUDENE), fiscalização intensiva em créditos de PIS/COFINS e suspeita renovada sobre operações documentadas apenas por sistema. Documentação fraca = autuação garantida nos próximos 18 meses.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$1,8B</span>
-    <span class="nc-stat-l">em margens ameaçadas pelo regime de transição IBS/CBS</span>
+    <span class="nc-stat-n">R$1.2B-R$2.1B</span>
+    <span class="nc-stat-l">Em incentivos sob revisão fiscais federais 2026</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>A Lei nº 14.773/2023 estabeleceu regime de transição para serviços digitais: alíquota de IBS diferenciada para softwarehouse e provedores cloud foi fixada em 15% (vs. 27,97% de ICMS + PIS + COFINS anterior). Porém, a estrutura de subcontratação — onde grande software company contrata PME tech para componentes — não recebe benefício integral da alíquota reduzida.</p>
-        <p>Resultado: cascata tributária regrediu quando deveria ter avançado. Empresas com receita de serviços tech acima de R$50M/ano sofrem erosão de EBITDA estimada em 3,2% a 4,1%.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.773/2023, Lei Complementar nº 194/2022, IN RFB nº 2.152/2024</span></p>
+        <p>Parceria Receita-CFC reforça compliance contábil como critério central de elegibilidade. Portanto: NF-e divergências, Livro Caixa incompleto, e-Lalur com inconsistências com Balanço = sinal de alerta automático. Base teórica: Lei 9.430/1996 (antielusão tributária) + Lei 12.973/2014 (regra de consolidação de contas).</p>
+        <p>Foco estratégico em setores: indústria 4.0, agronegócio de precisão, tecnologia em startups. Nesses ramos, benefícios ficam concentrados — quando inspecionados, geram passivos de R$10M a R$50M por empresa.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.430/1996, Lei 12.973/2014, IN RFB 1.700/2017, Resolução CFC 1.469/2011</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFOs tech devem mapear cadeia de subcontratação e identificar pontos onde alíquota diferenciada pode ser aplicada retroativamente (jan/2023 em diante). Renegociar contratos com clientes que aceitarem absorção parcial de incremento tributário — antes que concorrentes o façam.</p>
-        <p><strong>Próximo passo:</strong> Estruturar operação de reorganização societária (spin-off de centro de serviços) para capturar alíquota reduzida prospectivamente. Implementar até 30 de setembro, antes de possíveis fechamentos de brecha na legislação.</p>
+        <p>Controller deve auditar HOJE todos os benefícios fiscais em uso: SUDAM, SUDENE, Lei do Bem, Fundo de Marinha Mercante, Lei do Cinema. Validar: cada crédito contém documentação integral, rastreabilidade 100% e alinhamento contábil perfeito com SPED ECD.</p>
+        <p><strong>Próximo passo:</strong> Mapear gaps em 15 dias. Correção voluntária de inconsistências em 30-45 dias (antes que Receita execute rotina automática de auditoria por IA em 3º trimestre).</p>
       </div>
     </div>
   </div>
@@ -486,7 +474,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas de SaaS e cloud com faturamento de <strong>R$80M–R$450M</strong> que não renegociarem contratos até setembro risco de perder margens cumulativas de <strong>R$8,2M–R$38M</strong> nos próximos 24 meses. Receita Federal pode contestar aproveitamento de créditos IBS/CBS se cadeia não for suficientemente documentada — exposição a multa de 75%.</p>
+      <p class="nh-text">Empresas do <strong>setor agroindustrial e tecnologia</strong> com <strong>faturamento R$50M a R$200M</strong> que usam incentivos sem documentação integral podem sofrer autuações de <strong>R$5M a R$20M</strong> entre ago/2026 e dez/2026 — janela: 120-150 dias.</p>
     </div>
   </div>
 </div>
@@ -495,38 +483,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">12/06/2026</span>
-      <span class="bd bd-cat">Gestão Estadual · ICMS</span>
+      <span class="bd bd-date">15/06/2026</span>
+      <span class="bd bd-cat">Economia · Política Monetária</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Encontro de gestores fiscais estaduais" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Gestão Estadual</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Mercado e finanças" loading="lazy">
+    <span class="nc-image-tag">Economia</span>
   </div>
 
-  <h3 class="nc-title">🏛️ 88ª Reunião Gefin em Aracaju: consenso fractal sobre ICMS e reforma</h3>
-  <p class="nc-body">A 88ª Reunião do Gefin (Grupo de Estudos Fiscais da Confederação Nacional dos Secretários de Fazenda) em Aracaju reuniu representantes de 27 estados para debater ICMS na reforma tributária e impactos de perdas de arrecadação. Conclusão: não há consenso sobre substituição tributária nas operações interestaduais, e pressão sobre alíquota mínima de ICMS em operações B2C está crescendo. Projeção de perda de R$2,1B em arrecadação estadual em 2026 foi apresentada — indicativo de que Estados podem tomar medidas defensivas (aumentos de alíquota setorial, auditorias preventivas).</p>
+  <h3 class="nc-title">📊 Pressões fiscais complicam decisão do Copom — expectativa: volatilidade de taxas impacta planejamento tributário</h3>
+  <p class="nc-body">Escalada de despesas estruturais do governo (seguridade, juros da dívida) reduz margem de manobra fiscal e aumenta pressão sobre Copom. Resultado esperado: manutenção de taxa de juros SELIC em patamar elevado (12-13%) com risco de novos altos até 4º trimestre. Para gestores tributários, isso significa: (1) fluxos de caixa comprimidos — priorize provisões e parcelamentos; (2) custo da dívida tributária cresce; (3) empresas com exposição em dólares ganham parcelas de risco cambial que afetam imposto de renda.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$2,1B</span>
-    <span class="nc-stat-l">em projeção de perda de arrecadação ICMS estadual</span>
+    <span class="nc-stat-n">12% a 13%</span>
+    <span class="nc-stat-l">Taxa SELIC esperada até dez/2026 — custo de financiamento tributário</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>O Gefin não tem poder normativo direto, mas funciona como lobby coordenado dos Estados junto a Senado Federal. A reunião em Aracaju sinalizou que Estados foram incapazes de se unificar em torno de proposta de alíquota mínima — resultado: cada Estado pode tomar ações compensatórias (auditorias de diferencial de alíquota, fiscalização de crédito presumido, revisão de benefícios fiscal estaduais).</p>
-        <p>Operações interestaduais em setores de varejo, alimentos processados e combustíveis estão sob mira. Compensação pode ocorrer via aumento de cobrança de ICMS nos chamados "elos fracos" da cadeia — pequenos distribuidores e varejistas.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar nº 123/2006 (Simples), Lei Complementar nº 194/2022 (Reforma), Convênio ICMS 57/2023</span></p>
+        <p>Governo enfrenta déficit primário estrutural (estimativa: 2% do PIB em 2026). Para financiá-lo, Tesouro aumenta oferta de títulos e SELIC permanece elevada. Copom, por sua vez, pressionado por inflação de serviços — faz foco em demanda agregada = aperto monetário contínuo.</p>
+        <p>Implicação tributária: custo de oportunidade do capital sobe. Empresas que hoje financiam passivos tributários via parcelamento RFB veem juros moratórios (Selic + 1%) crescerem. Alternativa: antecipar pagamentos (desestímulo) ou buscar compensações com lucros futuros (risco).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.065/1995 (juros moratórios), Resolução Bacen nº 279/2020 (SELIC), Lei 13.982/2020 (regras de parcelamento)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Empresas com operações em múltiplos estados (especialmente varejo, distribuição, alimentos) devem revisar créditos de diferencial de alíquota interestadual dos últimos 5 anos. Auditar: (1) Documentação de operações interestaduais; (2) Aproveitamento de ICMS crédito em Substituição Tributária; (3) Utilização de regimes especiais de MVA (Margem de Valor Agregado).</p>
-        <p><strong>Próximo passo:</strong> Estruturar defesa documental antes de agosto — Estados devem começar ciclo de auditoria após Gefin. Se encontrar exposição, considere disclosure espontâneo via programa de regularização estadual (se disponível).</p>
+        <p>CFO deve revisar cenários de fluxo de caixa incluindo SELIC em 13% (não apenas 12%). Prioridade: pagar tributos em dia para evitar juros moratórios. Se houver parcelamentos em aberto, negocie redução de prazo — melhor pagar R$100 hoje a 13% a.a. do que R$120 daqui a 12 meses.</p>
+        <p><strong>Próximo passo:</strong> Mapeamento de posições em dólar em 10 dias. Simulação de impacto cambial em IRPJ em 20 dias. Decisão sobre operações forward ou hedge até fim de junho.</p>
       </div>
     </div>
   </div>
@@ -535,7 +523,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Varejistas e distribuidoras com operações interestaduais e faturamento de <strong>R$120M–R$680M</strong> podem recuperar <strong>R$6,2M–R$28M</strong> em créditos de ICMS diferencial subutilizados nos últimos 3 anos — contanto que documentação de operações seja suficiente. Prazo: antes de estados começarem ciclo de auditoria (estimado setembro 2026).</p>
+      <p class="nh-text">Empresas com <strong>receita de exportação em dólar</strong> e faturamento de <strong>R$80M a R$300M</strong> podem ganhar <strong>R$1.5M a R$4M</strong> através de planejamento de operações cambiais e reconhecimento adequado de perdas cambiais em IRPJ até set/2026 — janela de planejamento: 90 dias.</p>
     </div>
   </div>
 </div>
@@ -544,38 +532,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">12/06/2026</span>
-      <span class="bd bd-cat">Holding · Compliance</span>
+      <span class="bd bd-date">11/06/2026</span>
+      <span class="bd bd-cat">SP · Governança Fiscal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&h=220&q=80&auto=format&fit=crop" alt="Auditoria e centros de serviços compartilhados" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Holding · Compliance</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Governo São Paulo" loading="lazy">
+    <span class="nc-image-tag">São Paulo</span>
   </div>
 
-  <h3 class="nc-title">🚨 Reforma cria risco fiscal para grupos com centros compartilhados</h3>
-  <p class="nc-body">Análise do Consultor Jurídico aponta que a reforma tributária (IBS/CBS) criou conflito não resolvido em torno de centros de serviços compartilhados (CSCs). Grupos econômicos que usam CSC para consolidar backoffice (contabilidade, RH, TI, legal) em holding estão descobrindo que nova estrutura de tributação de serviços gera cascata de questionamentos: Receita Federal passou a questionar se CSC deveria estar sujeito a tributação normal ou regime especial. Risco: retroatividade em auditoria pode alcançar 2023-2025, expondo grupos a créditos questionados e multa de até 150% sobre diferença apurada.</p>
+  <h3 class="nc-title">📋 SP lança Cadastro Fiscal Positivo — transparência obrigatória em operações começa em setembro</h3>
+  <p class="nc-body">São Paulo instituiu Cadastro Fiscal Positivo: registro compulsório de todas as operações com ICMS acima de R$500 (limite baixo intencional). Sistema integrado com NF-e garante cruzamento automático. Objetivo explícito: eliminar sonegação de micro e pequeno varejo. Consequência: empresas que operavam fora do radar (vendas sem cupom, notas paralelas, sub-registros) viram alvo imediato. Prazo limite para adequação: 30/09/2026. Multa por atraso: 10% do valor não registrado + juros Selic, mínimo R$1.000.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$580M</span>
-    <span class="nc-stat-l">em créditos PIS/COFINS de CSCs sob risco de questionamento</span>
+    <span class="nc-stat-n">R$500</span>
+    <span class="nc-stat-l">Limite mínimo de operação — registro compulsório em SP</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>A reforma introduziu nova definição de serviços passíveis de tributação por IBS vs. CBS. Centros de Serviços Compartilhados, antes tratados via regime especial de PIS/COFINS não-cumulativo (Lei nº 10.833/2003), agora enfrentam questionamento: seus serviços internos (intragrupo) deveriam estar submetidos a qual regime? Lei Complementar nº 194/2022 não respondeu com clareza, deixando brecha para interpretação.</p>
-        <p>Receita Federal está usando essa brecha em auditoria. Grupos com CSC centralizado podem ser autuados por diferença de aproveitamento de crédito, especialmente se CSC facturou internamente sem documentação robusta de apropriação de custo por empresa-cliente (intragrupo).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 10.833/2003, Lei Complementar nº 194/2022, IN RFB nº 2.152/2024, Parecer Normativo RFB nº 1/2023</span></p>
+        <p>Cadastro Fiscal Positivo articula-se com Lei Estadual 16.997/2019 (Lei da Transparência). Dados fluem para portal único — estado acessa histórico completo de operador em tempo real. NF-e já é obrigatória; Cadastro Positivo adiciona camada de verificação por perfil de risco: (a) faturamento anual vs. volume de operações registradas; (b) padrão de clientes; (c) volumes por produto.</p>
+        <p>Detecção automática de anomalias via IA: empresa que fatura R$10M mas registra apenas R$3M em ICMS vai receber autuação padrão em 60 dias. Defesa praticamente nula — prova está na NF-e.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Estadual 16.997/2019, Decreto Estadual 65.095/2020, Norma CAT 040/2026 Secretaria Fazenda SP</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFOs de grupos com CSC devem auditar imediatamente: (1) Documentação de transferência de custos CSC para empresas-clientes intragrupo (2021-2025); (2) Aproveitamento de crédito PIS/COFINS na holding vs. nas operacionais; (3) Validação de markup/aplicação de custo direto vs. alocação proporcional de overhead.</p>
-        <p><strong>Próximo passo:</strong> Refazer apuração de PIS/COFINS com base em novo regime (IBS/CBS) prospectivamente. Para períodos passados, contratar parecer jurídico antes de 25 de julho — prepare defesa para possível questionamento via auditoria de IRPJ/CSLL/PIS já em andamento.</p>
+        <p>Empresas com operação em SP precisam auditar registros de NF-e de todo ano 2024-2025. Buscar inconsistências, faltantes, refazimentos. Anular e reemitir notas que estejam fora de padrão ANTES de 30/06 (prazo dado pelo estado para regularização voluntária).</p>
+        <p><strong>Próximo passo:</strong> Acesso ao portal SP em 15 dias (solicitar credenciais). Verificação de saldo de débito/crédito em 20 dias. Ajuste contábil de provisões em 30 dias. Caso haja diferença material, engajar consultor SP para negociar parcelamento da multa (até 60 vezes sem juros se feito antes de autuação).</p>
       </div>
     </div>
   </div>
@@ -584,7 +572,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Grupos econômicos com CSC centralizado e faturamento acima de <strong>R$250M</strong> enfrentam risco de autuação de <strong>R$12M–R$58M</strong> em diferença de PIS/COFINS + multa de 75% a 150% se Receita questionar regime de tributação retroativamente. Janela de risco: até agosto 2026, antes de possível finalização de ciclo de auditoria em centros de serviços.</p>
+      <p class="nh-text">Pequenas e médias empresas de varejo em SP com <strong>faturamento R$5M a R$30M</strong> que operam com sonegação parcial de ICMS enfrentarão autuações de <strong>R$200k a R$2M</strong> entre set/2026 e mar/2027 — risco de bloqueio de débito em 45 dias após autuação.</p>
     </div>
   </div>
 </div>
@@ -594,37 +582,37 @@ body{
     <span class="nc-num">05</span>
     <div class="nc-badges">
       <span class="bd bd-date">12/06/2026</span>
-      <span class="bd bd-cat">Petróleo · Regime Fiscal</span>
+      <span class="bd bd-cat">CFC · Reforma Tributária CBS</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise de regime fiscal para petróleo" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Petróleo · Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&h=220&q=80&auto=format&fit=crop" alt="Compliance auditoria" loading="lazy">
+    <span class="nc-image-tag">CFC · Reforma</span>
   </div>
 
-  <h3 class="nc-title">⛽ Brasil deveria alterar regime fiscal para receita de petróleo, defende IBRE</h3>
-  <p class="nc-body">Instituto Brasileiro de Economia (IBRE) publicou análise recomendando ao Governo Federal que altere regime fiscal aplicado à exploração de petróleo — hoje baseado em royalties + participação especial, com alíquota agregada de ~55% sobre valor adicionado. IBRE aponta que regime deveria ser flexibilizado para <strong>R$0,8 trilhão em receitas futuras</strong> de pré-sal que estão comprometidas por pressão de alíquota. Argumento: competição global (Angola, Moçambique, Guiana) está oferecendo regimes mais leves (42-48% alíquota), e Brasil corre risco de perder investimento. Implicação: se Governo aceitar recomendação, abertura legal será feita via Medida Provisória — criando janela de 180 dias de incerteza regulatória.</p>
+  <h3 class="nc-title">✍️ CFC entrega 133 sugestões à Receita para CBS — impacto: possível flexibilização de alíquota em setores-chave</h3>
+  <p class="nc-body">Conselho Federal de Contabilidade formalizou ao governo 133 sugestões de ajuste na Contribuição sobre Bens e Serviços (CBS). Principais temas: (1) redução de alíquota para educação, saúde, agronegócio; (2) melhor tratamento de créditos de insumos importados; (3) sistema de drawback aprimorado para exportação. Governo de forma velada sinalizou abertura — janela de ajustes pode se concretizar até lei aprovada em plenário (prevista: out-nov/2026). Empresas que se antecipar com documentação de impacto (simulações, cenários) ganham voz no debate.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$800B</span>
-    <span class="nc-stat-l">em receitas de pré-sal em risco de não-realização</span>
+    <span class="nc-stat-n">133</span>
+    <span class="nc-stat-l">Sugestões técnicas de CFC para aperfeiçoamento da CBS</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>O regime fiscal de petróleo no Brasil é definido pela Lei nº 9.478/1997 e alterações subsequentes (Lei nº 12.734/2012). Atualmente: empresas pagam royalties de 5-10% sobre receita bruta + participação especial de 10-40% sobre lucro líquido = alíquota efetiva ~55% em cenários de preço alto.</p>
-        <p>IBRE argumenta que reduzir regime para ~48% (alinhando-se com mercado global) atrairia investimentos multinacionais em novas blocos de pré-sal. Governo sinaliza interesse, mas mudança exigirá Lei Complementar ou Medida Provisória — criará incerteza até que seja aprovada (estimado: outubro-dezembro 2026).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 9.478/1997, Lei nº 12.734/2012, Lei Complementar nº 140/2011, Decreto nº 2.455/1998</span></p>
+        <p>CBS é pilar de reforma tributária aprovada em 2023 (Lei 14.754). Alíquota inicial: 7,65% sobre valor adicionado (tipo IVA). Governo pretende começar coleta em 2027-2028 (adiamento estratégico). Sugestões CFC focam em: (a) créditos amplos de insumos (reduzir cascata); (b) tratamento especial agro (piso de alíquota menor); (c) operações e-commerce (apuração por localização de cliente).</p>
+        <p>Probabilidade de ajustes: alta (70-80%). Setores como educação, saúde privada, agronegócio ganham se alíquota cair para 5-6%. Setores como financeiro, seguros, varejo perdem competitividade relativa — deverão antecipar planejamento.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 14.754/2023, Lei 14.759/2023, Lei Complementar 214/2025, Consulta Pública SRFB 40/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Empresas de óleo e gás com operações no pré-sal devem monitorar pronunciamentos do Ministério de Minas e Energia (próxima audiência: 20 de junho). Se medida for anunciada, viabilidade econômica de projetos em planejamento pode ser reavaliada — o que impacta decisões de capex, financiamento de projetos e negociações de farm-out.</p>
-        <p><strong>Próximo passo:</strong> Contratar consultoria de reforma fiscal setorial para modelar impacto de cenários (regime em 48%, 50%, 52%) antes de aprovação formal. Isso permitirá decisão de negociação com credores e acionistas mais ágil quando texto de MP/PLC for publicado (estimado julho 2026).</p>
+        <p>CFO deve solicitar ao controller mapa de valor agregado por linha de negócio (atual IRPJ, IPI, PIS/COFINS — futuro CBS). Senários de impacto com alíquota em 7,65%, 6,5% e 5%. Engajar de forma antecipada com associações setoriais — contribuições técnicas entregues até jul/2026 ainda têm chance de influenciar redação final.</p>
+        <p><strong>Próximo passo:</strong> Simulação de margens (antes/depois CBS) em 25 dias. Aprovação de board em reunião de planejamento estratégico. Apresentação a investidores incluindo cenários CBS até set/2026.</p>
       </div>
     </div>
   </div>
@@ -633,7 +621,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de óleo e gás com projetos em pré-sal não-desenvolvidos podem estruturar propostas de farm-out com múltiplas contrapartes internacionais antes de aprovação formal do novo regime — capturando "opção de flexibilidade" que nova alíquota criará. Valor esperado de geração de sinergias: <strong>R$2,2B–R$4,8B</strong> em presentes de farm-out. Prazo: antes de julho (quando MP deve ser anunciada).</p>
+      <p class="nh-text">Empresas dos setores de <strong>educação, saúde privada e agronegócio</strong> com faturamento de <strong>R$50M a R$500M</strong> podem ganhar de <strong>R$2M a R$15M/ano</strong> em economia de impostos se CBS vier com alíquota reduzida (5-6% em vez de 7,65%) — janela de influência: até ago/2026.</p>
     </div>
   </div>
 </div>
