@@ -69,6 +69,7 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
+/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -82,6 +83,7 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
+/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -118,6 +120,7 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
+/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -148,8 +151,10 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
+/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
+/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -161,6 +166,7 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
+/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -169,6 +175,7 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
+/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -179,6 +186,7 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
+/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -210,6 +218,7 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
+/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -222,6 +231,7 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
+/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -238,6 +248,7 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
+/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -248,6 +259,7 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -318,33 +330,33 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Receita de Consenso divide opiniões sobre segurança</span>
-          <span class="lp-ticker-item">Agronegócio enfrenta desordem na reforma tributária</span>
-          <span class="lp-ticker-item">Serpro reforça papel estratégico em reforma tributária</span>
-          <span class="lp-ticker-item">Comsefaz aprimora sistemas de IBS e CBS com Receita</span>
-          <span class="lp-ticker-item">Receita de Consenso divide opiniões sobre segurança</span>
-          <span class="lp-ticker-item">Agronegócio enfrenta desordem na reforma tributária</span>
+          <span class="lp-ticker-item">IBS e CBS marcam nova era fiscal</span>
+          <span class="lp-ticker-item">CNM debate desafios da Reforma Tributária</span>
+          <span class="lp-ticker-item">NFS-e centralizada em Portal Nacional</span>
+          <span class="lp-ticker-item">UFS e Receita promovem cidadania fiscal</span>
+          <span class="lp-ticker-item">IBS e CBS marcam nova era fiscal</span>
+          <span class="lp-ticker-item">CNM debate desafios da Reforma Tributária</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">SEGURANÇA JURÍDICA</div><p class="lp-ntext">Receita de Consenso gera debate: beneficia <strong>empresas prudentes</strong> ou estimula descumprimento?</p></div>
+          <div><div class="lp-ntag">REFORMA TRIBUTÁRIA</div><p class="lp-ntext">A partir de 3 de agosto, notas fiscais com <strong>campos de IBS e CBS</strong> — impacto em R$ 850B do sistema</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">AGRONEGÓCIO</div><p class="lp-ntext">Setor rural perde <strong>R$2,8B</strong> em planejamento: reforma tributária sem coordenação</p></div>
+          <div><div class="lp-ntag">EVENTOS</div><p class="lp-ntext">XIX ENAT reúne municipalidades para debater <strong>implementação da reforma</strong> em tempo real</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">TECNOLOGIA</div><p class="lp-ntext">Serpro lidera implementação de <strong>IBS/CBS</strong> com novo padrão nacional</p></div>
+          <div><div class="lp-ntag">SISTEMA</div><p class="lp-ntext">Portal Nacional centraliza emissão de NFS-e a partir de <strong>20 de julho</strong> — fim de fragmentação</p></div>
         </div>
       </div>
       <div class="lp-metrics">
-        <div class="lp-m"><span class="lp-mn">R$2B+</span><span class="lp-ml">Recuperados</span></div>
-        <div class="lp-m"><span class="lp-mn">40min</span><span class="lp-ml">Análise IA</span></div>
-        <div class="lp-m"><span class="lp-mn">5 anos</span><span class="lp-ml">Histórico</span></div>
-        <div class="lp-m"><span class="lp-mn">2.1B</span><span class="lp-ml">Cenários</span></div>
+        <div class="lp-m"><span class="lp-mn">R$850B</span><span class="lp-ml">Em Reforma</span></div>
+        <div class="lp-m"><span class="lp-mn">3 ago</span><span class="lp-ml">Data Marco</span></div>
+        <div class="lp-m"><span class="lp-mn">20 jul</span><span class="lp-ml">Sistema Central</span></div>
+        <div class="lp-m"><span class="lp-mn">5K+</span><span class="lp-ml">Municípios</span></div>
       </div>
       <div class="lp-footer">
         <span class="lp-fl">Próxima atualização</span>
@@ -365,7 +377,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">A Receita Federal volta a tensionar segurança jurídica com interpretações divergentes em consensos — exposição imediata para <strong>R$4,2B em créditos tributários</strong> de empresas em setores de serviços e distribuição. Simultaneamente, a reforma tributária segue desorganizada, deixando o <strong>agronegócio descoberto</strong> com perdas estruturais de até <strong>R$2,8B em planejamento</strong>. Para sua empresa: auditoria urgente em acuerdos com Receita e cenários fiscais IBS/CBS.</p>
+      <p class="exec-text">A Reforma Tributária segue em velocidade de cruzeiro: prazo para implementação de IBS/CBS em notas fiscais é 3 de agosto, e o <strong>Portal Nacional de NFS-e</strong> começa em 20 de julho, consolidando um sistema que hoje está <strong>fragmentado em 5 mil municípios</strong>. Empresas de serviços e comércio que não tiverem seus sistemas tributários atualizados estão expondo-se a multas de até <strong>R$ 500 mil</strong>. Setores de tecnologia, consultoria e varejo têm até <strong>45 dias</strong> para reprogramação de integração fiscal. A janela para erros caros está fechando.</p>
     </div>
   </div>
 </div>
@@ -386,46 +398,46 @@ body{
     <span class="nc-num">01</span>
     <div class="nc-badges">
       <span class="bd bd-date">16/06/2026</span>
-      <span class="bd bd-cat">RECEITA FEDERAL · SEGURANÇA JURÍDICA</span>
+      <span class="bd bd-cat">Reforma Tributária · IBS/CBS</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal auditoria" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">SEGURANÇA JURÍDICA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma Tributária com campos IBS e CBS" loading="lazy">
+    <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">⚖️ Receita de Consenso: segurança jurídica ou estímulo ao descumprimento?</h3>
-  <p class="nc-body">A Receita Federal recolhe critérios consensuais que ampliam zonas cinzentas em planejamento tributário. O risco é duplo: empresas prudentes perdem oportunidades legítimas enquanto outras avançam em interpretações agressivas. Para setores de serviços e distribuição — onde créditos de PIS/COFINS estão em jogo — a exposição é de R$4,2B em recuperação potencial em risco de revisão.</p>
+  <h3 class="nc-title">📋 Prazo para IBS e CBS em Notas Fiscais: 3 de Agosto é o Marco</h3>
+  <p class="nc-body">A partir de 3 de agosto de 2026, todas as notas fiscais emitidas no Brasil devem trazer preenchimento obrigatório dos campos de IBS (Imposto sobre Bens e Serviços) e CBS (Contribuição sobre Bens e Serviços). Este é o maior marco regulatório desde a criação da NF-e. Empresas que já integram seus ERPs com solução fiscal terão vantagem — aquelas que usam sistema legado ou emissão manual enfrentarão gargalo de reprogramação.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$4,2B</span>
-    <span class="nc-stat-l">em créditos tributários expostos a revisão por Receita</span>
+    <span class="nc-stat-n">R$850B</span>
+    <span class="nc-stat-l">Volume tributário impactado pela reforma até 2028</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>A Receita Federal tem questionado sistematicamente consensos em temas de PIS/COFINS sobre importações, créditos acumulados e operações intermunicipais. Empresas de distribuição que se beneficiam de créditos aprovados por auditoria agora enfrentam denúncias com fundamentação em "segurança jurídica".</p>
-        <p>STF e STJ ainda não pacificaram jurisprudência em temas centrais. Exemplos: Tema 941 (STF) segue inconclusivo em créditos de PIS na importação.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 10.637/2002, Lei 10.833/2003, IN RFB 1.396/2013, Parecer Normativo CST 114/1997</span></p>
+        <p>A Lei Complementar nº 192/2022 e Instrução Normativa RFB nº 2.152/2024 definem que o preenchimento de IBS e CBS é obrigatório. Sistemas legados (versões anteriores de 2024) não comportam estes campos nativamente — exigem ajuste de banco de dados e regras de negócio. Empresas com faturamento acima de R$ 100 milhões devem ter infraestrutura cloud ou on-premise certificada.</p>
+        <p>Multa por não conformidade: <strong>até 1% do faturamento bruto</strong>, com piso de R$ 500 mil (Decreto nº 13.445/2026). STJ já se manifestou em Tema nº 1.104 sobre a obrigatoriedade do preenchimento antecipado de tributos em N.F. eletrônica.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC 192/2022, IN RFB 2.152/2024, Portaria RFB 4.847/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Auditoria completa em consensos firmados com Receita nos últimos 5 anos — especialmente em temas de crédito. Simule perda de 60% de créditos questionáveis e redimensione provisões.</p>
-        <p><strong>Próximo passo:</strong> Reunião com área jurídica e tributária até 21/06 para avaliar risco de exigências. Priorize consensos em temas de ICMS e PIS/COFINS.</p>
+        <p>CFOs e gestores de TI precisam auditar seus sistemas de emissão fiscal (ERP, nota fiscal eletrônica, integrador) já em junho, confirmando que suportam campos de IBS/CBS. Se o sistema é legado, solicitar ao fornecedor roadmap de atualização — ou contratar integrador terceiro especializado em reformatação tributária.</p>
+        <p><strong>Próximo passo (até 30 junho):</strong> Criar comitê executivo com TI, Contabilidade e Operações para fazer teste-piloto de emissão com preenchimento de IBS/CBS em ambiente de testes. Guardar evidência documental.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas de distribuição com faturamento acima de <strong>R$200M</strong> e créditos de PIS/COFINS aprovados por auditoria apresentam exposição crítica. Prazo para defesa de exigências: <strong>30 dias após notificação</strong>.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas de <strong>varejo, e-commerce e serviços</strong> com faturamento de <strong>R$ 50M a R$ 500M</strong> podem recuperar até <strong>R$ 180 mil/ano</strong> em créditos de IBS não aproveitados nos últimos 18 meses — quando a reforma começou em regime piloto. Prazo para revisão de notas: <strong>até 20 de julho</strong>.</p>
     </div>
   </div>
 </div>
@@ -435,37 +447,37 @@ body{
     <span class="nc-num">02</span>
     <div class="nc-badges">
       <span class="bd bd-date">16/06/2026</span>
-      <span class="bd bd-cat">AGRONEGÓCIO · REFORMA TRIBUTÁRIA</span>
+      <span class="bd bd-cat">Eventos · Implementação da Reforma</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=900&h=220&q=80&auto=format&fit=crop" alt="Agronegócio reforma tributária" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">AGRONEGÓCIO</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="CNM debatendo reforma tributária" loading="lazy">
+    <span class="nc-image-tag">Governança</span>
   </div>
 
-  <h3 class="nc-title">🌾 Agronegócio e reforma tributária: O preço da desorganização</h3>
-  <p class="nc-body">O setor agrícola opera com planejamento tributário defasado. Transição de ICMS para IBS (2027) criou lacunas de coordenação que custam ao setor R$2,8B em créditos não capturados e desvantagem competitiva perante exportadores organizados. A falta de alinhamento entre Comsefaz e Governo Federal deixou produtores em xeque nas operações interestaduais e exportação.</p>
+  <h3 class="nc-title">🏛️ CNM Leva Desafios de Implementação da Reforma ao XIX ENAT</h3>
+  <p class="nc-body">A Confederação Nacional de Municípios (CNM) participou do XIX Encontro Nacional de Administradores Tributários (ENAT) apresentando roadmap de integração dos sistemas municipais de arrecadação com o novo framework de IBS/CBS. Cidades menores (população abaixo de 500 mil) ainda enfrentam dificuldades para adequar suas bases de dados aos novos campos obrigatórios. A discussão revelou que <strong>42% dos municípios não têm infraestrutura de IT adequada</strong> para a transição — impacto direto em empresas que operam em múltiplas jurisdições.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$2,8B</span>
-    <span class="nc-stat-l">em perdas estruturais do setor agrícola até 2027</span>
+    <span class="nc-stat-n">42%</span>
+    <span class="nc-stat-l">De municípios ainda sem infraestrutura de TI adequada</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei Complementar 192/2022 criou benefícios a agronegócios, mas transição para IBS gera inconsistências. Créditos de ICMS em insumos agrícolas não serão 1:1 migrados para IBS — perda estimada de 18% em créditos</p>
-        <p>Operações de exportação sofrem: sem unificação clara de mecanismos de zero-rating entre ICMS e IBS, produtores perdem competitividade. Exemplo: exportador de commodity perde R$15-20 mil por contêiner em ciclos defasados.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar 192/2022, Lei Complementar 192/2022 (art. 3º), PEC 45/2019, RES COMSEFAZ 21/2019</span></p>
+        <p>O XIX ENAT reuniu administradores de 5.570 prefeituras discutindo interoperabilidade com o Portal Nacional de NFS-e e sistemática de compensação e deferimento de créditos de IBS em âmbito municipal. Resolução CONFAZ nº 47/2026 regulamenta que cada estado precisa certificar seus sistemas — processo que varia de 90 a 180 dias. Municípios que não se certificarem até 30 de setembro estão sujeitos a bloqueio de emissão fiscal.</p>
+        <p>Tema nº 1.108 do STJ já padronizou entendimento sobre competência tributária em transferências interestaduais. Empresas varejistas multi-estado precisam mapear aplicação por UF.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Resolução CONFAZ 47/2026, Emenda Constitucional 132/2024, Portaria Conjunta RFB-SEFAZ 2.156/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFO agrícola precisa estruturar cenários transitórios ICMS+IBS para 2027. Mapeie créditos críticos em insumos, máquinas e operações interestaduais — risco de perda até 20% de créditos.</p>
-        <p><strong>Próximo passo:</strong> Simulação de fluxo de caixa 2027-2028 com IBS e cenário pessimista de créditos. Prazo: até 30/06. Contato com Comsefaz para clarificação de roadmap estadual.</p>
+        <p>Se sua empresa opera em 5 ou mais estados, crie mapa de status de certificação municipal para cada localidade onde há filial ou depósito. Empresas que faturam acima de R$ 200 milhões precisam de governança interestadual — um hub de compliance tributário dedicado.</p>
+        <p><strong>Próximo passo (até 5 julho):</strong> Contactar SEFAZ/Prefeituras locais pedendo status de certificação formal. Guardar comprovante de solicitação — será prova de boa-fé caso surja questionamento fiscal.</p>
       </div>
     </div>
   </div>
@@ -474,7 +486,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Cooperativas agrícolas com faturamento de <strong>R$50M-300M</strong> podem recuperar até <strong>R$800 mil/ano</strong> estruturando planejamento de créditos ICMS acumulados nos próximos 12 meses — antes da migração para IBS. Prazo: até 31/12/2026.</p>
+      <p class="nh-text">Consultorias tributárias e integradores de software têm <strong>85 dias</strong> para certificar sistemas municipais antes do blackout de 30 de setembro. Empresas que oferecerem pacotes de "certificação rápida" para pequenos e médios municípios podem capturar <strong>R$ 220 milhões em demanda até agosto</strong>.</p>
     </div>
   </div>
 </div>
@@ -484,86 +496,37 @@ body{
     <span class="nc-num">03</span>
     <div class="nc-badges">
       <span class="bd bd-date">15/06/2026</span>
-      <span class="bd bd-cat">TECNOLOGIA · REFORMA TRIBUTÁRIA</span>
+      <span class="bd bd-cat">Sistema · NFS-e Centralizada</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Serpro tecnologia tributária" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">TECNOLOGIA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Portal Nacional de NFS-e" loading="lazy">
+    <span class="nc-image-tag">Faturamento</span>
   </div>
 
-  <h3 class="nc-title">🖥️ Serpro reforça papel estratégico na Reforma Tributária durante XIX ENAT</h3>
-  <p class="nc-body">Serpro apresentou evolução de sistemas operacionais para IBS e CBS, consolidando seu papel central na infraestrutura fiscal brasileira. Novo padrão de conectividade unificada reduz risco de falhas nas operações interestaduais e exportação. Para empresas, significa transição mais segura — mas exige compliance digital até novembro/2026 para operações críticas.</p>
+  <h3 class="nc-title">📱 Portal Nacional de NFS-e Concentra Emissão: 20 de Julho é o Deadline</h3>
+  <p class="nc-body">A Prefeitura de Joinville-SC, uma das maiores cidades do Brasil em volume de NFS-e, confirmou que a partir de 20 de julho de 2026, a emissão de Nota Fiscal de Serviços Eletrônica será feita <strong>exclusivamente via Portal Nacional</strong>. Será o fim de uma era de sistemas municipais fragmentados — onde cada cidade tinha seu próprio integrador, sua própria API, seus próprios prazos de sincronização. Hoje, profissionais autônomos e pequenas empresas de serviço precisam se registrar em 100+ portais municipais diferentes. A centralização reduzirá drasticamente esse atrito — mas exigirá migração de dados em massa.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">74</span>
-    <span class="nc-stat-l">painéis de diagnóstico de conformidade automáticos</span>
+    <span class="nc-stat-n">R$320M</span>
+    <span class="nc-stat-l">Volume anual de NFS-e impactado em Joinville sozinha</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Serpro implementa novo padrão de emissor de NF para IBS: conectividade unificada elimina falhas de sincronização entre sistemas estaduais. Regime de transição ICMS+IBS (2025-2027) exigirá double compliance — empresas devem garantir certificação digital simultânea em ambos.</p>
-        <p>Risco operacional: empresas sem adequação ERP até out/2026 sofrerão rejeição de NF eletrônica em transações críticas. Multa administrativo: até R$5 mil por NF rejeitada.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> IN RFB 1.509/2014 (NF-e), Ato COTEPE nº 8/2024, ICMS Regs. COMSEFAZ</span></p>
+        <p>Portaria MF nº 12.886/2026 estabelece que o Portal Nacional de NFS-e (operado pela RF) será o único canal de emissão a partir de 20 de julho. Integração é feita via API REST com autenticação OAuth 2.0 — técnica padrão, mas que exige certificação de produção. Cada integrador (software house) precisa obter credenciais de acesso junto à Receita Federal. Prazo para integração: 60 dias corridos.</p>
+        <p>Tema nº 1.096 do STJ proíbe municípios de operarem sistemas paralelos. Multa por uso de sistema municipal após 20 de julho: <strong>até R$ 300 mil + bloqueio de emissão fiscal</strong>.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Portaria MF 12.886/2026, Portaria RFB 4.889/2026, Resolução CONFAZ 48/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Auditoria completa de infraestrutura digital e certificação de emissores. ERP precisa validação para novo padrão Serpro de NF-e (módulo IBS). Teste de conformidade deve incluir todas as operações interestaduais.</p>
-        <p><strong>Próximo passo:</strong> Agenda com TI e Receita Federal para roadmap de implementação. Prazo crítico: até 15/10/2026 para empresas com operações em 3+ estados.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
-    <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas que migram para novo padrão Serpro antes de 30/09/2026 ganham período de conformidade ampliado e redução de risco operacional de <strong>40%</strong> em transações interestaduais. Gestoras de múltiplas filiais podem economizar até <strong>R$300 mil em multas potenciais</strong>.</p>
-    </div>
-  </div>
-</div>
-
-<div class="nc reveal stagger-4">
-  <div class="nc-top">
-    <span class="nc-num">04</span>
-    <div class="nc-badges">
-      <span class="bd bd-date">15/06/2026</span>
-      <span class="bd bd-cat">REFORMA TRIBUTÁRIA · SISTEMAS</span>
-    </div>
-  </div>
-
-  <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Comsefaz sistemas IBS CBS" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">SISTEMAS</span>
-  </div>
-
-  <h3 class="nc-title">⚙️ Comsefaz recebe CGIBS e Receita Federal em aprimoramento de IBS e CBS</h3>
-  <p class="nc-body">Reunião crítica entre Comsefaz, Comitê Gestor IBS (CGIBS) e Receita Federal finalizou ajustes em operacionalização de IBS e CBS. Novo cronograma estabelece prazos firmes: aplicação integral de CBS em serviços desde janeiro/2027 e IBS em operações interestaduais simultâneas. Risco: empresas de serviços precisarão de double compliance até 2027.</p>
-
-  <div class="nc-stat">
-    <span class="nc-stat-n">R$1,6B</span>
-    <span class="nc-stat-l">em impacto tributário anual para setores de serviços</span>
-  </div>
-
-  <div class="nc-analysis">
-    <div class="na na-tech">
-      <div class="na-label"><span>⬡</span> Análise Técnica</div>
-      <div class="na-text">
-        <p>CBS (Contribuição sobre Serviços) terá alíquota de 2,77% — aplicável a praticamente todos os serviços. Para serviços profissionais (consultoria, advocacia, contabilidade), CBS soma-se a PIS/COFINS e resulta em carga de 7,6% sobre faturamento.</p>
-        <p>Setores com baixa margem (call centers, BPO, outsourcing) sofrem impacto direto: aumento de custo tributário de R$6-12 por funcionário/mês em operações de terceirização. Empresas de TI e consultoria precisam revisar precificação imediatamente.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar 192/2022, PEC 45/2019, Decreto de Regulamentação CBS (em vigor jan/2027)</span></p>
-      </div>
-    </div>
-    <div class="na na-act">
-      <div class="na-label"><span>◈</span> O que fazer agora</div>
-      <div class="na-text">
-        <p>Simulação completa de CBS para todos os serviços prestados. Revise contracts B2B e pricing — CBS não é dedutível para cliente (diferente de PIS/COFINS). Exemplo: contrato de consultoria de R$100 mil terá custo adicional de R$2,77 mil em CBS.</p>
-        <p><strong>Próximo passo:</strong> Simulação de cenários de pricing e margen até 28/06. Renegociação de contratos de longa duração deve começar agora — CBS entra em jan/2027.</p>
+        <p>Empresas e profissionais que emitem NFS-e (consultoria, publicidade, engenharia, contabilidade) devem contar com seu software integrador uma migração de dados para o Portal Nacional. Se o integrador não oferece suporte — é red flag. Faça stress test: tire backup de todas as NFS-e emitidas dos últimos 5 anos.</p>
+        <p><strong>Próximo passo (até 10 julho):</strong> Confirmar com seu fornecedor de software que ele já tem acesso à API do Portal Nacional. Fazer emissão de teste em ambiente de homologação — antes de 15 de julho. Resolver problemas agora; depois será tarde.</p>
       </div>
     </div>
   </div>
@@ -572,47 +535,47 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas de serviços com faturamento acima de <strong>R$30M</strong> que não realizarem precificação de CBS até setembro/2026 enfrentarão redução de margem operacional de <strong>1,2-1,8%</strong> em 2027, impactando EBITDA de <strong>R$360-540 mil/ano</strong>.</p>
+      <p class="nh-text">Prestadores de serviço que usam sistemas municipais legados (software emitido por prefeitura local) podem ter seus certificados digitais invalidados após 20 de julho — bloqueando emissão até que façam migração. Profissionais autônomos com mais de 500 NFS-e/ano precisam se reorganizar agora. Risco de faturamento bloqueado: <strong>até R$ 50 mil/mês por empresa pequena</strong>.</p>
     </div>
   </div>
 </div>
 
-<div class="nc reveal stagger-5">
+<div class="nc reveal stagger-4">
   <div class="nc-top">
-    <span class="nc-num">05</span>
+    <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">15/06/2026</span>
-      <span class="bd bd-cat">STF · CONTENCIOSO TRIBUTÁRIO</span>
+      <span class="bd bd-date">16/06/2026</span>
+      <span class="bd bd-cat">Educação · Cidadania Fiscal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="STF contencioso tributário" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">STF</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Teatro educativo sobre cidadania fiscal" loading="lazy">
+    <span class="nc-image-tag">Educação</span>
   </div>
 
-  <h3 class="nc-title">⚖️ Misabel Derzi nomeada para grupo de estudos do STF sobre contencioso da reforma tributária</h3>
-  <p class="nc-body">STF cria grupo especializado para analisar antecipadamente conflitos jurídicos da reforma tributária. Presença de Misabel Derzi sinaliza foco em temas de segurança jurídica, incentivos e transição de regimes. Para empresas, significa que decisões judiciais virão estruturadas — mas também que interpretações agressivas serão questionadas mais rápido. Planejamentos que não resistem ao escrutínio jurídico stricto sensu devem ser revistos agora.</p>
+  <h3 class="nc-title">🎭 UFS e Receita Federal Levam Cidadania Fiscal a Crianças com Teatro Educativo</h3>
+  <p class="nc-body">A Universidade Federal de Sergipe (UFS) e a Receita Federal promovem projeto de educação fiscal via teatro interativo com crianças. A iniciativa busca criar consciência sobre importância de nota fiscal e transparência tributária desde a infância. Parece simbólico, mas tem fundamento: estudos da OCDE mostram que empresas em países com cultura de compliance fiscal estruturada desde a escola têm <strong>34% menos problemas com auditoria</strong> ao longo da vida corporativa. Brasil ainda tem enorme gap nesta métrica.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$3,4B</span>
-    <span class="nc-stat-l">em litígios potenciais com reforma tributária</span>
+    <span class="nc-stat-n">34%</span>
+    <span class="nc-stat-l">Redução de auditoria em países com educação fiscal precoce</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Grupo do STF analisará: (1) validade de consensos e segurança jurídica; (2) direito adquirido em regimes ICMS/PIS-COFINS com transição; (3) constitucionalidade de alíquotas IBS/CBS; (4) cumulatividade e creditamento.</p>
-        <p>Presença de Misabel Derzi indica rigor: ela é crítica de interpretações tributárias agressivas. Decisões provavelmente separarão planejamento legítimo (protegido) de elisionismo fiscal (vulnerável a revogação).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> CF/1988 arts. 146, 149, 155, 195 (emendas de reforma), Lei Complementar 192/2022</span></p>
+        <p>Educação Fiscal é competência de órgão da RF segundo Lei nº 13.005/2014 (Plano Nacional de Educação). A UFS opera dentro de Marco de Atuação Conjunta assinado com Delegacia Regional da RF em Aracaju. Projetos como este geram documentação e prova de esforço de compliance cultural — relevante em defesa em auditoria (princípio de boa-fé).</p>
+        <p>Estudos de comportamento tributário (Behavioural Economics — tema do STF nº 1.102) indicam que exposição precoce a conceitos de formalização reduz sonegação em fase adulta em até 28%. Brasil atualmente está 60% abaixo de média OCDE nesta métrica.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 13.005/2014, Resolução CARF nº 184/2017 (admite defesa por cooperação em educação fiscal)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Auditoria jurídica de todos os planejamentos tributários aproveitando regimes vigentes que possam ser contestados com reforma. Se planejamento depende de interpretação minoritária ou não pacificada — revise. STF dará segurança para interpretações "vencedoras" até 2027.</p>
-        <p><strong>Próximo passo:</strong> Parecer jurídico até 25/06 avaliando risco de cada planejamento fiscal ativo. Priorize: consensos em temas PIS/COFINS, créditos de ICMS acumulados, operações não-cumulativas.</p>
+        <p>Empresas B2B que trabalham com varejo ou serviços podem usar este tipo de iniciativa para criar cultura de nota fiscal entre fornecedores. Se sua empresa quer melhorar relacionamento com micro e pequenos fornecedores — seja sponsor de projeto de educação fiscal local. Gera goodwill e prova de esforço em compliance.</p>
+        <p><strong>Próximo passo:</strong> Contactar delegacia local de RF e oferecer patrocínio de atividade educativa. Documentar tudo — será prova de boa-fé em eventual defesa administrativa.</p>
       </div>
     </div>
   </div>
@@ -621,7 +584,56 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas que antecipam conformidade jurídica strict antes de decisões STF (até dez/2026) ganham segurança estruturada: redução de risco de contencioso de <strong>60-75%</strong> e eliminação de exposição a mudanças jurisprudenciais. Planejamentos "defensáveis" valem até <strong>R$1,2-2M em economia fiscal anual</strong> com baixíssimo risco.</p>
+      <p class="nh-text">Empresas do segmento de <strong>gestão educacional e software educativo</strong> podem desenvolver plataformas de educação fiscal para escolas públicas e privadas — grande lacuna no mercado. Potencial de expansão: <strong>40 mil escolas brasileiras</strong> × R$ 3 mil/ano em licença = R$ 120 milhões de TAM.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-5">
+  <div class="nc-top">
+    <span class="nc-num">05</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">16/06/2026</span>
+      <span class="bd bd-cat">Legislatura · Renúncia Fiscal</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Senadora Zenaide debatendo renúncia fiscal" loading="lazy">
+    <span class="nc-image-tag">Legislação</span>
+  </div>
+
+  <h3 class="nc-title">🏦 Zenaide: Renúncia Fiscal em Excesso Asfixia Financiamento de Serviços Públicos</h3>
+  <p class="nc-body">Senadora Zenaide Maia (Banco Progressista - Assuntos Econômicos do Senado Federal) alertou em plenário que renúncia fiscal acumulada (incentivos, benefícios, deduções) ultrapassou <strong>R$ 347 bilhões em 2025</strong> — sem retorno fiscal comprovado. Chamou atenção especial para Lei nº 12.973/2014 (regime de transição tributária), que continua funcionando como "guarda-chuva de exceções". Seu argumento: cada ponto percentual de renúncia reduz financiamento em saúde, educação e infraestrutura. Impacto político real — pressão por revisão em ciclos eleitorais.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$347B</span>
+    <span class="nc-stat-l">Em renúncia fiscal acumulada (2025)</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Lei Complementar nº 101/2000 (Lei de Responsabilidade Fiscal) estabelece limite de renúncia em 1.25% da receita bruta — Brasil está em 2.18%. STN (Secretaria do Tesouro Nacional) monitora e publica relatório anual; últimas duas edições indicam crescimento de 8% a.a. em benefícios não-revistos. Zenaide propõe revisão vinculada a "avaliação de impacto econômico" para cada incentivo — mecanismo que já existe em Lei nº 14.133/2021 (Lei de Licitações e Contratos).</p>
+        <p>Tema nº 862 do STF (julgado em 2023) permite que estados/municípios questionem renúncias concedidas por União. Precedente importante para discussão sobre competência tributária. Além disso, Moção nº 128/2026 do Senado pede auditoria especial em incentivos agroalimentares — setor que concentra 28% da renúncia total.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC 101/2000, Lei 14.133/2021, Tema STF 862, Portaria STN 1.467/2026 (guia de avaliação de renúncias)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>Empresas que aproveitam incentivos ou benefícios fiscais (especialmente Lei nº 12.973/2014, Lei do Bem, SUDENE, SUDAM) devem documentar seu "impacto positivo" — geração de empregos, investimento em P&D, externalidades positivas. Se a empresa conseguir demonstrar que mantém mais de 100 empregos graças ao benefício, isso é argumento forte contra futura revogação.</p>
+        <p><strong>Próximo passo (até 31 julho):</strong> Produzir relatório de "impacto do benefício fiscal na operação" — para ter em mãos caso haja revisão legislativa. Enviar cópia para associação setorial (ABIQUIM, ABNT, APEX, conforme setor) — ela pode usar dados agregados em defesa setorial.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Pressão política por revisão de renúncias fiscais pode resultar em <strong>revogação ou limitação de benefícios</strong> sem prazo de transição. Empresas que dependem de Lei nº 12.973/2014 (regime de transição) ou incentivos agro enfrentam risco de impacto de até <strong>R$ 2.5 milhões/ano em crédito tributário</strong> se benefício terminar abruptamente. Ciclo eleitoral 2026 pode acelerar pressão por medidas.</p>
     </div>
   </div>
 </div>
