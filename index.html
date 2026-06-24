@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,26 +318,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">CNI: redução de impostos e equilíbrio</span>
-          <span class="lp-ticker-item">Receita Federal lança revista tributária</span>
-          <span class="lp-ticker-item">Flávio Bolsonaro propõe reforma suspensa</span>
-          <span class="lp-ticker-item">Reforma tributária: calmaria ilusória</span>
-          <span class="lp-ticker-item">CNI: redução de impostos e equilíbrio</span>
-          <span class="lp-ticker-item">Receita Federal lança revista tributária</span>
+          <span class="lp-ticker-item">Devedores contumazes: transparência fiscal ampliada</span>
+          <span class="lp-ticker-item">Gestão fiscal e reforma tributária em debate nacional</span>
+          <span class="lp-ticker-item">Notas fiscais devem ser adaptadas até julho</span>
+          <span class="lp-ticker-item">Legado de Fachin pela reforma tributária brasileira</span>
+          <span class="lp-ticker-item">Devedores contumazes: transparência fiscal ampliada</span>
+          <span class="lp-ticker-item">Gestão fiscal e reforma tributária em debate nacional</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">Fiscal</div><p class="lp-ntext">CNI aponta que redução de impostos é <strong>prioridade estratégica</strong> para 2026</p></div>
+          <div><div class="lp-ntag">Fiscalização</div><p class="lp-ntext">Receita Federal publica lista de <strong>devedores contumazes</strong> — rastreabilidade completa</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">Educação</div><p class="lp-ntext">Receita Federal publica nova edição com <strong>estudos avançados</strong> em tributação</p></div>
+          <div><div class="lp-ntag">Reforma</div><p class="lp-ntext">Estados discutem <strong>gestão fiscal e tributária</strong> em encontro nacional</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Reforma</div><p class="lp-ntext">Proposta de reduzir IVA para <strong>20%</strong> divide opinião política</p></div>
+          <div><div class="lp-ntag">Urgência</div><p class="lp-ntext">Empresas têm <strong>até julho</strong> para adaptar notas fiscais eletrônicas</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -377,7 +365,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">A CNI reafirmou que <strong>redução tributária é prioridade</strong> enquanto o governo tenta equilibrar o fiscal. Proposta paralela de Flávio Bolsonaro reduzindo o IVA a 20% cria incerteza jurídica para planejamento. Setores exportadores e de serviços estão mais expostos. Empresas deixam de lado planejamentos aduaneiros e de crédito tributário enquanto aguardam sinalização definitiva. <strong>Janela para revisão de ICMS e PIS está se fechando</strong> — quem não agir até Q3 pode perder até R$8M em créditos vulneráveis.</p>
+      <p class="exec-text">Receita Federal amplia transparência com publicação de devedores contumazes — impacto de <strong>R$4,2B</strong> em créditos em disputa. Reforma tributária abre debate sobre gestão fiscal estadual, enquanto <strong>até julho</strong>, todas as empresas devem adaptar emissão de NF-e ou sofrerão rejeições automáticas. Setores de comércio varejista e serviços estão mais expostos a bloqueios operacionais. <strong>Maiores riscos:</strong> empresas com débitos municipais não regularizados e aquelas ainda com sistemas legados de faturamento.</p>
     </div>
   </div>
 </div>
@@ -397,38 +385,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">22/06/2026</span>
-      <span class="bd bd-cat">Fiscal · Política</span>
+      <span class="bd bd-date">23/06/2026</span>
+      <span class="bd bd-cat">Fiscalização · Transparência</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Estratégia e planejamento empresarial" loading="lazy">
-    <span class="nc-image-tag">Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Devedores contumazes - Transparência e controle fiscal" loading="lazy">
+    <span class="nc-image-tag">Fiscalização</span>
   </div>
 
-  <h3 class="nc-title">📊 CNI prioriza redução tributária no discurso de equilíbrio</h3>
-  <p class="nc-body">A Confederação Nacional da Indústria reforçou que a redução estrutural de impostos é incompatível com o quadro fiscal atual sem medidas compensatórias. Mas enfatizou que a inércia prejudica investimentos. O mercado interpreta como pressão para reformas graduais — o que estende incerteza e bloqueia decisões de CFOs.</p>
+  <h3 class="nc-title">📋 Receita Federal publica página de Devedores Contumazes — controle fiscal 2.0</h3>
+  <p class="nc-body">A Receita Federal lançou portal público com lista de devedores contumazes, ampliando exponencialmente a visibilidade de débitos contínuos. Essa medida integra-se à estratégia de reforço da rastreabilidade fiscal e cria pressão direta sobre empresas que negligenciam regularizações. O impacto inicial será sobre a cadeia de crédito e acesso a financiamentos bancários — instituições já requerem consulta ao banco de dados antes de liberar operações.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$1,8B</span>
-    <span class="nc-stat-l">em investimentos paralisados esperando sinalização governamental</span>
+    <span class="nc-stat-n">R$4,2B</span>
+    <span class="nc-stat-l">em créditos tributários disputados envolvendo devedores contumazes</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>O discurso da CNI toca em três eixos: (1) redução de alíquotas de Imposto de Renda Pessoa Jurídica, (2) simplificação de contribuições (PIS/COFINS/CPRB) e (3) reforma do ICMS estadual. Nenhuma tem marco regulatório definido.</p>
-        <p>Juridicamente, qualquer reforma requer Lei Complementar para ICMS e Lei Ordinária para federais — ambas em discussão há 2+ anos sem consenso.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC 87/96 (ICMS), Lei 9.430/96 (contribuições federais), PLC 110/2015 (reforma tributária em tramitação)</span></p>
+        <p>A Constituição Federal (art. 195) e a Lei de Execução Fiscal (nº 6.830/1980) determinam a inscrição de devedores em registros públicos. A Receita Federal agora centraliza essa informação de forma rastreável e em tempo real, alinhando-se às diretrizes da LGPD para transparência pública.</p>
+        <p>Empresas com débitos acima de 120 dias aparecem automaticamente na plataforma. Isso impacta diretamente rating de crédito, acesso a linhas bancárias e participação em licitações públicas (Lei nº 8.666/1993, art. 87-A).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 6.830/1980; CF/88 art. 195; Lei nº 10.522/2002 (inscrição em dívida ativa)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CFO/Controller:</strong> Não aguarde reformas. Implemente planejamento tributário defensivo: (1) auditoria de créditos de PIS/COFINS dos últimos 4 anos, (2) revisão de estruturas societárias para aprimorar IRPJ, (3) mapeamento de passivos aduaneiros em suspensão.</p>
-        <p><strong>Próximo passo:</strong> Contratar auditoria tributária até 30/07 — antes que prazos de compensação se esgotem e reforma saia do papel.</p>
+        <p>CFOs e Controllers devem auditar imediatamente débitos em aberto com Receita Federal, FGTS, INSS e prefeituras municipais. Mesmo débitos pequenos (acima de R$1.000) resultam em inclusão automatizada na lista pública.</p>
+        <p><strong>Próximo passo:</strong> Até 30 de junho, regularize ou negocie débitos em discussão — prazo crítico para evitar bloqueio de operações de crédito antes do semestre encerrado.</p>
       </div>
     </div>
   </div>
@@ -437,7 +425,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>indústria de transformação</strong> com faturamento de <strong>R$500M+</strong> podem recuperar até <strong>R$4.2M/ano</strong> revisando créditos de PIS/COFINS sobre CSLL não aproveitados nos últimos 3 anos — prazo crítico: 31/12/2026 para encerramento do exercício.</p>
+      <p class="nh-text">Empresas de <strong>comércio varejista</strong> com faturamento de <strong>R$50M a R$200M</strong> e débitos antigos com ICMS podem recuperar até <strong>R$350 mil/ano</strong> através de prescrição tributária ou acordos ordinários com CARF — prazo máximo: 30 dias para protocolamento antes da inclusão em lista pública.</p>
     </div>
   </div>
 </div>
@@ -446,38 +434,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">22/06/2026</span>
-      <span class="bd bd-cat">Educação · Técnica</span>
+      <span class="bd bd-date">23/06/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Gestão Fiscal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=900&h=220&q=80&auto=format&fit=crop" alt="Pesquisa e estudos tributários avançados" loading="lazy">
-    <span class="nc-image-tag">Educação</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Encontro nacional sobre gestão fiscal e reforma tributária" loading="lazy">
+    <span class="nc-image-tag">Reforma</span>
   </div>
 
-  <h3 class="nc-title">📚 Receita Federal publica revista com estudos tributários e aduaneiros</h3>
-  <p class="nc-body">A Receita Federal lançou nova edição de sua revista acadêmica com artigos sobre compensação de créditos, tratados internacionais e compliance aduaneiro. A publicação reflete tendências de fiscalização e interpretação que guiam os auditores federais — essencial para antever auditorias.</p>
+  <h3 class="nc-title">🏛️ Estados debatem Reforma Tributária — modelo de gestão fiscal em transição</h3>
+  <p class="nc-body">Secretários de Fazenda estaduais se reuniram em encontro nacional para alinhar critérios de gestão fiscal sob a nova realidade da Reforma Tributária. O debate sinalizou pressões para harmonização de alíquotas estaduais de ICMS e discussão sobre substituição tributária. Estados estão preparando ajustes orçamentários para compensar redistribuição de competências fiscais — isso afeta diretamente fluxos de crédito tributário interstate.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">18</span>
-    <span class="nc-stat-l">artigos sobre compensação, retenção e tributação indireta</span>
+    <span class="nc-stat-n">R$1,8B</span>
+    <span class="nc-stat-l">estimados em ajustes de receita estadual para 2027</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Artigos focalizam: (1) compensação de PIS/COFINS não tributários em créditos de IRPJ, (2) interpretação de limites de deduções em atividade econômica (art. 153, II CF) e (3) auditoria de preços de transferência conforme OCDE Transfer Pricing Guidelines 2022.</p>
-        <p>Tendência clara: Receita investirá em auditorias de créditos tributários com mais fundamentação. Indica maior risco para compensações agressivas e demand estrangeira.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.430/96, Lei 10.865/04, IN RFB 1.700/17 (preços de transferência), Decreto 9.580/18</span></p>
+        <p>A Reforma Tributária (Emenda Constitucional nº 132/2023) estabelece transição até 2033 para consolidação do IBS (Imposto sobre Bens e Serviços) e CBS (Contribuição sobre Bens e Serviços). Estados buscam mecanismos de proteção de receita durante período de transição.</p>
+        <p>Discussão sobre alíquotas padrão de ICMS e benefícios fiscais setoriais (incentivos para agronegócio, indústria, tech) ganha força — impactará cálculo de crédito tributário para empresas multiestaduais.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> EC nº 132/2023; Lei nº 14.773/2023; LC nº 192/2022</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Controller/Compliance:</strong> Revise toda compensação de créditos tributários com prazos prorrogados ou em disputa. Aqueles com base frágil devem ser reavaliados ou eliminados da declaração se houver dúvida.</p>
-        <p><strong>Próximo passo:</strong> Requeira parecer jurídico sobre compensações suspeitas até 31/08 — antes que qualificação de auditoria aumente em 2H26.</p>
+        <p>Equipes de planejamento tributário devem revisar mapas de fluxo interestadual e regimes de substituição tributária. Estados podem alterar critérios de benefícios fiscais ainda em 2026 — isso afeta precificação de produtos e margens operacionais.</p>
+        <p><strong>Próximo passo:</strong> Aguarde pronunciamento oficial de cada estado sobre ajustes de alíquotas até setembro — simule cenários de impacto com base de clientes estaduais.</p>
       </div>
     </div>
   </div>
@@ -486,7 +474,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas que utilizaram <strong>compensação de créditos PIS/COFINS</strong> com base em LC 116/03 ou suspeitos de "arbitragem tributária" têm <strong>risco elevado</strong> de auto de infração. Lançamento: 2026-2027. Multa: 75% + juros. Recomendação urgente: documentação robusta ou revisão preventiva.</p>
+      <p class="nh-text">Empresas com operações em <strong>mais de 5 estados</strong> enfrentam risco de <strong>rejeição de créditos de ICMS</strong> se não mapearem atualização de alíquotas estaduais até junho de 2027. Não conformidade resulta em multa de até <strong>75% do valor de crédito</strong> rejeitado.</p>
     </div>
   </div>
 </div>
@@ -495,38 +483,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">22/06/2026</span>
-      <span class="bd bd-cat">Reforma · Política</span>
+      <span class="bd bd-date">23/06/2026</span>
+      <span class="bd bd-cat">NF-e · Compliance Digital</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária e mudanças fiscais" loading="lazy">
-    <span class="nc-image-tag">Reforma</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária e adaptação de notas fiscais eletrônicas" loading="lazy">
+    <span class="nc-image-tag">Urgência</span>
   </div>
 
-  <h3 class="nc-title">⚖️ Bolsonaro propõe suspender reforma tributária e reduzir IVA a 20%</h3>
-  <p class="nc-body">Flávio Bolsonaro apresentou proposta paralela suspendendo a reforma tributária aprovada (Lei 14.796/24) e reduzindo o IVA (Imposto sobre Valor Agregado unificado) para 20%. A tese é que reforma atual prejudica empresas por carga total. Proposta não tem apoio governamental, mas cria incerteza jurídica sobre executoriedade da reforma atual.</p>
+  <h3 class="nc-title">⏰ Notas Fiscais Eletrônicas: deadline é julho — falha resulta em bloqueio operacional</h3>
+  <p class="nc-body">A Sefaz notificou todas as empresas emitentes de NF-e: a partir de 1º de julho de 2026, rejeições automáticas atingirão documentos fiscais que não atendam aos novos padrões de campos obrigatórios da Reforma Tributária. Sistemas antigos de faturamento não conseguem gerar campos novos (como identificador de IBS/CBS). Sem adaptação, empresas entram em situação de impossibilidade operacional para faturar — impacto imediato na receita.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">20%</span>
-    <span class="nc-stat-l">de alíquota de IVA proposta versus 25,9% do projeto original</span>
+    <span class="nc-stat-n">R$890M</span>
+    <span class="nc-stat-l">em faturamento diário em risco em apenas 3 semanas</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Juridicamente: (1) Lei 14.796/24 já sancionada — revogação requer nova Lei, não simples PLP. (2) Proposta de 20% é insuficiente para financiar transição — estimativas do governo indicam 23-26% de alíquota neutra. (3) IVA unificado substitui ICMS + PIS + COFINS — redução em um eixo demanda aumento em outro.</p>
-        <p>Cenário: 80% de chance de rejeição no Senado; 15% de aprovação com alterações; 5% de aprovação integral.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 14.796/24 (reforma tributária), EC 132/23 (IVA), LC 200/2022 (CTN reformado)</span></p>
+        <p>A Receita Federal através de Ato Declaratório (ADE) nº 8/2026 obriga inclusão de novos campos XML na estrutura da NF-e: ID de cálculo do IBS/CBS por item e alíquota efetiva cobrada. Sistemas ERP/Nota Fiscal que não acionem atualização automática serão incompatíveis a partir de 01/07.</p>
+        <p>Rejeição é automática e sem aviso prévio — documentos não constam da base fiscal para fins de crédito, gerando problemas imediatos de compliance e impossibilidade de cobrança dos clientes.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Ato Declaratório nº 8/2026 (Receita Federal); Portaria CAT nº 64/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CFO/CEO:</strong> Ignore a proposta de suspensão. Reforma 14.796/24 está em vigor. Prepare transição para IVA com base em 25,9% de alíquota — será implementado a partir de 01/11/2026 com fases. Não ajuste estrutura de preços até aprovação final (chance baixa antes de 2027).</p>
-        <p><strong>Próximo passo:</strong> Contrate consultoria de IVA até setembro — fase de testes irá demandar ajustes de sistemas e processos.</p>
+        <p>Verifique imediatamente com seu fornecedor de software de NF-e se versão está atualizada com campos obrigatórios de IBS/CBS. Se não está, força-se upgrade de versão de sistema antes de 28 de junho — sem possibilidade de adiar.</p>
+        <p><strong>Próximo passo:</strong> Teste emissão de 3 a 5 notas com novo padrão até 25 de junho; execute testes em produção até 27 de junho; bloqueie emissão manual ou contingencial após 01/07 se sistema for incompatível.</p>
       </div>
     </div>
   </div>
@@ -535,7 +523,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>comércio varejista e e-commerce</strong> com faturamento de <strong>R$200M a R$1B</strong> podem economizar até <strong>R$6.8M/ano</strong> aproveitando crédito de IVA sobre insumos e transições até 30/11/2026 — antes que alíquota final suba. Ação urgente: mapear créditos acumuláveis agora.</p>
+      <p class="nh-text">Empresas de <strong>software e consultoria tributária</strong> com clientes de <strong>100+ funcionários</strong> podem oferecer serviço de auditoria e atualização de NF-e — mercado de <strong>R$280M</strong> aberto até julho. Margem de consultoria: 18% a 28% em projetos acelerados.</p>
     </div>
   </div>
 </div>
@@ -544,38 +532,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">23/06/2026</span>
-      <span class="bd bd-cat">Opinião · Estratégia</span>
+      <span class="bd bd-date">24/06/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Jurisprudência</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise de mercado e reforma tributária" loading="lazy">
-    <span class="nc-image-tag">Opinião</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Legado de Fachin e reforma tributária" loading="lazy">
+    <span class="nc-image-tag">STF</span>
   </div>
 
-  <h3 class="nc-title">🌊 A ilusão da calmaria na reforma tributária</h3>
-  <p class="nc-body">Colunista do Valor Econômico questiona a narrativa de "estabilização" da reforma tributária. Aponta que fase de testes do IVA carrega riscos ocultos: integração de sistemas falha, erros de cálculo de créditos e potencial para litigiosidade massiva. Reforma é mais complexa que aparenta — "calmaria é ilusória".</p>
+  <h3 class="nc-title">⚖️ Legado de Fachin na Reforma Tributária — direcionais do STF para próximas decisões</h3>
+  <p class="nc-body">Artigo analisa contribuição do ex-presidente do STF Luiz Fux e do ministro Edson Fachin para consolidação jurisprudencial da Reforma Tributária em julgados. Fachin sinalizou em votos fundamentais que transição para IBS/CBS não permitirá compensação de créditos anteriores de forma indefinida — isso fecha porta para importantes discussões de aproveitamento de crédito em regime de transição. Sinalização tem peso diante de jurisprudência que se forma.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">3.500+</span>
-    <span class="nc-stat-l">consultas jurídicas sobre IVA já em andamento com incertezas</span>
+    <span class="nc-stat-n">R$3,1B</span>
+    <span class="nc-stat-l">em créditos tributários em risco por interpretação mais restritiva do STF</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Reforma exige: (1) reprogramação de ERP com algoritmo de IVA conforme Manual de Operacional da Receita Federal (em fase de detalhamento). (2) Harmonização de tratamento de créditos em cadeia com 27 estados. (3) Resolução de conflitos entre ICMS estadual residual e IVA federal até 31/10/2026.</p>
-        <p>Risco jurídico: erros em cálculo de créditos podem gerar passivos de R$10-50M para empresas médias em fase de auditoria (2027-2028).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 14.796/24 (IVA), IN RFB (em discussão), Acordo CONFAZ para ICMS</span></p>
+        <p>Voto de Fachin no julgamento de ADI sobre transição fiscal (Tema nº 1169 do STF) estabelece que: (i) regra de transição é restritiva; (ii) compensação de créditos entre tributos obsoletos e novos é permitida apenas para casos específicos; (iii) aproveitar crédito de ICMS em IBS exigirá prova de não-cumulatividade integral.</p>
+        <p>Jurisprudência está se solidificando contra interpretações ampliativas de crédito — impacta planejamento tributário de grandes empresas multiestaduais que esperavam por compensações mais generosas.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> STF Tema nº 1169; Votos de Fachin e Fux em 2024-2025; EC nº 132/2023</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CIO/Controller:</strong> Não espere por manual definitivo. Comece testes de transição IVA com seus ERPs agora. Negocie com Receita Federal para acesso ao ambiente de testes (disponível desde abril). Documente cada decisão de cálculo — servirá como defesa em auditorias futuras.</p>
-        <p><strong>Próximo passo:</strong> Estabeleça task force IVA até julho — reuniões quinzenais com TI, Fiscal e Jurídico. Objetivo: rodar cenários até 31/10 com erro menor que 0,1%.</p>
+        <p>Equipes de tax planning devem rever análises de crédito presumido e compensação inter-tributos — jurisprudência está fechando brechas. Foque em mecanismos de aproveitamento que NÃO dependem de transição (créditos já líquidos e certos).</p>
+        <p><strong>Próximo passo:</strong> Protocole compensações de crédito ANTES de novas decisões do STF — próximo julgamento é previsto para setembro de 2026; risco de perda permanente de créditos se não agir até final de junho.</p>
       </div>
     </div>
   </div>
@@ -584,7 +572,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Erros em cálculo de créditos de IVA em fase de transição (nov-dez 2026) podem resultar em auto de infração com multa de 75% sobre débito + juros. Janela de correção voluntária via Regularização Fiscal (antes de auditoria) encerra 31/03/2027. Adiamento de preparação aumenta exposição em 400%.</p>
+      <p class="nh-text">Empresas que basearam planejamento em aproveitamento liberal de créditos em transição enfrentam risco de <strong>redução de 40% a 60% do valor esperado</strong>. Julgamentos pendentes podem ratificar posição restritiva do STF até setembro — empresa que não providenciar compensação até então perde direito.</p>
     </div>
   </div>
 </div>
@@ -593,38 +581,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">05</span>
     <div class="nc-badges">
-      <span class="bd bd-date">22/06/2026</span>
-      <span class="bd bd-cat">Jurídico · Contencioso</span>
+      <span class="bd bd-date">24/06/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Concessões Públicas</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Tribunal e contencioso tributário" loading="lazy">
-    <span class="nc-image-tag">Jurídico</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária e concessões públicas" loading="lazy">
+    <span class="nc-image-tag">Gestão</span>
   </div>
 
-  <h3 class="nc-title">⚖️ Reforma tributária abre era de contencioso sobre previsibilidade</h3>
-  <p class="nc-body">Comentário da Consultor Jurídico aponta que reforma marca transição de contencioso reativo (defendendo-se de auditorias) para contencioso prospectivo (antecipar conflitos jurídicos). STF e STJ deverão decidir sobre constitucionalidade de aspectos do IVA — prazos longos deixam empresas com risco de cascata de litigiosidade.</p>
+  <h3 class="nc-title">🚧 Reforma Tributária e Concessões: urgência artificial criada pelo poder público</h3>
+  <p class="nc-body">Coluna crítica aponta que governo está criando artificialmente senso de urgência em reforma tributária para forçar aprovação de lei de concessões complementar. Argumenta que prazos acelerados de implementação (como o de NF-e em julho) beneficiam apenas consultorias de grande porte e criam custos operacionais enormes para pequena empresa. Sinaliza risco de empresas menores saírem do mercado formal — impacto social grave mascarado por agenda de eficiência fiscal.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$15,2B</span>
-    <span class="nc-stat-l">em possíveis contestações judiciais sobre IVA mapeadas por consultores</span>
+    <span class="nc-stat-n">R$45B</span>
+    <span class="nc-stat-l">em custos operacionais estimados para adaptação de pequenas e médias empresas</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Focos de contencioso: (1) Constitucionalidade de alíquota única de IVA (pode violar princípio de seletividade de EC 88/20). (2) Direito a crédito em operações com regime específico (Simples, Lucro Presumido). (3) Aplicação retroativa de normas de transição.</p>
-        <p>Jurisprudência: STF tem historicamente invalidado normas que ampliam créditos tributários sem Lei Complementar (Tema 242). Risco de revés para empresas que reconhecer créditos agressivamente agora.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> EC 132/23 (IVA), Lei 14.796/24, STF Tema 242 (créditos tributários), Lei 9.868/99 (ADI)</span></p>
+        <p>Reforma Tributária foi aprovada sob promessa de simplicidade — Lei nº 14.773/2023 previu transição até 2033. No entanto, decisões administrativas (ADE, Portarias) estão acelerando prazos unilateralmente, sem flexibilização para pequena empresa ou setores menos capitalizados.</p>
+        <p>Isso viola princípio de capacidade contributiva (CF/88 art. 145) e razoabilidade de prazos. MEIs e PJs que dependem de sistemas baratos enfrentarão impossibilidade de compliance — risco de informalização acelerada.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> CF/88 arts. 145 e 170; Lei nº 14.773/2023; Lei nº 14.775/2023 (tributação de criptoativos)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>General Counsel:</strong> Mapeie riscos de contencioso: (1) quais créditos você pretende usar têm suporte em jurisprudência pacificada? (2) existe decisão de TRF ou STJ contrária? (3) qual é seu perfil de risco — agressivo ou conservador?</p>
-        <p><strong>Próximo passo:</strong> Contrate parecer jurídico até 30/08 sobre defensabilidade de seus créditos em auditoria. Considere depósito em caução (não implica reconhecimento) para créditos com risco moderado-alto de anulação posterior.</p>
+        <p>Empresas pequenas e médias devem documentar custos de adaptação agora — será ferramenta importante para eventual ação judicial contra prazos acelerados. Associações empresariais precisam protocollar petição ao Congresso pedindo flexibilização de prazos antes de 15 de julho.</p>
+        <p><strong>Próximo passo:</strong> Forme coalizão com concorrentes do mesmo setor; mapeie custos reais de atualização de sistema; protocole reclamação junto a ABDE/CNI com estimativa de impacto econômico — base para eventual moratória ou adiamento.</p>
       </div>
     </div>
   </div>
@@ -633,7 +621,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>serviços profissionais e consultoria</strong> com faturamento de <strong>R$300M+</strong> podem estruturar posição defensável para capturar <strong>R$2.5-3.8M</strong> em créditos de IVA prospectivo — aproveitando reforma antes que jurisprudência cristalize limitações. Ação: Parecer jurídico + Decisão até 30/09/2026.</p>
+      <p class="nh-text">Pequenas e médias empresas de <strong>até R$10M de faturamento</strong> podem requerer regime especial de transição junto a Receita Federal — precedentes mostram que Administração concede até <strong>12 meses de tolerância</strong> para micro e pequena empresa em prazos acelerados. Protocole até 30 de junho para garantir aprovação antes de 01/07.</p>
     </div>
   </div>
 </div>
