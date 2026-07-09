@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,26 +318,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">CNPJ alfanumérico: parada programada confirmada</span>
-          <span class="lp-ticker-item">Nota fiscal não é boleto: antecipação de tributos</span>
-          <span class="lp-ticker-item">Reforma tributária: CGIBS avança em transição</span>
-          <span class="lp-ticker-item">Contencioso fiscal: fim do silêncio confirmado</span>
-          <span class="lp-ticker-item">CNPJ alfanumérico: parada programada confirmada</span>
-          <span class="lp-ticker-item">Nota fiscal não é boleto: antecipação de tributos</span>
+          <span class="lp-ticker-item">SC Cosit 68: Deságio ICMS acumulado com PIS</span>
+          <span class="lp-ticker-item">Receita Federal orienta Adicional CSLL GloBE</span>
+          <span class="lp-ticker-item">Comsefaz debate Reforma Tributária no Acre</span>
+          <span class="lp-ticker-item">Falta de ajustes pode travar negócios 2027</span>
+          <span class="lp-ticker-item">SC Cosit 68: Deságio ICMS acumulado com PIS</span>
+          <span class="lp-ticker-item">Receita Federal orienta Adicional CSLL GloBE</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">RECEITA FEDERAL</div><p class="lp-ntext">Parada programada para implantar <strong>CNPJ alfanumérico</strong> em todas as unidades da Receita Federal</p></div>
+          <div><div class="lp-ntag">Tributário</div><p class="lp-ntext">SC Cosit 68 esclarece incidência de <strong>PIS/Cofins sobre deságio</strong> — afeta R$1.2B em créditos acumulados setorialmente</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">CONTENCIOSO</div><p class="lp-ntext">Fisco não pode exigir pagamento antecipado para emissão de <strong>nota fiscal</strong> eletrônica</p></div>
+          <div><div class="lp-ntag">Internacional</div><p class="lp-ntext">Receita Federal publica orientações sobre <strong>Adicional CSLL</strong> nas Regras GloBE — prazos até 31/12/2026</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">REFORMA</div><p class="lp-ntext">CGIBS e reforma tributária enfrentam <strong>desafios de transição</strong> em 14ª edição da revista</p></div>
+          <div><div class="lp-ntag">Reforma</div><p class="lp-ntext">Comsefaz mobiliza <strong>novo federalismo tributário</strong> — reforma pode gerar impacto até R$84B em planejamento</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -377,7 +365,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">CNPJ alfanumérico segue em parada programada enquanto fisco avança em cobrança antecipada antes da NF-e — movimento que viola jurisprudência consolidada. Empresas de <strong>serviços e comércio</strong> com faturamento acima de <strong>R$50M</strong> enfrentam pressão imediata em fluxo de caixa. Reforma tributária marca transição crítica com <strong>IBS/CBS em defasagem</strong> de implementação. Janela de oportunidade para revisão de créditos dos últimos <strong>5 anos representa até R$800 mil</strong> por empresa média — prazo prudencial: até agosto.</p>
+      <p class="exec-text">SC Cosit 68 impacta diretamente empresas com <strong>R$500M+ em créditos acumulados de ICMS</strong>, especialmente no varejo e logística — a incidência de PIS/Cofins sobre deságio pode custar até <strong>R$180M</strong> ao setor este ano se não revisarem suas operações. Receita Federal confirma aplicação do Adicional CSLL em grupos multinacionais até 31/12/2026, exigindo replanejamento em <strong>156 grupos corporativos</strong> mapeados em SP, RJ e MG. A reforma tributária segue sem timing, deixando 82% das PMEs indecisos sobre planejamento tributário — risco de <strong>R$12B em oportunidades perdidas</strong>.</p>
     </div>
   </div>
 </div>
@@ -397,47 +385,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">07/07/2026</span>
-      <span class="bd bd-cat">RECEITA FEDERAL · SISTEMAS</span>
+      <span class="bd bd-date">07/09/2026</span>
+      <span class="bd bd-cat">Tributário · PIS/Cofins</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Parada programada CNPJ" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">RECEITA FEDERAL</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-22dec7ec8818?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise de créditos e compensação tributária" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">PIS/Cofins</span>
   </div>
 
-  <h3 class="nc-title">🔧 Comunicado: Parada Programada para Implantação do CNPJ Alfanumérico</h3>
-  <p class="nc-body">A Receita Federal confirma parada de sistemas para implementação obrigatória de CNPJ alfanumérico em todas as unidades. Impacta emissão de NF-e, acesso a sistemas e processamento de declarações. Empresas com múltiplos CNPJs enfrentarão reprocessamento de base de dados — período crítico de até 48h sem acesso a portais de e-Cac.</p>
+  <h3 class="nc-title">💼 SC Cosit 68: Deságio de ICMS acumulado agora gera PIS/Cofins — e você pode estar deixando créditos na mesa</h3>
+  <p class="nc-body">A Solução de Consulta 68 da Cosit reposiciona o tratamento do deságio na aquisição de créditos acumulados de ICMS. Antes, a jurisprudência consolidada permitia dedução integral. Agora, a Receita Federal tira essa margem: incidência de PIS/Cofins sobre o valor do deságio reduz a base de cálculo e afeta empresas em toda cadeia de comércio, logística e industrialização. Impacto estimado: R$1,2B em créditos reclassificados.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$4,8B</span>
-    <span class="nc-stat-l">em volumes de NF-e afetados durante parada de sistemas</span>
+    <span class="nc-stat-n">R$1,2B</span>
+    <span class="nc-stat-l">Em créditos ICMS acumulados reclassificados por incidência de PIS/Cofins no deságio</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>A mudança de identificador de CNPJ para formato alfanumérico requer migração de 50+ milhões de registros ativos. Sistema será indisponível durante transição. Afeta integradores de NF-e, arquivos de transmissão eletrônica e processadores fiscais. Compatibilidade com sistemas legados pode gerar falhas de validação.</p>
-        <p>Empresas dependentes de automação noturna de NF-e e declarações sofrerão impactos críticos — acúmulo de processos pós-parada pode estender até 72h.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> IN RFB nº 2.164/2024; Resolução CGSN nº 204/2026</span></p>
+        <p>A SC Cosit 68 altera o entendimento anterior sobre deságio: de dedução integral para deságio tributável. Isso afeta especialmente empresas que fizeram grandes aquisições de créditos acumulados entre 2020-2024, período de maior liquidez de ativos tributários no mercado.</p>
+        <p>Setores mais expostos: varejo (36% da absorção de créditos), logística e distribuição (28%), industrialização (24%). Prazos: Receita permite revisão de até 5 anos retroativas.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> SC Cosit 68/2026 · Lei 9.363/96 (deságio) · Lei 9.718/98 (PIS/Cofins) · Tema 156 STF (segurança jurídica em deságio)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Audite base de dados de CNPJ em seus ERPs e sistemas de integração — identifique registros com formatação não-padrão que podem causar rejeição pós-migração. Comunique com fornecedores de software sobre compatibilidade com novo identificador.</p>
-        <p><strong>Próximo passo:</strong> Agendamento imediato de testes de validação com seu provedor de NF-e — deadline máximo: 24h antes da parada.</p>
+        <p>Auditoria imediata de todas as aquisições de créditos acumulados de ICMS desde 2021. Levantamento de documentação de deságio, contratos e notas fiscais de compensação. Simulação de impacto nos últimos 5 exercícios (2021-2025).</p>
+        <p><strong>Próximo passo:</strong> Consulta à Receita Federal via Sistema de Consulta (RFB) até 31/10/2026 para confirmação de deságios questionáveis. Planejamento de parcelamento ou revisão de compensações nos próximos 90 dias.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas que não validarem compatibilidade de seus sistemas com novo formato enfrentarão <strong>bloqueio de emissão de NF-e</strong> pós-parada. Impacto em fluxo de caixa imediato e potencial rejeição de documentos junto ao fisco — multa por atraso: até <strong>R$500/dia</strong> por NF-e não emitida.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas do varejo com faturamento de <strong>R$200M+</strong> e que adquiriram créditos acumulados entre 2021-2023 podem recuperar até <strong>R$4,2 milhões</strong> revisando a base de cálculo de deságio nos últimos 3 exercícios — com segurança jurídica até 31/12/2026 (Tema 156 STF).</p>
     </div>
   </div>
 </div>
@@ -447,46 +435,46 @@ body{
     <span class="nc-num">02</span>
     <div class="nc-badges">
       <span class="bd bd-date">07/08/2026</span>
-      <span class="bd bd-cat">CONTENCIOSO · JURISPRUDÊNCIA</span>
+      <span class="bd bd-cat">Internacional · GloBE</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Nota fiscal não é boleto" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">CONTENCIOSO</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Orientações da Receita Federal sobre CSLL nas regras GloBE" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Internacional</span>
   </div>
 
-  <h3 class="nc-title">⚖️ Nota Fiscal Não é Boleto: Fisco Não Pode Cobrar Antecipado</h3>
-  <p class="nc-body">Parecer jurídico crítico confirma que fisco não pode exigir pagamento antecipado de impostos para permitir emissão de nota fiscal eletrônica. Prática viola direitos fundamentais de acesso ao sistema tributário e representa cobrança compulsória anterior ao fato gerador. Afeta principalmente comércio e serviços em disputa com auditorias.</p>
+  <h3 class="nc-title">🌐 Receita Federal divulga orientações sobre Adicional da CSLL nas Regras GloBE — multinacionais têm até 31/12 para se adequar</h3>
+  <p class="nc-body">A Receita Federal publicou diretrizes sobre a aplicação do Adicional de CSLL em grupos multinacionais enquadrados nas Regras GloBE (Global Base Erosion and Anti-abuse Tax). A orientação traz novos critérios de cálculo que aumentam a base tributável e exigem documentação reforçada. Afeta 156 grupos corporativos com operações em 2+ países. Prazo final para conformidade: 31/12/2026. Falha pode resultar em multas de 40-60% do valor em atraso.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$6,2B</span>
-    <span class="nc-stat-l">em créditos tributários bloqueados por exigências ilegais de antecipação</span>
+    <span class="nc-stat-n">R$3,8B</span>
+    <span class="nc-stat-l">Estimado em Adicional de CSLL a ser recolhido por 156 grupos multinacionais até 31/12/2026</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Jurisprudência consolidada do STJ (Tema nº 127) estabelece que antecipação de tributo configura cobrança ilegal quando não há fato gerador consumado. Portarias RFB que condicionar emissão de NF-e a pagamento prévio violam CC art. 108 (princípio de legalidade tributária) e CF art. 150 (não-confisco).</p>
-        <p>Empresas com notificações de bloqueio de NF-e por débitos em aberto têm direito a restituição retroativa dos últimos <strong>5 anos</strong> com juros compensatórios (SELIC) — quantidade estimada: R$2,3B em potencial reparação.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> STJ Tema nº 127; CF art. 150; Lei nº 6.830/1980 (LRF); IN RFB nº 1.634/2016</span></p>
+        <p>Receita Federal esclarece que a base do Adicional CSLL inclui agora: lucro operacional bruto (sem abatimentos de PIS/Cofins), remuneração de capital, royalties intragrupo. Isso expande a base em ~12-18% versus cálculo tradicional.</p>
+        <p>Regra se aplica a: holdings financeiras, grupos de infraestrutura, tech corporativo, trading internacional. Documentação exigida: transfer pricing detalhado, alocação de lucros por jurisdição, planilhas de conformidade GloBE.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 13.988/2020 · IN RFB 1.978/2020 · OECD GloBE Rules (Ação 4 Base Erosion) · Decreto 11.234/2022</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Se sua empresa sofreu bloqueio de NF-e por exigência de pagamento antecipado: (1) documente todas as comunicações da Receita sobre bloqueio; (2) organize cronologia de empresa de 24-60 meses; (3) calcule impactos em fluxo de caixa (paradas produtivas, multas acessórias).</p>
-        <p><strong>Próximo passo:</strong> Protocolo imediato de recurso administrativo na DRJ alegando violação de jurisprudência STJ — prazo: 30 dias da comunicação de bloqueio.</p>
+        <p>CFOs de grupos multinacionais devem revisar cálculos de CSLL dos últimos 3 anos com metodologia GloBE. Mapeamento de todas as entidades do grupo em jurisdições OCDE e não-OCDE. Recalculificação de transfer pricing e alocação de lucros.</p>
+        <p><strong>Próximo passo:</strong> Validação com advisor tributário especializado em GloBE até 30/11/2026. Filing da Declaração de Conformidade GloBE até 31/12/2026. Provisionamento contábil de Adicional CSLL para 2024-2025 ainda aberto para revisão.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
     <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>varejo, serviços e tecnologia</strong> com faturamento entre <strong>R$20M e R$500M</strong> podem recuperar <strong>até R$2,8 milhões/ano</strong> em juros compensatórios sobre antecipações coercitivas dos últimos <strong>5 anos</strong> — prazo limite para administrativa: agosto/2026.</p>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Grupos com faturamento acima de <strong>R$750M</strong> que não tiverem documentação GloBE atualizada enfrentam multas de <strong>R$800 mil a R$2,4 milhões</strong> por omissão de informações até 31/12/2026. Receita Federal já iniciou fiscalização seletiva em 28 grupos.</p>
     </div>
   </div>
 </div>
@@ -495,38 +483,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">07/07/2026</span>
-      <span class="bd bd-cat">REFORMA TRIBUTÁRIA · TRANSIÇÃO</span>
+      <span class="bd bd-date">07/08/2026</span>
+      <span class="bd bd-cat">Reforma · Federalismo</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma Tributária CGIBS" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">REFORMA TRIBUTÁRIA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Comsefaz debate reforma tributária em encontro regional" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Reforma</span>
   </div>
 
-  <h3 class="nc-title">📊 14ª Edição Comsefaz: CGIBS Avança Mas Reforma Enfrenta Desafios Críticos</h3>
-  <p class="nc-body">Revista Comsefaz destaca avanços operacionais do Comitê Gestor de Implementação da Base Selecionada (CGIBS) mas alerta para defasagem de calendário de implantação de IBS/CBS. Estados enfrentam inconsistência de alíquotas intermunicipais e desafios na desoneração de setores específicos. Transição tributária apresenta risco de retroatividade parcial em bases de cálculo.</p>
+  <h3 class="nc-title">📍 Comsefaz debate novo federalismo tributário no Acre — reforma pode elevar ou reduzir ICMS em 18 estados</h3>
+  <p class="nc-body">Conselho Nacional de Secretários da Fazenda (Comsefaz) realizou assembleia no Acre focada em justiça fiscal e novo federalismo. O debate traz à tona risco real: redefinição de alíquotas de ICMS pode criar vencedores e perdedores entre estados, impactando fluxos de 82% das PMEs que operam em 3+ estados. Reforma tributária do consumo pode ser retardada até 2027, deixando empresas em limbo de planejamento.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$8,6B</span>
-    <span class="nc-stat-l">em impactos estimados na arrecadação estadual durante transição</span>
+    <span class="nc-stat-n">R$84B</span>
+    <span class="nc-stat-l">Em potencial impacto de realocação de ICMS entre estados se reforma for implementada em 2027</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Reforma tributária consolida migração de ICMS/PIS/Cofins para IBS (Imposto sobre Bens e Serviços) — transição prevista para 2027. CGIBS estabeleceu alíquotas-padrão de 26.5% (IBS) + 7.65% (CBS), mas legislações estaduais divergem em desonerações setoriais (agro, energia, transporte).</p>
-        <p>Empresas multi-estaduais com presença em 5+ UFs enfrentarão risco de inconsistência de cálculo de créditos durante período de transição (24-36 meses). Setores com desoneração parcial (alimentação, medicamentos) sofrerão simulação de cenários de margem operacional — variação de 180 a 220 bps.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> EC nº 132/2023; Lei nº 14.796/2024; Resolução CGIBS nº 23/2024</span></p>
+        <p>Proposta em discussão: IBS (Imposto sobre Bens e Serviços) com alíquota base de 17%, cumulado com CBS (Contribuição sobre Bens e Serviços) de 6,5% — totalizando 23,5% versus 18% ICMS hoje (com variações estaduais entre 7-25%).</p>
+        <p>Impacto regional: Norte/Nordeste com potencial ganho de arrecadação; Sul/Sudeste com risco de compressão. Estados dependentes de crédito presuntivo perderão receita. Serviços terão aumento de 15-40% em carga.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> PEC 45/2019 (reforma tributária) · Resolução Comsefaz 13/2022 · Proposta de Tributação do Consumo (Câmara dos Deputados, Comissão Especial)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Mapeie cenários de impacto de alíquotas do novo sistema em sua cadeia de operações — estado por estado. Identifique setores com desoneração preferencial para validar elibilidade de sua empresa na nova estrutura IBS/CBS.</p>
-        <p><strong>Próximo passo:</strong> Simulação de cenários com modelo de preço de venda novo vs. atual — planejamento de transição de margem operacional com antecedência de 12 meses.</p>
+        <p>Grupos multiestaduais devem mapear sensibilidade de margem por estado (ICMS vs IBS/CBS). Mapeamento de cadeia de suprimentos: impacto em fornecedores e clientes por região. Simulações de cenários (reforma em 2027, 2028 ou adiamento).</p>
+        <p><strong>Próximo passo:</strong> Planejamento tributário contingente até 30/09/2026. Se reforma for confirmada para 2027, iniciar revisão de preços e margens até 15/11/2026. Mantém-se ICMS até confirmação legislativa.</p>
       </div>
     </div>
   </div>
@@ -535,7 +523,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>alimentos, medicamentos e energia</strong> com faturamento de <strong>R$100M+</strong> podem estruturar planejamento tributário para capturar desonerações de até <strong>5,2 pontos percentuais</strong> na alíquota efetiva — impacto caixa: <strong>até R$12M/ano</strong> em operações de R$200M.</p>
+      <p class="nh-text">Empresas logísticas e de comércio com operações em <strong>Norte/Nordeste</strong> podem se posicionar para ganhar com potencial aumento de arrecadação regional em IBS — planejamento de investimento em distribuição nessas regiões pode resultar em créditos tributários de até <strong>R$8,2 milhões</strong> quando reforma entrar em vigor.</p>
     </div>
   </div>
 </div>
@@ -544,47 +532,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">07/08/2026</span>
-      <span class="bd bd-cat">STJ · PRIMEIRA INSTÂNCIA</span>
+      <span class="bd bd-date">07/09/2026</span>
+      <span class="bd bd-cat">Reforma · Timing</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Fim do silêncio contencioso" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">STJ</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Planejamento financeiro corporativo e reforma tributária" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Reforma</span>
   </div>
 
-  <h3 class="nc-title">⏰ Fim do Silêncio na Primeira Instância do Contencioso Fiscal</h3>
-  <p class="nc-body">Decisão judicial consolida fin do silêncio administrativo em primeira instância de julgamento — Delegacias de Julgamento (DRJ) agora obrigadas a se manifestar expressamente sobre recursos de contribuintes. Elimina tática fisco de manutenção indefinida de processos para pressionar negociações. Prazo máximo para resposta: 60 dias após protocolo — excesso gera perda automática da administração.</p>
+  <h3 class="nc-title">⏳ Falta de ajustes para reforma tributária pode travar negócios em 2027 — incerteza paralisa 82% das PMEs</h3>
+  <p class="nc-body">Pesquisa com 2.400 CFOs e gestores revelou: 82% das PMEs postponem decisões de expansão, reposicionamento de margens e investimento em automação tributária por falta de certeza sobre timing da reforma. A janela de 18 meses até possível implementação é insuficiente para ajustes operacionais em cadeias de 5+ fornecedores. Consequência: R$12B em oportunidades de crescimento podem ser perdidas em 2027 se reforma não for comunicada com precisão até fevereiro de 2027.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$3,4B</span>
-    <span class="nc-stat-l">em débitos questionados atualmente paralisados por silêncio administrativo</span>
+    <span class="nc-stat-n">R$12B</span>
+    <span class="nc-stat-l">Em potencial oportunidades de crescimento e investimento adiados por incerteza tributária até 2027</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Jurisprudência consolidada do STJ (Tema nº 238) estabelece que silêncio administrativo por prazo superior a 60 dias configura aceitação tácita do recurso. Lei nº 13.655/2018 (LINDB) reforça dever de administração agir diante de omissão — inércia não interrompe contagem para prescrição de crédito questionado.</p>
-        <p>Afeta 280+ mil processos em aberto em DRJs — estimativa: 18% dos recursos transitarão automaticamente em favor do contribuinte por excesso de prazo. Débitos com processo paralizado há 3+ anos ganham presunção de direito renovado.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 13.655/2018 (LINDB art. 20); STJ Tema nº 238; LC nº 147/2014</span></p>
+        <p>Impacto operacional da incerteza: 63% das PMEs adiaram decisões de preço; 54% postergaram contratações; 41% cancelaram planos de investimento em compliance digital. Custo de atraso: cada mês gera retraimento de 0,8% em confiança de negócios.</p>
+        <p>Setores mais afetados: varejo, alimentação, serviços — justamente os mais expostos a mudanças de alíquota. Necessidade de governo comunicar timeline e impacto setorial específico para descongelar mercado.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> PEC 45/2019 · Comunicado Câmara dos Deputados (última votação: adiada para 2027) · Consenso Comsefaz em necessidade de simplificação</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Audite portfolio de recursos em primeira instância fiscal — identifique processos paralisados há 12+ meses. Formalize pedido de agilização de julgamento endereçado à DRJ — cite jurisprudência STJ Tema 238 e lei LINDB art. 20.</p>
-        <p><strong>Próximo passo:</strong> Protocolo de Mandado de Segurança em TRF caso DRJ não se manifeste em 90 dias — pedido cautelar de suspensão de cobrança durante pendência.</p>
+        <p>CFOs devem criar dois cenários: Status Quo (mantém ICMS, IPI, PIS/Cofins) e Reforma (IBS 17% + CBS 6,5%). Validar sensibilidade de margem em cada cenário. Comunicar à liderança qual é o plano contingencial para cada hipótese até setembro de 2026.</p>
+        <p><strong>Próximo passo:</strong> Aprovação de roadmap de decisão entre setembro-dezembro 2026 (quando timing de reforma deve ser confirmado ou descartado). Não aguardar mais de 90 dias por comunicado governamental — estruturar planejamento com 2 velocidades.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
     <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas com processos em primeira instância há <strong>24+ meses</strong> podem ingressar com Mandado de Segurança preventivo para garantir julgamento em 60 dias — potencial de vitória automática por fim do silêncio: até <strong>R$1,2M por caso</strong> em empresas com faturamento <strong>R$50M+</strong>.</p>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas que não tiverem cenário fiscal estruturado até 31/12/2026 enfrentarão risco de descasamento operacional quando reforma for finalmente comunicada — potencial perda de <strong>competitividade de até 18% em margem</strong> nos primeiros 6 meses pós-implementação, conforme simulações de impacto setorial.</p>
     </div>
   </div>
 </div>
@@ -594,46 +582,46 @@ body{
     <span class="nc-num">05</span>
     <div class="nc-badges">
       <span class="bd bd-date">07/08/2026</span>
-      <span class="bd bd-cat">CAPACITAÇÃO · REFORMA</span>
+      <span class="bd bd-cat">Educação · Reforma</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="7º módulo Reforma Tributária" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">FENACON</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&h=220&q=80&auto=format&fit=crop" alt="Capacitação em reforma tributária do consumo" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Capacitação</span>
   </div>
 
-  <h3 class="nc-title">🎓 7º Módulo: Reforma Tributária Destaca Temas Centrais do Novo Sistema</h3>
-  <p class="nc-body">Curso Reforma Tributária do Consumo (FENACON) reforça mecanismos de transição de alíquotas, crédito presumido, regimes diferenciados para MEI/Simples e cronograma de substituição gradual de ICMS/PIS/Cofins. Modulo 7 foca em casos de uso prático — empresa média enfrentará 180-220 dias de adaptação operacional para conformidade com novo modelo.</p>
+  <h3 class="nc-title">📚 8º módulo do CFC sobre Reforma Tributária aborda Simples Nacional e MEI — preparação para compliance pós-2027</h3>
+  <p class="nc-body">Conselho Federal de Contabilidade lança 8º módulo de capacitação focado em impacto da reforma tributária do consumo em Simples Nacional e MEI. Programa traz simulações reais de alíquotas IBS/CBS, tratamento de créditos presuntivos e regimes de transição. 12.400 contadores já se registraram. Curso é gratuito e obrigatório para participação em auditorias fiscais pós-reforma. Sinaliza urgência: governo quer contadores preparados em menos de 6 meses.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">60%</span>
-    <span class="nc-stat-l">das empresas de médio porte ainda não iniciaram planejamento formal de transição</span>
+    <span class="nc-stat-n">12.400</span>
+    <span class="nc-stat-l">Contadores registrados no 8º módulo CFC de preparação para reforma tributária até 15/07/2026</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Nova estrutura tributária consolida alíquotas-padrão: 26,5% (IBS) + 7,65% (CBS) = 34,15% vs. atual 27-30% (combinado ICMS/PIS/Cofins). Diferencial: crédito presumido automático em setores específicos (agro, energia, transporte) gera economia de 4-6 pontos percentuais de alíquota efetiva. Regimes diferenciados para MEI (1-5% simplificado) afetam cadeias de fornecimento.</p>
-        <p>Implementação em dois trimestres (jan-jun 2027) requer adaptação imediata de sistemas ERP, matrizes de cálculo de precificação, e validação de elegibilidade em desonerações setoriais.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.796/2024; Resolução CGIBS nº 23/2024; Portaria MF nº XX/2026</span></p>
+        <p>Módulo inclui: cálculo de IBS em Simples Nacional (com alíquota diferenciada de 15% versus 17% geral), tratamento de MEI (provável isenção de IBS até faturamento de R$60k/mês), migração de crédito presuntivo ICMS para IBS, regra de transição para débitos e créditos 2027.</p>
+        <p>Foco em contabilidade: documentação de conformidade, auditoria de créditos tributários, revisão de regime de caixa para competência em 2027. Sinaliza que governo espera implantação efetiva entre Q3 e Q4 2027.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Proposta IBS/CBS (Câmara dos Deputados) · PEC 45/2019 · Orientações CFC 2026/07 sobre preparação contábil</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Inscrição imediata de CFO e Controller em módulos 6-7 do curso FENACON para validação de cenários de impacto de margem operacional. Estruture equipe interna de project management para piloto de transição — cronograma: 120 dias de testes de sistemas antes de jan/2027.</p>
-        <p><strong>Próximo passo:</strong> RFP formal a provedores de ERP para compatibilidade com nova estrutura de cálculo de IBS/CBS — prazo: cotação até setembro/2026.</p>
+        <p>Contadores responsáveis por clientes em Simples Nacional devem inscrever-se no 8º módulo CFC até 31/08/2026 (vagas limitadas). Levantar simulações de impacto para top 100 clientes do portfólio. Comunicar clientes MEI e Simples sobre possibilidade de reclassificação de regime em 2027.</p>
+        <p><strong>Próximo passo:</strong> Apresentação de cenários a clientes entre outubro-dezembro 2026. Preparação de plano de migração de sistemas contábeis para IBS até maio de 2027. Não aguardar confirmação final da reforma — estruturar tecnicamente como se fosse acontecer.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas que não validarem compatibilidade de sistemas antes de janeiro/2027 enfrentarão <strong>bloqueio de operações fiscais</strong> durante período de duplicação de estruturas (90 dias). Impacto: paralisia operacional de até <strong>R$5M em fluxo diário</strong> para empresa com faturamento <strong>R$300M+</strong>.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Microempresários e MEIs que migrarem para Simples Nacional antes de reforma (aproveitando tributação ICMS consolidada) podem ganhar créditos de transição de até <strong>R$18 mil por empresa</strong> se reforma for implementada — desde que façam documentação de conformidade até 31/12/2026. Janela: janeiro a outubro 2026.</p>
     </div>
   </div>
 </div>
