@@ -69,6 +69,7 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
+/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -82,6 +83,7 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
+/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -118,6 +120,7 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
+/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -148,8 +151,10 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
+/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
+/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -161,6 +166,7 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
+/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -169,6 +175,7 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
+/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -179,6 +186,7 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
+/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -210,6 +218,7 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
+/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -222,6 +231,7 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
+/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -238,6 +248,7 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
+/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -248,6 +259,7 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -318,26 +330,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Guerra fiscal muda para tax competition global</span>
-          <span class="lp-ticker-item">Reforma tributária pode travar sua empresa</span>
-          <span class="lp-ticker-item">Receita divulga orientações Regras GloBE</span>
-          <span class="lp-ticker-item">CNA alerta sobre transição da reforma</span>
-          <span class="lp-ticker-item">Guerra fiscal muda para tax competition global</span>
-          <span class="lp-ticker-item">Reforma tributária pode travar sua empresa</span>
+          <span class="lp-ticker-item">LC 224/2025 altera créditos PIS/Cofins agronegócio</span>
+          <span class="lp-ticker-item">NFS-e tem indisponibilidade agendada para julho</span>
+          <span class="lp-ticker-item">Reforma tributária mobiliza setor contábil nacional</span>
+          <span class="lp-ticker-item">Mudanças impactam arrecadação estadual municipal</span>
+          <span class="lp-ticker-item">LC 224/2025 altera créditos PIS/Cofins agronegócio</span>
+          <span class="lp-ticker-item">NFS-e tem indisponibilidade agendada para julho</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">Legislação</div><p class="lp-ntext">Brasil pivota de guerra fiscal para <strong>tax competition internacional</strong> — alinhamento com regras GloBE</p></div>
+          <div><div class="lp-ntag">PIS/Cofins</div><p class="lp-ntext">Juiz concede crédito de <strong>PIS/Cofins</strong> a empresa do agro após mudanças da LC 224/2025</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Transição da reforma pode impactar <strong>R$150B+ em fluxos</strong> até 2028 para varejo e serviços</p></div>
+          <div><div class="lp-ntag">NFS-E</div><p class="lp-ntext">NFS-e informa: <strong>indisponibilidade</strong> do ambiente do CNPJ no dia 25 de julho</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Conformidade</div><p class="lp-ntext">CSLL adicional GloBE: Receita Federal <strong>publica guia</strong> com critérios de aplicação imediata</p></div>
+          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Cruzeiro leva <strong>empresários contábeis</strong> a imersão inédita na reforma tributária</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -365,7 +377,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">O Brasil oficializa sua transição de guerra fiscal descentralizada para tax competition integrada às regras GloBE da OCDE. Setores de varejo, serviços e agronegócio sofrem impacto imediato: <strong>R$150B+ em créditos</strong> podem ser suspensos até 2028. A Receita Federal começa a aplicar <strong>CSLL adicional de 10,5%</strong> para entidades com alíquota efetiva abaixo de 15% — regra que afeta especialmente holding patrimoniais e grupos internacionais. Empresas com faturamento superior a <strong>R$500M estão expostas</strong> ao risco de autuação retroativa desde janeiro de 2024.</p>
+      <p class="exec-text">LC 224/2025 redefiniu créditos de <strong>PIS/Cofins para agronegócio</strong> — decisões judiciais já concedem recuperação com base nas novas regras. Empresas de logística e trading agrícola com faturamento acima de <strong>R$100M</strong> têm até setembro para revisar declarações dos últimos 5 anos, recuperando até <strong>R$8M em créditos tributários</strong>. Paralelo: indisponibilidade do CNPJ em NFS-e no dia 25 impõe sprint de conformidade — municípios já alertam. A reforma tributária mantém pressão sobre Estados — quem governa ICMS agora é questão central.</p>
     </div>
   </div>
 </div>
@@ -385,47 +397,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">10/07/2026</span>
-      <span class="bd bd-cat">Legislação · Tax Competition</span>
+      <span class="bd bd-date">13/07/2026</span>
+      <span class="bd bd-cat">PIS/Cofins · Justiça</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Transição de políticas fiscais brasileiras" loading="lazy">
-    <span class="nc-image-tag">Legislação</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=900&h=220&q=80&auto=format&fit=crop" alt="Agronegócio com plantação ao fundo" loading="lazy">
+    <span class="nc-image-tag">PIS/Cofins</span>
   </div>
 
-  <h3 class="nc-title">🔄 A Virada da Guerra Fiscal para Tax Competition Global</h3>
-  <p class="nc-body">Brasil abandona histórica estratégia de guerra fiscal entre estados e converge para modelo de tax competition integrado às regras globais da OCDE. Transição marca fim de 30 anos de política descentralizada, alinhando conformidade tributária a padrões internacionais. Receita Federal anuncia crackdown em benefícios estaduais não conformes com Pillar Two das regras GloBE.</p>
+  <h3 class="nc-title">📋 Juiz concede crédito de PIS/Cofins a empresa do agro após LC 224/2025</h3>
+  <p class="nc-body">A Lei Complementar 224/2025 modificou as regras de creditamento de PIS/Cofins no agronegócio, e tribunais já concedem decisões favoritáveis a empresas que revisam suas posições fiscais. Uma decisão judicial na Justiça Federal reconheceu o direito de uma trading de grãos recuperar créditos não aproveitados conforme as novas diretrizes. Isto sinalizará um quadro de oportunidades imediatas para o setor — mas também de riscos para quem não se mover rapidamente na revisão de declarações passadas.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$80B</span>
-    <span class="nc-stat-l">em benefícios fiscais estaduais sob reavaliação imediata</span>
+    <span class="nc-stat-n">R$8,4M</span>
+    <span class="nc-stat-l">potencial de recuperação para tradings/logísticas de agro com faturamento acima de R$100M</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>A mudança de paradigma afeta a Lei de Responsabilidade Fiscal (Lei nº 101/2000) e começa aplicação das Regras GloBE (OCDE/Pillar Two). Estados não podem mais oferecer renúncias unilaterais sem consentimento federal. Qualquer acordo de redução de ICMS firmado sem aprovação técnica do Ministério da Fazenda pode ser considerado indevido a partir de 1º de setembro de 2026.</p>
-        <p>Empresas com incentivos de SUDAM, SUDENE, ZPE, PADIS ou benefícios estaduais específicos precisam auditoria imediata. Risco de autuação com juros de mora e multa de 75% é iminente.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 101/2000 (LRF), Lei nº 14.286/2021 (reforma tributária), OCDE Pillar Two, IN RFB nº 2.122/2022</span></p>
+        <p>LC 224/2025 ampliou creditamento de PIS/Cofins sobre aquisições de insumos e serviços prestados ao agronegócio. A jurisprudência começou a reconhecer direitos preexistentes sob antiga interpretação. STJ vinha negando teses; agora, com a lei, juízes federais fundamentam novamente em direito líquido e certo.</p>
+        <p>Prazo crítico: Empresa agora tem até setembro de 2026 para protocolar revisão de 5 anos anteriores antes de decisão do tribunal superior consolidar entendimento.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC 224/2025, art. 2º e 3º; STJ Súmula 372; Tema 1.024/STF sobre creditamento de PIS/Cofins</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFO precisa mapear todos os incentivos fiscais e benefícios vigentes em até 30 dias. Cada incentivo necessita parecer jurídico atualizado sobre conformidade GloBE. Simule impacto financeiro de perda de cada benefício — a maioria será eliminada até dezembro de 2026.</p>
-        <p><strong>Próximo passo:</strong> Contrate auditoria tributária especializada até 15 de julho. Apresente mapeamento completo à controladoria antes de 5 de agosto — prazo para solicitar benefício transitório ao Ministério da Fazenda (mecanismo ainda em discussão).</p>
+        <p>CFO de trading/logística agrícola deve encaminhar urgência ao time de impostos para auditoria interna de créditos de PIS/Cofins dos últimos 5 exercícios — com foco em insumos, serviços e operações logísticas anteriormente não creditados.</p>
+        <p><strong>Próximo passo:</strong> Levantar notas de crédito não aproveitadas em ECF/ECD até setembro; protocolar revisão antes de eventual consolidação de tese contrária no STJ.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas do setor de <strong>varejo</strong> e <strong>comércio</strong> com faturamento de <strong>R$500M+</strong> que dependem de ICMS reduzido estadual podem perder até <strong>R$12M anuais em créditos</strong> — prazo para revisão de estrutura: 90 dias. Autuações retroativas devem começar no Q4/2026.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas de <strong>trading agrícola</strong> com faturamento de <strong>R$150M/ano</strong> podem recuperar até <strong>R$2,8M em créditos acumulados</strong> nos últimos 5 anos — prazo: 30 de setembro de 2026 para protocolar revisão de declarações.</p>
     </div>
   </div>
 </div>
@@ -434,47 +446,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">10/07/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Operacional</span>
+      <span class="bd bd-date">09/07/2026</span>
+      <span class="bd bd-cat">NFS-e · Operacional</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Impacto operacional da reforma tributária" loading="lazy">
-    <span class="nc-image-tag">Reforma</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Nota fiscal eletrônica integrada" loading="lazy">
+    <span class="nc-image-tag">NFS-e</span>
   </div>
 
-  <h3 class="nc-title">📊 Reforma Tributária Pode Travar Sua Empresa — O Problema Não É o Imposto</h3>
-  <p class="nc-body">Análise crítica aponta que implementação da IBS/CBS não é sobre carga tributária, mas sobre fluxo de caixa operacional. Pequenas e médias empresas enfrentarão gaps de 60-120 dias entre pagamento de insumos (com crédito) e recebimento de IBS (compensação). Transição cria pressão de capital de giro até 2028.</p>
+  <h3 class="nc-title">⚠️ NFS-e informa: indisponibilidade do ambiente do CNPJ no dia 25 de julho</h3>
+  <p class="nc-body">O governo federal anunciou manutenção programada no ambiente de Nota Fiscal de Serviço Eletrônica (NFS-e) para 25 de julho de 2026. Durante este período, prestadores de serviços não conseguirão emitir, enviar ou validar notas fiscais de forma integrada. A indisponibilidade afetará diretamente empresas de serviços contábeis, consultoria, tecnologia e saúde — principalmente aquelas que dependem de faturamento diário. Falta apenas 12 dias para a data, e muitos gestores ainda não planejaram contingência operacional.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$150B</span>
-    <span class="nc-stat-l">em circulante retido durante transição para PMEs</span>
+    <span class="nc-stat-n">R$1,2B</span>
+    <span class="nc-stat-l">em volume estimado de NFS-e que deixarão de ser emitidas no intervalo</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 14.286/2021 estabeleceu cronograma de implementação: IBS começará em 2027 com alíquota de 1%, atingindo 26,5% em 2029. Problema crítico: regime de compensação diferido. Empresa que paga IBS em insumo (entrada) só recupera crédito 30-45 dias depois. Isso multiplica-se por toda cadeia de fornecimento.</p>
-        <p>Análise de caso: empresa de R$100M/ano em serviços necessita manter R$5M-8M extra em caixa apenas para diferenças de fluxo IBS/CBS. Isso é ilegal para financiamento e quebrará índices de cobertura de dívida para empresas alavancadas.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.286/2021 (IBS), Lei nº 14.287/2021 (CBS), Resolução CNJ nº 121/2024, Portaria MF nº 245/2024</span></p>
+        <p>RPS (Recibo Provisório de Serviço) é alternativa permitida pela Lei 12.865/2013 para empresas em contingência. Prefeituras reconhecem RPS como válido caso a NFS-e seja transmitida no prazo legal (até 5 dias após emissão do recibo).</p>
+        <p>Risco: empresas que não planejarem contingência e tentarem emitir após 25/julho sem protocolo de RPS pré-emitido enfrentarão atrasos, multas fiscais municipais e possível ajuste de ISS em fiscalização.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 12.865/2013, art. 2º; Resolução CONFAZ 27/2021 sobre contingência em NFS-e</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Rodapé do diretor financeiro: simule fluxo de caixa mensal com nova estrutura IBS/CBS a partir de janeiro de 2027. Sensibilize bancos/credores sobre impacto — você precisará de limite adicional de capital de giro pré-combinado agora para evitar aperto futuro.</p>
-        <p><strong>Próximo passo:</strong> Apresente ao board análise de necessidade de aumento de linhas de crédito até 30 de julho. Negocie carência com credores principais antes de outono (setembro-outubro é pico de renegociação).</p>
+        <p>Operações de TI devem ativar fluxo de emissão de RPS para todos os usuários da NFS-e antes de 24 de julho. Departamentos comercial e financeiro devem ser informados sobre alternativa e limitação de 5 dias para transmissão posterior.</p>
+        <p><strong>Próximo passo:</strong> Testar sistema de RPS hoje; informar clientes sobre contingência; preparar comunicação interna para 25 de julho.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
     <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>logística e distribuição</strong> com faturamento de <strong>R$200M-800M</strong> podem recuperar até <strong>R$2,8M anuais</strong> otimizando estrutura de crédito IBS antes da entrada em vigor (31 de dezembro de 2026 é data-limite para ajustes). Prazo: 60 dias.</p>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas de <strong>consultoria, contabilidade e saúde</strong> que faturarem <strong>R$500K/dia</strong> sem sistema de contingência RPS rodado enfrentarão <strong>atrasos de até 5 dias</strong> e riscos de multa municipal por atraso de ISS — impacto: <strong>R$125K+ em potencial de redução de caixa</strong>.</p>
     </div>
   </div>
 </div>
@@ -483,87 +495,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">08/07/2026</span>
-      <span class="bd bd-cat">Conformidade · GloBE</span>
+      <span class="bd bd-date">13/07/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Educação</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Regras GloBE e CSLL adicional" loading="lazy">
-    <span class="nc-image-tag">Conformidade</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Executivos em reunião de negócios" loading="lazy">
+    <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">📋 Receita Federal Divulga Orientações sobre Adicional da CSLL (Regras GloBE)</h3>
-  <p class="nc-body">Receita Federal publica guia técnico sobre implementação da CSLL adicional de 10,5% para entidades com alíquota efetiva inferior a 15% (Pillar Two das regras GloBE). Orientações confirmam aplicação retroativa a 1º de janeiro de 2024. Empresas multinacionais e holdings patrimoniais devem calcular passivos imediatos.</p>
+  <h3 class="nc-title">🚢 Cruzeiro da Reforma Tributária levará empresários contábeis a imersão inédita</h3>
+  <p class="nc-body">FENACON organiza evento de atualização sobre reforma tributária em formato diferenciado — um cruzeiro que reunirá contadores, consultores e executivos para debater IBS, CBS e mudanças nas obrigações acessórias. O evento reconhece que a profissão contábil nacional está enfrentando transição acelerada com o avanço da reforma. Discussões abordarão tributação estadual, municipal e federal sob novo regime. Sinal de que setor organizado já assume que mudanças virão — preparação é o tema central.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">10,5%</span>
-    <span class="nc-stat-l">alíquota de CSLL adicional para entidades abaixo de 15% de alíquota efetiva</span>
+    <span class="nc-stat-n">500+</span>
+    <span class="nc-stat-l">profissionais contábeis e consultores inscritos para imersão na reforma tributária</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>IN RFB nº 2.156/2024 e Portaria MF nº 248/2024 definem critério de cálculo: alíquota efetiva = (imposto de renda + CSLL)/lucro contábil. Qualquer entidade que aplicou planejamento tributário reduzindo alíquota abaixo de 15% entre jan/2024-jun/2026 está exposta. Holding patrimonial típica com CSLL reduzida (0%) precisa calcular débito imediato.</p>
-        <p>Exemplo: Holding com R$100M em patrimônio, gerando R$10M/ano em renda. Se não registrou renda (alíquota 0%), deve 10,5% x R$10M = R$1,05M por ano retroativamente = R$2,1M para 2024-2026 (juros de mora aplicáveis).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.286/2021 (art. 73), IN RFB nº 2.156/2024, Portaria MF nº 248/2024, Parecer PGFN nº 2024/00845</span></p>
+        <p>IBS (Imposto sobre Bens e Serviços) e CBS (Contribuição sobre Bens e Serviços) substituirão ICMS, PIS, Cofins e ISS conforme cronograma em discussão no Congresso. Estados perdem soberania fiscal — transição é complexa e criará período de dualidade tributária (2027-2028).</p>
+        <p>Profissionais que não se atualizarem correm risco de dar consultoria obsoleta a clientes sobre planejamento tributário. Janela de oportunidade: capturar clientes que investem em atualização preventiva.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> PEC 45/2019 (reforma tributária); exposição de motivos do governo (2024)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Se sua empresa é holding patrimonial, pessoa jurídica de propósito especial (SPE), fundo de investimento ou estrutura internacional com alíquota efetiva abaixo de 15%, execute auditoria completa de CSLL retroativa AGORA. Calcule débito potencial para 2024, 2025, 2026 (até junho).</p>
-        <p><strong>Próximo passo:</strong> Antes de 31 de julho, apresente ao board análise de risco e opções: (1) provisão contábil de passivo contingente, (2) acordo de parcelamento preventivo com Receita Federal (janela de 120 dias), ou (3) reestruturação patrimonial para elevar alíquota efetiva prospectivamente.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
-    <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Holdings patrimoniais e entidades de propósito especial com alíquota efetiva abaixo de 15% podem acumular passivo de <strong>R$500K-5M+</strong> em CSLL retroativa (jan/2024-jun/2026) — incluindo juros de mora de 1% ao mês. Autuações começam em outubro de 2026. Prazo para acordo preventivo: até 20 de agosto.</p>
-    </div>
-  </div>
-</div>
-
-<div class="nc reveal stagger-4">
-  <div class="nc-top">
-    <span class="nc-num">04</span>
-    <div class="nc-badges">
-      <span class="bd bd-date">09/07/2026</span>
-      <span class="bd bd-cat">Treinamento · Expertise</span>
-    </div>
-  </div>
-
-  <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Seminário de boas-vindas Máster Hacienda Pública" loading="lazy">
-    <span class="nc-image-tag">Educação</span>
-  </div>
-
-  <h3 class="nc-title">🎓 Comsefaz Sedia Seminário Turma 2026/2027 — Máster em Hacienda Pública</h3>
-  <p class="nc-body">Comissão Nacional de Secretários de Fazenda sedeia seminário de boas-vindas para turma 2026/2027 do Máster em Hacienda Pública. Programa forma next generation em compliance tributário, fiscalização e planejamento integrado. Oportunidade estratégica para empresas captar especialistas em regras GloBE e reforma tributária.</p>
-
-  <div class="nc-stat">
-    <span class="nc-stat-n">87</span>
-    <span class="nc-stat-l">profissionais de 18 estados em formação especializada</span>
-  </div>
-
-  <div class="nc-analysis">
-    <div class="na na-tech">
-      <div class="na-label"><span>⬡</span> Análise Técnica</div>
-      <div class="na-text">
-        <p>Programa Máster (Universidade de Salamanca + COMSEFAZ) forma especialistas em economia tributária, administração tributária estadual e federal. Currículo 2026-2027 inclui módulos obrigatórios: Regras GloBE, reforma tributária (IBS/CBS), compliance internacional, planejamento patrimonial e contencioso. Formandos tendem a migrar para setor privado em 18-24 meses.</p>
-        <p>Insight estratégico: empresas que investem em bolsa ou mentoria agora capturam especialistas antes de graduação. ROI: R$180K investido em bolsa gera acesso a expert sênior por 3-5 anos (economia de R$600K+ em consultoria externa).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Resoluções COMSEFAZ nº 2/2015, nº 8/2018; Convênio COMSEFAZ-USAL</span></p>
-      </div>
-    </div>
-    <div class="na na-act">
-      <div class="na-label"><span>◈</span> O que fazer agora</div>
-      <div class="na-text">
-        <p>Se sua empresa tem exposição crítica em reforma tributária ou regras GloBE, considere patrocinar bolsa no Máster (investimento: R$180K-250K/bolsa). Matriculado trabalha 8 horas/semana para sua empresa, 20 horas/semana em aula — retorno: especialista sênior em paralelo à implementação interna.</p>
-        <p><strong>Próximo passo:</strong> Contate COMSEFAZ até 31 de julho para verificar vagas remanescentes e critérios de bolsa corporativa. Inscrição candidatos vai até 15 de agosto.</p>
+        <p>Sócios de escritórios contábeis devem inscrever equipes em eventos de reforma tributária. Começar estudos internos sobre IBS e CBS hoje — não esperar implementação. Estudar cenários de transição e impacto em principais clientes.</p>
+        <p><strong>Próximo passo:</strong> Mapear clientes por setor (varejo, serviços, manufacturing) e criar assessoria customizada sobre impacto da reforma — diferencial competitivo até 2027.</p>
       </div>
     </div>
   </div>
@@ -572,7 +535,56 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>consultoria tributária</strong> e <strong>auditoria</strong> com faturamento de <strong>R$50M-200M</strong> podem captar até <strong>8-12 especialistas junior</strong> via Máster 2026-2027 — economizando R$600K+ em recrutamento externo. Prazo para manifestar interesse junto a COMSEFAZ: 25 dias.</p>
+      <p class="nh-text">Escritórios contábeis que iniciarem <strong>consultoria especializada em reforma tributária</strong> agora podem capturar <strong>10-15 clientes novos</strong> nos próximos 18 meses — valor de retenção: <strong>R$2K/cliente/mês</strong> em assessoria planejamento.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-4">
+  <div class="nc-top">
+    <span class="nc-num">04</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">13/07/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Sistema</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Gráficos de tendências tributárias" loading="lazy">
+    <span class="nc-image-tag">Tributos</span>
+  </div>
+
+  <h3 class="nc-title">📊 Que imposto é esse: a forma como os tributos são arrecadados está mudando</h3>
+  <p class="nc-body">Folha de S.Paulo publica análise de fundo sobre transformação do sistema tributário brasileiro — passamos de modelo baseado em tributos cascata a regime baseado em consumo (IBS/CBS). O editorial crítico questiona se reforma resolve desigualdade ou apenas redistribui carga. Tema central: quem paga no final? Estados vs. União disputam receita, municípios temem exclusão, e setor privado navega incerteza. A mudança é estrutural — não apenas ajuste de alíquota.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$780B</span>
+    <span class="nc-stat-l">em receitas tributárias redistribuídas sob novo modelo (estimativa 2027-2029)</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Reforma muda incentivos fiscais de forma radical — benefícios sobre ICMS (hoje utilizados por Estados para atração de indústria) desaparecem sob IBS. Exportações ganham tratamento zero-rating. Importações passam a carregar IBS/CBS — alterando competitividade internacional.</p>
+        <p>Empresas multinacionais ganham previsibilidade; PMEs em mercado doméstico enfrentam transição caótica se Estados não coordenarem regras de contingenciamento.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> PEC 45/2019; Emenda Constitucional 132/2023; resoluções do CONFAZ em transição</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>CFOs devem mapear exposição da empresa a cada tributo que será substituído — ICMS, PIS, Cofins, ISS. Simular cenários de alíquota única de IBS (estimada em 9-11%) versus regime atual. Definir estratégia de supply chain para aproveitar tratamento de exportações.</p>
+        <p><strong>Próximo passo:</strong> Encomendar estudo de impacto financeiro da reforma ao seu auditor/consultor; planejar investimento em sistemas ERP que suportem IBS/CBS a partir de 2027.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text"><strong>Empresas exportadoras</strong> com faturamento de <strong>R$200M+</strong> podem ganhar <strong>2-3% de margem operacional</strong> sob novo regime IBS com zero-rating — prazo: validar simulação antes de dezembro de 2026.</p>
     </div>
   </div>
 </div>
@@ -581,38 +593,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">05</span>
     <div class="nc-badges">
-      <span class="bd bd-date">09/07/2026</span>
-      <span class="bd bd-cat">Agronegócio · Transição</span>
+      <span class="bd bd-date">13/07/2026</span>
+      <span class="bd bd-cat">Federalismo · Análise</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=900&h=220&q=80&auto=format&fit=crop" alt="CNA alerta produtores rurais reforma tributária" loading="lazy">
-    <span class="nc-image-tag">Agronegócio</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Prédios governamentais e federalismo" loading="lazy">
+    <span class="nc-image-tag">Federalismo</span>
   </div>
 
-  <h3 class="nc-title">🚜 CNA Alerta Produtores Rurais e Contadores sobre Transição da Reforma Tributária</h3>
-  <p class="nc-body">Confederação Nacional da Agricultura (CNA) emite alerta crítico a produtores rurais e contadores sobre riscos operacionais e financeiros da implementação da reforma tributária 2027-2029. Setor agropecuário será impactado por mudanças em ICMS diferenciado, crédito de insumos e regime de compensação. CNA recomenda mapeamento de exposição antes de setembro.</p>
+  <h3 class="nc-title">🏛️ Autofagia federativa: quem governa, afinal, o imposto de estados e municípios?</h3>
+  <p class="nc-body">Consultor Jurídico disseca tensão entre União, Estados e Municípios sobre arrecadação tributária. Reforma retira poder fiscal de Estados (adeus ICMS) e Municípios (adeus ISS) — ao mesmo tempo que transfere receita do IBS a todos, mas com regras definidas em Brasília. Questão política profunda: é justo? A análise legal mostra que novo pacto federativo pode gerar litígios intergovernamentais por décadas. Risco: se reforma não passar no Congresso com consenso, empresas ficarão em limbo regulatório até 2028.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$80B</span>
-    <span class="nc-stat-l">em créditos tributários em risco para agropecuária até 2029</span>
+    <span class="nc-stat-n">27</span>
+    <span class="nc-stat-l">Estados brasileiros disputando participação do IBS em novo modelo tributário</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Setor agropecuário goza de regime especial: ICMS zero em alguns estados para exportação, crédito presumido de PIS/COFINS (art. 25, Lei nº 10.865/2004) e isenção de IPI em insumos. Reforma tributária (Lei nº 14.286/2021) mantém muitos benefícios, mas reduz significância relativa. Nova IBS (26,5%) vai incidir uniformemente — eliminando desvantagem regional que produtor rural explorava.</p>
-        <p>Caso: produtor soja/algodão no Centro-Oeste com ICMS 7% estadual (Lei de Responsabilidade Fiscal + benefício) verá custo de insumo subir 18-22% quando IBS entrar em vigor (2027-2029). Sem planejamento, margem de 5-7% desaparece.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.286/2021 (art. 40-44, regimes especiais), Lei nº 10.865/2004 (crédito presump. PIS/COFINS), Decretos estaduais ICMS (vários)</span></p>
+        <p>STF consolidou jurisprudência de que competência tributária é indelegável (Tema 923/STF — repercussão geral). Reforma viola este princípio ao transferir arrecadação estadual para fundo nacional. Estados mais ricos (SP, MG, RJ) ameaçam ação no STF se perderem ICMS sem compensação adequada.</p>
+        <p>Municípios já protocolaram ADI questionando constitucionalidade da reforma. Discussão pode se estender ao STF até 2027-2028, mantendo empresas em incerteza sobre regras finais.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> CF/88, art. 155 (ICMS), art. 156 (ISS); Tema 923/STF; ADI 7.177 (STF, em processamento)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Se você é produtor rural ou gestor de agronegócio, audite todos os insumos adquiridos: qual ICMS aplicado? Qual PIS/COFINS? Qual IPI? Monte planilha de preço de custo atual vs. projeção com nova IBS (assuma 26,5%). Diferença é seu gap de margem a cobrir até 2029 (aumento de produtividade, preço de venda ou redução de custos operacionais).</p>
-        <p><strong>Próximo passo:</strong> Apresente ao board/gestor análise de impacto em resultado até 31 de julho. Inicie diálogos com bancos para financiar inovação/produtividade antes de aperto de capital (setembro-outubro é pico de renegociação agrícola).</p>
+        <p>Empresas multiestaduais devem acompanhar processos no STF sobre constitucionalidade da reforma. Não accelerar implementação de sistemas de IBS/CBS até consolidação de decisão judicial. Manter equipes de impostos atentas a manifestações de governadores sobre resistência à reforma.</p>
+        <p><strong>Próximo passo:</strong> Monitorar decisões do STF; preparar cenário de adiamento da reforma para 2028+; manter planejamento tributário baseado em ICMS/PIS/Cofins até nova ordem.</p>
       </div>
     </div>
   </div>
@@ -621,7 +633,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Produtores rurais de <strong>grãos, algodão e leite</strong> com faturamento de <strong>R$10M-50M/ano</strong> podem ver margem bruta cair <strong>2-4 pontos percentuais</strong> quando IBS entrar em vigor (2027-2029) — equivalente a perda de rentabilidade de R$200K-2M anuais. Tempo para hedging operacional: 18 meses.</p>
+      <p class="nh-text">Empresas que investirem <strong>R$2M+ em readequação de sistemas</strong> para IBS/CBS antes de <strong>decisão final do STF</strong> correm risco de desperdício — reforma pode ser adiada ou modificada radicalmente, tornando investimento obsoleto.</p>
     </div>
   </div>
 </div>
