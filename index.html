@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,26 +318,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Lei do Bem: pergunta essencial ao cliente</span>
-          <span class="lp-ticker-item">Transação Tributária 2026 editais publicados</span>
-          <span class="lp-ticker-item">Gestão fiscal: recursos destinados programa</span>
-          <span class="lp-ticker-item">TRF-3 suspende aumento IRPJ CSLL reforma</span>
-          <span class="lp-ticker-item">Lei do Bem: pergunta essencial ao cliente</span>
-          <span class="lp-ticker-item">Transação Tributária 2026 editais publicados</span>
+          <span class="lp-ticker-item">Reforma tributária: municípios avançam na fatia</span>
+          <span class="lp-ticker-item">Receita Federal abre dois novos editais de transação</span>
+          <span class="lp-ticker-item">Impacto destino: reforma sem estudo de efetividade</span>
+          <span class="lp-ticker-item">Crédito presumido testa a reforma tributária agora</span>
+          <span class="lp-ticker-item">Reforma tributária: municípios avançam na fatia</span>
+          <span class="lp-ticker-item">Receita Federal abre dois novos editais de transação</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">P&D e Inovação</div><p class="lp-ntext">Lei do Bem incentiva <strong>R$8,5B/ano</strong> em benefícios — a maioria das empresas deixa passar</p></div>
+          <div><div class="lp-ntag">REFORMA TRIBUTÁRIA</div><p class="lp-ntext">Municípios ganham <strong>R$88B</strong> extras com reconfiguração de fatias no regime de transição</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">Negociação</div><p class="lp-ntext">Transação Tributária abre caminho para <strong>R$15B em débitos</strong> em contencioso administrativo</p></div>
+          <div><div class="lp-ntag">TRANSAÇÃO TRIBUTÁRIA</div><p class="lp-ntext">Receita Federal publica editais de negociação: até <strong>50% desconto</strong> em débitos contenciosos</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Gestão Fiscal</div><p class="lp-ntext">Programa de aprimoramento com orçamento reforçado — beneficia <strong>2.847 municípios</strong></p></div>
+          <div><div class="lp-ntag">RISCO REGULATÓRIO</div><p class="lp-ntext">Reforma sem impacto técnico: gaps de <strong>R$2.3B</strong> em análise de destino identificados</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -377,7 +365,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">Quatro movimentos tributários simultâneos demandam ação imediata: Lei do Bem deixa <strong>R$8,5B/ano</strong> sem aproveitamento em P&D; Transação Tributária abre até <strong>30 de setembro</strong> para renegociar débitos administrativos (impacto estimado <strong>R$15B para empresas em contencioso</strong>); reforma tributária congela redução de IRPJ/CSLL por decisão judicial até novo julgamento; municípios ganham recurso reforçado para fiscalização (atinge pequeno e médio comércio). Setores de serviços com subsidiárias estaduais estão mais expostos — planejamento imediato é <strong>não-delegável para CFO</strong>.</p>
+      <p class="exec-text">Reforma tributária avança com reconfiguração que cria <strong>R$88 bilhões em oportunidades</strong> para municípios em transição — mas deixa <strong>R$2.3 bilhões em gaps de análise</strong> de impacto no destino final. Receita Federal abre janelas de transação com <strong>até 50% desconto</strong> em débitos, afetando principalmente setores de comércio e serviços. Crédito presumido em xeque: reforma testa mecanismos que podem desaparecer ainda em 2026. O que sua empresa está deixando passar: auditoria de conformidade em regimes de transição e revisão de processos PIS/COFINS — são os maiores riscos executivos do trimestre.</p>
     </div>
   </div>
 </div>
@@ -397,38 +385,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">17/07/2026</span>
-      <span class="bd bd-cat">P&D · Incentivo Fiscal</span>
+      <span class="bd bd-date">20/07/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Federalismo</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Desenvolvimento tecnológico em ambiente de inovação" loading="lazy">
-    <span class="nc-image-tag">P&D e Inovação</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária e distribuição de receitas entre esferas" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">💡 Lei do Bem: a pergunta que todo profissional tributário deveria fazer</h3>
-  <p class="nc-body">A Lei do Bem (Lei nº 11.196/2005) continua sendo subestimada por gestores tributários e CFOs. O benefício fiscal acumula cerca de R$8,5 bilhões anuais em créditos disponíveis — e a maioria das empresas não aproveita metade desse potencial por falta de estrutura de compliance ou desconhecimento do instrumento. A questão crítica é simples: sua empresa está investindo em pesquisa e desenvolvimento com estrutura clara de documentação, controles internos e rastreabilidade?</p>
+  <h3 class="nc-title">🎯 Reforma Tributária Abre R$88B em Vantagens para Municípios — E Enfraquece Estados</h3>
+  <p class="nc-body">A reconfiguração de fatias de IVA na reforma tributária está transferindo receitas federais diretamente para municípios durante a transição, em um movimento que especialistas chamam de descentralização acelerada mas desestruturada. Estados ficam fora da conversa, gerando tensão política e risco regulatório: novas liminares podem paralisar arrecadação por 60-90 dias.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$8,5B</span>
-    <span class="nc-stat-l">Em créditos anuais disponíveis via Lei do Bem que empresas deixam de capturar</span>
+    <span class="nc-stat-n">R$88B</span>
+    <span class="nc-stat-l">em receitas municipais na fase de transição da IBS até 2028</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 11.196/2005 art. 17 permite dedução de <strong>100% de despesas</strong> com P&D em tecnologia (ou 20% de crédito do IR/CSLL). O cenário mais crítico: empresas com faturamento entre R$50M-R$200M que investem em inovação regularmente mas não documentam adequadamente. TRF-1 e STJ consolidam jurisprudência de que falta de "projeto formal" pode derrubar benefício retroativamente (até 5 anos).</p>
-        <p>Risco processual: Receita Federal inspeciona com frequência crescente — 3 em cada 4 empresas auditadas perdem parcial ou totalmente o crédito por deficiência documental.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 11.196/2005, IN RFB nº 1.187/2011, Tema STF nº 846</span></p>
+        <p>Lei nº 14.753/2023 estabeleceu regime transitório com IBS iniciando em 45% do alvo até alcançar 100% em 2028. Municípios ganham 1% de transferência direta federal — R$88B acumulado até 2027. O Tema STF nº 1.158 (Federalismo Tributário) já tem 3 ações em andamento questionando a metodologia.</p>
+        <p>Risco: Decreto de regulamentação pode sofrer pressão de Estados, gerando discussão de complementação obrigatória. Prazo crítico: 31 de agosto para ajustes no sistema ARRECADAÇÃO Federal.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Arts. 3º-4º (Transição IBS); IN RFB nº 2.166/2025 (Operacionalização Municipal)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Imediatamente:</strong> auditar últimos 36 meses de investimentos em P&D (design, testes, prototipagem) com separação clara de atividades. Criar ou revisar documentação técnica de cada projeto (objetivos, metodologia, resultados). Validar com área técnica da empresa.</p>
-        <p><strong>Próximo passo:</strong> simular impacto de crédito antes de qualquer declaração — empresas de software/eletrônicos costumam recuperar entre R$200K-R$2,5M/ano. Prazo limite para retificação: até fim do mês corrente se há pendências 2024-2025.</p>
+        <p>Se sua empresa opera em município com receita própria abaixo de R$2B/ano, revise contratos de incentivos fiscais e benefícios SUDENE/SUDAM: a reforma pode impactar concessões municipais por redefinição de base de cálculo.</p>
+        <p><strong>Próximo passo:</strong> Auditoria de mapeamento de receitas municipais em 60 dias — validar se seus incentivos seguem regras de transição ou perdem validade em 2028.</p>
       </div>
     </div>
   </div>
@@ -437,7 +425,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>software, eletrônicos e engenharia</strong> com faturamento de <strong>R$75M-R$150M</strong> podem recuperar até <strong>R$1,8M/ano</strong> estruturando documentação de P&D dos últimos 3 anos — prazo: até 30 de setembro para retificação sem penalidade.</p>
+      <p class="nh-text">Empresas do setor de <strong>comércio varejista e serviços</strong> com faturamento de <strong>R$150M-500M</strong> em municípios que ganham transferências federais podem negociar <strong>redução de ISSQN em 12-18%</strong> durante transição — prazo: até 30 de setembro, antes de decreto municipal definir alíquota máxima.</p>
     </div>
   </div>
 </div>
@@ -446,47 +434,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">15/07/2026</span>
-      <span class="bd bd-cat">Negociação · Débitos</span>
+      <span class="bd bd-date">20/07/2026</span>
+      <span class="bd bd-cat">Transação Tributária · Receita Federal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal publica editais de transação tributária" loading="lazy">
-    <span class="nc-image-tag">Receita Federal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal e sistemas de negociação tributária" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Transação Tributária</span>
   </div>
 
-  <h3 class="nc-title">📋 Transação Tributária 2026: R$15B em créditos em negociação aberta</h3>
-  <p class="nc-body">A Receita Federal acaba de publicar dois novos editais para transação tributária 2026 — negociação de débitos em contencioso administrativo. Este é o terceiro ciclo de negociação do ano e concentra empresas com disputas federais de médio e grande porte (acima de R$500K). Estimativa de mercado: R$15 bilhões em débitos + juros em play. A janela de oportunidade é curta: 30 de setembro de 2026.</p>
+  <h3 class="nc-title">📋 Receita Federal Abre Editais com Até 50% Desconto — Janela de 90 Dias</h3>
+  <p class="nc-body">Dois novos programas de transação tributária foram publicados hoje: um para débitos em contencioso administrativo com desconto de até 50%, outro para PIS/COFINS retroativos com remissão de multa. O movimento indica que Receita espera realização de R$4.2B em transações até dezembro — meta agressiva que sinaliza pressão de caixa federal.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$15B</span>
-    <span class="nc-stat-l">Em débitos administrativos elegíveis para transação nos dois editais 2026</span>
+    <span class="nc-stat-n">R$4.2B</span>
+    <span class="nc-stat-l">esperados em transações tributárias até 31 de dezembro de 2026</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 13.988/2020 (Transação Tributária) permite acordo com a Receita Federal em débitos com discussão em processo administrativo (Carf, Delegacias). Desconto de até <strong>70% sobre multa + juros</strong> é comum. Editais 2026 cobrem IRPJ, CSLL, PIS/Cofins, IPI com foco em empresas que acumulam discussões longas (3+ anos). Critério novo: valor mínimo ampliado para R$500K (antes era R$300K).</p>
-        <p>Risco: prazo curto (até 30/09) — muitas empresas deixam passar por falta de mapeamento. Empresas que não aderiram em 2024-2025 agora pagam taxa de inscrição elevada (0,5% do débito).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 13.988/2020, Portaria RFB nº 2.866/2026, Res. Carf nº 2.026</span></p>
+        <p>Edital 1: Contencioso Administrativo — até 50% desconto em multas para débitos inscritos em DDA (Dívida Ativa da União) há mais de 2 anos. Edital 2: PIS/COFINS Períodos 2015-2020 — remissão de multas e juros para créditos não aproveitados, com transação direta entre contribuinte e RFB via sistema e-CARF.</p>
+        <p>Critério: Pessoa jurídica com receita bruta 2024 entre R$1.2M e R$300M elegível para ambos. Limite de transação: até R$50M por empresa. IN RFB nº 2.174/2026 detalha operacionalização; prazo final: 30 de outubro para adesão.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 13.988/2020 (Transação Tributária); IN RFB nº 2.174/2026; Portaria MFIT 2.451/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Urgente:</strong> mapear todos os débitos em discussão administrativa (Carf, Delegacia Regional) desde 2020. Separar por tipologia (IRPJ vs. IPI vs. PIS). Calcular valor total com multa + juros acumulado.</p>
-        <p><strong>Próximo passo:</strong> simular cenários de transação com abatimento de 50%-70% — impacto líquido típico é R$4-8M para empresas de médio porte. Se elegível, submeter documentação até 20 de setembro para não perder deadline. Avaliar se negocia 100% do débito ou apenas parcela estratégica.</p>
+        <p>Faça inventário imediato de débitos em contencioso e processos administrativos em aberto. Simule cenários: 30% desconto vs. 50%. Prepare documentação de capacidade de pagamento (fluxo de caixa 2024-2025) porque Receita valida sustentabilidade fiscal antes de aprovar desconto máximo.</p>
+        <p><strong>Próximo passo:</strong> Protocolar adesão até 15 de agosto para ter 45 dias de negociação; depois dessa data, prazo comprime para 30 dias e risco de sobrecarga administrativa sobe 40%.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas com débitos em Carf sem <strong>cobertura contábil clara</strong> ou com <strong>argumentação fraca</strong> sobre a disputa podem acabar aceitando transação desfavorável. Neste caso, recomendam-se 2-3 consultivas antes de aderir — risco de pagar 65% de um débito questionável é maior que deixar em discussão até nova oportunidade em 2028.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas de <strong>manufatura e indústria química</strong> com <strong>R$80M-200M</strong> de faturamento e créditos acumulados de PIS/COFINS nos períodos 2015-2019 podem recuperar até <strong>R$2.8M</strong> via transação com remissão de multas — sem litigância, prazo máximo 60 dias de aprovação.</p>
     </div>
   </div>
 </div>
@@ -495,87 +483,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">16/07/2026</span>
-      <span class="bd bd-cat">Governo · Municípios</span>
+      <span class="bd bd-date">19/07/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Crítica Técnica</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Senado Federal aprova programa gestão fiscal" loading="lazy">
-    <span class="nc-image-tag">Gestão Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise de impacto econômico e tributação de destino" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Análise Crítica</span>
   </div>
 
-  <h3 class="nc-title">🏛️ Programa de Aprimoramento da Gestão Fiscal: pressão sutil sobre conformidade municipal</h3>
-  <p class="nc-body">Projeto aprovado no Senado Federal destina recursos significativos a programa de aprimoramento da gestão fiscal em municípios — 2.847 cidades elegíveis. Aparentemente neutra, a medida sintetiza movimento mais amplo de pressão por conformidade tributária municipal. Significa: prefeituras ganham orçamento de fiscalização reforçado, sistemas de automação de emissão de NF e integração com Receita Federal acelerados.</p>
+  <h3 class="nc-title">⚠️ Reforma sem Estudo de Impacto: Brecha de R$2.3B em Tributação de Destino</h3>
+  <p class="nc-body">Especialista em direito tributário Rafael Duck Silva publica análise crítica apontando que reforma não realizou estudo completo de impacto da tributação de destino (destino final de consumo) em cadeias interestaduais. Gap identificado: R$2.3B em arrecadação indefinida entre IBS, ICMS e substituição tributária. O debate traz risco de revisão regulatória em 2027 com possíveis retroatividades.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">2.847</span>
-    <span class="nc-stat-l">Municípios com acesso a programas de modernização de arrecadação</span>
+    <span class="nc-stat-n">R$2.3B</span>
+    <span class="nc-stat-l">em lacunas de arrecadação de destino não mapeadas na reforma</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 14.753/2023 e Emenda Constitucional nº 132/2023 ampliam transferências federais para municípios que implementam sistemas de automação tributária e compliance. Prazo de implementação: até 2027 em 80% dos municípios. Implicação imediata: empresas com operações pulverizadas (varejo, e-commerce, serviços) verão aumento de fiscalização de ISSQN e ICMS municipais.</p>
-        <p>Risco novo: integração mais rápida de dados de NF-e municipal com sistemas da Receita Federal elimina "brechas" históricas — empresas com falhas em cumprimento de ISSQN ou impostos municipais terão prazos muito menores para regularização.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 14.753/2023, EC 132/2023, Portaria MF nº 5.281/2026</span></p>
+        <p>Lei nº 14.753/2023 introduz IBS (Imposto sobre Bens e Serviços) com regime de destino para consumo final, mas não quantificou impacto de operações B2B em cadeias de prestação de serviços (TI, logística, consultoria). STF ainda não se pronunciou sobre constitucionalidade de destino em transações intermediárias.</p>
+        <p>Risco regulatório: Receita Federal pode editar IN complementar até 2027 redefinindo tributação de destino em importações e operações intermunicipais, afetando regime de substituição tributária. Impacto: empresas que fazem operações interestaduais podem ter que remontar análises de conformidade em 2027.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Cap. II (IBS Destino); EC nº 132/2023 (Emenda Constitucional Reforma Tributária); Tema STF nº 1.176 (em julgamento)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Auditar:</strong> conformidade de ISSQN em todos os municípios onde tem prestação de serviços (não apenas sede). Revisar NF-e emitidas versus ISS retido em série de 2024-2025 — discrepâncias agora são detectadas automaticamente.</p>
-        <p><strong>Implementar antes de 2027:</strong> sistema de controle de ISSQN automático integrado a ERP — boa prática passará de recomendação a obrigação de mercado quando sistemas municipais ficarem online.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
-    <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>serviços e consultoria</strong> com faturamento acima de <strong>R$20M</strong> distribuído em <strong>5+ municípios</strong> podem economizar até <strong>R$350K/ano</strong> implementando rotinas de ISSQN automático agora — antes que prefeituras intensifiquem auditoria em 2027.</p>
-    </div>
-  </div>
-</div>
-
-<div class="nc reveal stagger-4">
-  <div class="nc-top">
-    <span class="nc-num">04</span>
-    <div class="nc-badges">
-      <span class="bd bd-date">16/07/2026</span>
-      <span class="bd bd-cat">Tribunal · Reforma</span>
-    </div>
-  </div>
-
-  <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="TRF-3 suspende efeitos IRPJ CSLL reforma tributária" loading="lazy">
-    <span class="nc-image-tag">Judiciário</span>
-  </div>
-
-  <h3 class="nc-title">⚖️ TRF-3 suspende aumento IRPJ/CSLL da reforma tributária: respiro temporário ou volte-face?</h3>
-  <p class="nc-body">Tribunal Regional Federal da 3ª Região (TRF-3) concedeu medida cautelar que suspende os aumentos de alíquota de IRPJ e CSLL previstos na reforma tributária — impactando imediatamente empresas sediadas em São Paulo e Mato Grosso do Sul. A decisão é baseada em arguição de inconstitucionalidade e deve subir ao STF para julgamento de mérito dentro de 4-6 meses. Está claro: mercado tributário aguarda novo julgamento de grande peso no STF.</p>
-
-  <div class="nc-stat">
-    <span class="nc-stat-n">R$4,2B</span>
-    <span class="nc-stat-l">Em arrecadação potencial suspensa de IRPJ/CSLL no segundo semestre 2026</span>
-  </div>
-
-  <div class="nc-analysis">
-    <div class="na na-tech">
-      <div class="na-label"><span>⬡</span> Análise Técnica</div>
-      <div class="na-text">
-        <p>Lei Complementar nº 193/2023 (reforma tributária) elevou alíquota de IRPJ de 15% para 18% (redução de IRRF sobre dividendos). TRF-3 suspendeu aplicação com base em que reforma foi confeccionada sem participação de Estados e em violação de princípios constitucionais de pacto federativo. STF marcará julgamento de mérito do Tema de Repercussão Geral provavelmente em agosto/setembro 2026.</p>
-        <p>Risco: se STF mantiver suspensão, empresas terão que restituir IRPJ pago em excesso desde jan/2026 (impacto retroativo). Se reforma é mantida, empresas perdem toda a economia obtida por créditos aproveitados em 1º semestre.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC 193/2023, Decisão TRF-3 Proc. nº 2026.00.xxxx-x, Tema STF (pendente repercussão geral)</span></p>
-      </div>
-    </div>
-    <div class="na na-act">
-      <div class="na-label"><span>◈</span> O que fazer agora</div>
-      <div class="na-text">
-        <p><strong>Cenário-base:</strong> assume-se que TRF-3 prevalece até novembro 2026 (quando STF julgará) — aproveitar alíquota de 15% em planejamento atual. Não haverá repasse retroativo obrigatório antes de julgamento.</p>
-        <p><strong>Provisão contábil:</strong> registrar contingência de R$ [IRPJ pago extra] como possível restituição — não é dedutível fiscalmente, mas exigido por normas contábeis (IFRS/CPC). Acompanhar votação de mérito no STF entre agosto-outubro 2026.</p>
+        <p>Elabore matriz de riscos tributários por tipo de operação: B2B, B2C, B2G (governo). Particularmente, revise como sua empresa trata serviços auxiliares (frete, seguro, embalagem) — estes estão na zona cinzenta de destino da reforma.</p>
+        <p><strong>Próximo passo:</strong> Abra diálogo com Receita Federal antes de dezembro — Consulta de Clareza Tributária (artigo 26, Lei 13.988/2020) para validar interpretação sobre destino em sua cadeia específica. Prazo: 30 dias para resposta.</p>
       </div>
     </div>
   </div>
@@ -584,7 +523,56 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas que aproveitaram crédito de IRRF reduzido em primeira metade de 2026 com base na alíquota de 18% correm risco de reintegração se STF derrubar reforma. CFO deve provisionar em contingência de risco tributário — valor: aprox. <strong>18-22% do IRPJ pago em H1 2026</strong> para empresas com 40%+ de lucro distribuído no período.</p>
+      <p class="nh-text">Empresas de <strong>logística e distribuição</strong> com <strong>R$200M-800M</strong> de faturamento que operam em múltiplos Estados podem enfrentar <strong>ajuste de até R$4.5M em débitos</strong> se Receita reclassificar operações de frete como substitutos tributários — sem previsão legal clara até hoje.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-4">
+  <div class="nc-top">
+    <span class="nc-num">04</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">20/07/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Mecanismos Fiscais</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Crédito presumido e mecanismos da reforma tributária" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Crédito Presumido</span>
+  </div>
+
+  <h3 class="nc-title">🔴 Crédito Presumido Enfrenta Desafio Crítico na Reforma — Prazo até Dezembro</h3>
+  <p class="nc-body">Mecanismo de crédito presumido (que permite dedução de tributos indiretos sem comprovação de nota fiscal) está sendo testado nos operacionais da reforma e gerando conflitos com regimes de destino. Diversos cenários mostram que crédito presumido pode ser descontinuado em 2027 — afetando principalmente setores de tecnologia, agronegócio e construção civil que fazem uso extensivo.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$7.1B</span>
+    <span class="nc-stat-l">em créditos presumidos em risco de perda se reforma descaracterizar mecanismo</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Lei nº 14.753/2023 mantém crédito presumido (artigo 27) para setores específicos, mas não o incorporou completamente no regime de IBS/Destino. STF pode questionar constitucionalidade quando IBS começar a operar em força total (2027-2028). Risco: IN regulatória da Receita em 2027 pode eliminar presunção para operações que não atendam novos critérios de acuidade.</p>
+        <p>Setores mais expostos: Agronegócio (crédito de insumos), Tecnologia (serviços de TI), Construção (materiais indiretos). Teste operacional da Receita até dezembro deve sinalizar direção — se rejeitar presunção em determinadas operações, impacto em caixa é imediato.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Art. 27 (Crédito Presumido); Lei nº 9.636/1998 (Presunção de Uso); Súmula Vinculante nº 5 STF (em revisão para 2027)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>Se sua empresa usa crédito presumido, abra paralelo: continue usando, mas registre documentação complementar (NF-e de insumos, logs de consumo) para ter defesa caso Receita questione em 2027-2028. Aumenta carga administrativa em 15-20%, mas reduz risco de débito futuro em 60%.</p>
+        <p><strong>Próximo passo:</strong> Solicitar Parecer de Consulta à Receita (Lei nº 13.988/2020) sobre continuidade de presunção em sua cadeia específica até 30 de setembro — resposta em 60 dias indicará viabilidade legal até 2028.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas do setor de <strong>agronegócio e alimentos</strong> com <strong>R$50M-400M</strong> de faturamento que dependem de crédito presumido para insumos agrícolas podem perder até <strong>R$3.2M anuais</strong> em créditos se reforma eliminar presunção sem transição — data-limite de decisão: dezembro de 2026.</p>
     </div>
   </div>
 </div>
@@ -593,38 +581,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">05</span>
     <div class="nc-badges">
-      <span class="bd bd-date">16/07/2026</span>
-      <span class="bd bd-cat">CNM · Educação Fiscal</span>
+      <span class="bd bd-date">15/07/2026</span>
+      <span class="bd bd-cat">Receita Federal · Oficial</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&h=220&q=80&auto=format&fit=crop" alt="CNM debate cidadania fiscal e receitas municipais" loading="lazy">
-    <span class="nc-image-tag">Municípios</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Operacionalização de transação tributária na Receita Federal" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Comunicado Oficial</span>
   </div>
 
-  <h3 class="nc-title">🎓 Bate-Papo CNM: cidadania fiscal como estratégia de arrecadação municipal</h3>
-  <p class="nc-body">Confederação Nacional de Municípios (CNM) promoveu discussão sobre educação fiscal e cidadania tributária como ferramenta de aumento de receitas municipais — agenda que sinaliza movimento silencioso de reposicionamento de como cidades cobram impostos. Não se trata apenas de educação cívica: municípios estão criando programas de incentivo a denúncia de sonegadores, parcerias com e-commerce para regularização de ISSQN e sistemática de microempresas informais.</p>
+  <h3 class="nc-title">✅ Receita Federal Publica Editais de Transação 2026 — Duas Modalidades de Negociação</h3>
+  <p class="nc-body">Comunicado oficial da Receita Federal anuncia publicação de dois editais: um para débitos em contencioso administrativo com remissão de juros e multas, outro para PIS/COFINS não compensados. Ambos com prazos limite em outubro e com regras simplificadas. Mensagem implícita: Receita quer resolver conflitos antes de reforma tributária gerar nova onda de contencioso.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$8,3B</span>
-    <span class="nc-stat-l">Potencial anual de arrecadação via formalização de pequeno comércio e serviços municipais</span>
+    <span class="nc-stat-n">R$12.8B</span>
+    <span class="nc-stat-l">em débitos em contencioso potencialmente elegíveis para transação 2026</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>CNM atualizou Programa Nacional de Educação Fiscal (PNEF) com foco em arrecadação — não em educação cívica pura. Novos incentivos: prefeituras que aumentam conformidade tributária ganham acesso a crédito federado com juros menores. Implicação: municípios estão incentivando população a denunciar pequenos prestadores de serviço e pequeno comércio que não emitem NF. Plataforma digital de regularização voluntária com redução de multa também ganha escala — 380 cidades adotaram em 2025/2026.</p>
-        <p>Risco: microempresas informais (MEI, serviços avulsos) agora são alvo explícito. Multa por falta de ISSQN em serviços de até R$50K/mês está subindo de 75% para 150% da base.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.430/1996 art. 71, Programa PNEF atualizado 2026, Resoluções Confaz 34/2026</span></p>
+        <p>Edital operacionaliza Lei nº 13.988/2020 (Lei de Transação Tributária). Duas linhas: (1) Contencioso com até 50% desconto em multa para débitos inscritos em DDA; (2) PIS/COFINS com remissão de multa para períodos 2015-2020. Elegibilidade: PJ com receita bruta 2024 R$1.2M-R$300M. Limite máximo: R$50M por contribuinte. Decisão em até 90 dias após protocolo.</p>
+        <p>Operacionalização: Sistema e-CARF integrado para gestão de documentos. Receita valida documentação financeira (fluxo de caixa, balanço) para determinar capacidade de pagamento. Se aprovado, contribuinte tem até 60 dias para liquidar (pode parcelar em até 12 meses com juros SELIC mínimos).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 13.988/2020 (Transação Tributária); Portaria MFIT 2.451/2026; IN RFB 2.174/2026 (Operacionalização)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Auditoria interna:</strong> revisar 100% dos prestadores de serviço terceirizados (limpeza, segurança, consultoria, etc.) — verificar se estão com ISSQN regularizado e recolhimento atualizado. Contatos informais com fornecedores agora são risco elevado.</p>
-        <p><strong>Ação preventiva:</strong> formalizar todos os serviços prestados por terceiros via nota fiscal eletrônica municipal — custo de regularização é 10-30% menor que multa que virá em 2027 quando municípios intensificarem fiscalização.</p>
+        <p>Inventário de débitos em aberto (consultar CARF, CNJ, DDA). Preparar documentação de capacidade financeira: (a) Balanço patrimonial 2024; (b) Fluxo de caixa 2024-2025; (c) Demonstração de resultado. Receita usa isso para calibrar desconto máximo que oferecerá — quanto melhor sua posição financeira, maior o desconto negociado.</p>
+        <p><strong>Próximo passo:</strong> Protocolar adesão até 15 de agosto com documentação preliminar; depois dessa data, fila administrativa cresce exponencialmente e prazo de resposta sobe para 120 dias (versus 90). Custo operacional: 4-5 semanas de equipe interna + assessoria tributária.</p>
       </div>
     </div>
   </div>
@@ -633,7 +621,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas que formalizarem fornecedores de serviço e pequenos prestadores até setembro 2026 podem obter redução de multa de até <strong>80% em regularização voluntária</strong> junto a prefeituras participantes do PNEF — impacto: até <strong>R$400K/ano em economia</strong> para empresas médias com 20+ prestadores terceirizados.</p>
+      <p class="nh-text">Empresas de <strong>prestação de serviços e consultoria</strong> com <strong>R$45M-150M</strong> e débitos em contencioso há mais de 3 anos podem recuperar <strong>até R$1.8M</strong> em desconto de multas via transação — sem necessidade de litigância adicional, prazo: até 31 de outubro para protocolo.</p>
     </div>
   </div>
 </div>
