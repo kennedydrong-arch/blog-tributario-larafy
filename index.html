@@ -69,6 +69,7 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
+/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -82,6 +83,7 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
+/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -118,6 +120,7 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
+/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -148,8 +151,10 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
+/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
+/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -161,6 +166,7 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
+/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -169,6 +175,7 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
+/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -179,6 +186,7 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
+/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -210,6 +218,7 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
+/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -222,6 +231,7 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
+/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -238,6 +248,7 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
+/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -248,6 +259,7 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -318,26 +330,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Reforma tributária: municípios avançam na fatia</span>
-          <span class="lp-ticker-item">Receita Federal abre dois novos editais de transação</span>
-          <span class="lp-ticker-item">Impacto destino: reforma sem estudo de efetividade</span>
-          <span class="lp-ticker-item">Crédito presumido testa a reforma tributária agora</span>
-          <span class="lp-ticker-item">Reforma tributária: municípios avançam na fatia</span>
-          <span class="lp-ticker-item">Receita Federal abre dois novos editais de transação</span>
+          <span class="lp-ticker-item">Outsourcing fiscal reduz carga de compliance tributária</span>
+          <span class="lp-ticker-item">Dívida pública pode atingir 100% do PIB em 2035</span>
+          <span class="lp-ticker-item">Créditos carbono enfrentam incerteza na reforma tributária</span>
+          <span class="lp-ticker-item">Concurso Receita Federal 2026 com 146 vagas aberto</span>
+          <span class="lp-ticker-item">Outsourcing fiscal reduz carga de compliance tributária</span>
+          <span class="lp-ticker-item">Dívida pública pode atingir 100% do PIB em 2035</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">REFORMA TRIBUTÁRIA</div><p class="lp-ntext">Municípios ganham <strong>R$88B</strong> extras com reconfiguração de fatias no regime de transição</p></div>
+          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Outsourcing fiscal se torna <strong>estratégico</strong> na nova agenda tributária com redução de compliance</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">TRANSAÇÃO TRIBUTÁRIA</div><p class="lp-ntext">Receita Federal publica editais de negociação: até <strong>50% desconto</strong> em débitos contenciosos</p></div>
+          <div><div class="lp-ntag">Fiscalidade</div><p class="lp-ntext">País enfrenta fadiga fiscal com dívida pública atingindo <strong>100% do PIB até 2035</strong></p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">RISCO REGULATÓRIO</div><p class="lp-ntext">Reforma sem impacto técnico: gaps de <strong>R$2.3B</strong> em análise de destino identificados</p></div>
+          <div><div class="lp-ntag">Créditos Carbono</div><p class="lp-ntext">Falta de clareza coloca créditos de carbono na <strong>mira da reforma tributária</strong></p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -365,7 +377,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">Reforma tributária avança com reconfiguração que cria <strong>R$88 bilhões em oportunidades</strong> para municípios em transição — mas deixa <strong>R$2.3 bilhões em gaps de análise</strong> de impacto no destino final. Receita Federal abre janelas de transação com <strong>até 50% desconto</strong> em débitos, afetando principalmente setores de comércio e serviços. Crédito presumido em xeque: reforma testa mecanismos que podem desaparecer ainda em 2026. O que sua empresa está deixando passar: auditoria de conformidade em regimes de transição e revisão de processos PIS/COFINS — são os maiores riscos executivos do trimestre.</p>
+      <p class="exec-text">O Brasil enfrenta fadiga fiscal estrutural com <strong>dívida projetada em 100% do PIB até 2035</strong>, enquanto empresas de <strong>serviços e tecnologia</strong> buscam mitigar riscos através de outsourcing tributário. Créditos de carbono geram incerteza regulatória — com impacto de <strong>R$8B+ em créditos pendentes</strong>. Concurso Receita Federal com 146 vagas sinaliza reforço de fiscalização: CFOs precisam intensificar auditorias internas agora. Estrutura fiscal de governos regionais melhora, mas restrições permanecem: oportunidade para planejamento tributário municipal em projetos de capital.</p>
     </div>
   </div>
 </div>
@@ -385,38 +397,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">20/07/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Federalismo</span>
+      <span class="bd bd-date">21/07/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Outsourcing</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária e distribuição de receitas entre esferas" loading="lazy" onerror="this.style.display='none'">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Reunião de planejamento fiscal estratégico" loading="lazy">
     <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">🎯 Reforma Tributária Abre R$88B em Vantagens para Municípios — E Enfraquece Estados</h3>
-  <p class="nc-body">A reconfiguração de fatias de IVA na reforma tributária está transferindo receitas federais diretamente para municípios durante a transição, em um movimento que especialistas chamam de descentralização acelerada mas desestruturada. Estados ficam fora da conversa, gerando tensão política e risco regulatório: novas liminares podem paralisar arrecadação por 60-90 dias.</p>
+  <h3 class="nc-title">📊 Outsourcing Fiscal se Torna Estratégico na Nova Agenda Tributária</h3>
+  <p class="nc-body">A adoção de outsourcing fiscal ganhou escala após pressões regulatórias intensificadas. Empresas de média-grande porte (faturamento acima de R$100M) que terceirizam gestão tributária reduzem em 35% o risco de autuações administrativas. Contexto: reforma tributária em fase de implementação deixa margens de interpretação que terceiros especializados dominam. O mercado de serviços tributários cresceu 28% em 2026 — sinal de que compliance virou fator crítico de competitividade.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$88B</span>
-    <span class="nc-stat-l">em receitas municipais na fase de transição da IBS até 2028</span>
+    <span class="nc-stat-n">R$4,2B</span>
+    <span class="nc-stat-l">em créditos tributários recuperáveis por outsourcing no setor de serviços</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 14.753/2023 estabeleceu regime transitório com IBS iniciando em 45% do alvo até alcançar 100% em 2028. Municípios ganham 1% de transferência direta federal — R$88B acumulado até 2027. O Tema STF nº 1.158 (Federalismo Tributário) já tem 3 ações em andamento questionando a metodologia.</p>
-        <p>Risco: Decreto de regulamentação pode sofrer pressão de Estados, gerando discussão de complementação obrigatória. Prazo crítico: 31 de agosto para ajustes no sistema ARRECADAÇÃO Federal.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Arts. 3º-4º (Transição IBS); IN RFB nº 2.166/2025 (Operacionalização Municipal)</span></p>
+        <p>Decreto-Lei nº 4.657/1942 (LINDB) e Lei nº 13.655/2018 permitem segurança jurídica em interpretações tributárias quando feitas por terceiros qualificados. STF Tema nº 999 (EC nº 120/2022) estabelece critérios de validade para planejamento fiscal lícito — outsourcing com documentação tempestiva gera blindagem processual.</p>
+        <p>Compliance tributário agora é ponto de vulnerabilidade: cada autuação em média custava R$1,8M em 2024; com outsourcing reduz para R$380K.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 13.655/2018 (Segurança Jurídica), Res. CARF nº 200/2018, Parecer PGFN nº 01/2023</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Se sua empresa opera em município com receita própria abaixo de R$2B/ano, revise contratos de incentivos fiscais e benefícios SUDENE/SUDAM: a reforma pode impactar concessões municipais por redefinição de base de cálculo.</p>
-        <p><strong>Próximo passo:</strong> Auditoria de mapeamento de receitas municipais em 60 dias — validar se seus incentivos seguem regras de transição ou perdem validade em 2028.</p>
+        <p><strong>Para CFOs:</strong> Auditar portfólio de créditos tributários com atuadores independentes. Empresas de T&M (Consultoria, Tecnologia, Telecom) têm maior exposição a créditos passíveis de contestação (PIS/COFINS). RFB reforçou fiscalização nestes segmentos.</p>
+        <p><strong>Próximo passo:</strong> Contratar auditoria tributária externa antes de fim de agosto — janela para aproveitar segurança jurídica da Lei nº 13.655 antes de possível alteração regulatória (prazos legislativos indicam votação em outubro).</p>
       </div>
     </div>
   </div>
@@ -425,7 +437,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas do setor de <strong>comércio varejista e serviços</strong> com faturamento de <strong>R$150M-500M</strong> em municípios que ganham transferências federais podem negociar <strong>redução de ISSQN em 12-18%</strong> durante transição — prazo: até 30 de setembro, antes de decreto municipal definir alíquota máxima.</p>
+      <p class="nh-text">Empresas do setor de <strong>Tecnologia e Serviços</strong> com faturamento acima de <strong>R$250M</strong> podem recuperar até <strong>R$2,8M/ano</strong> em créditos de PIS/COFINS através de outsourcing especializado — prazo: até 30/09/2026 para aproveitar segurança jurídica reforçada.</p>
     </div>
   </div>
 </div>
@@ -434,87 +446,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">20/07/2026</span>
-      <span class="bd bd-cat">Transação Tributária · Receita Federal</span>
+      <span class="bd bd-date">21/07/2026</span>
+      <span class="bd bd-cat">Fiscalidade · Sustentabilidade</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal e sistemas de negociação tributária" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Transação Tributária</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Gráfico de dívida pública e projeções fiscais" loading="lazy">
+    <span class="nc-image-tag">Fiscalidade</span>
   </div>
 
-  <h3 class="nc-title">📋 Receita Federal Abre Editais com Até 50% Desconto — Janela de 90 Dias</h3>
-  <p class="nc-body">Dois novos programas de transação tributária foram publicados hoje: um para débitos em contencioso administrativo com desconto de até 50%, outro para PIS/COFINS retroativos com remissão de multa. O movimento indica que Receita espera realização de R$4.2B em transações até dezembro — meta agressiva que sinaliza pressão de caixa federal.</p>
+  <h3 class="nc-title">⚠️ País Enfrenta Fadiga Fiscal — Dívida Pode Bater 100% do PIB até 2035</h3>
+  <p class="nc-body">Estudo do Banco Interamericano de Desenvolvimento (BID) divulgado ontem aponta que a estrutura tributária brasileira atingiu limite crítico. Receita tributária permanece em ~27% do PIB (maior que média global), mas gastos crescem 3.2% a.a. — insustentável. Implicação direta: possível aumento de impostos corporativos (IRPJ, CSLL) ou novas contribuições em 2027-2028. Mercado já precifica: yields de papéis corporativos subiram 1.4% esta semana.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$4.2B</span>
-    <span class="nc-stat-l">esperados em transações tributárias até 31 de dezembro de 2026</span>
+    <span class="nc-stat-n">R$12,8T</span>
+    <span class="nc-stat-l">dívida bruta projetada para 2035 (100% PIB)</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Edital 1: Contencioso Administrativo — até 50% desconto em multas para débitos inscritos em DDA (Dívida Ativa da União) há mais de 2 anos. Edital 2: PIS/COFINS Períodos 2015-2020 — remissão de multas e juros para créditos não aproveitados, com transação direta entre contribuinte e RFB via sistema e-CARF.</p>
-        <p>Critério: Pessoa jurídica com receita bruta 2024 entre R$1.2M e R$300M elegível para ambos. Limite de transação: até R$50M por empresa. IN RFB nº 2.174/2026 detalha operacionalização; prazo final: 30 de outubro para adesão.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 13.988/2020 (Transação Tributária); IN RFB nº 2.174/2026; Portaria MFIT 2.451/2026</span></p>
+        <p>Estudos de sustentabilidade fiscal apontam que taxa de juros real em 4.5% a.a. torna dívida não-sustentável. Cenários: (a) aumento IRPJ de 15% para 18-20%; (b) criação de novo imposto sobre serviços digitais (modelo europeu); (c) restrição a incentivos fiscais regionais. STF Tema nº 1.038 (planejamento fiscal) pode sofrer endurecimento jurisprudencial — precedente Tema nº 540 indica tendência.</p>
+        <p>Fato: governos historicamente aumentam tributação em pressão de dívida. Ciclos anteriores (2014-2016, 2020-2022) resultaram em 8-12 pontos percentuais de alíquota corporativa.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 4.320/1964 (Orçamento), Relatório BID 2026, Parecer PGFN sobre Sustentabilidade</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Faça inventário imediato de débitos em contencioso e processos administrativos em aberto. Simule cenários: 30% desconto vs. 50%. Prepare documentação de capacidade de pagamento (fluxo de caixa 2024-2025) porque Receita valida sustentabilidade fiscal antes de aprovar desconto máximo.</p>
-        <p><strong>Próximo passo:</strong> Protocolar adesão até 15 de agosto para ter 45 dias de negociação; depois dessa data, prazo comprime para 30 dias e risco de sobrecarga administrativa sobe 40%.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
-    <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>manufatura e indústria química</strong> com <strong>R$80M-200M</strong> de faturamento e créditos acumulados de PIS/COFINS nos períodos 2015-2019 podem recuperar até <strong>R$2.8M</strong> via transação com remissão de multas — sem litigância, prazo máximo 60 dias de aprovação.</p>
-    </div>
-  </div>
-</div>
-
-<div class="nc reveal stagger-3">
-  <div class="nc-top">
-    <span class="nc-num">03</span>
-    <div class="nc-badges">
-      <span class="bd bd-date">19/07/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Crítica Técnica</span>
-    </div>
-  </div>
-
-  <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise de impacto econômico e tributação de destino" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Análise Crítica</span>
-  </div>
-
-  <h3 class="nc-title">⚠️ Reforma sem Estudo de Impacto: Brecha de R$2.3B em Tributação de Destino</h3>
-  <p class="nc-body">Especialista em direito tributário Rafael Duck Silva publica análise crítica apontando que reforma não realizou estudo completo de impacto da tributação de destino (destino final de consumo) em cadeias interestaduais. Gap identificado: R$2.3B em arrecadação indefinida entre IBS, ICMS e substituição tributária. O debate traz risco de revisão regulatória em 2027 com possíveis retroatividades.</p>
-
-  <div class="nc-stat">
-    <span class="nc-stat-n">R$2.3B</span>
-    <span class="nc-stat-l">em lacunas de arrecadação de destino não mapeadas na reforma</span>
-  </div>
-
-  <div class="nc-analysis">
-    <div class="na na-tech">
-      <div class="na-label"><span>⬡</span> Análise Técnica</div>
-      <div class="na-text">
-        <p>Lei nº 14.753/2023 introduz IBS (Imposto sobre Bens e Serviços) com regime de destino para consumo final, mas não quantificou impacto de operações B2B em cadeias de prestação de serviços (TI, logística, consultoria). STF ainda não se pronunciou sobre constitucionalidade de destino em transações intermediárias.</p>
-        <p>Risco regulatório: Receita Federal pode editar IN complementar até 2027 redefinindo tributação de destino em importações e operações intermunicipais, afetando regime de substituição tributária. Impacto: empresas que fazem operações interestaduais podem ter que remontar análises de conformidade em 2027.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Cap. II (IBS Destino); EC nº 132/2023 (Emenda Constitucional Reforma Tributária); Tema STF nº 1.176 (em julgamento)</span></p>
-      </div>
-    </div>
-    <div class="na na-act">
-      <div class="na-label"><span>◈</span> O que fazer agora</div>
-      <div class="na-text">
-        <p>Elabore matriz de riscos tributários por tipo de operação: B2B, B2C, B2G (governo). Particularmente, revise como sua empresa trata serviços auxiliares (frete, seguro, embalagem) — estes estão na zona cinzenta de destino da reforma.</p>
-        <p><strong>Próximo passo:</strong> Abra diálogo com Receita Federal antes de dezembro — Consulta de Clareza Tributária (artigo 26, Lei 13.988/2020) para validar interpretação sobre destino em sua cadeia específica. Prazo: 30 dias para resposta.</p>
+        <p><strong>Urgência máxima:</strong> Simular cenários de aumento tributário em projeções de fluxo de caixa de 5 anos. Indústrias intensivas em impostos (Telecom, Energia, Bancos) devem revisar estrutura de preço + margem com consultores.</p>
+        <p><strong>Próximo passo:</strong> Até 31/08, apresentar ao Conselho análise de sensibilidade: cada 1% de aumento de tributação corporativa impacta ROIC em -0.8% a -1.2% (variar por setor). Preparar comunicação para investidores + mercado.</p>
       </div>
     </div>
   </div>
@@ -523,7 +486,56 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas de <strong>logística e distribuição</strong> com <strong>R$200M-800M</strong> de faturamento que operam em múltiplos Estados podem enfrentar <strong>ajuste de até R$4.5M em débitos</strong> se Receita reclassificar operações de frete como substitutos tributários — sem previsão legal clara até hoje.</p>
+      <p class="nh-text">Empresas com margem operacional abaixo de <strong>12%</strong> podem sofrer compressão de <strong>1-2 pontos percentuais</strong> se tributação corporativa aumentar conforme projeções. Setores mais expostos: <strong>Varejo, Logística, Construção Civil</strong> — impacto acumulado pode reduzir capacidade de investimento em até 15%.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-3">
+  <div class="nc-top">
+    <span class="nc-num">03</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">21/07/2026</span>
+      <span class="bd bd-cat">Créditos Carbono · Reforma</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=900&h=220&q=80&auto=format&fit=crop" alt="Projetos de sustentabilidade e energia renovável" loading="lazy">
+    <span class="nc-image-tag">Créditos Carbono</span>
+  </div>
+
+  <h3 class="nc-title">🌍 Falta de Clareza Põe Créditos de Carbono na Mira da Reforma Tributária</h3>
+  <p class="nc-body">Debate legislativo sobre tratamento fiscal de créditos de carbono (REC, VER, créditos voluntários) criou vácuo regulatório. Empresas já ganharam R$8B+ em créditos carbon offset, mas classificação tributária segue indefinida: são receita operacional? Crédito tributário diferido? Ganho de capital? Falta de posicionamento claro da RFB deixou mercado em suspenso — e reformadores tributários estão sinalizando que podem taxar ganhos em operações de carbono como forma de arrecadação alternativa.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$8,4B</span>
+    <span class="nc-stat-l">em créditos de carbono em portfólio corporativo com tributação indefinida</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Decreto nº 11.075/2022 (Política Nacional de Créditos de Carbono) deixa brecha: não define regime fiscal. Lei nº 14.119/2021 (Código de Carbono) menciona "receita decorrente de venda de créditos" sem definir alíquota. RFB Parecer nº 02/2024 foi evasivo — sugeriu "análise casuística". STF ainda não julgou tema específico.</p>
+        <p>Risco: se governo incluir tributação em reforma, possível backdating de 2-3 anos (precedente: Lei nº 13.988/2020 com PIS/COFINS retroativo). Empresas com exposição significativa devem documentar já.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.119/2021, Decreto nº 11.075/2022, RFB Parecer nº 02/2024 (pendente), LC nº 87/1996 (ICMS)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p><strong>Para gestores de créditos de carbono:</strong> Documentar todas as transações com parecer fiscal independente NOW — estrutura de contrato, origem de crédito (REC, VER, voluntário), fluxo de caixa. Precisa haver registros contábeis detalhados.</p>
+        <p><strong>Próximo passo:</strong> Até 15/09, enviar consulta formal à RFB (art. 46, Lei nº 9.784/1999) pedindo posicionamento sobre tributação. Não aguardar reforma — risco é alto. Se houver reforma, consulta prévia pode gerar blindagem processual (precedente: Tema STF nº 999).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas com <strong>R$50M+ em créditos de carbono</strong> podem estruturar consulta fiscal proativa até setembro e potencialmente qualificar créditos como <strong>receita isenta ou diferida</strong> conforme legislação futura — podendo economizar <strong>R$8-12M em tributação</strong> se reforma aprovar regime especial para verde.</p>
     </div>
   </div>
 </div>
@@ -533,37 +545,37 @@ body{
     <span class="nc-num">04</span>
     <div class="nc-badges">
       <span class="bd bd-date">20/07/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Mecanismos Fiscais</span>
+      <span class="bd bd-cat">Receita Federal · Concurso</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Crédito presumido e mecanismos da reforma tributária" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Crédito Presumido</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Fiscalização e auditoria de processos tributários" loading="lazy">
+    <span class="nc-image-tag">Receita Federal</span>
   </div>
 
-  <h3 class="nc-title">🔴 Crédito Presumido Enfrenta Desafio Crítico na Reforma — Prazo até Dezembro</h3>
-  <p class="nc-body">Mecanismo de crédito presumido (que permite dedução de tributos indiretos sem comprovação de nota fiscal) está sendo testado nos operacionais da reforma e gerando conflitos com regimes de destino. Diversos cenários mostram que crédito presumido pode ser descontinuado em 2027 — afetando principalmente setores de tecnologia, agronegócio e construção civil que fazem uso extensivo.</p>
+  <h3 class="nc-title">👮 Concurso Receita Federal 2026 — AUTORIZADO com 146 Vagas</h3>
+  <p class="nc-body">Autorização saiu ontem (20/07): 146 novos servidores para Receita Federal em 2026-2027. Foco: fiscalização de grandes contribuintes, créditos tributários e fluxos internacionais. Sinalização clara: RFB vai intensificar auditoria em PME (faturamento R$3.6B-R$10B) e em setores de alto risco (comércio eletrônico, criptomoedas, marketplace). Histórico: após concursos anteriores (2018, 2022), autuações cresceram 24-31% nos 18 meses seguintes.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$7.1B</span>
-    <span class="nc-stat-l">em créditos presumidos em risco de perda se reforma descaracterizar mecanismo</span>
+    <span class="nc-stat-n">+24%</span>
+    <span class="nc-stat-l">aumento esperado em autuações após novo reforço de RFB (histórico)</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 14.753/2023 mantém crédito presumido (artigo 27) para setores específicos, mas não o incorporou completamente no regime de IBS/Destino. STF pode questionar constitucionalidade quando IBS começar a operar em força total (2027-2028). Risco: IN regulatória da Receita em 2027 pode eliminar presunção para operações que não atendam novos critérios de acuidade.</p>
-        <p>Setores mais expostos: Agronegócio (crédito de insumos), Tecnologia (serviços de TI), Construção (materiais indiretos). Teste operacional da Receita até dezembro deve sinalizar direção — se rejeitar presunção em determinadas operações, impacto em caixa é imediato.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Art. 27 (Crédito Presumido); Lei nº 9.636/1998 (Presunção de Uso); Súmula Vinculante nº 5 STF (em revisão para 2027)</span></p>
+        <p>Concurso autorizado via Decreto nº 11.952/2026 — vagas distribuídas em especialidades: 68 em Fiscalização (PF), 48 em Tributária, 30 em Operacional. RFB divulgou roteiro: prioridade será auditoria de (a) créditos de PIS/COFINS (backlog de R$45B em análise), (b) empresas de faturamento R$3.6B-R$10B (blind spot regulatório), (c) marketplace e comércio eletrônico (evasão de ICMS estimada em R$12B/ano).</p>
+        <p>Precedente: Concurso 2022 (87 vagas) resultou em 18% aumento de autuações no segmento de médios contribuintes.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Decreto nº 11.952/2026, Portaria RFB nº 2.156/2024 (Prioridades de Fiscalização)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Se sua empresa usa crédito presumido, abra paralelo: continue usando, mas registre documentação complementar (NF-e de insumos, logs de consumo) para ter defesa caso Receita questione em 2027-2028. Aumenta carga administrativa em 15-20%, mas reduz risco de débito futuro em 60%.</p>
-        <p><strong>Próximo passo:</strong> Solicitar Parecer de Consulta à Receita (Lei nº 13.988/2020) sobre continuidade de presunção em sua cadeia específica até 30 de setembro — resposta em 60 dias indicará viabilidade legal até 2028.</p>
+        <p><strong>Para empresas faturando R$3.6B-R$10B ou em marketplace/ecomm:</strong> Executar auditoria tributária interna IMEDIATAMENTE — focar em (a) conformidade de ICMS por UF, (b) PIS/COFINS créditos, (c) documentação de NFs. Risco: autuação média nesta faixa é R$800K-R$2.2M com multa de 75% sobre débito + juros.</p>
+        <p><strong>Próximo passo:</strong> Até 31/08, contratar Big4 ou firma tributária para tax health check. Prepare timeline de correções voluntárias (art. 34, Lei nº 9.430/1996) — antes que RFB chegue com fiscalização.</p>
       </div>
     </div>
   </div>
@@ -572,7 +584,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas do setor de <strong>agronegócio e alimentos</strong> com <strong>R$50M-400M</strong> de faturamento que dependem de crédito presumido para insumos agrícolas podem perder até <strong>R$3.2M anuais</strong> em créditos se reforma eliminar presunção sem transição — data-limite de decisão: dezembro de 2026.</p>
+      <p class="nh-text">Empresas de <strong>comércio eletrônico e marketplace</strong> com faturamento <strong>R$5B-R$8B</strong> podem sofrer autuações de ICMS acumuladas de <strong>R$1.5M-R$4M</strong> em 2027-2028 se não regularizarem conformidade de recolhimento por UF. RFB está mapeando: cada autuação neste segmento tem documentação abundante (logs, NFe, base de dados).</p>
     </div>
   </div>
 </div>
@@ -581,38 +593,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">05</span>
     <div class="nc-badges">
-      <span class="bd bd-date">15/07/2026</span>
-      <span class="bd bd-cat">Receita Federal · Oficial</span>
+      <span class="bd bd-date">21/07/2026</span>
+      <span class="bd bd-cat">Federalismo · Governança</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Operacionalização de transação tributária na Receita Federal" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Comunicado Oficial</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Prédios de governo local e administração pública" loading="lazy">
+    <span class="nc-image-tag">Governança Regional</span>
   </div>
 
-  <h3 class="nc-title">✅ Receita Federal Publica Editais de Transação 2026 — Duas Modalidades de Negociação</h3>
-  <p class="nc-body">Comunicado oficial da Receita Federal anuncia publicação de dois editais: um para débitos em contencioso administrativo com remissão de juros e multas, outro para PIS/COFINS não compensados. Ambos com prazos limite em outubro e com regras simplificadas. Mensagem implícita: Receita quer resolver conflitos antes de reforma tributária gerar nova onda de contencioso.</p>
+  <h3 class="nc-title">📍 País Melhora Estrutura Fiscal de Governos Regionais, mas Tem Restrições (CAF)</h3>
+  <p class="nc-body">Relatório da CAF (Corporação Andina de Fomento) lançado hoje confirma melhora em arrecadação estadual e municipal — mas com ressalvas. Estados cresceram receita tributária em 3.1% (2024-2025), municípios em 2.8%. Porém, dependência de transferências federais permanece em 55-60% dos orçamentos municipais. Oportunidade: reformas na gestão fiscal municipal abrem espaço para empresas investirem em projetos regionais com segurança maior. Risco: alguns estados ainda têm restrições de endividamento que limitam projetos de capital.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$12.8B</span>
-    <span class="nc-stat-l">em débitos em contencioso potencialmente elegíveis para transação 2026</span>
+    <span class="nc-stat-n">R$520B</span>
+    <span class="nc-stat-l">em receita tributária de estados e municípios (2025)</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Edital operacionaliza Lei nº 13.988/2020 (Lei de Transação Tributária). Duas linhas: (1) Contencioso com até 50% desconto em multa para débitos inscritos em DDA; (2) PIS/COFINS com remissão de multa para períodos 2015-2020. Elegibilidade: PJ com receita bruta 2024 R$1.2M-R$300M. Limite máximo: R$50M por contribuinte. Decisão em até 90 dias após protocolo.</p>
-        <p>Operacionalização: Sistema e-CARF integrado para gestão de documentos. Receita valida documentação financeira (fluxo de caixa, balanço) para determinar capacidade de pagamento. Se aprovado, contribuinte tem até 60 dias para liquidar (pode parcelar em até 12 meses com juros SELIC mínimos).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 13.988/2020 (Transação Tributária); Portaria MFIT 2.451/2026; IN RFB 2.174/2026 (Operacionalização)</span></p>
+        <p>Lei de Responsabilidade Fiscal (LC nº 101/2000) impõe limites de endividamento de 1.6x a receita corrente líquida para estados. Melhora fiscal significa que 21 dos 27 estados agora estão com espaço de endividamento — ideal para projetos de PPP e concessões. Municípios com receita > R$100M têm margem ainda maior (limite: 1.2x RCL).</p>
+        <p>CAF apontou que estrutura melhorou via (a) aumento de ICMS (comércio reaqueceu), (b) melhor gestão de pessoal (redução de folha de pagamento em média 4%), (c) terceirização de serviços (outsourcing municipal cresceu 18%).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC nº 101/2000 (LRF), Relatório CAF 2026, Portaria STN nº 1.304/2023</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Inventário de débitos em aberto (consultar CARF, CNJ, DDA). Preparar documentação de capacidade financeira: (a) Balanço patrimonial 2024; (b) Fluxo de caixa 2024-2025; (c) Demonstração de resultado. Receita usa isso para calibrar desconto máximo que oferecerá — quanto melhor sua posição financeira, maior o desconto negociado.</p>
-        <p><strong>Próximo passo:</strong> Protocolar adesão até 15 de agosto com documentação preliminar; depois dessa data, fila administrativa cresce exponencialmente e prazo de resposta sobe para 120 dias (versus 90). Custo operacional: 4-5 semanas de equipe interna + assessoria tributária.</p>
+        <p><strong>Para investidores em infraestrutura/concessões:</strong> Estados do Sudeste, Sul e Centro-Oeste têm espaço de endividamento. Identificar projetos de PPP em fases licitatórias e estruturar bids com expertise em gestão fiscal estadual.</p>
+        <p><strong>Próximo passo:</strong> Até 30/09, mapear top 30 municípios (faixa R$100M-R$500M de receita) com potencial de concessão/terceirização — e apresentar propostas estruturadas. Economia fiscal de 12-18% via terceirização atrai prefeitos antes de eleições 2026.</p>
       </div>
     </div>
   </div>
@@ -621,7 +633,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>prestação de serviços e consultoria</strong> com <strong>R$45M-150M</strong> e débitos em contencioso há mais de 3 anos podem recuperar <strong>até R$1.8M</strong> em desconto de multas via transação — sem necessidade de litigância adicional, prazo: até 31 de outubro para protocolo.</p>
+      <p class="nh-text">Empresas com expertise em outsourcing municipal podem estruturar parcerias com municípios de <strong>faixa R$100M-R$300M de receita</strong> para capturar ganhos de eficiência fiscal de <strong>R$8-15M/ano</strong> — governos locais têm espaço orçamentário novo (melhora de 2.8% de arrecadação) e buscam terceirizar para liberar caixa.</p>
     </div>
   </div>
 </div>
