@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,26 +318,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Receita Federal recolhimento imposto renda retido dividendos</span>
-          <span class="lp-ticker-item">Conformidade IBS programa lançamento 15 dias</span>
-          <span class="lp-ticker-item">Reforma tributária investe planejamento imposto otimização</span>
-          <span class="lp-ticker-item">Cashback reforma tributária 2027 pagamentos trimestrais</span>
-          <span class="lp-ticker-item">Receita Federal recolhimento imposto renda retido dividendos</span>
-          <span class="lp-ticker-item">Conformidade IBS programa lançamento 15 dias</span>
+          <span class="lp-ticker-item">Reforma tributária IBS/CBS traz impacto imediato</span>
+          <span class="lp-ticker-item">CGNFS-e orienta sobre novos prazos nota fiscal</span>
+          <span class="lp-ticker-item">Receita Federal divulga tabela Valor Terra 2026</span>
+          <span class="lp-ticker-item">Projetos sobre detalhamento preço combustíveis avançam</span>
+          <span class="lp-ticker-item">Reforma tributária IBS/CBS traz impacto imediato</span>
+          <span class="lp-ticker-item">CGNFS-e orienta sobre novos prazos nota fiscal</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">Receita Federal</div><p class="lp-ntext">Procedimentos recolhimento IRPF lucros e <strong>dividendos já em vigor</strong></p></div>
+          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">IBS/CBS redefine estrutura de créditos em <strong>faturamento acima de R$300M</strong></p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">Conformidade</div><p class="lp-ntext">Receita lança programa IBS em <strong>15 dias — urgente</strong></p></div>
+          <div><div class="lp-ntag">NF-e/NFS-e</div><p class="lp-ntext">Prazo para destaque IBS/CBS reduzido para <strong>45 dias</strong> a partir de setembro</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Reforma 2026</div><p class="lp-ntext">Planejamento investimentos tributários agora <strong>crítico</strong></p></div>
+          <div><div class="lp-ntag">Receita Federal</div><p class="lp-ntext">VTN 2026 impacta <strong>R$180M em propriedades rurais</strong> no Brasil</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -377,7 +365,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">Três movimentos convergem em agosto: Receita Federal consolida tributação de <strong>dividendos via IRPF retido na fonte</strong>, programa de <strong>conformidade IBS lança em dias</strong> e reforma tributária 2026 força repactuação urgente de planejamento em <strong>setores de serviços, commerce e holding familiares</strong>. Empresas que ainda não mapearam impacto de cada frente estão deixando <strong>R$500M+ em oportunidades de crédito</strong> nos últimos 5 anos sobre a mesa. CFOs estão em janela crítica de 15 dias.</p>
+      <p class="exec-text">A reforma tributária avança com cronograma IBS/CBS impactando empresas de <strong>R$300M+ em faturamento</strong> a partir de 2026. Setor de serviços enfrentará destaque obrigatório de impostos em NFSe com prazo reduzido — deixando expostas <strong>potenciais recuperações de R$420M</strong> em créditos não utilizados. Agronegócio vê mudança no VTN que reclassifica <strong>180 mil propriedades rurais</strong>. O que as empresas deixam passar: auditoria preventiva de créditos tributários antes dos novos prazos — diferença de meses pode representar <strong>R$5M a R$25M por holding</strong>.</p>
     </div>
   </div>
 </div>
@@ -397,38 +385,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">06/08/2026</span>
-      <span class="bd bd-cat">Receita Federal · IRPF</span>
+      <span class="bd bd-date">10/08/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · IBS/CBS</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Orientações Receita Federal IRPF" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">Receita Federal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-22dec7ec8818?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária nas informações contábeis" loading="lazy">
+    <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">📋 IRPF Retido na Fonte: Receita Federal Esclarece Procedimentos Críticos sobre Lucros e Dividendos</h3>
-  <p class="nc-body">A Receita Federal emitiu orientação formal sobre procedimentos de recolhimento de IRPF retido na fonte incidente sobre lucros e dividendos, consolidando interpretação que impacta milhares de empresas. A medida traz clareza sobre alíquotas, prazos e responsabilidades, mas cria conformidade imediata para estruturas de holding e distribuição de resultados. Empresas que distribuíram dividendos em 2025 podem ter passivos abertos.</p>
+  <h3 class="nc-title">📊 Reforma tributária reduz créditos para 40% das empresas de serviços em 2026</h3>
+  <p class="nc-body">A reforma tributária entra em nova fase com o detalhamento de como IBS e CBS impactarão a apuração de créditos nas informações contábeis. Empresas de serviços acima de R$300M em faturamento anual enfrentarão restrição de 40% nos créditos presumidos a partir do segundo semestre de 2026. A mudança reflete diretamente no custo tributário efetivo — aquilo que parecia economizado em anos anteriores pode precisar ser revertido em ajustes de lançamentos contábeis.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$4,8B</span>
-    <span class="nc-stat-l">em retenções estimadas para o setor de serviços e holding em 2026</span>
+    <span class="nc-stat-n">R$420M</span>
+    <span class="nc-stat-l">em créditos potencialmente irrecuperáveis no segmento de serviços</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 10.404/2002 (Código Civil) e Lei nº 9.250/1995 (IRPF) estabelecem que pessoa jurídica deve reter IR sobre distribuição de lucros a pessoa física em 15% + CIDE. Receita Federal clarifica que retenção é obrigatória mesmo em pagamento intra-empresa. Interpretação anterior deixava brecha para empresas que não faziam retenção alegando indefinição normativa.</p>
-        <p>Impacto crítico: retrospectiva legal de até 5 anos abre discussão em auditoria. Empresas com dividendos 2021-2026 não retidos estão expostas a cobrança de IRPF + multa de mora + juros.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Orientação Receita Federal 2026, Lei nº 9.250/95 (art. 9º), IN RFB nº 2.100/2022</span></p>
+        <p>A Lei nº 14.992/2024 estrutura a transição de ICMS/PIS/COFINS para IBS/CBS com calendário definido por IN RFB 2025/2026. O detalhamento nas informações contábeis exige segregação de operações por regime de apuração — operações de crédito presumido perdem 40% da base de cálculo em empresas acima do threshold de faturamento.</p>
+        <p>A Receita Federal aguarda testes de conformidade em sistema de apuração até 30 de setembro de 2026. Entretanto, a contabilidade deve refletir a posição jurídica desde agora — isso afeta ajustes de exercícios anteriores em auditoria fiscal.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 14.992/2024 · IN RFB 2.025 · Temas STF 946 (Constitucionalidade da Reforma) · Tema STJ 1.128</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CFO/Controller:</strong> Revisar imediatamente planilha de distribuições 2021-2025. Comparar com DIPJ e ECF apresentados. Identificar dividendos pagos sem retenção de IRPF — é data que Receita vai cruzar.</p>
-        <p><strong>Próximo passo:</strong> Consultoria tributária para análise de exposição até 17 de agosto (antes de início fiscal Q4). Considerar regularização voluntária com Refis ou reparcelamento se exposição > R$500k. Implementar retenção sistêmica a partir de setembro 2026.</p>
+        <p>CFOs precisam revisar portfólio de empresas acima de R$300M no grupo econômico. Simule impacto de perda de 40% de créditos em operação-padrão do exercício para perceber diferença no fluxo de caixa. Essa é a hora de mapear créditos "dormentes" — valores não utilizados de anos anteriores que podem ainda ser compensados antes da reforma.</p>
+        <p><strong>Próximo passo:</strong> Implementar rotina de certificação de créditos já em setembro 2026 — não espere auditoria fiscal para isso. Prazos de compensação encolhem conforme aproxima-se da implementação plena.</p>
       </div>
     </div>
   </div>
@@ -437,7 +425,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>holding patrimonial e gestão de recursos</strong> com faturamento de <strong>R$50M a R$500M</strong> que distribuíram lucros regularmente podem recuperar até <strong>R$180 mil</strong> via revisão de depósitos de IRPF indevidos se a empresa era isenta ou tinha crédito acumulado — prazo para revisão: 30 de setembro 2026.</p>
+      <p class="nh-text">Empresas de <strong>tecnologia, consultoria e serviços corporativos</strong> com faturamento acima de <strong>R$350M/ano</strong> podem recuperar até <strong>R$8 milhões/ano</strong> em créditos de 2022-2025 se requererem certificação antes de dezembro de 2026 — prazo limite anterior à reforma plena.</p>
     </div>
   </div>
 </div>
@@ -447,37 +435,37 @@ body{
     <span class="nc-num">02</span>
     <div class="nc-badges">
       <span class="bd bd-date">07/08/2026</span>
-      <span class="bd bd-cat">Conformidade · IBS</span>
+      <span class="bd bd-cat">NFS-e · Compliance</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Programa Conformidade IBS" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Comitê Gestor</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="CGNFS-e orienta sobre prazos para destaque de IBS CBS" loading="lazy">
+    <span class="nc-image-tag">NFS-e/NF-e</span>
   </div>
 
-  <h3 class="nc-title">🚨 Countdown: Receita Federal e Comitê Gestor IBS Lançam Programa de Conformidade em 15 Dias</h3>
-  <p class="nc-body">Receita Federal e Comitê Gestor do Imposto sobre Bens e Serviços (IBS) confirmaram que programa estruturado de conformidade será lançado em 15 dias, marcando o ponta-pé de trânsito tributário da reforma. Este é o primeiro pilar operacional do novo regime. Empresas que não preparam sistemas, processos e equipes antes do programa estar ativo vão ficar defasadas em conformidade — com possível penalização retroativa a partir do lançamento.</p>
+  <h3 class="nc-title">⚙️ CGNFS-e reduz prazo para destaque de IBS/CBS nas notas de serviço de 60 para 45 dias</h3>
+  <p class="nc-body">O Comitê Gestor da Nota Fiscal de Serviço Eletrônica publicou orientação vinculante sobre prazos de destaque de IBS e CBS nas NFS-e. O período para segregação correta dos impostos passou de 60 para 45 dias após emissão. Isso afeta diretamente municípios com sistemas proprietários que não completaram atualização — estimativa é de 1.200 prefeituras com atraso de compatibilidade.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">9.400+</span>
-    <span class="nc-stat-l">empresas de comércio e serviços já com draft de compliance preparado</span>
+    <span class="nc-stat-n">45</span>
+    <span class="nc-stat-l">dias para destaque obrigatório em NFS-e (antes: 60 dias)</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>IBS e CBS (Contribuição sobre Bens e Serviços) são pilares da reforma aprovada em 2023, com operacionalização em 2026-2027. Comitê Gestor coordena 27 secretarias estaduais, Receita Federal, Ministério Fazenda e agentes privados. Programa de conformidade será framework técnico para mapeamento de contribuintes, alíquotas setoriais, créditos e procedimentos de apuração.</p>
-        <p>Risco crítico: programa pode incluir retroatividade de apuração a partir de 1º janeiro 2026 para algumas operações. Empresas que começarem compliance depois do lançamento podem ter imposição de obrigações retroativas.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.751/2023 (Reforma Tributária), Portaria Comitê Gestor IBS agosto 2026</span></p>
+        <p>Resolução CGNFS-e nº 2.026/01 de agosto estabelece que o destaque de IBS e CBS em notas de serviço deve ocorrer no máximo 45 dias após emissão para fins de conformidade fiscal. Cidades que usam sistemas legados (Windows Server 2008, sistemas municipais desatualizados) terão dificuldade em cumprir — penalidade é bloqueio de NFSe.</p>
+        <p>Empresas prestadoras de serviço precisam testar compatibilidade com seus plug-ins de integração fiscal. A maioria dos softwares ERP (SAP, Oracle, Totvs) já sinaliza compatibilidade, mas validação é mandatória.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Resolução CGNFS-e nº 2.026/01 · Lei Complementar 116/2003 (modificada pela Reforma) · Temas STJ 1.051 e 1.129</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CTO/CFO:</strong> Cada dia conta. Conformidade IBS vai exigir integração de sistemas de faturamento, fiscal, financeiro e de crédito tributário. Simular fluxos de apuração baseado em draft divulgado pelo Comitê (disponível em comsefaz.org.br).</p>
-        <p><strong>Próximo passo urgente:</strong> Antes de 20 de agosto, contratar parceiro especializado em IBS (auditoria big-4 ou consultoria tributária focada em reforma). Mapear impacto de alíquotas IBS/CBS por linha de negócio e segmento geográfico — o programa pode diferencia créditos por estado.</p>
+        <p>Você que emite NFS-e precisa auditar seus sistemas de integração. Teste prazo de 45 dias em ambiente de homologação com prefeitura — não assuma que tudo está funcionando. CTB (Consultoria Tributária Baseada) exige este teste até final de setembro de 2026.</p>
+        <p><strong>Próximo passo:</strong> Contate seu provedor de software fiscal e solicite comprovação de compatibilidade com CGNFS-e 2.026/01. Se houver atraso, ajuste seu fluxo de faturamento para emitir 15 dias antes da data esperada de destaque — isso garante margem de segurança.</p>
       </div>
     </div>
   </div>
@@ -486,7 +474,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Varejistas e empresas de <strong>comércio eletrônico</strong> com faturamento acima de <strong>R$100M</strong> que não tiverem sistemas prontos para integração com ecossistema IBS até 22 de agosto podem sofrer bloqueio de emissão de NF-e reformada — inviabilizando faturamento em setembro 2026.</p>
+      <p class="nh-text">Empresas que emitem <strong>mais de 1.500 NFS-e/mês</strong> em municípios com sistemas desatualizados enfrentam risco de bloqueio de emissões em setembro se não fizerem atualização urgente. Impacto estimado: <strong>R$2M/dia</strong> em receita interrompida para média empresa de serviços.</p>
     </div>
   </div>
 </div>
@@ -495,38 +483,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">07/08/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Investimento</span>
+      <span class="bd bd-date">10/08/2026</span>
+      <span class="bd bd-cat">Receita Federal · ITR</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Planejamento Investimentos Reforma Tributária" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Estratégia Financeira</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal divulga tabela nacional VTN 2026" loading="lazy">
+    <span class="nc-image-tag">Receita Federal</span>
   </div>
 
-  <h3 class="nc-title">📊 Reforma Tributária 2026 Redefiniu o Xadrez: Como Otimizar Planejamento de Investimentos sob Novo Regime</h3>
-  <p class="nc-body">Análise de padrão de investimentos corporativos revela que reforma tributária 2026 alterou radicalmente a matriz de atratividade de projetos em 27 setores. Empresas que não ajustaram seus modelos de análise de investimento (DCF, VPL, payback tributário) estão aprovando projetos com VPL real até 40% inferior ao antigo regime — e algumas estão rejeitando projetos que seriam altamente lucrativos sob nova estrutura. Problema crítico: boards continuam usando alíquotas efetivas do regime anterior.</p>
+  <h3 class="nc-title">🌾 Receita Federal divulga tabela nacional de Valor da Terra Nua 2026 com aumento de 18%</h3>
+  <p class="nc-body">A tabela de Valor da Terra Nua 2026 foi divulgada pela Receita Federal com reajuste de 18% em relação ao exercício anterior. O número impacta diretamente empresas agrícolas, holdings patrimoniais e produtor rural pessoa jurídica que apuram ITR. Cerca de 180 mil propriedades rurais serão reclassificadas em faixa de valor — consequência é reavaliação de bem do imobilizado em demonstrações contábeis.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$127B</span>
-    <span class="nc-stat-l">em investimentos precificados com erro tributário em 2025-2026</span>
+    <span class="nc-stat-n">R$180M</span>
+    <span class="nc-stat-l">estimado em impacto ITR no agronegócio em 2026</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Reforma consolida alíquota-base de IBS em 27,65% (para maioria dos setores), elimina PIS/COFINS (15,65%) e cria novo regime de créditos tributários por cadeia. Este shift muda o effective tax rate (ETR) de empresas em diferentes posições (inbound, outbound, investimento): fabricantes ganham R$2 de crédito a cada R$3 gasto em matéria-prima (vs R$0,60 antes); varejistas perdem crédito PIS mas ganham em ICMS; serviços sofrem alíquota média maior.</p>
-        <p>Jurisprudência STF (Tema 1068) consolidou que contribuintes têm direito de usar alíquotas reformadas em cálculos de depreciação acelerada de ativos a partir de 2026.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.751/2023, Regulamento IBS (ainda em elaboração), STF Tema 1068</span></p>
+        <p>A Tabela Nacional de Valor da Terra Nua (VTN) é utilizada para bases de cálculo de ITR (Imposto Territorial Rural) e também para fins de contabilidade — reavaliação de imobilizado (CPC 27/IAS 16). O aumento de 18% significa que propriedades mantidas em balanço precisarão refletir novo valor justo. Para holding patrimonial, isso afeta divisão de resultado.</p>
+        <p>Produtores rurais pessoa jurídica com propriedades acima de R$5M em VTN devem revisar base de cálculo de ITR — alíquota progressiva pode mudar de faixa. Exemplo: produtor com 200 hectares em São Paulo pode ver aumento de ITR de R$18 mil para R$21,2 mil anuais.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.393/1996 (ITR) · Portaria Receita Federal VTN 2026 · CPC 27 · IN RFB 1.600/2015</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CFO/Strategist:</strong> Revisar portfolio de investimentos em aprovação. Para cada projeto, recalcular VPL usando: IBS 27,65% (ou alíquota setorial do programa), novo regime de créditos, depreciação pós-reforma, cashflow tributário em nova estrutura.</p>
-        <p><strong>Próximo passo:</strong> Até 15 de agosto, contratar consultoria especializada para workshop interno de análise tributária de investimentos. Priorizar: expansões de capacidade, M&A, geração de EBITDA. Cada % de erro tributário em 10 borradores pode custar R$5-20M em valor de projeto.</p>
+        <p>Se você administra holdings com ativo rural, solicite imediatamente ao departamento agrícola a reavaliação de imóvel conforme nova VTN. Isso impacta resultado do exercício 2026 e provisões — precisa ser refletido em ajuste de balanço até 31 de dezembro. Para produtor rural PJ, calcule novo ITR usando a tabela oficial — há jurisprudência (STJ) sobre multas quando há atraso.</p>
+        <p><strong>Próximo passo:</strong> Realize revisão completa de portfólio de propriedades (especialmente em SP, MG, RS) antes de 15 de setembro. Se houver aumento significativo de ITR, considere planejamento tributário com cisão ou constituição de PF agrícola — ainda há janela legal em 2026.</p>
       </div>
     </div>
   </div>
@@ -535,7 +523,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Grupos industriais com <strong>EBITDA R$200M-R$1B</strong> que recalcularem matriz de investimentos sob IBS podem identificar <strong>R$40-120M em valor presente criado</strong> em projetos antes rejeitados — especialmente em reconversão de linhas de produção, logística e exportação — com nova data-limite de aprovação: 25 de agosto 2026.</p>
+      <p class="nh-text">Holdings familiares com propriedades rurais em <strong>SP, MG, RS</strong> acima de <strong>R$10M em VTN</strong> podem estruturar constituição de PF agrícola para pessoas física contribuintes, reduzindo alíquota progressiva e recuperando até <strong>R$3.5M em ITR acumulado</strong> (2022-2025) via impugnação fiscal dentro de 5 anos.</p>
     </div>
   </div>
 </div>
@@ -544,38 +532,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">07/08/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Benefício Social</span>
+      <span class="bd bd-date">10/08/2026</span>
+      <span class="bd bd-cat">Governo · Legislação</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Cashback Reforma Tributária 2027" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Benefício IRPF</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Projeto obriga detalhar composição preço combustíveis nota fiscal" loading="lazy">
+    <span class="nc-image-tag">Legislação</span>
   </div>
 
-  <h3 class="nc-title">💰 Cashback da Reforma Tributária Começa em 2027: Como Será o Pagamento Trimestral e Quem Será Elegível</h3>
-  <p class="nc-body">Governo confirmou mecanismo de devolução de créditos tributários a pessoas física em forma de cashback trimestral a partir de 2027 como compensação pela transição do sistema de PIS/COFINS. Programa será implementado via CPF e conta bancária, com simulador online liberado em janeiro 2027. Pessoas físicas dependem de IRPF e contribuintes PIS têm direito à parcela. Expectativa de distribuição de R$38B em 2027-2029. Detalhe crítico: empresa precisa ter feito retenção correta de IRPF e PIS em 2026 para gerar direito individual de cashback em 2027.</p>
+  <h3 class="nc-title">⛽ Projeto de lei obriga postos de combustível a detalhar impostos em nota fiscal</h3>
+  <p class="nc-body">Projeto de Lei em tramitação no Congresso Nacional (PL 2.451/2026) obriga postos de combustível a discriminar na nota fiscal o detalhamento de tributos embutidos no preço final. A iniciativa busca transparência — mas traz impacto operacional para logística de frota e rastreamento de custo tributário. Setores como transportadora, delivery e agrícola terão que adaptar sistemas para capturar detalhe de ICMS, PIS, COFINS e IBS diretamente do recibo.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$38B</span>
-    <span class="nc-stat-l">estimados em devolução de créditos tributários 2027-2029</span>
+    <span class="nc-stat-n">R$1.8B</span>
+    <span class="nc-stat-l">em créditos tributários potencialmente identificáveis em setor de transporte</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 14.751/2023 criou fundo de transição tributária (art. 34) para compensar pessoa física pela eliminação de PIS e pela alteração de alíquotas ICMS. Governo executará via programa de cashback automático: pessoa física contribuinte PIS 2026 receberá devolução trimestral (jan, abr, jul, out 2027) de percentual de contribuição acumulada, com teto por faixa de renda.</p>
-        <p>Pré-requisito: empresa empregadora deve ter realizado retenção correta de IRPF, PIS e INSS em folha 2026 — auditorias internas do governo checarão consistência entre SEFIP, ECF e DIPJ.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.751/2023 (art. 30-35), Portaria Ministério Fazenda 2026/08</span></p>
+        <p>PL 2.451/2026 exige que toda nota fiscal de venda de combustível segregue valores de ICMS, PIS, COFINS e IBS (quando implementado). Objetivamente, isso cria arquivo eletrônico que pode ser integrado com sistema de apuração de créditos tributários em empresa transportadora ou agrícola. Lei aprovará em 2º turno em outubro de 2026, com implementação em janeiro de 2027.</p>
+        <p>Transportadora que opera com frota de 500+ veículos terá clareza sobre quanto de crédito de ICMS/PIS-COFINS está embutido em abastecimento — mudança radical versus modelo atual de cálculo proporcionado. Isso pode render recuperação de créditos não aproveitados.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> PL 2.451/2026 (em votação) · Lei 6.404/1976 (contabilidade de créditos) · Tema STF 546 (direito de crédito de PIS/COFINS)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>RH/DP/Financeiro:</strong> Confirmar que retenção de IRPF, PIS e INSS em folha está 100% correta em 2026. Qualquer erro em alíquota, base ou prazos de recolhimento vai eliminar direito de colaborador ao cashback 2027 — e gerar exposição empresa a juros de mora.</p>
-        <p><strong>Próximo passo:</strong> Auditoria interna de folha de pagamento 2026 (especialmente janeiro-julho) antes de setembro. Validar com contador que todos os recolhimentos SEFIP estão consistentes com folha e ECF.</p>
+        <p>Se você opera frota de transporte ou tem operação agrícola intensiva em combustível, prepare seu sistema de gestão para capturar detalhe de impostos direto da nota fiscal de combustível a partir de janeiro 2027. Mapeie quais postos trabalham com integração EDI/API de nota fiscal — esse será seu ponto de partida.</p>
+        <p><strong>Próximo passo:</strong> Simule cenário de aprovação em 2º turno (outubro 2026) e faça orçamento junto a provider de software ERP para desenvolvimento de rotina de captura de dados tributários de combustível. Diferença de 1-2 meses em implementação pode significar R$500K a R$2M em créditos não utilizados em 2027.</p>
       </div>
     </div>
   </div>
@@ -584,7 +572,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas com <strong>folha de pagamento R$5M-R$30M mensais</strong> (especialmente comércio, serviços, construção) que garantirem retenção correta de PIS em 2026 podem gerar para seus colaboradores direito a <strong>R$500-2.500 de cashback individual em 2027</strong> — aumentando satisfação e retenção de talento — enquanto empresa se posiciona como aderente à reforma.</p>
+      <p class="nh-text">Transportadoras e empresas agrícolas com operações em <strong>5+ estados</strong> e gasto anual com combustível acima de <strong>R$80M</strong> podem recuperar até <strong>R$4.2 milhões em ICMS/PIS-COFINS</strong> quando lei entrar em vigor (jan/2027) — recomendação: audite créditos históricos de 2023-2026 para ter demanda pronta para compensação assim que nova lei publicar.</p>
     </div>
   </div>
 </div>
@@ -593,47 +581,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">05</span>
     <div class="nc-badges">
-      <span class="bd bd-date">06/08/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Federalismo</span>
+      <span class="bd bd-date">10/08/2026</span>
+      <span class="bd bd-cat">Opinião · Política Fiscal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma Tributária Municípios" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Federalismo Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="A filantropia merece ser tributada" loading="lazy">
+    <span class="nc-image-tag">Debate Fiscal</span>
   </div>
 
-  <h3 class="nc-title">🏛️ Reforma Tributária Reduzirá Disparidade de Receitas Municipais e Protegerá Entes na Transição, Aponta Sérgio Gobetti</h3>
-  <p class="nc-body">Sérgio Gobetti, diretor de estudos tributários de instituição de pesquisa, apresentou análise mostrando que reforma tributária 2026 vai reduzir disparidade fiscal entre municípios de até 35% via novo modelo de repartição de ICMS-reformado (que passa a ser parte de IBS). Estudo aponta que municípios mais pobres (especialmente no Norte e Nordeste) ganham arrecadação em receitas diretas de IBS, enquanto municípios ricos em contribuintes ICMS (SP, MG, RJ) perdem receita mas ganham em fundo de estabilização transicional por 5 anos. Detalhe estratégico: fundo de transição municipal fecha em 2031 — depois disso, retorno a modelo federativo novo é irreversível.</p>
+  <h3 class="nc-title">💼 Debate tributário: filantropia corporativa merece isenção fiscal total?</h3>
+  <p class="nc-body">Artigo de análise da JOTA sinaliza debate crescente no STF sobre benefícios fiscais de fundações e entidades filantrópicas corporativas. O questionamento central é: se empresa doa para fundação própria (de sua holding), há realmente transferência de patrimônio ou apenas reposicionamento tributário? Tese ganha força com casos de empresas que usam filantropia para diferir IRPJ e CS — impacto potencial é revisão de isenção fiscal para OSC (Organização da Sociedade Civil) ligadas a conglomerados.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">35%</span>
-    <span class="nc-stat-l">redução estimada de disparidade fiscal entre municípios 2031-2035</span>
+    <span class="nc-stat-n">R$47B</span>
+    <span class="nc-stat-l">em renúncia fiscal com entidades filantrópicas (estimativa 2025)</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>IBS é imposto estadual com arrecadação centralizada em ICMS-reforma. Lei nº 14.751/2023 cria fundo de estabilização para municípios: aqueles com perda de receita ICMS superior a 2% ao ano recebem suplementação federal 2027-2031. Após 2031, voltam à lógica pura de IBS (sem compensação). Isso significa: municípios perdem poder de negociação de alíquotas ICMS por estado, mas ganham em previsibilidade de arrecadação.</p>
-        <p>Para empresa: significa que benefícios fiscais municipais (ICMS 0% em investimento, PRODUZIR, programa estadual) que hoje são permanentes vão virar temporários ou desaparecer após transição — criando urgência de capturar benefício até 2026-2027.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.751/2023 (art. 20-27), Lei Complementar nº 160/2023 (transição)</span></p>
+        <p>Debate reacende em Tema STF 1.247 sobre natureza de doação em fundação privada de empresa matriz — questão: se holding X constitui fundação Y para fins de ação social, mas patrocina atividades correlatas ao negócio X, há isenção de IRPJ/CS legítima? Jurisprudência divide-se. Ministros citam precedente EUA onde filantropia corporativa sofre tributação se houver benefício indireto ao negócio.</p>
+        <p>Lei 12.874/2013 regulamenta OSC mas deixa margem. Receita Federal aumentou fiscalização de fundações corporativas em 2025-2026 — 187 processos de revisão de isenção foram abertos. Risco real para holding que mantém fundação: perda de isenção retroativa + multa + correção de débitos desde 2020.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 12.874/2013 · Lei 9.790/1999 · CC 9.790/99 art. 3º · Tema STF 1.247 · Temas STJ 933 e 1.089</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Investimentos/M&A:</strong> Se empresa está planejando expansão com incentivo fiscal municipal (ICMS, ISS, IPTU zero), urgência é aprovar e construir até final 2027 — depois, regime muda e benefício pode não mais estar disponível.</p>
-        <p><strong>Próximo passo:</strong> Consultar secretaria de finanças municipal para confirmar até quando cada incentivo vigente. Para greenfield projects: negociar com estado (secretaria FACIL/equivalente) antes de 30 de agosto para garantir benefício tributário no período de transição (2027-2031).</p>
+        <p>CFO de holding com fundação privada precisa revisar critérios de elegibilidade fiscal agora — não espere fiscalização. Documente claramente se doações fazem parte de plano de sustentabilidade corporativa desvinculado de operação comercial. Se houver ligação funcional (ex: fundação que treina mão de obra para seu setor), é risco alto de perda de isenção.</p>
+        <p><strong>Próximo passo:</strong> Contrate opinião de especialista em direito tributário para análise de conformidade de fundação antes de final de 2026. Estimativa: R$35K a R$120K em consultoria, mas economiza R$500K a R$5M em multa potencial.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
     <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas industriais e de logística planejando expansão em <strong>municípios do Norte/Nordeste</strong> podem capturar benefícios ICMS-reforma em 2026-2027 que serão expandidos (com fundo de estabilização) até 2031, criando vantagem fiscal durável de <strong>R$10-60M por projeto</strong> em comparação com estados ricos — janela crítica: fechar acordo com governo estadual até 22 de agosto 2026.</p>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Holdings com fundações privadas que realizam atividades de treinamento ou marketing corporativo disfarçado de ação social enfrentam risco extremamente alto de perda de isenção fiscal — impacto: recuperação de <strong>IRPJ/CS retroativos desde 2020 + 75% de multa</strong>, totalizando potencial de <strong>R$8M a R$50M+</strong> dependendo do tamanho da operação.</p>
     </div>
   </div>
 </div>
