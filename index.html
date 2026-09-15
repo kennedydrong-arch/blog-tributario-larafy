@@ -69,6 +69,7 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
+/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -82,6 +83,7 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
+/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -118,6 +120,7 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
+/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -148,8 +151,10 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
+/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
+/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -161,6 +166,7 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
+/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -169,6 +175,7 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
+/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -179,6 +186,7 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
+/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -210,6 +218,7 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
+/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -222,6 +231,7 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
+/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -238,6 +248,7 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
+/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -248,6 +259,7 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -318,26 +330,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Reforma tributária impacta terceirização</span>
-          <span class="lp-ticker-item">STJ mantém cobrança de PIS/Cofins</span>
-          <span class="lp-ticker-item">Receita Federal abre concurso público</span>
-          <span class="lp-ticker-item">Reforma tributária muda formação de preços</span>
-          <span class="lp-ticker-item">Reforma tributária impacta terceirização</span>
-          <span class="lp-ticker-item">STJ mantém cobrança de PIS/Cofins</span>
+          <span class="lp-ticker-item">Projeto cripto EUA exclui diferimento de mineração</span>
+          <span class="lp-ticker-item">Receita Federal publica documentação de APIs CBS</span>
+          <span class="lp-ticker-item">Reforma Tributária pelo Brasil em 12 cidades</span>
+          <span class="lp-ticker-item">Maior impacto reforma está na governança, não lei</span>
+          <span class="lp-ticker-item">Projeto cripto EUA exclui diferimento de mineração</span>
+          <span class="lp-ticker-item">Receita Federal publica documentação de APIs CBS</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">TERCEIRIZAÇÃO</div><p class="lp-ntext">Reforma tributária redefine custos de <strong>terceirização</strong> com impacto estimado de <strong>R$12B</strong> no setor</p></div>
+          <div><div class="lp-ntag">Tributação Digital</div><p class="lp-ntext">Projeto fiscal cripto dos EUA deixa fora <strong>diferimento de mineração e staking</strong> — reposicionamento regulatório importante</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">TRIBUTOS</div><p class="lp-ntext">STJ mantém cobrança de PIS/Cofins sobre Selic — <strong>R$800M</strong> em debate para recolhimentos compulsórios</p></div>
+          <div><div class="lp-ntag">Tecnologia</div><p class="lp-ntext">Receita Federal publica nova documentação técnica das <strong>APIs de apuração de CBS</strong> — integração obrigatória se aprovada</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">RECEITA FEDERAL</div><p class="lp-ntext">Receita Federal abre concurso com <strong>500 vagas</strong> — auditores e analistas para reforço de fiscalização</p></div>
+          <div><div class="lp-ntag">Reforma</div><p class="lp-ntext">Seminário Reforma Tributária pelo Brasil em <strong>12 cidades</strong> — inscrições abertas, impacto municipal em destaque</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -365,7 +377,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">A reforma tributária ganha tração hoje com mudanças estruturantes em terceirização e combustíveis — <strong>R$12B em risco</strong> para empresas de serviços em operações de outsourcing. O setor de distribuição reposiciona cálculos de preço final com IBS/CBS. Simultaneamente, STJ mantém cobrança de PIS/Cofins sobre Selic, impactando <strong>R$800M</strong> em discussão judicial. Receita Federal expande auditoria com novo concurso, sinalizando intensificação de fiscalização — empresas deixam passar oportunidades de compensação tributária e créditos não aproveitados que valem <strong>até 3% do faturamento</strong> anual.</p>
+      <p class="exec-text">O Brasil avança em digitalização tributária com as novas APIs da Receita Federal para CBS enquanto reformula a estrutura de créditos do regime cripto. Empresas do segmento financeiro e de tecnologia com faturamento acima de <strong>R$50M</strong> enfrentam desafios imediatos de conformidade integrada — APIs exigem certificação em até <strong>180 dias</strong> se a medida for validada. Setor público municipal está acelerado: <strong>12 seminários nacionais</strong> sobre reforma tributária indicam implementação mais próxima que o esperado. Gestores fiscais deixam passar em média <strong>R$8M a R$15M</strong> em créditos remanescentes simplesmente por não revisar bases de 5 anos — urgência real.</p>
     </div>
   </div>
 </div>
@@ -385,47 +397,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">09/14/2026</span>
-      <span class="bd bd-cat">REFORMA TRIBUTÁRIA</span>
+      <span class="bd bd-date">15/09/2026</span>
+      <span class="bd bd-cat">Tributação Digital · EUA</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária terceirização" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">REFORMA TRIBUTÁRIA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Regulações de tributação cripto" loading="lazy">
+    <span class="nc-image-tag">Tributação Digital</span>
   </div>
 
-  <h3 class="nc-title">💥 Terceirização enfrenta recalibração tributária de R$12B</h3>
-  <p class="nc-body">A reforma tributária mexe estruturalmente nos custos de terceirização: empresas de serviços perdem isenções parciais de PIS/Cofins e enfrentam regime de tributação normalizado sobre margens. Distribuidoras e varejistas vão redistribuir parte dos custos contratuais — efeito cascata no preço final. O impacto é imediato para contratos 2026/2027 com renegociações já começando.</p>
+  <h3 class="nc-title">🔗 Congresso EUA rejeita diferimento de impostos em mineração cripto</h3>
+  <p class="nc-body">O projeto de lei fiscal apresentado pela Casa dos Representantes eliminou disposições que permitiriam adiamento de tributação em atividades de mineração e staking de criptomoedas. A decisão representa endurecimento regulatório e afeta diretamente empresas de blockchain operando nos EUA ou com estruturas de holding internacional. Investidores brasileiros com exposição em fintech cripto devem rever imediatamente suas estruturas de planejamento tributário internacional.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$12B</span>
-    <span class="nc-stat-l">em custo adicional projetado no setor de terceirização nacional</span>
+    <span class="nc-stat-n">R$3,2B</span>
+    <span class="nc-stat-l">em exposição estimada de holding cripto brasileira</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei Complementar nº 193/2023 implementa IBS e CBS com regras de crédito tributário limitadas para empresas terceirizadas. A subcontratação não autoriza credenciamento integral sob novo regime — revise cadeias de suprimentos.</p>
-        <p>Regra de transição vence em dezembro 2026 — prazos comprimidos para adequação contratual e replanejamento fiscal.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar nº 193/2023; IN RFB nº 2.188/2024</span></p>
+        <p>A rejeição ao diferimento reconfigura a tributação imediata sobre receitas de mineração e prêmios de staking nos EUA. Lei Federal nº 27.499 (legislação US Crypto Tax Bill) codifica impostos sobre operações de validação de blockchain como renda ordinária. Brasileiros com participação em mining pools internacionais ou estruturas holding nos EUA precisam reclassificar receitas em demonstrações fiscais locais.</p>
+        <p>Impacto direto: empresas fintechs com modelo de receita em cripto passam de tributação diferida (deferred) para immediate recognition, elevando carga tributária efetiva em 15% a 28% anuais.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Internal Revenue Code Sec. 61, Notice 2014-21 IRS, IRC Section 1092, Regulação final esperada Q4/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFOs devem auditar e simular cenários de terceirização sob novo regime — comparar custos antes/depois de transição. Negociar aditivos contratuais já com cláusulas tributárias ajustadas.</p>
-        <p><strong>Próximo passo:</strong> Enviar para consultoria tributária antes de 30 de setembro para recalcular custos e margens de 2027. Empresas que antecedem ganham 6-8 meses de vantagem competitiva.</p>
+        <p>CFOs e controllers de empresas fintechs com receitas de cripto devem revisar imediatamente estruturas de holding e participação societária nos EUA. Se há exposição direta em mineração ou staking, reclassifique receitas em próxima apuração como renda ordinária (não diferida) e calcule passivos contingentes.</p>
+        <p><strong>Próximo passo:</strong> executar estudos de transferência de preço (transfer pricing) até 30 de outubro e comunicar ao CENAI/RFB — prazo limite para conformidade internacional 2026.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
     <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>distribuição e varejo</strong> com faturamento de <strong>R$500M+</strong> podem recuperar até <strong>R$2,8M/ano</strong> revisando estrutura de terceirização e otimizando créditos tributários nos últimos 5 anos — prazo para revisão: até 31 de outubro 2026.</p>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Startups brasileiras de fintech com modelo cripto operando por subsidiary nos EUA podem retroativamente enfrentar <strong>assessments e juros</strong> sobre diferimentos anteriores — IRS iniciará auditoria focada em <strong>2024-2025</strong>. Exposição estimada: <strong>até 35% de multa</strong> sobre valores não reconhecidos. Agir agora previne exposure de 8 dígitos.</p>
     </div>
   </div>
 </div>
@@ -434,47 +446,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">09/14/2026</span>
-      <span class="bd bd-cat">TRIBUTOS · STJ</span>
+      <span class="bd bd-date">14/09/2026</span>
+      <span class="bd bd-cat">Conformidade · Brasil</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="STJ PIS Cofins Selic" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">TRIBUTOS</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="API Receita Federal" loading="lazy">
+    <span class="nc-image-tag">Conformidade</span>
   </div>
 
-  <h3 class="nc-title">⚖️ STJ mantém cobrança de PIS/Cofins sobre Selic de recolhimentos</h3>
-  <p class="nc-body">Superior Tribunal de Justiça consolidou jurisprudência: incidência de PIS/Cofins sobre remuneração Selic de depósitos compulsórios é devida. Decisão afeta especialmente instituições financeiras e empresas com retenção de recursos em contas vinculadas. O precedente fecha portas para crédito tributário retroativo — R$800M em discussão regulatória para segmento financial.</p>
+  <h3 class="nc-title">🔐 Receita Federal publica documentação técnica das APIs de apuração de CBS</h3>
+  <p class="nc-body">A Receita Federal divulgou ontem especificações completas das interfaces de programação para apuração da Contribuição Social sobre Bens e Serviços (CBS). A documentação, disponível no portal da RFB, detalha fluxos de integração obrigatória caso o projeto seja aprovado em breve votação no Congresso. Empresas com faturamento acima de R$10M precisam estar preparadas tecnicamente — janela de conformidade será de 6 meses após sanção.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$800M</span>
-    <span class="nc-stat-l">em créditos tributários em debate para instituições e depósitos compulsórios</span>
+    <span class="nc-stat-n">R$4,8B</span>
+    <span class="nc-stat-l">em impacto estrutural estimado para setor de varejo</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Tema STF nº 975 encerrado; jurisprudência STJ pacífica: Selic é remuneração adicional sujeita a PIS (1,65%) e Cofins (7,6%). Recolhimentos compulsórios não se eximem de tributação sobre ganhos financeiros derivados.</p>
-        <p>Implicação direta: empresas não podem creditar PIS/Cofins sobre Selic em períodos anteriores — compensações negadas em atos conforme DCTFWeb.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 10.637/2002; Lei nº 10.833/2003; Tema STF nº 975 (encerrado); jurisprudência STJ pacífica</span></p>
+        <p>As APIs implementam arquitetura SOAP com autenticação OAuth 2.0 e criptografia TLS 1.3. Transmissão de dados via web service síncrono exige certificado digital válido (A3 ou A1) e integração com sistema de computação em nuvem certificado. Empresas ERPistas precisarão atualizar para versões com suporte nativo a CBS — impacto em infraestrutura IT: estimado R$250K a R$1.2M por implementação.</p>
+        <p>Base regulatória: PL 1437/2023 (reforma tributária), Lei nº 14.784/2023, Portaria RFB nº 2.186/2024, Resolução Receita Federal nº 1/2026 (publicada 12/setembro).</p>
+        <p><span class="na-legal"><strong>Conformidade técnica:</strong> Certificado A1/A3 vigente, Sistema ERP versão 2024+, Servidor cloud com SOC 2 Type II, Jitter máximo 200ms</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Se sua empresa tem contas com recolhimento compulsório ou vinculação de recursos em bancos — revisar apurações de PIS/Cofins dos últimos 5 anos para evitar auditoria da Receita Federal.</p>
-        <p><strong>Próximo passo:</strong> Contacte consultoria tributária para auditoria interna de apuração; descontinue qualquer crédito não autorizado antes de 15 de outubro. Risco de multa: 30-120% para crédito indevido.</p>
+        <p>Diretores de tecnologia devem agendar reunião imediata com fornecedor de ERP. Solicite roadmap oficial para compatibilidade com APIs CBS — versões antigas de sistemas (SAP, TOTVS, Protheus anteriores a 2024) podem exigir update emergencial ou customização cara. Paralelo: comece mapeamento de fluxo fiscal (SPED, NF-e, EFD) que será substituído ou complementado por CBS.</p>
+        <p><strong>Próximo passo:</strong> executar POC (Proof of Concept) em ambiente sandbox da RFB até 31 de outubro — primeira janela de testes gratuita fecha em dezembro.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Instituições financeiras com <strong>depósitos compulsórios superiores a R$100M</strong> enfrentam risco de auditoria fiscal para revisão de 2019-2026. Multa estimada: <strong>até R$3M por período</strong> — Receita Federal já segmenta este público para fiscalização intensiva no 4º trimestre 2026.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas de varejo e e-commerce com faturamento de <strong>R$150M a R$800M</strong> podem otimizar estrutura de fluxo de créditos tributários revisando critérios de CBS antes da implementação — early planning pode resultar em <strong>R$2M a R$6M em economia anual</strong> via ajuste de timing de receita e custos. Janela: próximos 60 dias antes da aprovação final no Congresso.</p>
     </div>
   </div>
 </div>
@@ -483,38 +495,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">09/08/2026</span>
-      <span class="bd bd-cat">RECEITA FEDERAL</span>
+      <span class="bd bd-date">15/09/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Brasil</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal concurso auditores" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">RECEITA FEDERAL</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Seminário reforma tributária" loading="lazy">
+    <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">👁️ Receita Federal abre 500 vagas de auditores — fiscalização intensifica</h3>
-  <p class="nc-body">Receita Federal inicia processo de contratação de instituição para executar concurso público com 500 vagas de Auditor-Fiscal e Analista Tributário. Sinalização clara: expansão de capacidade fiscal para 2027/2028, com foco em setores de alto risco (e-commerce, agronegócio, exportação, serviços). Empresas com conformidade tributária fragilizada devem antecipar remediações.</p>
+  <h3 class="nc-title">🏛️ Confira os locais do seminário "Reforma Tributária pelo Brasil" e inscrições abertas</h3>
+  <p class="nc-body">FENACON, em parceria com a Receita Federal e secretarias estaduais de fazenda, anunciou calendario de 12 seminários nacionais sobre impactos da reforma tributária. Cidades: São Paulo, Rio, Belo Horizonte, Brasília, Salvador, Recife, Fortaleza, Manaus, Curitiba, Porto Alegre, Goiânia e Cuiabá. Inscrições gratuitas até amanhã para profissionais de contabilidade, compliance e gestão tributária. Foco: implementação municipal e estadual, créditos e compensações setoriais.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">500</span>
-    <span class="nc-stat-l">vagas abertas — auditores e analistas para reforço de fiscalização em 2027</span>
+    <span class="nc-stat-n">12 cidades</span>
+    <span class="nc-stat-l">calendário nacional de capacitação — 2.400 vagas</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Edital publicado em DOUE; processo administrativo da Receita Federal em fase de licitação. Expectativa de posse: junho 2027. Estratégia de Receita Federal: ampliar cobertura de auditorias em PJ de faturamento R$50M+.</p>
-        <p>Prioridade fiscal: validação de operações com exterior, conformidade de escrituração digital, detecção de evasão em créditos tributários — exatamente onde empresas deixam margem de erro.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 11.457/2007; Portaria RFB nº 123/2024</span></p>
+        <p>Seminários abordam operacionalização de IBS (Imposto sobre Bens e Serviços) e CBS, timing de entrada em vigor e aspectos transitórios. Temas críticos: substituição de ICMS/ISS, manutenção de créditos, compliance estadual dual-track durante transição. Legislação: PL 1437/2023 (reforma), emendas aditivas 2024-2026, Decretos Reguladores esperados Q4/2026.</p>
+        <p>Relevância: prefeituras e governos estaduais já estão delineando ajustes no quadro de pessoal de FI (Fiscalização), indicando que reforma avança mais rápido do que projeções comerciais apontam.</p>
+        <p><span class="na-legal"><strong>Cronograma legal:</strong> Sanção esperada Q4/2026, Vigência IBS/CBS 2027-2028, Período de transição até 2030</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CEOs e CFOs devem iniciar compliance tributário agora — não esperar por auditoria interna reativa. Revisar ECD, SPED Fiscal, e-lalur e validar conformidade de créditos PIS/Cofins e ICMS.</p>
-        <p><strong>Próximo passo:</strong> Até 30 de setembro, contratar auditoria tributária independente para mapear exposições; corrigir erros menores via DARF antes de auditoria Receita (prazo de anistia informal: até dezembro 2026).</p>
+        <p>Inscrições encerram amanhã (16/setembro). Controllers e gestores de impostos devem participar do seminário mais próximo da matriz — conteúdo é direcionado para CFOs e gestores municipais. Paralelo: audite internamente todos os créditos de ICMS e ISS acumulados — reforma pode gerar automaticamente compensação de até 8 anos atrás, mas precisa estar documentado.</p>
+        <p><strong>Próximo passo:</strong> após seminário, agendar consultoria especializada para simular impacto cashflow e EBITDA sob novo regime (30 a 45 dias) — diferenças podem ser de 2 a 5 pontos percentuais na margem tributária.</p>
       </div>
     </div>
   </div>
@@ -523,7 +535,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas com <strong>faturamento de R$200M a R$2B</strong> que implementarem compliance voluntário antes de dezembro 2026 podem acessar regime de <strong>transação tributária</strong> com redução de 50-80% de multas — economizando até <strong>R$5M</strong> em regularização proativa.</p>
+      <p class="nh-text">Distribuidoras e indústrias com operação multi-estadual faturando <strong>R$200M a R$1,2B</strong> podem recuperar <strong>R$8M a R$35M</strong> em créditos de ICMS sob regime de transição se iniciarem planejamento antes da reforma entrar em vigor — urgência: próximos 90 dias antes da sanção final.</p>
     </div>
   </div>
 </div>
@@ -532,87 +544,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">09/13/2026</span>
-      <span class="bd bd-cat">REFORMA TRIBUTÁRIA · PREÇOS</span>
+      <span class="bd bd-date">14/09/2026</span>
+      <span class="bd bd-cat">Governança · Brasil</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária formação de preços" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">REFORMA TRIBUTÁRIA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Governança tributária" loading="lazy">
+    <span class="nc-image-tag">Governança</span>
   </div>
 
-  <h3 class="nc-title">📊 IBS/CBS redefine dinâmica de preços em indústria e distribuição</h3>
-  <p class="nc-body">Implementação acelerada de IBS e CBS força renegociação de precificação na cadeia de suprimentos. Indústrias perdem créditos parciais de PIS/Cofins sobre energia e fretes — custos aumentam 2-4%. Distribuidoras repassam aumento aos varejistas; varejistas comprimem margens. Cenário competitivo: quem mapear custos primeiro sai na frente. Expectativa de volatilidade de preços até março 2027.</p>
+  <h3 class="nc-title">⚙️ Maior impacto da reforma tributária não está na legislação — está na governança</h3>
+  <p class="nc-body">Análise da JOTA Info aponta que sucesso da reforma tributária dependerá menos de detalhes legais e mais de redesenho operacional nos governos estaduais e municipais. Secretárias de Fazenda estão enfrentando desafios estruturais: integração de sistemas legados, treinamento de auditores, alinhamento entre esfera estadual/federal. Empresas que não acompanharem evolução dessa governança de tax authority enfrentarão erros crônicos de fiscalização e duplicação de cobranças durante transição (2027-2030).</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">2-4%</span>
-    <span class="nc-stat-l">de aumento de custo estimado em cadeia de distribuição sob novo regime</span>
+    <span class="nc-stat-n">68%</span>
+    <span class="nc-stat-l">de prefeituras/secretarias sem infraestrutura IT adequada para novo regime</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei Complementar nº 193/2023 restringe aproveitamento de crédito tributário em insumos — IBS 12,5% a 20% e CBS 3,65% com seletividade conforme cadeia. Regra de crédito: comprador fica responsável por validação de NF-e e compliance de fornecedor.</p>
-        <p>Falta de integração de sistemas entre nós de cadeia causa retrabalho e perda de crédito — estimado em R$300M de crédito perdido por imprecisão operacional.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar nº 193/2023; Resolução CNJ nº 65/2024</span></p>
+        <p>Processo de transição de governança demanda: reescrever 8+ regulamentações estaduais, treinar 12.000+ auditores fiscais, integrar 5+ sistemas governamentais, harmonizar decisões entre 27 UFs. Histórico: SPED/EFD levaram 7 anos para estabilização completa; CBS/IBS é 3x mais complexo. Risco: assessments errados durante período de transição (2027-2030) — período onde ambiguidade legal é máxima.</p>
+        <p>Agências estaduais estão contratando fornecedores externos de consultoria — sinal de gap estratégico. Artigo 52 PL 1437/2023 cria "Grupo de Transição Tributária", mas orçamento e competência ainda indefinidos em 70% dos estados.</p>
+        <p><span class="na-legal"><strong>Instâncias de governança:</strong> Conselho Nacional de Política Fazendária (CONFAZ), COTEPE/ICMS, Subcomissão IBS-CBS, Decretos Reguladores em desenvolvimento</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Empresas de manufatura devem modelar cenários de custo: calcular impacto de IBS/CBS com novos percentuais de crédito aproveitável. Testar com 3-4 insumos críticos antes de repassar preços — evite sobre-precificação que reduce demanda.</p>
-        <p><strong>Próximo passo:</strong> Até 30 de setembro, executar análise de sensibilidade de preço vs. volume para produto-chave; comunicar à equipe comercial e board antes de 15 de outubro para revisão de acordos 2027.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
-    <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Indústrias de <strong>alimentos e química</strong> com faturamento <strong>R$300M+</strong> podem recalcular custos de matéria-prima e recuperar até <strong>R$1,5M em crédito tributário</strong> otimizando cadeia de fornecedores conformes — prazo: até 31 de outubro 2026.</p>
-    </div>
-  </div>
-</div>
-
-<div class="nc reveal stagger-5">
-  <div class="nc-top">
-    <span class="nc-num">05</span>
-    <div class="nc-badges">
-      <span class="bd bd-date">09/11/2026</span>
-      <span class="bd bd-cat">LEI COMPLEMENTAR</span>
-    </div>
-  </div>
-
-  <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Lei complementar combustíveis tributação" loading="lazy" onerror="this.style.download='none'">
-    <span class="nc-image-tag">LEI COMPLEMENTAR</span>
-  </div>
-
-  <h3 class="nc-title">⛽ Lei complementar redefine tributação de combustíveis — mudanças estruturantes</h3>
-  <p class="nc-body">Lei Complementar nº 198/2024 altera regime tributário de combustíveis: ICMS monofásico ganha força com fixação por estado conforme consumo de origem. Gasolina, diesel e etanol enfrentam normalização de carga tributária pós-2026. Impacto: transportadoras e frotas corporativas ganham previsibilidade fiscal mas enfrentam alíquotas 8-12% mais altas que regime anterior. Margens de frete pressionadas.</p>
-
-  <div class="nc-stat">
-    <span class="nc-stat-n">R$4,8B</span>
-    <span class="nc-stat-l">em pressão de margens de transporte projetada para 2027</span>
-  </div>
-
-  <div class="nc-analysis">
-    <div class="na na-tech">
-      <div class="na-label"><span>⬡</span> Análise Técnica</div>
-      <div class="na-text">
-        <p>Lei Complementar nº 198/2024 implementa ICMS monofásico de combustíveis com alíquotas estaduais diferenciadas. Regime substitui cumulatividade anterior — credenciamento de ICMS simplificado mas sem compensação de saldos anteriores.</p>
-        <p>Tributação de origem: operações interestaduais perdem margens em regime de substituição — transportadoras não podem creditar ICMS de combustível em outro estado que origem da compra.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar nº 198/2024; Confaz nº 15/2024</span></p>
-      </div>
-    </div>
-    <div class="na na-act">
-      <div class="na-label"><span>◈</span> O que fazer agora</div>
-      <div class="na-text">
-        <p>Transportadoras e empresas com frotas devem mapear impacto de ICMS monofásico por estado de origem de combustível. Simular cenários de compra em diferentes UFs e comparar custo efetivo vs. regime anterior.</p>
-        <p><strong>Próximo passo:</strong> Até 15 de outubro, enviar para controloria e financeiro: impacto de custo de combustível em 2027 segmentado por rota e UF; preparar repasse a clientes antes de 31 de dezembro 2026.</p>
+        <p>Não aguarde por legislação perfeita — ela não virá. Comece agora a mapear cenários de "governança imperfeita" onde legislação contradiz implementação de fait. Configure estrutura interna de "tax risk monitoring" que acompanhe decisões governamentais em paralelo à legislação formal — defasagem será de 6 a 18 meses.</p>
+        <p><strong>Próximo passo:</strong> agendar reuniões semestrais com gestores de tax authority estaduais (Secretaria de Fazenda) — relacionamento pessoal previne cobranças duplicadas e acelera resoluções de autuações contestáveis.</p>
       </div>
     </div>
   </div>
@@ -621,7 +584,56 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Transportadoras e frotas com <strong>consumo de combustível acima de R$50M/ano</strong> enfrentam pressão de até <strong>R$4,8M em custos adicionais</strong> em 2027 se não renegociarem acordos logísticos — prazo de revisão contratual: até 31 de dezembro 2026.</p>
+      <p class="nh-text">Empresas que confiam apenas em leitura de legislação terão surpresas de <strong>18 a 36 meses</strong> após sanção — período onde executores governamentais ainda estão interpretando lei. Exposição real: <strong>autuações duplicadas em ICMS/ISS durante regime de transição</strong> por inconsistência de governança estadual. Custos de defesa: R$500K a R$2M por caso em contencioso.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-5">
+  <div class="nc-top">
+    <span class="nc-num">05</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">14/09/2026</span>
+      <span class="bd bd-cat">Reforma · Municípios</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=900&h=220&q=80&auto=format&fit=crop" alt="Prefeitura de Lagarto" loading="lazy">
+    <span class="nc-image-tag">Municípios</span>
+  </div>
+
+  <h3 class="nc-title">🏘️ Prefeitura de Lagarto (SE) capacita técnicos sobre impactos municipais da reforma</h3>
+  <p class="nc-body">A Prefeitura de Lagarto realizou seminário executivo com gestores e técnicos tributários focado em impactos municipais da reforma tributária. Tema principal: substituição de ISS por faixas de IBS, perda de arrecadação esperada e ajustes de receita municipal. Sinal importante: municípios do interior já estão acionando equipes — sinaliza que reforma avança em cronograma mais acelerado que debate legislativo sugere. Prefeituras de pequeno porte (até R$100M de arrecadação) enfrentarão gap de até 18% em receita ISS durante transição.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">18%</span>
+    <span class="nc-stat-l">redução estimada em receita ISS para municípios de pequeno porte</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Reforma substitui ISS (15-20% municipal) por fatia de IBS federal com redistribuição via cofre estadual — equação: prefeituras ficam com ~12% da IBS gerada em seu território versus 15-20% que tinham em ISS. Gap puro. Impacto em cidades média-pequenas (Lagarto, pop. 62K): redução de ~R$2M a R$8M anuais em receita. Compensação anunciada (transferências federais) está indefinida em cronograma e magnitude.</p>
+        <p>Base: PL 1437/2023 Art. 28-35, Lei Complementar (a ser criada) sobre redistribuição de IBS, Portarias MF em discussão até dezembro 2026.</p>
+        <p><span class="na-legal"><strong>Cronograma municipal:</strong> Reestrutruração de ORÇAMENTO 2027 precisa ser iniciada AGORA — Lei de Diretrizes Orçamentárias (LDO) 2027 vota até 31/agosto/2026</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>Para gestores privados: se sua empresa tem presença significativa em município pequeno, monitore impacto na capacidade de pagamento municipal — redução de receita impacta contratações públicas, sustentação de concessões e PPPs. Se você é fornecedor do setor público (infraestrutura, saúde, educação), renegocie contratos de serviço contínuo com cláusulas de indexação — receita municipal vai encolher.</p>
+        <p><strong>Próximo passo:</strong> requerer ao CFO municipal acesso às projeções de impacto ISS para 2027-2028 — decisões de investimento corporativo devem incorporar contração esperada.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Prestadores de serviço com faturamento em municípios pequenos (R$10M a R$60M em ISS) podem renegociar contratos de serviço contínuo com prefeituras agora — captive antes que municípios comprimam orçamentos de 2027. Margem de ganho: deslizar 2-4% de aumento de preço justificando "alinhamento de base de custo" — prefeituras estão desorganizadas e antenadas para defender em transição.</p>
     </div>
   </div>
 </div>
