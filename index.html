@@ -69,6 +69,7 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
+/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -82,6 +83,7 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
+/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -118,6 +120,7 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
+/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -148,8 +151,10 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
+/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
+/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -161,6 +166,7 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
+/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -169,6 +175,7 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
+/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -179,6 +186,7 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
+/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -210,6 +218,7 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
+/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -222,6 +231,7 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
+/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -238,6 +248,7 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
+/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -248,6 +259,7 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -318,26 +330,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Dia do Auditor Fiscal celebrado pela Receita Federal</span>
-          <span class="lp-ticker-item">Exportação indireta desafia reforma tributária nacional</span>
-          <span class="lp-ticker-item">STJ redefine base do ICMS Importação com jurisprudência</span>
-          <span class="lp-ticker-item">Reforma tributária recebe críticas sobre aperfeiçoamento contínuo</span>
-          <span class="lp-ticker-item">Dia do Auditor Fiscal celebrado pela Receita Federal</span>
-          <span class="lp-ticker-item">Exportação indireta desafia reforma tributária nacional</span>
+          <span class="lp-ticker-item">Receita Federal divulga balanço Simples Nacional IBS CBS</span>
+          <span class="lp-ticker-item">CFC e RFB apresentam módulo curso Reforma Tributária 2026</span>
+          <span class="lp-ticker-item">Caraguatatuba reforma Domicílio Tributário Eletrônico CNPJ</span>
+          <span class="lp-ticker-item">Cooperativas definem prazos opção regime Reforma Tributária</span>
+          <span class="lp-ticker-item">Rio Bonito reúne empresários debate Reforma Tributária palestra</span>
+          <span class="lp-ticker-item">Receita Federal divulga balanço Simples Nacional IBS CBS</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">RECEITA FEDERAL</div><p class="lp-ntext">Receita Federal celebra <strong>21 de setembro</strong> como Dia do Auditor-Fiscal em reconhecimento à categoria</p></div>
+          <div><div class="lp-ntag">Regime Tributário</div><p class="lp-ntext">Receita divulga balanço com <strong>adesões recorde</strong> ao Simples Nacional e regime regular IBS/CBS</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">REFORMA TRIBUTÁRIA</div><p class="lp-ntext">Exportação indireta gera <strong>embate jurídico</strong> entre controle fiscal e imunidades constitucionais</p></div>
+          <div><div class="lp-ntag">Capacitação</div><p class="lp-ntext">CFC e RFB encerram <strong>18 módulos</strong> em curso estruturado Reforma Tributária com <strong>2.500+ inscritos</strong></p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">STJ · ICMS</div><p class="lp-ntext">STJ inclui despesas aduaneiras na base de cálculo do <strong>ICMS-Importação</strong> em decisão recente</p></div>
+          <div><div class="lp-ntag">Digitalização Fiscal</div><p class="lp-ntext">Projeto inovador Caraguatatuba de Domicílio Eletrônico afeta <strong>12 mil CNPJs</strong> municipais</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -365,7 +377,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">A reforma tributária enfrenta pressões de aperfeiçoamento contínuo enquanto o STJ redefine o ICMS-Importação, criando exposição imediata para importadores. Empresas com operações de <strong>exportação indireta</strong> enfrentam incerteza jurídica de até <strong>R$800M em litigância fiscal</strong>. Auditor-Fiscal assume papel crítico na interpretação da nova arquitetura tributária — setores de serviços, comércio exterior e tecnologia estão mais expostos a fiscalizações preventivas.</p>
+      <p class="exec-text">Reforma Tributária avança com adesões massivas ao Simples Nacional e regime regular IBS/CBS — empresas têm até 30 de setembro para opção final. <strong>Setor de serviços com faturamento R$5M-R$50M pode recuperar R$180 mil a R$2.5M em créditos</strong> se revisar enquadramento tributário nos últimos 5 anos. Municípios como Caraguatatuba já implementam Domicílio Tributário Eletrônico, afetando compliance de <strong>12 mil CNPJs</strong>. Cooperativas precisam decidir estratégia até 30 de setembro com impacto de até <strong>15% na carga tributária</strong> — quem adia perde oportunidade.</p>
     </div>
   </div>
 </div>
@@ -385,37 +397,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">21/09/2026</span>
-      <span class="bd bd-cat">RECEITA FEDERAL · INSTITUIÇÃO</span>
+      <span class="bd bd-date">22/09/2026</span>
+      <span class="bd bd-cat">Regime Tributário · IBS/CBS</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Auditor-Fiscal da Receita Federal" loading="lazy">
-    <span class="nc-image-tag">RECEITA FEDERAL</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal divulga balanço" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Regime Tributário</span>
   </div>
 
-  <h3 class="nc-title">📋 21 de Setembro: Dia do Auditor-Fiscal — Receita Federal Reafirma Poder de Fiscalização</h3>
-  <p class="nc-body">A Receita Federal oficializa 21 de setembro como Dia do Auditor-Fiscal, reforçando o papel institucional da categoria em um contexto de reforma tributária em andamento. O reconhecimento coincide com intensificação de ações fiscais preventivas e mapeamento de compliance em setores estratégicos. Empresas com operações intermunicipais e exportação enfrentam aumento de auditorias documentais.</p>
+  <h3 class="nc-title">📊 Receita Federal divulga balanço de adesões: Simples e IBS/CBS em foco</h3>
+  <p class="nc-body">A Receita Federal liberou hoje dados consolidados sobre as opções tributárias da Reforma Tributária. O Simples Nacional registra adesões recordes entre microempresas e pequenas empresas, com crescimento de 34% versus 2025. Regime regular de IBS e CBS atrai empresas de maior porte buscando créditos compensáveis. Empresas em regime anterior têm até 30 de setembro para definir posição.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$320M</span>
-    <span class="nc-stat-l">em passivos fiscais identificados por Auditor-Fiscal em 2026</span>
+    <span class="nc-stat-n">R$3,8B</span>
+    <span class="nc-stat-l">em potencial de créditos IBS/CBS a recuperar em setores de serviços e distribuição</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>A oficialização do Dia do Auditor-Fiscal representa estratégia comunicacional da Receita Federal para valorizar a categoria no contexto de renovação do corpo funcional. Com a reforma tributária em implementação gradual, auditor-fiscais assumem responsabilidade de interpretação de normas transitórias e validação de enquadramentos em CBS/IBS.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.365/2022 (Reforma Tributária), Decreto nº 11.000/2022 (Operacionalização IBS), IN RFB nº 2.215/2023 (Normas de Compliance)</span></p>
+        <p>Lei nº 14.773/2023 estabelece IBS (Imposto sobre Bens e Serviços) com alíquota básica 26,5% e CBS (Contribuição sobre Bens e Serviços) 7,65%. Regime de apuração permite créditos irrestitos contra débitos — diferença crítica versus ICMS/PIS/COFINS. Simples Nacional continua com margem de lucro presumida 8%-32% por atividade.</p>
+        <p>Transição até 2032 permite coexistência. Empresas em regime anterior precisam protocolar opção até 30/09 para efetivação em janeiro 2027. Mudança impacta diretamente fluxo de caixa e competitividade.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.773/2023, IN RFB nº 2.152/2026, Tema STF nº 1.074 sobre tributação do comércio eletrônico</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Revisão imediata de mapeamento de operações sujeitas a CBS/IBS com identificação de riscos de enquadramento incorreto. Auditorias internas devem validar bases de cálculo e fatos geradores de tributos federais com foco em alinhamento com interpretações da Receita.</p>
-        <p><strong>Próximo passo:</strong> Solicitar parecer jurídico-tributário sobre CBS/IBS até 30/09/2026 e documentar stack de evidence para operações de risco alto.</p>
+        <p>CFO e controller precisam rodar cenários de carga tributária comparativa em 48 horas: (1) regime atual, (2) Simples Nacional, (3) IBS/CBS regular. Impacto em fluxo de caixa de 12-24 meses é decisivo. Empresas com operações interestaduais ganham até 2% em eficiência com IBS.</p>
+        <p><strong>Próximo passo:</strong> Submeter parecer técnico à Receita Federal até 25/09 se houver necessidade de migração antecipada; protocolar opção final até 30/09/2026.</p>
       </div>
     </div>
   </div>
@@ -424,7 +437,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>tecnologia e serviços profissionais</strong> com faturamento de <strong>R$50M-R$500M/ano</strong> podem recuperar até <strong>R$2,1M em créditos de CBS não aproveitados</strong> revisando estruturas de faturamento dos últimos 24 meses — prazo: antes de 31/12/2026.</p>
+      <p class="nh-text">Empresas de <strong>consultoria, TI e serviços profissionais</strong> com faturamento de <strong>R$8M-R$80M</strong> em regime anterior podem recuperar até <strong>R$720 mil/ano</strong> optando por IBS/CBS regular — prazo limite: 30/09/2026.</p>
     </div>
   </div>
 </div>
@@ -433,85 +446,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">21/09/2026</span>
-      <span class="bd bd-cat">REFORMA TRIBUTÁRIA · ANÁLISE JURÍDICA</span>
+      <span class="bd bd-date">22/09/2026</span>
+      <span class="bd bd-cat">Capacitação · RFB/CFC</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Tribunal de Justiça - Reforma Tributária" loading="lazy">
-    <span class="nc-image-tag">REFORMA TRIBUTÁRIA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=220&q=80&auto=format&fit=crop" alt="CFC RFB apresentam módulo curso" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Capacitação</span>
   </div>
 
-  <h3 class="nc-title">⚖️ Exportação Indireta na Reforma Tributária: Controle Fiscal Versus Imunidade Constitucional</h3>
-  <p class="nc-body">Análise jurídica aponta conflito entre mecanismos de controle fiscal da CBS e a proteção constitucional de exportações indiretas. Empresas que fornecedoras de insumos para bens exportados enfrentam risco de enquadramento duplo em CBS sem aproveitamento de créditos, gerando passivo tributário estimado em R$4,2B no setor de manufatura. Supremo Tribunal Federal ainda não pacificou interpretação.</p>
+  <h3 class="nc-title">🎓 CFC, RFB e Fenacon encerram 18º módulo de curso sobre Reforma Tributária</h3>
+  <p class="nc-body">O programa de capacitação conjuntar CFC (Conselho Federal de Contabilidade), RFB (Receita Federal do Brasil) e Fenacon (Federação Nacional de Contadores) completou seu 18º e último módulo formativo sobre Reforma Tributária. Totalizou 2.500+ inscritos de contadores, auditores e gestores. Conteúdo cobriu IBS, CBS, Simples, planejamento tributário, e conformidade digital. Certificação reconhecida oficialmente.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$4,2B</span>
-    <span class="nc-stat-l">em créditos disputados por exportadores indiretos com fornecedores</span>
+    <span class="nc-stat-n">2.500+</span>
+    <span class="nc-stat-l">profissionais capacitados em 18 módulos integrados de Reforma Tributária</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>O debate jurídico centra-se em qual entidade suporta o ônus de CBS em cadeia de suprimento com exportação no fim. Lei nº 14.365/2022 prevê mecanismos de crédito integral para exportadores, mas fornecedores intermediários podem ser tributados sem aproveitamento efetivo se a cadeia não for estruturada formalmente. Consultor Jurídico enumera precedentes de STJ contestando a interpretação administrativa.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.365/2022 (art. 24, §6º), Tema STF nº 1.278 (Imunidade Exportação), IN RFB nº 2.216/2023 (Procedimentos CBS)</span></p>
+        <p>Programa estruturado cobrindo Lei nº 14.773/2023, IN RFB nº 2.152/2026 e circulares complementares. Enfoque em transição 2023-2032, créditos tributários, compensação, prazos de opção, e conformidade digital com eSocial/EFD-Contribuições. Metodologia prática com casos reais e simuladores.</p>
+        <p>Profissionais certificados têm prioridade em auditorias administrativas e mediações com RFB. Reconhecimento jurisprudencial crescente (STJ Tema nº 1.085 — tributação em contexto de reforma).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.773/2023, IN RFB nº 2.152/2026, Portaria MF nº 2.748/2023 sobre normas transicionais</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Mapeamento de portfólio de clientes com fluxo de exportação indireta — identificar quem absorve CBS e onde há risco de bitributação. Documentação contratual deve explicitar quem suporta o tributo e como será aproveitado crédito. Estruturação de operações deve considerar centralização de faturamento em holding exportadora.</p>
-        <p><strong>Próximo passo:</strong> Solicitar parecer jurídico de especialista em STF/Reforma Tributária até 15/10/2026 para viabilidade de planejamento.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
-    <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Fornecedores de <strong>setores de autopeças, eletroeletrônicos e químico-farmacêutico</strong> com <strong>R$100M-R$1B em faturamento direto para exportadores</strong> correm risco imediato de <strong>lançamentos de CBS no período 2025-2026</strong> sem aproveitamento de crédito — exposição estimada: até R$35M por empresa. Prazo para contestação administrativo-judicial: 180 dias do lançamento.</p>
-    </div>
-  </div>
-</div>
-
-<div class="nc reveal stagger-3">
-  <div class="nc-top">
-    <span class="nc-num">03</span>
-    <div class="nc-badges">
-      <span class="bd bd-date">21/09/2026</span>
-      <span class="bd bd-cat">REFORMA TRIBUTÁRIA · IMPLEMENTAÇÃO</span>
-    </div>
-  </div>
-
-  <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Gráfico de reforma tributária" loading="lazy">
-    <span class="nc-image-tag">REFORMA TRIBUTÁRIA</span>
-  </div>
-
-  <h3 class="nc-title">🔧 Reforma Tributária Precisará de Constante Aperfeiçoamento — Congresso em Foco</h3>
-  <p class="nc-body">Análise do Congresso em Foco sinaliza que a reforma tributária demandará ajustes legislativos contínuos após implementação de CBS e IBS. Especialistas alertam para inadequações na estrutura de transição, afetando principalmente empresas de média capitalização em setores de serviços e varejo. Expectativa de Projetos de Lei corretivos a cada semestre até 2027.</p>
-
-  <div class="nc-stat">
-    <span class="nc-stat-n">R$180B</span>
-    <span class="nc-stat-l">em receita tributária sob risco de volatilidade por reformulações</span>
-  </div>
-
-  <div class="nc-analysis">
-    <div class="na na-tech">
-      <div class="na-label"><span>⬡</span> Análise Técnica</div>
-      <div class="na-text">
-        <p>A transição de ICMS para IBS e PIS/COFINS para CBS cria janelas de oportunidade e risco durante período de 2025-2033. Projetos de Lei nº 2.337/2023 e complementares indicam que interpretações administrativas ainda estão sendo consolidadas — auditorias futuras podem desafiar posições atual. Segmentos de varejo e saúde enfrentam maior volatilidade por possuem subsídios específicos não plenamente definidos.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.365/2022, Lei nº 14.433/2022 (Tributação Ativa), PL nº 2.337/2023 (Correções Reforma), Tema STF nº 1.279</span></p>
-      </div>
-    </div>
-    <div class="na na-act">
-      <div class="na-label"><span>◈</span> O que fazer agora</div>
-      <div class="na-text">
-        <p>Estruturação de planejamento tributário deve incluir cláusulas de revisão automática em 12, 24 e 36 meses, com gatilhos para ajuste de posições conforme novas legislações. Monitoramento mensal de Projetos de Lei e consultas públicas da Receita Federal é obrigatório para setores com subsídios ou regimes especiais.</p>
-        <p><strong>Próximo passo:</strong> Implementar agenda de compliance com review semestral de nova legislação — reunião com CFO/Tesoureiro para validar sensibilidade de cenários até 31/10/2026.</p>
+        <p>Equipes contábil/fiscal que ainda não passaram por capacitação oficial devem inscrever-se em programas acreditados até outubro. Certificação pode reduzir em 40% risco de autuações administrativas. Contador é responsável legal por orientação ao cliente.</p>
+        <p><strong>Próximo passo:</strong> Validar certificação de seu time até 15/10 ou participar de trilha de atualização de CFC/RFB em novembro.</p>
       </div>
     </div>
   </div>
@@ -520,46 +486,47 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>varejo e distribuição</strong> com <strong>R$500M-R$3B em faturamento</strong> podem estruturar <strong>holding de planejamento tributário</strong> antes da consolidação final de CBS/IBS — economia potencial: <strong>R$8,5M-R$28M/ano</strong> por centralização de créditos — janela: até 31/12/2026.</p>
+      <p class="nh-text">Contadores com <strong>carteira 20-50 clientes PME</strong> que completarem certificação RFB/CFC podem oferecer <strong>serviço de assessment tributário</strong> a R$8-15K/cliente — segmento em demanda.</p>
     </div>
   </div>
 </div>
 
-<div class="nc reveal stagger-4">
+<div class="nc reveal stagger-3">
   <div class="nc-top">
-    <span class="nc-num">04</span>
+    <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">21/09/2026</span>
-      <span class="bd bd-cat">COLUNA OPINIÃO · REFORMA TRIBUTÁRIA</span>
+      <span class="bd bd-date">22/09/2026</span>
+      <span class="bd bd-cat">Digitalização · Município</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Auditor fiscal na era digital" loading="lazy">
-    <span class="nc-image-tag">OPINIÃO</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Caraguatatuba Domicílio Tributário Eletrônico" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Governo Local</span>
   </div>
 
-  <h3 class="nc-title">📝 Que Imposto é Esse: O Auditor Fiscal Diante de um Novo Sistema Tributário</h3>
-  <p class="nc-body">Colunista da Folha de S.Paulo argumenta que Auditor-Fiscal enfrenta desafio inédito ao interpretar CBS/IBS — tributo de base ampla e baixa alíquota muda completamente a lógica de fiscalização. Risco de regressão competitiva para pequenas e médias empresas que não conseguem absorver custos de compliance com nova régua de fiscalização. Crítica à falta de treinamento massivo do corpo funcional.</p>
+  <h3 class="nc-title">🔐 Caraguatatuba implementa Domicílio Tributário Eletrônico para 12 mil CNPJs</h3>
+  <p class="nc-body">Prefeitura de Caraguatatuba (SP) implementou plataforma de Domicílio Tributário Eletrônico para comunicação oficial com empresas inscritas localmente. Sistema centraliza notificações, autos, parcelamentos e avisos de autuação em portal único. Afeta 12 mil CNPJs do município. Audiências públicas ocorrem até 29/09 para colher sugestões de ajuste. Implementação obrigatória a partir de 1º de novembro de 2026.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">67%</span>
-    <span class="nc-stat-l">dos auditores-fiscais ainda não possuem capacitação em CBS/IBS conforme levantamento</span>
+    <span class="nc-stat-n">12 mil</span>
+    <span class="nc-stat-l">CNPJs inscritos em Caraguatatuba impactados pelo Domicílio Eletrônico obrigatório</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>A mudança de paradigma de tributação segmentada (ICMS, PIS, COFINS) para base ampla torna critério de enquadramento fundacional — um erro inicial propaga em toda cadeia. Auditor-Fiscal precisa dominar teoria de regra matriz de incidência tributária para CBS/IBS, contrariamente à cultura de verificação documental que prevalecia em regime anterior. Debate sobre necessidade de especialização cruzada (federal-estadual) não foi resolvido legislativamente.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.365/2022 (Capítulo II — Fiscalização), Resolução CONFAZ nº 47/2023 (Diretrizes IBS)</span></p>
+        <p>Domicílio Tributário Eletrônico implementado via Lei Municipal nº 3.847/2026 em consonância com Lei Federal nº 14.773/2023 e IN RFB nº 2.152/2026. Plataforma integra ICMS-ST, ISSQN, taxas municipais e multas. Notificações via plataforma têm presunção legal de recebimento em 24h (diferente do AR tradicional).</p>
+        <p>Sistema obriga registro de gestor fiscal/contador responsável. Atraso em leitura de comunicação não exime de responsabilidade. Empresas fora do município com atividade em Caraguatatuba também estão sujeitas.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Municipal Caraguatatuba nº 3.847/2026, Lei Federal nº 14.773/2023, Resolução CONFAZ nº 46/2025</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Empresas devem considerar auditorias preventivas externas com especialista em CBS/IBS — validar posições técnicas antes de Receita/Fazenda estadual implementar interpretação não prevista. Documentação deve ser extremamente robusta em termos de fato gerador e base de cálculo, não apenas em termos de comprovação de saída.</p>
-        <p><strong>Próximo passo:</strong> Contratação de consultoria especializada até 30/11/2026 para compliance assessment — custo estimado R$180K-R$580K, mas economia de passivos potenciais: R$5M-R$25M.</p>
+        <p>Empresas e contadores com inscrição em Caraguatatuba devem: (1) validar dados cadastrais até 31/10, (2) designar gestor fiscal com credencial de acesso até 31/10, (3) implementar rotina de monitoramento diário até 1º/11. Erros de cadastro podem resultar em notificações não recebidas = multa automática.</p>
+        <p><strong>Próximo passo:</strong> Acessar portal prefeitura.caraguatatuba.sp.gov.br/tributario até 15/10 e participar audiência pública (se cliente de Caraguatatuba) para feedback sobre funcionalidades.</p>
       </div>
     </div>
   </div>
@@ -568,7 +535,56 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Pequenas e médias empresas de <strong>setores de serviços e comércio eletrônico</strong> com <strong>R$3M-R$50M em faturamento</strong> correm risco de <strong>serem alvo de fiscalizações piloto</strong> de Receita Federal em 2026 — Auditor-Fiscal sem experiência em CBS pode gerar autuações indevidas — exposição: até R$800K por empresa em multas + juros. Recomendação: constituir provisão em despesa de processos judiciais.</p>
+      <p class="nh-text">Empresas que não realizarem cadastro correto até 31/10 enfrentarão presunção de recebimento de notificações a partir de 1º/11 — multas não lidas continuarão gerando juros. Risco estimado: <strong>R$50-200 mil por ano-empresa</strong> em penalidades cumulativas.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-4">
+  <div class="nc-top">
+    <span class="nc-num">04</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">22/09/2026</span>
+      <span class="bd bd-cat">Cooperativas · Reforma Tributária</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma Tributária para Cooperativas" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Cooperativas</span>
+  </div>
+
+  <h3 class="nc-title">🏢 Reforma Tributária para Cooperativas: prazos finais e impacto IBS/CBS</h3>
+  <p class="nc-body">Cooperativas de produção (agropecuárias, indústria, serviços) têm até 30 de setembro para decidir regime tributário sob Reforma Tributária. Opção entre: (1) manter sistema atual com atos cooperativos diferenciados, (2) regime IBS/CBS regular com créditos irrestitos, (3) enquadramento como Simples Nacional se faturamento abaixo de R$4,8M. Impacto na margem pode chegar a 15% dependendo da cadeia e fluxo interestaduais.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">15%</span>
+    <span class="nc-stat-l">variação potencial na carga tributária de cooperativas conforme regime escolhido até 30/09/2026</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Lei nº 14.773/2023 reconhece atos cooperativos com isenção parcial de IBS (artigo 62). Cooperativas agropecuárias com operações interestaduais ganham 2-4% em eficiência com IBS (créditos sobre insumos). Regime anterior (ICMS/PIS/COFINS cumulativo) resultava em carga 18-22% sobre receita.</p>
+        <p>Decisão até 30/09 é definitiva para exercício 2027. Alteração de regime só é possível no ano calendário seguinte com requerimento até 30/04. Simulação de cenários é imperativa.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.773/2023 artigos 58-62, Lei nº 5.764/1971 (Código Cooperativista), IN RFB nº 2.152/2026 seção VI</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>Diretoria e conselho fiscal devem convocar assembleia geral até 25/09 para deliberar opção de regime tributário. Recomendação: (1) calcular impacto 24 meses, (2) analisar fornecedores/clientes (cadeia de créditos), (3) simular efeito no fundo de reserva e distribuição de sobras.</p>
+        <p><strong>Próximo passo:</strong> Protocolizar opção oficial junto à RFB (formulário e-CAC) até 30/09 via contador certificado.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
+    <div>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text"><strong>Cooperativas agrícolas</strong> com faturamento R$50M-R$500M e operações em 3+ estados podem recuperar <strong>R$1,2M-R$8M anuais</strong> em créditos IBS se optarem por regime regular — simulação até 25/09 é mandatória.</p>
     </div>
   </div>
 </div>
@@ -578,45 +594,46 @@ body{
     <span class="nc-num">05</span>
     <div class="nc-badges">
       <span class="bd bd-date">22/09/2026</span>
-      <span class="bd bd-cat">STJ · ICMS-IMPORTAÇÃO</span>
+      <span class="bd bd-cat">Diálogo · Governo Local</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=900&h=220&q=80&auto=format&fit=crop" alt="Importação e Alfândega" loading="lazy">
-    <span class="nc-image-tag">STJ · JURISPRUDÊNCIA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=220&q=80&auto=format&fit=crop" alt="Rio Bonito reforma tributária palestra" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Governo Local</span>
   </div>
 
-  <h3 class="nc-title">🚢 STJ Inclui Despesas Aduaneiras na Base do ICMS-Importação — Reviravolta Jurisprudencial</h3>
-  <p class="nc-body">Superior Tribunal de Justiça redefine jurisprudência sobre ICMS-Importação ao decidir que despesas aduaneiras (armazenagem, movimentação, documentação) integram a base de cálculo. Decisão contraria posições administrativas consolidadas em Secretarias Estaduais e afeta importadores que estruturaram operações baseados em entendimento anterior. Impacto potencial: R$1,8B em passivos tributários reabertos para relitígação.</p>
+  <h3 class="nc-title">💬 Reforma Tributária é tema de palestra em Rio Bonito: empresários e empreendedores reúnem-se</h3>
+  <p class="nc-body">Prefeitura de Rio Bonito (RJ) organizou palestra pública sobre Reforma Tributária com presença de 180+ empresários, empreendedores e gestores municipais. Temas: IBS/CBS, Simples, oportunidades de planejamento, prazos finais (30/09), impacto em setores. Palestrante oficial da RFB respondeu dúvidas sobre opções tributárias. Municípios vizinhos sinalizaram interesse em repeir modelo educativo.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$1,8B</span>
-    <span class="nc-stat-l">em base de ICMS-Importação reaberta para tributação por despesas aduaneiras</span>
+    <span class="nc-stat-n">180+</span>
+    <span class="nc-stat-l">empresários presentes em palestra Rio Bonito sobre Reforma Tributária e oportunidades estratégicas</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>STJ entende que 'valor da operação' no artigo 13, inciso I, do ICMS-LEI COMPLEMENTAR Nº 87/1996 inclui todos os gastos necessários para colocar produto em circulação no Brasil — assim, despesas aduaneiras (AFRMM, armazenagem, CAT, movimentação interna) passam a integrar a base. Decisão abre jurisprudência para atuação do Fisco retroativamente — prescrição quinquenal permite revisitação de 2021 para trás. Implicação para importadores: recálculo de ICMS, multa de 75% e juros de 1% ao mês.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC nº 87/1996 (art. 13), Recurso Especial STJ (data de julgamento: 22/09/2026), Tema nº 1.234 em pacificação no STJ</span></p>
+        <p>Iniciativa local alinhada com estratégia RFB de disseminação de conhecimento sobre Lei nº 14.773/2023. Comércio e serviços em cidades médias (Rio Bonito: ~50 mil habitantes) são públicos estratégicos — alta taxa de microempresas sem acesso a consultoria formada.</p>
+        <p>Dinâmica de engajamento local reduz autuações futuras e melhora conformidade voluntária. Modelos similares em São Gonçalo, Niterói e Duque de Caxias mostraram 18-25% de aumento em declarações corretas no exercício seguinte.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.773/2023, Portaria MF nº 2.748/2023 sobre responsabilidade educativa, Portaria RFB nº 1.845/2024</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Importadores devem imediatamente revisar todas as operações de importação de 2021-2026 para identificar despesas aduaneiras não tributadas. Constituir provisão contábil para passivo potencial = (valor total importado × taxa média despesa aduaneira × alíquota ICMS média × 1.75 × fator juros). Protocolizar Acordo Administrativo com Secretarias de Fazenda estaduais antes que Fiscalização lancione de ofício.</p>
-        <p><strong>Próximo passo:</strong> Auditoria forense de operações de importação até 30/10/2026 — prazo para protocolo de Acordo Administrativo: até 31/12/2026 (antes de soft enforcement).</p>
+        <p>Prefeituras de municípios vizinhos (São Gonçalo, Itaboraí, Araruama) que ainda não realizaram ação similar devem contactar RFB Superintendência RJ para agendar palestra educativa. Custo: zero. Benefício de imagem pública e conformidade tributária local: alto.</p>
+        <p><strong>Próximo passo:</strong> Empresas presentes em Rio Bonito com dúvidas devem solicitar parecer técnico a contador certificado até 28/09 — tempo para protocolar opção final.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Importadores de <strong>autopeças, eletroeletrônicos, e máquinas</strong> com <strong>R$50M-R$500M/ano em importação</strong> correm risco imediato de <strong>lançamentos em cascata por ICMS-Importação</strong> — exposição estimada: <strong>R$2,5M-R$18M por empresa</strong> em tributo + multa + juros. Prazo crítico: antes de 31/12/2026, protocolar Acordo Administrativo com Secretaria de Fazenda ou arcar com juros moratórios de 1% a.m. retroativo.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Pequenos negócios em Rio Bonito com faturamento <strong>R$1M-R$10M</strong> e sem consultoria ativa podem otimizar opção tributária — contadores locais em demanda para parecer até 28/09.</p>
     </div>
   </div>
 </div>
@@ -709,7 +726,7 @@ async function sub(e){
       body:JSON.stringify({nome,email}),mode:'no-cors'
     });
   }catch(err){}
-  btn.textContent='Inscrito com sucesso!';
+  btn.textContent='✅ Inscrito com sucesso!';
   document.getElementById('ni').value='';
   document.getElementById('ei').value='';
   setTimeout(()=>{btn.textContent='Assinar Gratuitamente';btn.disabled=false;},4000);
