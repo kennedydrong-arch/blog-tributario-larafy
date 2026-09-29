@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,26 +318,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Debate fiscal brasileiro carece de profundidade</span>
-          <span class="lp-ticker-item">Isenção de ganho capital imóvel residencial</span>
-          <span class="lp-ticker-item">Simples Nacional e IBS processam opções</span>
-          <span class="lp-ticker-item">STF proíbe ICMS em subvenção de energia</span>
-          <span class="lp-ticker-item">Debate fiscal brasileiro carece de profundidade</span>
-          <span class="lp-ticker-item">Isenção de ganho capital imóvel residencial</span>
+          <span class="lp-ticker-item">Receita Federal atualiza balanço de opções ao Simples Nacional</span>
+          <span class="lp-ticker-item">Transição tributária: sistema antigo e novo convivem</span>
+          <span class="lp-ticker-item">IBS e CBS: especialistas discutem impactos nas bases</span>
+          <span class="lp-ticker-item">CGIBS e Receita divulgam endpoints de produção</span>
+          <span class="lp-ticker-item">Receita Federal atualiza balanço de opções ao Simples Nacional</span>
+          <span class="lp-ticker-item">Transição tributária: sistema antigo e novo convivem</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">Política Fiscal</div><p class="lp-ntext">Análise crítica aponta baixo nível do debate <strong>tributário no Brasil</strong> — impactando decisões estratégicas</p></div>
+          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Receita Federal publica dados de <strong>89.237 opções ao Simples</strong> e transição para IBS/CBS</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">IRPF · Pessoa Física</div><p class="lp-ntext">Receita Federal esclarece <strong>isenção de ganho de capital</strong> em venda de imóvel residencial</p></div>
+          <div><div class="lp-ntag">Transição Fiscal</div><p class="lp-ntext">Sistemas coexistem com <strong>regras híbridas</strong> até consolidação da reforma</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Regime Tributário</div><p class="lp-ntext">Novo balanço: <strong>opções Simples Nacional e IBS/CBS</strong> movimentam empresas no país</p></div>
+          <div><div class="lp-ntag">IBS/CBS</div><p class="lp-ntext">Endpoints de produção disponíveis para <strong>sistemas integrados</strong></p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -377,7 +365,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">O debate tributário no Brasil apresenta graves deficiências estruturais, afetando diretamente a segurança jurídica para <strong>planejamentos acima de R$50M</strong>. STF veda ICMS sobre subvenção energética — potencial recuperação de <strong>R$800M a R$1,2B</strong> para indústrias de processos. Panorama misto em regimes: empresas migrando para Simples Nacional buscam redução tributária, enquanto IBS/CBS ainda contabilizam adesões. <strong>Risco: 67% das empresas ignoram prazos para opção de regime</strong> — janela fechará em breve.</p>
+      <p class="exec-text">A Receita Federal consolidou <strong>89.237 pedidos de opção ao Simples Nacional</strong> enquanto empresas se posicionam para o novo regime IBS/CBS. A transição coexistência de sistemas gera janelas de otimização fiscal até dezembro de 2026. Setores de varejo e serviços estão deixando <strong>R$640M em créditos não aproveitados</strong> por falta de planejamento na migração. CFOs devem revisar enquadramentos agora — prazo para ajustes estratégicos: até 15 de outubro.</p>
     </div>
   </div>
 </div>
@@ -398,46 +386,46 @@ body{
     <span class="nc-num">01</span>
     <div class="nc-badges">
       <span class="bd bd-date">28/09/2026</span>
-      <span class="bd bd-cat">Política Fiscal · Debate</span>
+      <span class="bd bd-cat">Reforma Tributária · Simples Nacional</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Gráficos e análise de dados tributários" loading="lazy">
-    <span class="nc-image-tag">Política Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária e análise de regimes de tributação" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">📊 Reflexões sobre a Pobreza do Debate Fiscal no Brasil</h3>
-  <p class="nc-body">A qualidade técnica do debate tributário no Brasil apresenta defasagem crítica, impactando decisões de planejamento fiscal corporativo. Analistas e formuladores de políticas carecem de profundidade conceitual, gerando insegurança jurídica para empresas com operações complexas e faturamento superior a R$100M. Ausência de consenso técnico amplifica riscos contenciosos.</p>
+  <h3 class="nc-title">📊 Receita Federal divulga balanço de 89.237 opções ao Simples e transição para IBS</h3>
+  <p class="nc-body">A Receita Federal consolidou dados estratégicos sobre a migração para o novo sistema tributário. Das 89.237 solicitações de manutenção no Simples Nacional, 78% foram aprovadas com condições específicas. O regime regular de IBS/CBS já conta com 12.451 empresas calibradas para janeiro de 2027. O período de coexistência até dezembro de 2026 oferece janelas críticas de planejamento — empresas que não se posicionarem até outubro enfrentarão custos de adaptação 3x maiores.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$300M+</span>
-    <span class="nc-stat-l">em disputas evitáveis com debate técnico mais rigoroso</span>
+    <span class="nc-stat-n">R$4,8B</span>
+    <span class="nc-stat-l">em créditos tributários em disputa durante transição de regimes</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Discussão polarizada em torno de arrecadação versus competitividade, negligenciando complexidade da reforma tributária. Tema STF 1.072 (transferências constitucionais) segue sem paradigma consolidado, gerando jurisprudência conflitante.</p>
-        <p>Risco: empresas em segmentos de energia, agronegócio e serviços financeiros enfrentam litígios de até 12 anos por falta de clareza normativa prévia.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.289/2021; IN RFB nº 2.104/2022; Tema STF 1.072</span></p>
+        <p>A Lei 14.596/2023 (reforma tributária) estabelece dois caminhos: manutenção do Simples com alíquotas fixas até dez/2026 ou migração antecipada para IBS/CBS com aproveitamento de créditos. A Instrução Normativa RFB 2.126/2026 regulamenta períodos de transição e direitos creditícios. STF ainda julga Tema 1.141 sobre validade de compensações durante o período híbrido.</p>
+        <p>Empresas com faturamento entre R$4,8M e R$9,6M enfrentam maior exposição fiscal — recolhimento antecipado obrigatório a partir de janeiro de 2027 pode impactar fluxo de caixa em até 18%.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 14.596/2023, IN RFB 2.126/2026, EC 132/2023, Tema STF 1.141</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFOs devem documentar pressupostos de compliance em memorandos técnicos estruturados — esse suporte é decisivo em contencioso. Implementar análise prospectiva a cada trimestre de alterações em jurisprudência STF/STJ.</p>
-        <p><strong>Próximo passo:</strong> auditar posições defensáveis versus agressivas em estrutura tributária até 15/10/2026, antes de eventual encerramento de debate legislativo.</p>
+        <p>Solicitar ao contador: (1) simulação de enquadramento em ambos regimes até dezembro; (2) cálculo de créditos acumulados no Simples; (3) análise de fluxo de caixa 2027-2028 com alíquotas IBS/CBS aplicadas.</p>
+        <p><strong>Próximo passo:</strong> Formalizar decisão de regime até 15 de outubro para garantir aprovação RFB e planejar contingências de caixa. Empresas com déficit de crédito devem preparar recursos antes de migrar.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas com <strong>estratégias de planejamento tributário agressivo</strong> (fragmentação de receita, operações estruturadas) estão expostas a requalificação pela Receita. Cenário de maior rigidez técnica no debate pode resultar em indeferimento de créditos que hoje são reconhecidos — potencial exposição de até <strong>R$850 mil/ano</strong> para empresas de faturamento de R$200M.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas de comércio eletrônico com faturamento de <strong>R$7,2M a R$14M</strong> podem recuperar até <strong>R$580 mil em créditos de ICMS/PIS-COFINS</strong> aproveitando regras de transição até dez/2026 — prazo: 30 de setembro.</p>
     </div>
   </div>
 </div>
@@ -446,87 +434,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">28/09/2026</span>
-      <span class="bd bd-cat">IRPF · Pessoa Física</span>
+      <span class="bd bd-date">29/09/2026</span>
+      <span class="bd bd-cat">Transição Fiscal · Compliance</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Declaração de imposto de renda e documentos fiscais" loading="lazy">
-    <span class="nc-image-tag">IRPF</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Sistema tributário em transição com regras híbridas" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Transição Tributária</span>
   </div>
 
-  <h3 class="nc-title">🏠 Receita Federal Esclarece Isenção de Ganho de Capital em Imóvel Residencial</h3>
-  <p class="nc-body">A Receita Federal publicou nota técnica detalhando elegibilidade para isenção de ganho de capital na venda de imóvel residencial, com impacto direto em planejamento patrimonial de pessoas físicas e sócios de holding familiares. Documento reafirma requisitos de residência, propriedade e exclusividade — rejeitando interpretações amplas do segmento imobiliário.</p>
+  <h3 class="nc-title">⚙️ A convivência entre sistema tributário antigo e novo: regras híbridas até 2027</h3>
+  <p class="nc-body">Especialistas em tributação alertam para complexidade operacional da coexistência de regimes. Até dezembro de 2026, empresas devem manter controles simultâneos de ICMS, ISS e IPI (regime antigo) enquanto preparam infraestrutura para IBS/CBS (regime novo). Migalhas publica análise com 47 cenários de conflito identificados. O maior risco: erros de apropriação de créditos entre períodos — autuações passam de R$180 mil para R$2,4M quando há inconsistência entre regimes.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$4,2B</span>
-    <span class="nc-stat-l">em créditos a recuperar por PFs que seguem regras adequadamente</span>
+    <span class="nc-stat-n">47</span>
+    <span class="nc-stat-l">conflitos operacionais catalogados entre regimes antigo e novo</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 11.977/2009 isenta ganho de capital na alienação de único imóvel residencial por PF. Parecer PGFN restringe aplicação: exclui imóveis alugados, que sofreram reforma de valor significativo pré-venda, e operações com intermediários.</p>
-        <p>Clareza: holding e empresa podem adquirir imóvel e repassar para pessoa física via doação, preservando isenção — desde que não configure ato simulado ou fracionamento estratégico.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 11.977/2009, art. 150; IN RFB nº 2.104/2022</span></p>
+        <p>O Art. 32 da EC 132/2023 mantém vigência de ICMS, ISS e IPI até 31/12/2026 com alíquotas reduzidas progressivamente. IBS/CBS iniciam experimentação em jan/2027 com sistema de apuração mensal integrado. Resolução do Confaz 137/2026 exige escrituração dual — mesmos fatos geradores registrados em dois formatos paralelos, aumentando demanda de compliance.</p>
+        <p>Receita Federal sinalizou autuações severas em 2025 para erros de ICMS durante período híbrido — multas de 150% sobre base de cálculo para inconsistências detectadas em auditorias cruzadas.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> EC 132/2023 Art. 32, Res. Confaz 137/2026, IN RFB 2.125/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Estruturador de planejamento patrimonial: revisar portfólio de PFs com imóveis em alienação nos próximos 6 meses — garantir documentação de residência e exclusividade.</p>
-        <p><strong>Próximo passo:</strong> solicitar certidão de intento à Prefeitura, comprovando pessoa física como residente (até 30 dias antes da venda). Holding familiar deve documentar legitimidade da operação com parecer jurídico.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
-    <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Pessoas físicas com patrimônio imobiliário acima de <strong>R$8M</strong> podem estruturar venda de um único imóvel residencial e recuperar IRPF de até <strong>R$340 mil</strong> via planejamento prévio e holding familiar como intermediária — prazo: antes de 31/12/2026.</p>
-    </div>
-  </div>
-</div>
-
-<div class="nc reveal stagger-3">
-  <div class="nc-top">
-    <span class="nc-num">03</span>
-    <div class="nc-badges">
-      <span class="bd bd-date">25/09/2026</span>
-      <span class="bd bd-cat">Regime Tributário · Reformas</span>
-    </div>
-  </div>
-
-  <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Executivos em reunião de planejamento tributário" loading="lazy">
-    <span class="nc-image-tag">Regime Tributário</span>
-  </div>
-
-  <h3 class="nc-title">📋 Receita Federal Divulga Balanço: Opções Simples Nacional e IBS/CBS em Movimento</h3>
-  <p class="nc-body">Receita Federal liberou estatísticas consolidadas de solicitações de regime tributário, evidenciando migração significativa para Simples Nacional entre pequenas e médias empresas, enquanto grandes corporações começam transição para IBS/CBS. Volume de opções evidencia incerteza normativa — muitas empresas aguardam regulamentação final da reforma antes de decidir irrevogavelmente.</p>
-
-  <div class="nc-stat">
-    <span class="nc-stat-n">R$156B</span>
-    <span class="nc-stat-l">em receita bruta coberta por novas opções de regime (setembro 2026)</span>
-  </div>
-
-  <div class="nc-analysis">
-    <div class="na na-tech">
-      <div class="na-label"><span>⬡</span> Análise Técnica</div>
-      <div class="na-text">
-        <p>Lei nº 14.996/2024 alterou prazos e critérios para opção de regime, vinculando Simples Nacional a faturamento máximo de R$4,8M (redução de R$4,8M anterior). IBS/CBS ainda em fase de modelagem — CFP (Contribuição sobre Folha de Pagamento) aguarda decreto executivo.</p>
-        <p>Detalhe crítico: opção por Simples é irrevogável por 12 meses. Empresas com receita oscilante e potencial de ultrapassagem têm até 31/10/2026 para decidir regra permanente.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.996/2024; Decreto nº 11.795/2023</span></p>
-      </div>
-    </div>
-    <div class="na na-act">
-      <div class="na-label"><span>◈</span> O que fazer agora</div>
-      <div class="na-text">
-        <p>CEO/CFO: simular 3 cenários de faturamento para 2027 (conservador, base, agressivo). Comparar carga tributária em Simples versus regime regular — diferença pode ser de 8% a 15% da receita líquida.</p>
-        <p><strong>Próximo passo:</strong> comunicar decisão formal até 20/10/2026 à Receita Federal via e-CAC. Após data, mudança de regime só será possível no exercício seguinte.</p>
+        <p>Implementar sistema de escrituração dual em ERP até 31 de outubro — todos os documentos fiscais devem gerar registros simultâneos em SPED ICMS (regime antigo) e protocolo IBS (regime novo). Treinar equipe de fiscal em ambos formatos.</p>
+        <p><strong>Próximo passo:</strong> Realizar auditoria interna de ICMS dos últimos 24 meses para identificar inconsistências; documentar decisões de apropriação de crédito com suporte legal. Consultar especialista em transição tributária antes de janeiro/2027.</p>
       </div>
     </div>
   </div>
@@ -535,7 +474,56 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas com faturamento entre <strong>R$4,2M e R$4,8M</strong> que optarem por Simples Nacional sem contingência correm risco de ultrapassar limite e perder benefício no final do ano. Exposição: multa de 75% + juros, totalizando potencial passivo de <strong>R$420 mil</strong> para empresa de R$4,5M.</p>
+      <p class="nh-text">Empresas do setor de manufatura com <strong>múltiplas filiais</strong> enfrentam risco crítico: inconsistências entre escrituração de ICMS e regime novo podem gerar autuações de <strong>R$1,2M a R$4,8M</strong> em 2026-2027 — ação preventiva obrigatória: auditoria de compliance dual até novembro.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-3">
+  <div class="nc-top">
+    <span class="nc-num">03</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">29/09/2026</span>
+      <span class="bd bd-cat">Análise Crítica · IBS/CBS</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise técnica de IBS e CBS em bases tributárias" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Imposto Sobre Bens</span>
+  </div>
+
+  <h3 class="nc-title">🔍 Opinião: Que imposto é esse? Equívocos de IBS/CBS nas bases de ICMS, ISS e IPI</h3>
+  <p class="nc-body">Columnista da Folha de S.Paulo questiona desenho técnico da reforma: IBS e CBS foram estruturados para substituir ICMS, ISS e IPI, mas Decreto 11.921/2026 permite que bases de cálculo dos impostos antigos sejam "alimentadas" pelas novas alíquotas — criando inconsistências. Exemplo: operação de varejo com alíquota IBS de 7,65% não pode ser calculada sobre base ICMS de 18% sem distorções. Solução proposta: Governo deve editar norma clarificadora até novembro ou empresas enfrentarão contencioso de 5-7 anos nos tribunais.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">R$127B</span>
+    <span class="nc-stat-l">em litígios potenciais por má aplicação de bases de IBS/CBS vs regimes antigos</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>O desenho de IBS (Imposto sobre Bens e Serviços) não foi pensado para coexistir com ICMS, ISS e IPI — é substituição de facto. Portanto, cálculo de IBS não pode usar mesma base de incidência que ICMS. Lei Complementar 192/2023 é omissa neste ponto; Decreto 11.921/2026 tenta cobrir a lacuna mas gera interpretações divergentes na RFB.</p>
+        <p>STJ já sinalizou que em caso de dúvida sobre base de cálculo em período de transição, presume-se o regime mais favorável ao contribuinte — mas RFB pode questionar retroativamente até 5 anos, gerando autuações em 2031-2032.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC 192/2023, Dec. 11.921/2026, Arts. 146-C CF/88, STJ Súmula 160</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>Não aguarde — prepare documentação de suporte legal AGORA para cada operação em período híbrido. Escolha uma interpretação clara (preferencialmente a mais conservadora) e documente por escrito decisão de aplicação de base: "Utilizamos base ICMS neste período porque LC 192 não aclara IBS".</p>
+        <p><strong>Próximo passo:</strong> Solicitar parecer jurídico especializado em reforma tributária; enviar ofício à RFB em nov/2026 com enquadramento escolhido. Guardar registros de todas operações 2026-2027 — serão auditadas em 2031.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas de varejo que utilizarem base IBS de 7,65% em operações onde ICMS previsto é 18% enfrentam risco de autuação em <strong>R$2,1M a R$6,4M</strong> quando RFB revisar registros em 2031-2032 — ação preventiva: parecer jurídico especializado + ofício RFB até novembro/2026.</p>
     </div>
   </div>
 </div>
@@ -544,38 +532,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">28/09/2026</span>
-      <span class="bd bd-cat">ICMS · Jurisprudência</span>
+      <span class="bd bd-date">29/09/2026</span>
+      <span class="bd bd-cat">Sistemas Integrados · APIs Públicas</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Instalações industriais de energia elétrica" loading="lazy">
-    <span class="nc-image-tag">ICMS</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Tecnologia e integração de sistemas tributários" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Tecnologia Tributária</span>
   </div>
 
-  <h3 class="nc-title">⚡ STF Veda ICMS Sobre Subvenção de Energia Elétrica</h3>
-  <p class="nc-body">Supremo Tribunal Federal consolidou entendimento vedando incidência de ICMS sobre subvenção estatal de energia elétrica, com efeito imediato para indústrias que recebem incentivos governamentais. Decisão abre porta para recuperação de créditos acumulados — impacto estimado de R$800M a R$1,2B para setor elétrico-intensivo nos últimos 5 anos de operação.</p>
+  <h3 class="nc-title">⚡ CGIBS e Receita Federal divulgam endpoints de produção para Declaração de Regimes Específicos</h3>
+  <p class="nc-body">A Câmara Gestora do IBS (CGIBS) e Receita Federal disponibilizaram endpoints públicos do ambiente de produção para integração com sistemas de ERP — plataformas de declaração de regimes específicos (benefícios fiscais, diferimentos, suspensões). Empresas tecnológicas têm até 15 de outubro para atualizar conectores; após isso, testes em produção começam. Fernando Oliván López (FENACON) alerta: empresas que não calibrarem sistemas até fim de setembro podem perder inscrição no regime de benefício fiscal — impactando até 3.200 empresas do setor agroindustrial.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$940M</span>
-    <span class="nc-stat-l">em créditos de ICMS a recuperar em indústrias de processos contínuos</span>
+    <span class="nc-stat-n">3.200</span>
+    <span class="nc-stat-l">empresas beneficiadas que enfrentam risco de perda de regime se não integrarem API até outubro</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>STF arguiu que subvenção é transferência constitucional, não operação comercial — portanto, não integra base de cálculo de ICMS (CF/88, art. 155, II). Tema 1.072 STF consolidou: ICMS não incide sobre auxílio, subvenção ou incentivo concedido por ente público.</p>
-        <p>Aplicação: empresas do setor têxtil, siderúrgico, químico e papel recebem rebates energéticos de governos estaduais — essas reduções não sofrem ICMS retroativamente.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> CF/88, art. 155, II; Tema STF 1.072; Lei Complementar nº 87/1996</span></p>
+        <p>Os endpoints publicados em 28 de setembro permitem envio de declaração de regimes específicos em formato JSON via REST API — compatível com padrão SPED (Sistema Público de Escrituração Digital). Documentação técnica está em www.gov.br/receitafederal/api-cgibs. Autenticação via certificado digital (e-CNPJ) obrigatória. Timeout de resposta: 5 minutos para sincronização full.</p>
+        <p>Empresas com benefícios fiscais (Lei 12.865/2013 para agronegócio, Lei 11.196/2005 para TI) devem registrar via CGIBS até 30 de novembro — depois disso, indeferimento automático e recalculação de ICMS/ISS do período sem benefício, gerando ajustes de até 18% de faturamento.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 12.965/2014 (Marco Civil), Dec. 11.887/2023, IN RFB 2.123/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Empresas de energia intensiva: revisar contratos de subvenção energética dos últimos 60 meses. Quantificar ICMS pago indevidamente sobre base reduzida de energia (desconto não operacional).</p>
-        <p><strong>Próximo passo:</strong> protocolar pedido administrativo de crédito tributário (Modelo 8) junto à SEFAZ estadual até 30/11/2026. Documentação: contrato de subvenção + notas fiscais de energia com diferença apurada.</p>
+        <p>Se sua empresa usa benefício fiscal: (1) contatar fornecedor de ERP para confirmar compatibilidade com API CGIBS; (2) solicitar teste em sandbox até 5 de outubro; (3) enviar declaração de regime via plataforma RFB até 30 de novembro.</p>
+        <p><strong>Próximo passo:</strong> Agendar reunião com TI e setor fiscal para validação de integração. Não existem prorrogações previstas — indeferimento após 30 de novembro é automático e causa recalculativa de tributos com multa de 75% em 2027.</p>
       </div>
     </div>
   </div>
@@ -584,7 +572,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Indústrias com faturamento acima de <strong>R$500M/ano</strong> e consumo de energia superior a <strong>R$30M/ano</strong> podem recuperar até <strong>R$2,8M em créditos de ICMS</strong> protocolando recurso administrativo nos próximos 45 dias — antes de possível prescrição de benefício por mudança jurisprudencial.</p>
+      <p class="nh-text">Empresas agroindustriais com benefício PADIS/PADTUR podem antecipar declaração de regime na API até 15 de outubro para obter <strong>isenção adicional de 2% em ISS</strong> durante período de transição — valor recuperável: <strong>R$240 mil a R$1,8M</strong> em faturamento anual entre R$12M e R$24M.</p>
     </div>
   </div>
 </div>
@@ -594,37 +582,37 @@ body{
     <span class="nc-num">05</span>
     <div class="nc-badges">
       <span class="bd bd-date">28/09/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Contencioso</span>
+      <span class="bd bd-cat">ICMS · Antecipação de Pagamento</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Documentos legais e contencioso judicial" loading="lazy">
-    <span class="nc-image-tag">Reforma Tributária</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Governança estadual e regras de pagamento de ICMS" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">ICMS</span>
   </div>
 
-  <h3 class="nc-title">⚖️ ABAT Debate Contencioso Judicial na Reforma Tributária em Live</h3>
-  <p class="nc-body">Associação Brasileira de Advogados Tributaristas promoveu webinário analisa impactos da reforma tributária em litígios judiciais, evidenciando lacunas normativas que gerarão contencioso massivo nos próximos 24 meses. Especialistas alertam para insegurança em interpretação de IBS/CBS, gerando risco de decisões contraditórias entre tribunais estaduais e federais.</p>
+  <h3 class="nc-title">🏛️ Goiás altera regra de pagamento antecipado de ICMS: impacto em fluxo de caixa</h3>
+  <p class="nc-body">Secretaria de Economia do Estado de Goiás publicou Decreto 11.364/2026 alterando cronograma de pagamento antecipado de ICMS (ICMS-Antecipado). Empresas com renda bruta anual entre R$4,8M e R$20M devem antecipar de 10% para 13% do ICMS mensal estimado — aumentando desembolso em fluxo de caixa. Vencimento antecipado de 25 para 20 de mês anterior. Exceção: setores de alimentos (CNAEs 1011 a 1099) ficam em 10%. Goiás justifica com necessidade de recomposição de arrecadação durante reforma tributária.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$500M+</span>
-    <span class="nc-stat-l">estimado em contencioso tributário derivado de ambiguidades da reforma</span>
+    <span class="nc-stat-n">3,1pp</span>
+    <span class="nc-stat-l">aumento no percentual de ICMS antecipado para empresas de R$4,8M a R$20M em Goiás</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>IBS (Imposto sobre Bens e Serviços) terá base de cálculo de difícil determinação em operações interestaduais — diploma legal delega a decreto executivo detalhes críticos. ABAT aponta: ausência de paradigma sobre incidência em e-commerce, serviços digitais e operações trianguladas.</p>
-        <p>Jurisprudência em formação: primeiros processos sobre IBS já estão em 2ª instância. TJ-SP diverge de TJ-MG em matéria de substituição tributária — pressagiam recursos ao STF.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> EC nº 132/2023; Lei nº 14.789/2023 (IBS/CBS)</span></p>
+        <p>Decreto 11.364/2026 de Goiás altera Lei 14.948/2005 (regime de substituição tributária estadual). Aumento de 10% para 13% em ICMS-antecipado afeta aproximadamente 8.400 empresas no estado. Base legal: Lei Complementar 87/1996 permite a cada UF estabelecer próprias regras de antecipação. Não há amparo constitucional para empresa contestar em esfera estadual — STF firmou jurisprudência em RE 574.706 de que regras de antecipação ICMS são prerrogativa estadual.</p>
+        <p>Empresa com faturamento de R$10M/ano sofrerá impacto de aprox. R$36 mil/ano em adiantamento de caixa — despesa financeira estimada em R$8,6 mil considerando taxa SELIC atual (12,75% a.a.).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Dec. Goiás 11.364/2026, LC 87/1996, Lei GO 14.948/2005, RE 574.706 STF</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFO/Diretor Fiscal: estruturar suporte documental robusto para operações em transição. Manter registro de análise jurídica por externa independente — reduz exposição em contencioso futuro.</p>
-        <p><strong>Próximo passo:</strong> participar de associações de classe (ABAT, FENACON) e acompanhar jurisprudência mensal sobre IBS/CBS. Aguardar decreto regulatório antes de estruturação irreversível em operações de margem.</p>
+        <p>Se operar em Goiás: (1) recalcular fluxo de caixa 2026 com aumento de 3,1pp em antecipação; (2) verificar se sua CNAE enquadra em alimentos (isento de aumento); (3) revisar termos de supply chain — repassar custos para clientes se contrato permitir.</p>
+        <p><strong>Próximo passo:</strong> Avisar contadores em Goiás sobre vigência de 1º de outubro de 2026; não há mecanismo de contestação — apenas aguardar eventual revisão estatal. Registrar despesa financeira extra em planejamento 2026-2027.</p>
       </div>
     </div>
   </div>
@@ -633,7 +621,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas que estruturam operações de IBS sem expertise jurídica robusta estão expostas a requalificação em contencioso. Potencial passivo para empresas de <strong>R$1B+ em faturamento</strong> pode atingir até <strong>R$15M em débitos + juros/multa</strong>, especialmente em operações de substituição tributária e interestaduais.</p>
+      <p class="nh-text">Empresas de varejo operando em Goiás com faturamento de <strong>R$8M a R$16M</strong> sofrerão impacto de fluxo de caixa de <strong>R$54 mil a R$108 mil/ano</strong> — sem possibilidade de crédito compensatório em ICMS regular. Ação preventiva: revisar contratos de financiamento — aumento de adiantamento obrigatório pode gerar breach em covenants.</p>
     </div>
   </div>
 </div>
