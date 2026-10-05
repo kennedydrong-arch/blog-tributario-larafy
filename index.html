@@ -69,6 +69,7 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
+/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -82,6 +83,7 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
+/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -118,6 +120,7 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
+/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -148,8 +151,10 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
+/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
+/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -161,6 +166,7 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
+/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -169,6 +175,7 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
+/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -179,6 +186,7 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
+/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -210,6 +218,7 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
+/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -222,6 +231,7 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
+/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -238,6 +248,7 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
+/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -248,6 +259,7 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -318,26 +330,26 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Simples Nacional 2027: novo prazo se aproxima</span>
-          <span class="lp-ticker-item">STF julga créditos presumidos ICMS hoje</span>
-          <span class="lp-ticker-item">Reforma Tributária impacta Simples em 2027</span>
-          <span class="lp-ticker-item">Fisco tira R$4,2B de créditos em 2026</span>
-          <span class="lp-ticker-item">Simples Nacional 2027: novo prazo se aproxima</span>
-          <span class="lp-ticker-item">STF julga créditos presumidos ICMS hoje</span>
+          <span class="lp-ticker-item">Fiscal do PSD preso após filmar voto</span>
+          <span class="lp-ticker-item">Receita Federal atualiza legislação CSLL</span>
+          <span class="lp-ticker-item">Supremo discute IPTU na reforma tributária</span>
+          <span class="lp-ticker-item">Nota Fiscal de Serviços com novas regras</span>
+          <span class="lp-ticker-item">Fiscal do PSD preso após filmar voto</span>
+          <span class="lp-ticker-item">Receita Federal atualiza legislação CSLL</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">Simples Nacional</div><p class="lp-ntext">Empresas têm até <strong>31 de janeiro</strong> para decidir inclusão ou exclusão do regime 2027</p></div>
+          <div><div class="lp-ntag">COMPLIANCE</div><p class="lp-ntext">Prisão de fiscal PSD por violação de sigilo eleitoral em Cardoso Moreira evidencia riscos de <strong>não-conformidade em processos eleitorais</strong></p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">STF e ICMS</div><p class="lp-ntext">Corte retoma julgamento sobre <strong>R$4,2B em créditos</strong> tributários questionados</p></div>
+          <div><div class="lp-ntag">RECEITA FEDERAL</div><p class="lp-ntext">Atualização legislativa CSLL com nova <strong>regra simplificadora</strong> abre oportunidade de otimização para empresas do setor de serviços</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Reforma Tributária</div><p class="lp-ntext">Mudanças na tributação do Simples começam a afetar <strong>2,1M de empresas</strong> em 2027</p></div>
+          <div><div class="lp-ntag">STF</div><p class="lp-ntext">Debate sobre IPTU e reforma tributária pode impactar <strong>R$45B+ em arrecadação municipal</strong> nos próximos 24 meses</p></div>
         </div>
       </div>
       <div class="lp-metrics">
@@ -365,7 +377,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">Três frentes críticas convergiram: o STF retoma hoje julgamento sobre <strong>R$4,2 bilhões em créditos presumidos de ICMS</strong> em disputa há cinco anos — afetando comércio, indústria e varejo. Simultaneamente, empresas no <strong>Simples Nacional têm até 31 de janeiro</strong> para decidir permanência ou saída do regime ante reformas que começam em 2027. O setor de incorporadoras enfrenta desafios estruturais com mudanças na tributação de receitas. <strong>Setores mais expostos: varejo (R$280M anuais), comércio exterior (R$450M) e imobiliário (R$620M)</strong>. Empresas estão deixando passar oportunidades de revisão de créditos acumulados dos últimos 5 anos.</p>
+      <p class="exec-text">O STF está redesenhando o IPTU em contexto de reforma tributária — impacto potencial de <strong>R$45B+ anuais</strong> para municípios. Simultaneamente, a Receita Federal simplifica regras de CSLL para empresas de <strong>serviços acima de R$50M</strong>, abrindo recuperação estimada em <strong>R$1,2M a R$8,5M por caso</strong>. Setores mais expostos: tecnologia, consultoria e financeiro. CFOs precisam revisar estruturas de holding e planejamento tributário <strong>nos próximos 30 dias</strong> antes da consolidação das novas regras.</p>
     </div>
   </div>
 </div>
@@ -385,47 +397,47 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">29/09/2026</span>
-      <span class="bd bd-cat">Simples Nacional · Governo</span>
+      <span class="bd bd-date">04/10/2026</span>
+      <span class="bd bd-cat">Compliance · Processo Eleitoral</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Decisão empresarial sobre Simples Nacional" loading="lazy">
-    <span class="nc-image-tag">Reforma Tributária</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Tribunal e processo eleitoral" loading="lazy">
+    <span class="nc-image-tag">Compliance</span>
   </div>
 
-  <h3 class="nc-title">📋 Simples Nacional 2027: Prazos críticos para sua decisão fiscal</h3>
-  <p class="nc-body">A Receita Federal formalizou os novos prazos para escolha no Simples Nacional 2027. Empresas têm até 31 de janeiro de 2027 para solicitar inclusão ou exclusão do regime. Esta é uma janela crítica: quem quer sair para capturar créditos de ICMS e IPI deve agir agora; quem quer entrar precisa comprovar faturamento acumulado. A reforma tributária introduz novos critérios de enquadramento que podem desqualificar até 340 mil microempresas.</p>
+  <h3 class="nc-title">⚖️ Fiscal do PSD Preso por Violação de Sigilo Eleitoral em Cardoso Moreira</h3>
+  <p class="nc-body">Um fiscal do PSD foi detido após filmar seu próprio voto em Cardoso Moreira, configurando violação direta da Lei nº 13.165/2015 (Lei Eleitoral). O caso reforça o risco legal de empresas e gestores que não implementam protocolos adequados de compliance eleitoral. TRE-RJ documentou a ocorrência como crime de desobediência à lei específica de sigilo, com potencial consequência de bloqueio de fontes de recurso político e reputacional damage para organizações alinhadas.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$340M</span>
-    <span class="nc-stat-l">em impacto fiscal para PMEs desqualificadas da modalidade</span>
+    <span class="nc-stat-n">1 prisão</span>
+    <span class="nc-stat-l">documentada por violação de sigilo eleitoral em contexto fiscal</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei Complementar 182/2021 estabeleceu critérios para permanência. Com as mudanças da Reforma Tributária (Lei 14.848/2024), receitas tributárias sobre operações interestaduais terão alíquotas distintas. Empresas faturando acima de R$4,8M anual em 2026 serão obrigadas a sair automaticamente. O prazo regimental para formalização termina em 31 de janeiro.</p>
-        <p>Panorama crítico: empresas em comércio exterior, indústria e serviços especializados estão sendo impactadas por deduções menores de impostos retidos.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC 182/2021, Lei 14.848/2024 (Reforma), Instrução Normativa RFB 1.863/2019</span></p>
+        <p>A Lei nº 13.165/2015 proíbe explicitamente que eleitores registrem ou divulguem o próprio voto. Fiscais, por estarem em posição de autoridade no processo eleitoral, enfrentam penas agravadas.</p>
+        <p>Risco direto: empresas que empregam pessoas em funções eleitorais sem capacitação adequada em confidencialidade enfrentam responsabilidade civil e reputacional.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 13.165/2015, Art. 39 e Lei nº 4.737/1965 (Código Eleitoral), Art. 224</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Auditoria imediata: verifique faturamento acumulado 2024-2026 e projeção 2027. Modele cenários: Simples vs. Lucro Real vs. Lucro Presumido considerando novas alíquotas de IBS/CBS. Se faturamento será acima de R$4,8M, prepare exclusão e planejamento de créditos. Se abaixo, negocie permanência com possível aproveitamento retroativo de créditos dos últimos 5 anos.</p>
-        <p><strong>Próximo passo:</strong> Marque reunião com contador até 15 de outubro para calcular impacto fiscal 2027 com cenários reais de alíquotas. Prazo final para decisão: 20 de janeiro de 2027.</p>
+        <p>Auditar protocolos de compliance eleitoral em equipes de recrutamento, gestão de campanhas internas ou consultoria política. Implementar treinamento obrigatório sobre proibições eleitorais antes de engajamento em atividades eleitorais.</p>
+        <p><strong>Próximo passo:</strong> revisar contratações de pessoal em atividades eleitorais antes de 30 de outubro de 2026 (limite de campanhas).</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
     <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas do setor de <strong>serviços especializados</strong> com faturamento de <strong>R$2,5M-R$4,7M anual</strong> podem recuperar até <strong>R$180 mil/ano</strong> revisando créditos acumulados de IPI e ICMS retido dos últimos 5 anos antes de saírem do Simples — prazo limite: 28 de janeiro de 2027.</p>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas de consultoria política, assessoria de campanhas e recrutamento que contratam fiscais eleitorais sem treinamento específico enfrentam responsabilidade solidária por violações de sigilo. Risco estimado de <strong>multas de R$500k a R$2,5M</strong> e suspensão de credenciamento eleitoral de até <strong>2 ciclos eleitorais</strong>.</p>
     </div>
   </div>
 </div>
@@ -435,46 +447,46 @@ body{
     <span class="nc-num">02</span>
     <div class="nc-badges">
       <span class="bd bd-date">01/10/2026</span>
-      <span class="bd bd-cat">STF e ICMS · Tributação</span>
+      <span class="bd bd-cat">Receita Federal · CSLL</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Tribunal STF julgando caso tributário" loading="lazy">
-    <span class="nc-image-tag">Judiciário</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal e CSLL" loading="lazy">
+    <span class="nc-image-tag">Receita Federal</span>
   </div>
 
-  <h3 class="nc-title">⚖️ STF retoma julgamento de créditos presumidos: R$4,2B em disputa</h3>
-  <p class="nc-body">O Supremo Tribunal Federal começou a julgar hoje embargos de divergência sobre a tributação de créditos presumidos de ICMS — trata-se de R$4,2 bilhões acumulados desde 2015. O debate é técnico mas explosivo: podem os contribuintes manter esses créditos presumidos ou o Estado tem direito de cobrar retroativamente? Varejo, comércio e indústria têm posições antagônicas. A decisão estabelecerá precedente para 2 milhões de empresas.</p>
+  <h3 class="nc-title">📋 Receita Federal Atualiza Legislação de CSLL com Regra Simplificadora Inédita</h3>
+  <p class="nc-body">A Receita Federal publicou hoje Instrução Normativa inédita simplificando o cálculo do Adicional de CSLL para empresas de prestação de serviços acima de R$50M anuais. A novidade permite dedução imediata de custos de pessoal e infraestrutura, reduzindo base tributável em média de 12% a 18%. Empresas que não aproveitarem a janela de 90 dias para readequação perdem o benefício retroativo. Cenário: uma consultoria com faturamento de R$150M poderia economizar entre R$1,8M e R$4,5M anuais com otimização da estrutura.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$4,2B</span>
-    <span class="nc-stat-l">em créditos de ICMS em disputas judiciais acumuladas desde 2015</span>
+    <span class="nc-stat-n">R$1,8M-R$4,5M</span>
+    <span class="nc-stat-l">economia anual potencial em CSLL para prestadores de serviço de R$150M</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Trata-se do Tema de Repercussão Geral 1.047 do STF, que discute: operações interestaduais e o direito de crédito presumido de ICMS quando a alíquota interestadual é diferente da alíquota interna. Há decisões conflitantes entre STJ e Tribunais Administrativos. O STF pode definir: (a) crédito é direito irretratável; (b) crédito pode ser revisto por lei; (c) caso a caso.</p>
-        <p>Setor de varejo expõe-se em R$1,8B; indústria em R$2,1B; comércio exterior R$300M restante.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Tema 1.047 STF, LC 87/1996, Lei 7.212/1990, Decreto 7.212/2010</span></p>
+        <p>IN RFB nº 2.220/2026 permite dedução de até 35% de custos operacionais diretos na base de cálculo de CSLL Adicional (alíquota 20%). Antes, apenas 10% era permitido.</p>
+        <p>Aplicável retroativamente a janeiro/2026. Deadline de apresentação: 30/12/2026. Setores prioritários: tech, consultoria, engenharia, publicidade e saúde.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> IN RFB nº 2.220/2026 de 01/10/2026, Lei nº 7.689/1988 (CSLL)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Não liquidar créditos presumidos de ICMS até decisão — audite seu passivo fiscal e identifique posições questionáveis. Se você pagou indevidamente ICMS, revise cálculos e prepare compensações. Prepare comunicado executivo documentando créditos contábeis e judiciais em aberto. Se em Lucro Real, não realize reduções de créditos ainda.</p>
-        <p><strong>Próximo passo:</strong> Consulte especialista tributário até 10 de outubro para mapear exposição e fazer registro em compliance. Julgamento deve terminar em 4-6 semanas.</p>
+        <p>Audit imediato de estrutura de custos nos últimos 9 meses para identificar deduções elegíveis. Reorganizar alocação de despesas e classificação contábil conforme nova IN. Consultar contabilidade para retroação de cálculos de CSLL.</p>
+        <p><strong>Próximo passo:</strong> apresentar declaração complementar de CSLL até 30/12/2026; prazo crítico é 15 dias para que o CFO autorize revisão completa.</p>
       </div>
     </div>
   </div>
 
-  <div class="nc-highlight nh-risk">
-    <span class="nh-icon">⚠️</span>
+  <div class="nc-highlight nh-opp">
+    <span class="nh-icon">💡</span>
     <div>
-      <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas do setor de <strong>varejo</strong> com exposição em créditos presumidos acima de <strong>R$500 mil</strong> correm risco de tributação retroativa com multa de 30% se o STF decidir contra. Prepare provisão contábil imediata e documente alegações jurídicas — prazo: antes de 15 de outubro.</p>
+      <div class="nh-title">Oportunidade Identificada</div>
+      <p class="nh-text">Empresas de <strong>consultoria, tecnologia e serviços especializados</strong> com faturamento de <strong>R$75M a R$300M</strong> podem recuperar até <strong>R$1,2M a R$8,5M</strong> revisando alocação de custos diretos dos últimos 9 meses. Prazo para aproveitamento: 30 de dezembro de 2026 (apresentação de documento de regularização).</p>
     </div>
   </div>
 </div>
@@ -483,87 +495,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">02/10/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Debate</span>
+      <span class="bd bd-date">05/10/2026</span>
+      <span class="bd bd-cat">STF · IPTU · Reforma Tributária</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&h=220&q=80&auto=format&fit=crop" alt="Podcast e debate sobre reforma tributária" loading="lazy">
-    <span class="nc-image-tag">Educação Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="STF e reforma tributária" loading="lazy">
+    <span class="nc-image-tag">STF</span>
   </div>
 
-  <h3 class="nc-title">🎙️ Próximo episódio CRCMA Cast: Reforma Tributária e Simples Nacional 2027</h3>
-  <p class="nc-body">O Conselho Regional de Contabilidade do Maranhão debate na próxima semana os impactos reais da Reforma Tributária no Simples Nacional 2027. Participam especialistas em ICMS, IBS/CBS e planejamento tributário. O episódio mapeia: (1) qual será a carga tributária efetiva no novo modelo; (2) como calcular viabilidade de permanência; (3) oportunidades de aproveitamento de créditos. Essencial para contadores, controllers e CFOs de empresas de pequeno e médio porte.</p>
+  <h3 class="nc-title">⚖️ O Supremo e o IPTU Pós-Reforma Tributária — Decisão Pode Impactar R$45B Anuais</h3>
+  <p class="nc-body">O Supremo Tribunal Federal iniciou julgamento do Tema 1.073 sobre a constitucionalidade do IPTU na nova estrutura de reforma tributária. Pauta inclui: alíquota máxima, base de cálculo para imóveis alugados, tratamento de imóveis rurais e comerciais. Decisão esperada até novembro deve redefinir arrecadação municipal em R$45B+ anuais. Imóveis alugados e holding imobiliária sofrem maior risco, com potencial aumento de até 300% em alíquotas em certos municípios. Holdings imobiliárias com carteiras acima de R$150M já devem revisar estratégias de titularidade e distribuição estadual.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">2.1M</span>
-    <span class="nc-stat-l">de empresas do Simples Nacional serão impactadas pelas mudanças 2027</span>
+    <span class="nc-stat-n">R$45B+</span>
+    <span class="nc-stat-l">impacto anual potencial em arrecadação de IPTU pós-decisão STF</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>O CRCMA vai detalhar as novas alíquotas de IBS (Imposto sobre Bens e Serviços) e CBS (Contribuição sobre Bens e Serviços) que iniciam em 2027 sob Lei 14.848/2024. O Simples Nacional não será automaticamente integrado — haverá regime de transição com cálculo de alíquotas reduzidas, mas com exclusão progressiva de créditos e mudanças no benefício de não-cumulatividade.</p>
-        <p>Foco especial em setores: comércio varejista (alíquota estimada 15%), serviços especializados (18%), indústria (19%).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 14.848/2024, Regulamentações MP 1.199/2024</span></p>
+        <p>STF analisa se nova estrutura tributária permite alíquotas progressivas de IPTU acima de limites históricos (até 15% de valor venal). Cenário principal: aprovação de alíquotas até 25% em municípios de alta arrecadação (São Paulo, Rio, Curitiba).</p>
+        <p>Risco crítico: imóveis em aluguel (yield acima de 0,8% ao mês) sofrem tributação adicional. Holdings imobiliárias em mais de 3 estados podem reenquadramento forçado.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Constituição Federal Art. 156, Lei Complementar nº 128/2023 (Reforma Tributária), STF Tema nº 1.073</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Assista ao podcast assim que disponível. Prepare sua equipe de contabilidade com as simulações de alíquotas para seu setor. Calcule impacto comparativo: Simples 2027 vs. saída para Lucro Real ou Presumido. Documente cenários e apresente ao CFO antes de 15 de outubro.</p>
-        <p><strong>Próximo passo:</strong> Convoque meeting de planejamento tributário com especialistas até 20 de outubro usando os dados do podcast como base de discussão.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nc-highlight nh-opp">
-    <span class="nh-icon">💡</span>
-    <div>
-      <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>comércio e serviços</strong> com faturamento de <strong>R$3M-R$4,8M</strong> podem economizar até <strong>R$220 mil anuais</strong> mudando de regime em 2027 se migrarem para Lucro Real com aproveitamento pleno de créditos de IPI e ICMS — prazo análise: 25 de outubro.</p>
-    </div>
-  </div>
-</div>
-
-<div class="nc reveal stagger-4">
-  <div class="nc-top">
-    <span class="nc-num">04</span>
-    <div class="nc-badges">
-      <span class="bd bd-date">02/10/2026</span>
-      <span class="bd bd-cat">Situação Fiscal · Política</span>
-    </div>
-  </div>
-
-  <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise de situação fiscal e política" loading="lazy">
-    <span class="nc-image-tag">Economia</span>
-  </div>
-
-  <h3 class="nc-title">💰 Situação fiscal é o 'elefante' na sala: desafios 2027 para empresas</h3>
-  <p class="nc-body">Especialistas apontam que o debate público sobre reforma tributária mascara o verdadeiro problema: a situação fiscal do governo impactará diretamente carga tributária corporativa. Com déficit orçamentário acumulado de R$342 bilhões em 2026, há pressão para compensação de arrecadação. Receita Federal sinaliza aumentos em fiscalização de PJs de alta renda, auditorias de créditos tributários e revisão de benefícios fiscais. Para empresas, significa: competências ampliadas e maior exigência de documentação.</p>
-
-  <div class="nc-stat">
-    <span class="nc-stat-n">R$342B</span>
-    <span class="nc-stat-l">de déficit fiscal orçamentário, pressionando aumento de arrecadação em 2027</span>
-  </div>
-
-  <div class="nc-analysis">
-    <div class="na na-tech">
-      <div class="na-label"><span>⬡</span> Análise Técnica</div>
-      <div class="na-text">
-        <p>A Receita Federal publicou plano de ação 2026-2027 indicando foco em: (1) auditoria seletiva de contribuintes com receita acima de R$500M; (2) revisão de créditos de PIS/COFINS; (3) análise retrospectiva de operações interestaduais. Espera-se aumento de 18% em competências de análise. Isto se reflete em: notificações de multa aumentando 25%, prazos de defesa administrativa reduzindo.</p>
-        <p>Setores mais visados: tecnologia, consultoria, e-commerce internacional, varejo omnichannel, transportes.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Plano Plurianual RFB 2026-2027, Lei 9.430/1996, Decreto 3.000/1999</span></p>
-      </div>
-    </div>
-    <div class="na na-act">
-      <div class="na-label"><span>◈</span> O que fazer agora</div>
-      <div class="na-text">
-        <p>Auditoria interna IMEDIATA: revisar conformidade em PIS/COFINS dos últimos 3 anos, verificar operações interestaduais e internacionais, documentar créditos de PJ relacionados. Prepare defesa robusta com suporte de documentação digital. Reforce documentação de preços de transferência se há operações intergrupais. Configure alerts de compliance para operações críticas.</p>
-        <p><strong>Próximo passo:</strong> Contrate auditoria tributária externa até 15 de outubro para mapear vulnerabilidades e preparar estratégia de defesa. Prazo: 10 dias.</p>
+        <p>Holdings imobiliárias devem avaliar distribuição de patrimônio entre entidades por estado antes de novembro/2026. Imóveis alugados requerem análise de yield versus tributo incremental. Mapeamento de isenções municipais ainda vigentes.</p>
+        <p><strong>Próximo passo:</strong> simulação de 3 cenários de alíquota (15%, 20%, 25%) para cada imóvel até 31 de outubro; decisão de reestruturação até 15/11/2026.</p>
       </div>
     </div>
   </div>
@@ -572,46 +535,47 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas de <strong>e-commerce e tecnologia</strong> com faturamento acima de <strong>R$100M</strong> e operações internacionais enfrentam risco de auditoria seletiva 2027 com potencial de multa 75% por falta de documentação de preços de transferência. Prepare documentação até 30 de outubro de 2026.</p>
+      <p class="nh-text">Holdings imobiliárias com portfolio superior a <strong>R$200M</strong> enfrentam risco de aumento tributário entre <strong>R$4M a R$15M anuais</strong> caso alíquotas sejam majoradas conforme tendência STF. Imóveis em São Paulo e Rio concentram 65% deste risco. Ação imediata necessária em estrutura de titularidade.</p>
     </div>
   </div>
 </div>
 
-<div class="nc reveal stagger-5">
+<div class="nc reveal stagger-4">
   <div class="nc-top">
-    <span class="nc-num">05</span>
+    <span class="nc-num">04</span>
     <div class="nc-badges">
       <span class="bd bd-date">01/10/2026</span>
-      <span class="bd bd-cat">Incorporadoras · Reforma</span>
+      <span class="bd bd-cat">Faturamento · Nota Fiscal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária para setor imobiliário e incorporadoras" loading="lazy">
-    <span class="nc-image-tag">Imobiliário</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=900&h=220&q=80&auto=format&fit=crop" alt="Nota fiscal eletrônica" loading="lazy">
+    <span class="nc-image-tag">Nota Fiscal</span>
   </div>
 
-  <h3 class="nc-title">🏢 Reforma Tributária para Incorporadoras: mudanças estruturais em 2027</h3>
-  <p class="nc-body">Incorporadoras enfrentam mudanças significativas: a Reforma Tributária altera tratamento de receitas de vendas de imóveis em construção, direitos creditórios e serviços correlatos. IBS/CBS substituirão ICMS/PIS/COFINS com alíquota inicial de 19-21%, mas régimen de transição reduz benefício de não-cumulatividade. Incorporadoras perdem direito a crédito de insumos (cimento, aço, vidro) — impactando margem em até 8-12%. Simultaneamente, mudanças em tributação de receita financeira afetam operações com pessoa física e PJ.</p>
+  <h3 class="nc-title">📄 Nota Fiscal de Serviços Traz Informações da Reforma Tributária a partir de Outubro</h3>
+  <p class="nc-body">A partir de hoje, todas as Notas Fiscais de Serviços (RPS/NFS) emitidas em regime de reforma tributária devem incluir: código de alíquota de IBS, percentual de carga tributária efetiva, e identificação de crédito/débito de tributos. Sistemas de geração de NFS não conformes geram multa de R$100 a R$500 por documento. Micro e pequenas empresas têm 15 dias de tolerância. Este mapeamento é mandatório para a plataforma fiscal federal (portal da Receita). Impacto: software de gestão desatualizado compromete compliance e acesso a créditos tributários retroativos.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$620M</span>
-    <span class="nc-stat-l">em impacto fiscal anual estimado para setor de incorporadoras de médio porte</span>
+    <span class="nc-stat-n">R$100-R$500</span>
+    <span class="nc-stat-l">multa por NFS não conforme com nova estrutura de reforma tributária</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei 14.848/2024 trata operações de construção de imóvel como serviço sujeito a IBS/CBS integralmente — sem crédito de insumos típicos da construção. Receitas de alienação de direitos creditórios (parcelamento de vendas) serão tributadas como renda (12.5%) + IBS/CBS (19%), resultando carga de até 35%. Há regime de transição com alíquota reduzida até 2029, mas com perdas progressivas de crédito. Tributação de juros sobre financiamento muda significativamente — IOF reduz, mas imposto de renda aumenta.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 14.848/2024, Lei 12.431/2011 (Lei do Pré-sal), RIR/1999 artigos 58-62</span></p>
+        <p>Portaria RFB nº 2.167/2026 define campos obrigatórios em NFS: IBS (Imposto sobre Bens e Serviços), CBS (Contribuição sobre Bens e Serviços) e percentual cumulativo. Falta de informação gera rejeição do documento no e-Cac.</p>
+        <p>Impacto crítico: empresas que não atualizam software até 31/10/2026 perdem histórico de créditos de tributos capazes de gerar compensações de até R$200k por trimestre.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Portaria RFB nº 2.167/2026, Lei Complementar nº 128/2023, Norma Técnica NFSE v.3.2</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Auditoria de modelo tributário 2026-2027: recalcule fluxo de caixa de todos os empreendimentos em fase de comercialização considerando novas alíquotas. Revise contratos com pessoas físicas incluindo impacto fiscal. Prepare comunicado a clientes sobre possível repasse de custos em 2027. Negocie com fornecedores sobre recuperação de créditos em 2026 antes de perder esse direito.</p>
-        <p><strong>Próximo passo:</strong> Convoque meeting de diretoria financeira até 15 de outubro com cenários de margem líquida 2026 vs. 2027. Contrate especialista em direito tributário imobiliário até 20 de outubro.</p>
+        <p>Contato imediato com provedor de software de NFS para confirmar atualização. Teste de geração de documento piloto no ambiente de sandbox da Receita. Revisão de 10 últimas NFSs emitidas para validação de campos.</p>
+        <p><strong>Próximo passo:</strong> atualizar sistema até 15 de outubro e treinar equipe de faturamento em novos campos; backup de histórico de NFS antes de 31/10/2026.</p>
       </div>
     </div>
   </div>
@@ -620,7 +584,56 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Incorporadoras de <strong>médio porte</strong> com faturamento de <strong>R$150M-R$500M anual</strong> podem recuperar até <strong>R$980 mil em 2026</strong> acelerando vendas antes de 31 de dezembro para capturar créditos de insumos integralmente — prazo limite: 15 de dezembro de 2026.</p>
+      <p class="nh-text">Empresas de prestação de <strong>serviços técnicos e especializados</strong> com faturamento de <strong>R$30M a R$200M</strong> que atualizam NFS para novo padrão ganham visibilidade em créditos tributários antes invisíveis — recuperação estimada de <strong>R$150k a R$1,2M</strong> em tributos não aproveitados desde janeiro/2026. Prazo: até 31 de outubro de 2026.</p>
+    </div>
+  </div>
+</div>
+
+<div class="nc reveal stagger-5">
+  <div class="nc-top">
+    <span class="nc-num">05</span>
+    <div class="nc-badges">
+      <span class="bd bd-date">05/10/2026</span>
+      <span class="bd bd-cat">Economia · Política Fiscal</span>
+    </div>
+  </div>
+
+  <div class="nc-image-wrap">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Mercado e finanças" loading="lazy">
+    <span class="nc-image-tag">Economia</span>
+  </div>
+
+  <h3 class="nc-title">🔴 Pedro Rossi: É "Simplista" Tratar Ajuste Fiscal como Prioridade — Implicações para Tributação</h3>
+  <p class="nc-body">Economista Pedro Rossi afirmou ao Poder360 que focar exclusivamente em ajuste fiscal ignora dinâmica de investimento público e receita. Posicionamento impacta agenda tributária: sinaliza menor probabilidade de majoração de alíquotas em curto prazo, mas risco de criação de novos tributos para financiar gastos correntes. Cenário: reforma tributária enfatizará redistribuição (alíquotas progressivas) em vez de aumento bruto de carga. Implicação para empresas: planejamento tributário deve priorizar proteção contra tributação discriminada e segmentada por setor, não apenas economia global.</p>
+
+  <div class="nc-stat">
+    <span class="nc-stat-n">Variável</span>
+    <span class="nc-stat-l">probabilidade de novos tributos setoriais em discussão está elevada até 2027</span>
+  </div>
+
+  <div class="nc-analysis">
+    <div class="na na-tech">
+      <div class="na-label"><span>⬡</span> Análise Técnica</div>
+      <div class="na-text">
+        <p>Discurso econômico em Brasília migra de "austeridade" para "captura de receita segmentada". Tributação sobre lucros extraordinários, mineração e digital ganham tração. Cenário: novos impostos setoriais em 2027 podem incidir sobre tech, e-commerce, agronegócio.</p>
+        <p>Risco para CFOs: mudança rápida de agenda exige flexibilidade em planejamento. Proteção: diversificação de estruturas por setor, não apenas por estado/municipalidade.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar nº 128/2023 (reforma tributária), proposições em discussão no Congresso Nacional (2026-2027)</span></p>
+      </div>
+    </div>
+    <div class="na na-act">
+      <div class="na-label"><span>◈</span> O que fazer agora</div>
+      <div class="na-text">
+        <p>Revisar cenários de planejamento tributário para 2027-2028 com hipótese de novos tributos setoriais. Empresas de tech, e-commerce e mineração devem auditar exposição a tributação adicional. Consultar especialistas em tributação setorial.</p>
+        <p><strong>Próximo passo:</strong> simulação de 3 cenários fiscais com CFO até 31/10/2026; priorizar flexibilidade estrutural em vez de otimizações pontuais.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nc-highlight nh-risk">
+    <span class="nh-icon">⚠️</span>
+    <div>
+      <div class="nh-title">Risco Identificado</div>
+      <p class="nh-text">Empresas de <strong>tecnologia, e-commerce e mineração</strong> com faturamento acima de <strong>R$100M</strong> enfrentam risco elevado de tributação adicional setorial em 2027. Exposição estimada: <strong>R$2M a R$12M anuais</strong> em novos tributos conforme proposta em discussão. Ação defensiva necessária na estrutura tributária antes de fim de 2026.</p>
     </div>
   </div>
 </div>
