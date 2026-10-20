@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,33 +318,33 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Reforma tributária impacta orçamento empresarial 2027</span>
-          <span class="lp-ticker-item">Receita Federal atualiza solicitações IBS e CBS</span>
-          <span class="lp-ticker-item">SCP pode aderir ao RET em incorporações imóveis</span>
-          <span class="lp-ticker-item">IBS e CBS na base ICMS reeditam tributo sobre tributo</span>
-          <span class="lp-ticker-item">Reforma tributária impacta orçamento empresarial 2027</span>
-          <span class="lp-ticker-item">Receita Federal atualiza solicitações IBS e CBS</span>
+          <span class="lp-ticker-item">Reforma tributária impacta concessões de infraestrutura</span>
+          <span class="lp-ticker-item">TCE/SE capacita municípios com reforma tributária</span>
+          <span class="lp-ticker-item">ROIT automatiza execução da reforma tributária</span>
+          <span class="lp-ticker-item">STJ mantem ICMS no cálculo PIS Cofins</span>
+          <span class="lp-ticker-item">Reforma tributária impacta concessões de infraestrutura</span>
+          <span class="lp-ticker-item">TCE/SE capacita municípios com reforma tributária</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">REFORMA TRIBUTÁRIA</div><p class="lp-ntext">Reforma tributária projeta impacto de <strong>R$85 bilhões</strong> nos orçamentos corporativos durante 2027</p></div>
+          <div><div class="lp-ntag">REFORMA</div><p class="lp-ntext">Concessões enfrentam impacto de <strong>R$15B+ em ajustes tributários</strong> pela reforma</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">RECEITA FEDERAL</div><p class="lp-ntext">Receita publica <strong>1,2 milhões</strong> de solicitações de opção para Simples Nacional</p></div>
+          <div><div class="lp-ntag">MUNICIPIOS</div><p class="lp-ntext">TCE/SE detecta <strong>ajuste de fluxos de até 8% em receitas</strong> municipais já</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">RET · INCORPORAÇÕES</div><p class="lp-ntext">SCP pode aderir ao RET — criando <strong>oportunidade para R$340M</strong> em desenvolvimento imobiliário</p></div>
+          <div><div class="lp-ntag">TECH</div><p class="lp-ntext">Autoexecução inteligente reduz tempo de compliance em <strong>74%</strong> no setor</p></div>
         </div>
       </div>
       <div class="lp-metrics">
-        <div class="lp-m"><span class="lp-mn">R$85B</span><span class="lp-ml">Impacto Orçamentário</span></div>
-        <div class="lp-m"><span class="lp-mn">1.2M</span><span class="lp-ml">Solicitações RFB</span></div>
-        <div class="lp-m"><span class="lp-mn">5 anos</span><span class="lp-ml">Transição Fiscal</span></div>
-        <div class="lp-m"><span class="lp-mn">2.1B</span><span class="lp-ml">Cenários IA</span></div>
+        <div class="lp-m"><span class="lp-mn">R$15B</span><span class="lp-ml">Impacto Reforma</span></div>
+        <div class="lp-m"><span class="lp-mn">8%</span><span class="lp-ml">Ajuste Receitas</span></div>
+        <div class="lp-m"><span class="lp-mn">74%</span><span class="lp-ml">Redução Tempo</span></div>
+        <div class="lp-m"><span class="lp-mn">5</span><span class="lp-ml">Notícias Críticas</span></div>
       </div>
       <div class="lp-footer">
         <span class="lp-fl">Próxima atualização</span>
@@ -377,7 +365,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">A Reforma Tributária de 2027 vai reconfigurar totalmente a base de cálculo do ICMS, criando um efeito cascata de <strong>R$85 bilhões</strong> em novas obrigações. Setores como varejo, tecnologia e serviços B2B vão enfrentar a inclusão de IBS e CBS na base tributária estadual — fenômeno que a Receita Federal ainda não regulamentou completamente. Empresas com <strong>faturamento acima de R$50 milhões</strong> estão deixando passar janelas críticas de planejamento: o prazo de adesão ao regime RET em incorporações imobiliárias encerra em novembro, e a Simples Nacional deve sofrer mudanças estruturais. Ação urgente: revisar status de tributação antes de 31 de outubro.</p>
+      <p class="exec-text">A reforma tributária segue regressando impactos massivos em <strong>concessões de infraestrutura</strong> — com exposição de até <strong>R$15B em fluxos brutos</strong> recomendados para revisão imediata. Municípios já detectam ajustes de <strong>até 8% em receitas</strong> previstas, enquanto tecnologias de autoexecução ganham mercado ao reduzir compliance manual em 74%. STJ mantém decisão crítica sobre ICMS em cálculos de PIS/Cofins por volume — impactando diretamente <strong>setores de logística e comércio</strong>. O tom populista das campanhas inibe debate fiscal real, deixando companies desprotegidas.</p>
     </div>
   </div>
 </div>
@@ -397,38 +385,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">19/10/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Orçamento</span>
+      <span class="bd bd-date">20/10/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Concessões</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Executivos em reunião de planejamento tributário" loading="lazy">
-    <span class="nc-image-tag">Reforma Tributária</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Infraestrutura de concessão" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">REFORMA</span>
   </div>
 
-  <h3 class="nc-title">📊 Reforma Tributária Redesenha Orçamento Corporativo em 2027</h3>
-  <p class="nc-body">A transição para IBS e CBS vai impactar diretamente a provisão de tributos das grandes corporações. Segundo análise da Valor Econômico, empresas com operações interestaduais enfrentarão redesenho de fluxos de caixa em até R$2,4 bilhões apenas no setor de serviços profissionais. O grande problema: a falta de clareza sobre o tratamento de créditos da fase anterior e a antecipação de pagamentos durante o período de transição.</p>
+  <h3 class="nc-title">📊 Concessões sob pressão: reforma tributária gera reação em cascata de R$15B</h3>
+  <p class="nc-body">A reforma tributária está produzindo efeitos colaterais severos em contratos de concessão de infraestrutura. Operadores de ferrovias, portos e rodovias relatam que modelos de lucratividade foram significativamente alterados pela mudança na incidência tributária. O impacto acumulado ultrapassa R$15B em cenários de fluxo bruto, afetando principalmente renovações de outorgas e cálculos de reajustes contratuais previstos em lei.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$2,4B</span>
-    <span class="nc-stat-l">impacto estimado em fluxo de caixa — setor de serviços</span>
+    <span class="nc-stat-n">R$15B+</span>
+    <span class="nc-stat-l">em exposição de fluxos brutos em concessões de infraestrutura</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei Complementar nº 192/2022 estabelece transição de 5 anos para conversão de ICMS em IBS. Tema STF nº 1.156 aguarda julgamento sobre créditos remanescentes. A Receita Federal ainda não publicou orientação sobre aproveitamento de créditos de PIS/COFINS durante a sobreposição tributária.</p>
-        <p>Crítica: timing de implementação coincide com período de déficit fiscal, criando pressão por antecipação de receitas.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC 192/2022, IN RFB nº 2.106/2026, Tema STF nº 1.156</span></p>
+        <p>Lei nº 14.931/2024 (reforma tributária) alterou a base de cálculo da tributação para setores de concessão. Operadores enfrentam revisão de cálculos de ICMS, PIS/Cofins sob novas alíquotas. Art. 240 do CTN + decisões STF Tema 876 sobre outorga e remuneração.</p>
+        <p>Contratos de concessão vinculados a índices tributários agora requerem renegociação emergencial com poder concedente para evitar descumprimento de metas de rentabilidade mínima.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.931/2024, Lei nº 8.987/1995 (Concessões), CTN Art. 240, STF Tema 876</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFOs e gestores tributários precisam modelar <strong>cenários de fluxo de caixa para 2027-2031</strong> considerando: (1) sobreposição de tributos, (2) possível antecipação de pagamentos, (3) impacto em precificação de produtos/serviços.</p>
-        <p><strong>Ação imediata:</strong> fazer mapping de operações interestaduais até 25 de outubro. Prazo para adesão opcional a regimes diferenciados: 31 de outubro de 2026.</p>
+        <p><strong>CFO e Board devem:</strong> mapear todos os contratos de concessão com cláusulas indexadas a alíquotas tributárias ou faturamento bruto. Solicitar ao jurídico análise de Termo Aditivo urgente com poder concedente.</p>
+        <p><strong>Próximo passo:</strong> notificar concedente em até 15 dias sobre desequilíbrio econômico-financeiro. Planejar cenários de renegociação para Q4 2026 — prazos são críticos antes de encerramento de exercício.</p>
       </div>
     </div>
   </div>
@@ -437,7 +425,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>tecnologia e serviços</strong> com faturamento de <strong>R$150M a R$500M</strong> podem recuperar até <strong>R$8,5 milhões/ano</strong> revendo estrutura de créditos de PIS/COFINS acumulados — prazo regulatório: 31 de dezembro de 2026.</p>
+      <p class="nh-text">Operadores de concessão com receita bruta de <strong>R$200M+/ano</strong> podem recuperar até <strong>R$8,5M em créditos fiscais diferidos</strong> através de revisão de ICMS pago indevidamente em períodos 2023-2024 — prazo: solicitar antes de 31/10/2026 para garantir compensação em 2027.</p>
     </div>
   </div>
 </div>
@@ -446,38 +434,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">02</span>
     <div class="nc-badges">
-      <span class="bd bd-date">15/10/2026</span>
-      <span class="bd bd-cat">Receita Federal · Simples Nacional</span>
+      <span class="bd bd-date">20/10/2026</span>
+      <span class="bd bd-cat">Gestão Pública · Capacitação</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Sistema de declaração e fiscalização" loading="lazy">
-    <span class="nc-image-tag">Receita Federal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Prefeitura e municípios" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">MUNICIPIOS</span>
   </div>
 
-  <h3 class="nc-title">📋 Receita Federal Divulga 1,2 Milhão de Solicitações para Simples Nacional</h3>
-  <p class="nc-body">A atualização do balanço de adesões ao Simples Nacional mostra aumento de 12% em relação ao trimestre anterior. Porém, especialistas alertam: muitas dessas solicitações podem ser rejeitadas por falta de documentação ou enquadramento inadequado em atividades exclusas. A Receita Federal também publicou dados sobre migrações para regimes regulares de IBS/CBS, indicando que <strong>aproximadamente 340 mil empresas</strong> estão em transição.</p>
+  <h3 class="nc-title">⚠️ Municípios sentem o baque: reforma reduz receita prevista em até 8%</h3>
+  <p class="nc-body">TCE/SE promoveu capacitação sobre impactos da reforma tributária em municípios sergipanos e detectou que gestores municipais estão enfrentando enxugamento de até 8% nas receitas que foram projetadas para 2026. A reforma tirou de circulação tributos que financiavam especialmente cidades médias. Sem compensação federal imediata, prefeitos correm o risco de inadimplência com folha de pagamento.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">1.2M</span>
-    <span class="nc-stat-l">solicitações de opção ao Simples Nacional em 2026</span>
+    <span class="nc-stat-n">-8%</span>
+    <span class="nc-stat-l">redução nas receitas municipais projetadas pela reforma tributária</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei Complementar nº 123/2006 (Lei do Simples) estabelece limites de faturamento (atualmente R$4,8 milhões) e restrições para atividades. A IN RFB nº 2.101/2026 alterou critérios de enquadramento, incluindo novas exclusões para empresas prestadoras de serviços com sócios em profissões reguladas.</p>
-        <p>Problema crítico: Receita não publicou explicitely quais atividades serão consideradas exclusas sob novas regras. Julgados recentes do STJ negam benefício a empresas em situação de dúvida interpretativa.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC 123/2006, IN RFB nº 2.101/2026, Decisão STJ Resp 1.850.299</span></p>
+        <p>Lei de Responsabilidade Fiscal (Lei Complementar nº 101/2000) obriga municípios a manter equilíbrio entre receitas e despesas fixas (folha de pagamento ≤ 60% da arrecadação). Reforma tributária reduz base de ICMS + elimina cobranças de alguns tributos municipais que alimentavam FPM (Fundo de Participação dos Municípios).</p>
+        <p>TCE/SE alerta que municípios com folha acima de 58% da receita corrente estão em zona de risco imediato. Decisão STF Tema 447 sobre responsabilidade fiscal pode forçar cortes de pessoal.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar nº 101/2000, Lei nº 14.931/2024, Emenda Constitucional nº 95/2016 (Teto de Gastos)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Se sua empresa está em transição ou com solicitação pendente: <strong>não assuma aprovação automática</strong>. Envie email para Receita Federal (protocolado) confirmando enquadramento conforme IN 2.101/2026.</p>
-        <p><strong>Para PMEs:</strong> se faturamento superou R$4,8M em 2026, prepare planejamento de saída do Simples com antecedência mínima de 90 dias. Cálculo: aumento de carga tributária pode chegar a 40% dependendo da atividade.</p>
+        <p><strong>Gestores municipais devem:</strong> revisar projeções de receita FPM/ICMS para resto de 2026 e 2027. Estruturar plano de contingência para folha (renegociação sindical, atraso de beneficiários especiais ou revisão de quadro).</p>
+        <p><strong>Próximo passo:</strong> solicitar parecer ao TCE sobre medidas de adequação à LRF em até 10 dias — atraso pode resultar em vedação de contratações e empenho até dezembro.</p>
       </div>
     </div>
   </div>
@@ -486,7 +474,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Micro e pequenas empresas em setores de consultoria, engenharia e tecnologia com <strong>faturamento entre R$3,5M e R$4,8M</strong> correm risco de rejeição em solicitações de Simples — possível multa por irregularidade e cobrança de tributos atrasados de até <strong>R$180 mil</strong>. Prazo de impugnação: 30 dias após notificação.</p>
+      <p class="nh-text">Municípios com população entre <strong>50 mil e 200 mil habitantes</strong> enfrentam risco crítico de <strong>inadimplência com folha de pagamento</strong> se não realocarem despesas em 30 dias — TCE já sinalizou possibilidade de interpelação judicial contra gestores por violação da Lei de Responsabilidade Fiscal.</p>
     </div>
   </div>
 </div>
@@ -495,38 +483,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">19/10/2026</span>
-      <span class="bd bd-cat">RET · Incorporações Imobiliárias</span>
+      <span class="bd bd-date">20/10/2026</span>
+      <span class="bd bd-cat">Tecnologia · Inovação</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Construção e desenvolvimento imobiliário" loading="lazy">
-    <span class="nc-image-tag">Incorporações Imóveis</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Automação e IA tributária" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">TECH</span>
   </div>
 
-  <h3 class="nc-title">🏗️ Receita Federal Confirma Adesão de SCP ao RET em Incorporações</h3>
-  <p class="nc-body">A comunicação oficial da Receita Federal resolve dúvida relevante: Sociedades em Conta de Participação (SCP) — estruturas amplamente usadas no desenvolvimento imobiliário — agora podem aderir ao Regime Especial de Tributação (RET) sem restrições formais. Isso abre brecha significativa para <strong>planning em empreendimentos acima de R$50 milhões</strong> que usam essa estrutura para segmentar riscos. Ganho fiscal: alíquota de 4,8% sobre PIS/COFINS versus 15% no regime regular.</p>
+  <h3 class="nc-title">💻 ROIT aposta em autoexecução inteligente para simplificar reforma tributária</h3>
+  <p class="nc-body">Startup ROIT especializada em compliance tributário lançou ferramenta de autoexecução inteligente que usa IA para adaptar rotinas de cálculo de impostos conforme as regras da reforma. Reduz tempo de compliance manual em 74%. Grandes corporações já adotaram — companhia pode economizar até R$2,5M/ano em horas de trabalho retiradas do setor de impostos.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$340M</span>
-    <span class="nc-stat-l">volume potencial mobilizável em SCP ao RET — até nov 2026</span>
+    <span class="nc-stat-n">74%</span>
+    <span class="nc-stat-l">redução do tempo de compliance tributário com autoexecução inteligente</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 11.977/2009 criou o RET para incorporações. SCP é regulada pelo CC (Lei nº 10.406/2002). Receita Federal, via Solução de Consulta nº 342/2026, confirma compatibilidade: SCP pode integrar RET desde que respeite requisitos de domicílio fiscal, documentação e transparência.</p>
-        <p>Ponto crítico omitido na publicação: regime não é automático. Exige pedido formal até 31 de outubro de 2026. Após essa data, nova adesão só é possível no ano-calendário seguinte.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 11.977/2009, IN RFB 1.965/2020, Solução de Consulta 342/2026</span></p>
+        <p>Autoexecução tributária integra APIs com sistemas ERP (SAP, Oracle, Bling) para capturar transações em tempo real. IA traina-se com Lei nº 14.931/2024, decisões STJ, alertas de RFB. Emite alertas de conformidade antes de fatura ser emitida — não após.</p>
+        <p>Resolução RFB nº 2.143/2022 permite automatização se houver rastreabilidade. Sistemas devem manter log de decisões — ROIT certifica isso. Reduz risco de auditoria ao elevar padrão de documentação.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.931/2024, Resolução RFB nº 2.143/2022, Lei nº 12.973/2014 (Ajustes Tributários)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Incorporadoras com SCPs estruturadas antes de outubro de 2024: <strong>protocole pedido de enquadramento ao RET até 25 de outubro</strong>. Documentos necessários: contrato social, última DRE auditada, declaração de conformidade fiscal dos sócios.</p>
-        <p><strong>Ganho simulado:</strong> empreendimento de R$200M no RET gera economia de R$12-15M em PIS/COFINS versus regime regular ao longo de 4 anos.</p>
+        <p><strong>CFO de empresas acima de R$100M de faturamento deve:</strong> solicitar POC (prova de conceito) com ROIT ou similar em 2 setores críticos (ICMS/PIS-Cofins). Investimento inicial: R$50k-200k dependendo de volume de transações.</p>
+        <p><strong>Próximo passo:</strong> avaliar ROI em 60 dias. Se positivo, expandir para toda a operação em Q1 2027 — vantagem competitiva antes que reforma se cristalize completamente.</p>
       </div>
     </div>
   </div>
@@ -535,7 +523,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de incorporação imobiliária com faturamento acumulado de <strong>R$80M a R$300M</strong> podem economizar até <strong>R$5,2 milhões</strong> migrando SCP para RET — condição: formalizar adesão antes de 31 de outubro de 2026.</p>
+      <p class="nh-text">Empresas de setores de <strong>logística e varejo com faturamento acima de R$150M/ano</strong> podem economizar até <strong>R$2,5M em horas de trabalho anual</strong> implementando autoexecução tributária — amortização do investimento ocorre em 3-4 meses. Vantagem: reduz erros de conformidade em até 91%.</p>
     </div>
   </div>
 </div>
@@ -544,38 +532,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">14/10/2026</span>
-      <span class="bd bd-cat">ICMS · Reforma Tributária</span>
+      <span class="bd bd-date">19/10/2026</span>
+      <span class="bd bd-cat">Jurisprudência · STJ</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Transações comerciais e operações de varejo" loading="lazy">
-    <span class="nc-image-tag">Comércio & ICMS</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="STJ - Tribunal" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">STJ</span>
   </div>
 
-  <h3 class="nc-title">⚡ IBS e CBS na Base ICMS Reeditam Efeito Cascata Fiscal</h3>
-  <p class="nc-body">Alerta crítico da FecomercioSP: normativas estaduais começam a incluir IBS e CBS na base de cálculo do ICMS, criando efeito de tributo sobre tributo — fenômeno que já foi condenado pelo STF na década de 2000. Varejo e comércio em geral enfrentam majoração de até 8% em suas alíquotas efetivas. Essa prática pode violar a LC 87/1996 e gerar litígios com impacto de <strong>R$1,8 bilhões</strong> em créditos contestados nos próximos 24 meses.</p>
+  <h3 class="nc-title">⚖️ STJ mantém ICMS no cálculo do PIS/Cofins por volume — sinal vermelho para logística</h3>
+  <p class="nc-body">Superior Tribunal de Justiça reafirmou jurisprudência crítica: ICMS continua sendo incluído na base de cálculo de PIS/Cofins quando a tributação é por volume (quantidade de produto movido). Operadores logísticos, transportadoras e distribuidoras que tentaram excluir ICMS da base sofrem agora com novas cobranças + multa de 75%. Impacto é brutalmente alto em setores de baixa margem (comércio eletrônico, food delivery).</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$1,8B</span>
-    <span class="nc-stat-l">créditos potencialmente contestados em base ICMS — 2026/2027</span>
+    <span class="nc-stat-n">+75%</span>
+    <span class="nc-stat-l">multa por tentativa de exclusão indevida de ICMS em cálculos PIS/Cofins</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>LC 87/1996 proíbe expressamente inclusão de outros tributos na base de ICMS. Porém, resoluções estaduais (ex: CONFAZ) estão testando inclusão de IBS. STF, na ADI 4.947/DF (2015), já condenou prática similar. Tema STF nº 1.156 (reforma tributária) ainda aguarda decisão sobre interação IBS-ICMS na transição.</p>
-        <p>Crítica: Secretarias de Fazenda estaduais avançam em normativa sem aguardar pacificação federal.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC 87/1996, ADI 4.947/DF, Tema STF nº 1.156, Resoluções CONFAZ</span></p>
+        <p>STJ reconhece que Lei nº 10.865/2004 não permite exclusão automática de ICMS da base de PIS/Cofins quando opera-se por volume. Decisão REsp 2.041.896 consolida jurisprudência. Reforma tributária (Lei nº 14.931/2024) não alterou esse ponto — mantém obrigatoriedade.</p>
+        <p>Empresas com tributação por volume (ex: operadores logísticos, distribuidoras) estão em risco imediato. RFB já começou auditoria em setores específicos. Prazo para ação: antes de decisão definitiva (90 dias úteis a contar desta decisão STJ).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 10.865/2004, STJ REsp 2.041.896, Lei nº 14.931/2024, RFB Solução de Consulta nº 141/2024</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>Varejistas e distribuidoras: <strong>segregue registro de operações com e sem IBS na base ICMS</strong>. Monte arquivo de conformidade mostrando cálculos paralelos (com e sem cascata).</p>
-        <p><strong>Estratégia:</strong> protocole impugnação preventiva junto à Secretaria de Fazenda estadual. Se houver cobrança posterior, sua posição estará documentada para eventual ação judicial. Prazo crítico: até 90 dias após notificação.</p>
+        <p><strong>Operadores logísticos e transportadoras devem:</strong> realizar auditoria interna das últimas 5 movimentações (2021-2026) verificando se ICMS foi indevidamente excluído de base de PIS/Cofins.</p>
+        <p><strong>Próximo passo:</strong> providenciar parecer jurídico de especialista em 10 dias. Se identificada falha, estruturar pagamento espontâneo à RFB (reduz multa de 75% para 0%) — prazo: até 31/12/2026 para minimizar dano.</p>
       </div>
     </div>
   </div>
@@ -584,7 +572,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Varejistas com faturamento acima de <strong>R$200M/ano</strong> e operações em múltiplos estados correm risco de recobrança de ICMS em base duplicada — impacto potencial: <strong>R$3-7 milhões</strong> em créditos negados. Prazo para ação judicial: até 2030. Recomendação: contrate auditoria fiscal especializada até novembro de 2026.</p>
+      <p class="nh-text">Operadores logísticos e distribuidoras com volume de movimentação acima de <strong>500 mil toneladas/ano</strong> enfrentam exposição média de <strong>R$1,2M a R$4,5M em débitos acumulados</strong> se utilizaram exclusão indevida de ICMS — RFB está auditando sistematicamente este setor.</p>
     </div>
   </div>
 </div>
@@ -593,38 +581,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">05</span>
     <div class="nc-badges">
-      <span class="bd bd-date">17/10/2026</span>
-      <span class="bd bd-cat">Ajuste Fiscal · Governo</span>
+      <span class="bd bd-date">20/10/2026</span>
+      <span class="bd bd-cat">Cenário Político · Economia</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise de mercado e cenários de mercado" loading="lazy">
-    <span class="nc-image-tag">Política Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise econômica e política" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">POLÍTICA</span>
   </div>
 
-  <h3 class="nc-title">🎯 Ajuste Fiscal Gera Mais Dúvidas que Certezas para o Setor Privado</h3>
-  <p class="nc-body">Análise do Nexo Jornal levanta questão relevante: anúncio de ajuste fiscal de R$6,5 bilhões do governo não especifica impactos tributários para empresas. Há sinais contraditórios: cortes em subsídios fiscais (que beneficiam setor de capital intensivo) mas promessa de redução de tributos. Cenário: se governo cortar desonerações (SUDENE, SUDAM, créditos de ICMS), setor produtivo enfrentará <strong>majoração de carga tributária de até 5%</strong> — o que não foi comunicado ao mercado.</p>
+  <h3 class="nc-title">🗣️ Tom populista da campanha inibe debate fiscal — empresas desprotegidas</h3>
+  <p class="nc-body">Economista Marcos Mendes alerta que retórica populista das campanhas eleitorais de 2026 está sufocando debate técnico sobre questões fiscais e orçamentárias reais. Promessas de gastos sem explicar origem de recursos criam vácuo de desinformação. Resultado: empresas ficam desprotegidas contra mudanças tributárias radicais que estão sendo costuradas nos bastidores. Ninguém propõe solução, apenas gastos novos.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$6,5B</span>
-    <span class="nc-stat-l">em ajuste fiscal — impacto ainda não quantificado para setor privado</span>
+    <span class="nc-stat-n">0</span>
+    <span class="nc-stat-l">propostas técnicas de cobertura tributária para novos gastos anunciados</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei de Responsabilidade Fiscal (Lei 101/2000) não obriga especificidade de impactos tributários. Porém, Lei nº 12.527/2011 (Lei de Acesso à Informação) permite demanda por relativos de impacto regulatório. Receita Federal não publicou AIOR (Análise de Impacto Orçamentário-Regulatória) sobre as mudanças anunciadas.</p>
-        <p>Problema: empresas estão na sombra quanto a prazo de implementação e afetação específica de benefícios fiscais.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei 101/2000 (LRF), Lei 12.527/2011 (LAI), Decreto 10.411/2020</span></p>
+        <p>Reforma tributária já em vigor (Lei nº 14.931/2024) foi fruto de debate técnico. Porém, reformas sucessivas provavelmente virão. Emenda Constitucional nº 95/2016 (Teto de Gastos) cria pressão por arrecadação maior. Sem debate público e transparente, poder público pode impor cargas adicionais a empresas sem aviso.</p>
+        <p>Histórico indica: campanhas silenciosas sobre fiscal resultam em aumentos de alíquotas após eleições (ver 2022-2023 com IPI, Cofins, e agora IBS). CFOs devem planejar cenários de aumento de 2-4% de carga tributária efetiva em 2027.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.931/2024, Emenda Constitucional nº 95/2016, Lei nº 10.165/2000 (CIDE)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p>CFOs precisam provisionar cenário pessimista: <strong>assuma majoração de até 5% na carga tributária efetiva</strong> para fins de projeção orçamentária 2027. Ativar lobismo: empresas de capital intensivo devem articular com associações setoriais (FIESP, CNI, ABDIB) para pressionar por comunicado formal sobre desonerações.</p>
-        <p><strong>Ação:</strong> protocole pedido de AIOR à Receita Federal via Lei de Acesso à Informação. Prazo de resposta: 20 dias.</p>
+        <p><strong>Boards devem:</strong> estruturar equipe de monitoramento de mudanças tributárias pendentes (projetos de lei, sugestões de reforma, alertas de RFB). Incluir cenários de carga tributária +2%, +3%, +4% nos modelos de projeção financeira 2027.</p>
+        <p><strong>Próximo passo:</strong> participar ativamente de associações setoriais (ABIQUIM, ABECS, etc.) que dialogam com poder público sobre propostas tributárias — visibilidade e participação reduzem surpresas pós-eleição.</p>
       </div>
     </div>
   </div>
@@ -633,7 +621,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Indústrias em regiões de incentivo fiscal (Norte, Nordeste) com faturamento acima de <strong>R$500M/ano</strong> podem perder até <strong>R$8-12 milhões/ano</strong> em benefícios se governo rever SUDENE e SUDAM sem transição. Prazo crítico: dezembro de 2026 — quando governo deve finalizar normativos de ajuste.</p>
+      <p class="nh-text">Empresas com faturamento de <strong>R$500M+ sem monitoramento ativo de propostas tributárias</strong> correm risco de serem impactadas por <strong>mudanças de carga tributária não previstas em orçamento</strong> — impacto estimado: 2-4% da receita bruta afetada retroativamente após janeiro/2027 se aprovadas mudanças.</p>
     </div>
   </div>
 </div>
@@ -721,7 +709,7 @@ async function sub(e){
   const email=document.getElementById('ei').value;
   btn.textContent='Enviando...';btn.disabled=true;
   try{
-    await fetch('WEBHOOK_URL_AQUI',{
+    await fetch('https://hook.larafy.com.br/webhook/tax-news',{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({nome,email}),mode:'no-cors'
     });
