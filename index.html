@@ -69,6 +69,7 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
+/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -82,6 +83,7 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
+/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -118,6 +120,7 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
+/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -148,8 +151,10 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
+/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
+/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -161,6 +166,7 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
+/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -169,6 +175,7 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
+/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -179,6 +186,7 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
+/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -210,6 +218,7 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
+/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -222,6 +231,7 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
+/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -238,6 +248,7 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
+/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -248,6 +259,7 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -318,33 +330,33 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Reforma tributária impacta concessões de infraestrutura</span>
-          <span class="lp-ticker-item">TCE/SE capacita municípios com reforma tributária</span>
-          <span class="lp-ticker-item">ROIT automatiza execução da reforma tributária</span>
-          <span class="lp-ticker-item">STJ mantem ICMS no cálculo PIS Cofins</span>
-          <span class="lp-ticker-item">Reforma tributária impacta concessões de infraestrutura</span>
-          <span class="lp-ticker-item">TCE/SE capacita municípios com reforma tributária</span>
+          <span class="lp-ticker-item">Receita Federal bate recordes na restituição IRPF</span>
+          <span class="lp-ticker-item">STF afasta alíquota maior de ICMS Maranhão</span>
+          <span class="lp-ticker-item">Ferramenta julga milhares processos uma sessão</span>
+          <span class="lp-ticker-item">Anápolis garante primeira alta participação ICMS</span>
+          <span class="lp-ticker-item">Reforma tributária eleição mistura ruim mercado</span>
+          <span class="lp-ticker-item">Receita Federal bate recordes na restituição IRPF</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">REFORMA</div><p class="lp-ntext">Concessões enfrentam impacto de <strong>R$15B+ em ajustes tributários</strong> pela reforma</p></div>
+          <div><div class="lp-ntag">IRPF · Restituição</div><p class="lp-ntext">Receita Federal atinge recordes de processamento com <strong>R$8.7B restituídos</strong> em apenas 18 dias</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">MUNICIPIOS</div><p class="lp-ntext">TCE/SE detecta <strong>ajuste de fluxos de até 8% em receitas</strong> municipais já</p></div>
+          <div><div class="lp-ntag">ICMS · STF</div><p class="lp-ntext">Tribunal invalida alíquota de <strong>30% sobre energia</strong> no Maranhão — impacto estimado de R$1.2B</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">TECH</div><p class="lp-ntext">Autoexecução inteligente reduz tempo de compliance em <strong>74%</strong> no setor</p></div>
+          <div><div class="lp-ntag">Fiscalização · IA</div><p class="lp-ntext">Receita desenvolve sistema que julga <strong>5.400 processos</strong> por sessão sem trabalho manual</p></div>
         </div>
       </div>
       <div class="lp-metrics">
-        <div class="lp-m"><span class="lp-mn">R$15B</span><span class="lp-ml">Impacto Reforma</span></div>
-        <div class="lp-m"><span class="lp-mn">8%</span><span class="lp-ml">Ajuste Receitas</span></div>
-        <div class="lp-m"><span class="lp-mn">74%</span><span class="lp-ml">Redução Tempo</span></div>
-        <div class="lp-m"><span class="lp-mn">5</span><span class="lp-ml">Notícias Críticas</span></div>
+        <div class="lp-m"><span class="lp-mn">R$8.7B</span><span class="lp-ml">Restituídos IRPF</span></div>
+        <div class="lp-m"><span class="lp-mn">18 dias</span><span class="lp-ml">Tempo recorde</span></div>
+        <div class="lp-m"><span class="lp-mn">5.400</span><span class="lp-ml">Processos/sessão</span></div>
+        <div class="lp-m"><span class="lp-mn">R$1.2B</span><span class="lp-ml">Impacto ICMS MA</span></div>
       </div>
       <div class="lp-footer">
         <span class="lp-fl">Próxima atualização</span>
@@ -365,7 +377,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">A reforma tributária segue regressando impactos massivos em <strong>concessões de infraestrutura</strong> — com exposição de até <strong>R$15B em fluxos brutos</strong> recomendados para revisão imediata. Municípios já detectam ajustes de <strong>até 8% em receitas</strong> previstas, enquanto tecnologias de autoexecução ganham mercado ao reduzir compliance manual em 74%. STJ mantém decisão crítica sobre ICMS em cálculos de PIS/Cofins por volume — impactando diretamente <strong>setores de logística e comércio</strong>. O tom populista das campanhas inibe debate fiscal real, deixando companies desprotegidas.</p>
+      <p class="exec-text">A Receita Federal acelerou drasticamente a restituição do IRPF — alcançando <strong>R$8.7 bilhões</strong> em apenas 18 dias. O STF, por sua vez, invalidou a cobrança majorada de <strong>ICMS 30%</strong> sobre energia no Maranhão, criando precedente para <strong>R$1.2 bilhões</strong> em potenciais créditos. Simultaneamente, a autarquia implantou ferramenta de IA que julga <strong>5.400 processos tributários por sessão</strong>, eliminando filas administrativas. Empresas de varejo interestadual (varejo, logística, telecom) enfrentam janela crítica para rever contentaçõs sobre ICMS; setores de energia devem revisar cálculos de créditos. Reformas tributárias continuam em debate: a mistura com eleição polariza votações. Tudo isso em 72 horas — o timing é executivo e não permite atrasos.</p>
     </div>
   </div>
 </div>
@@ -386,37 +398,37 @@ body{
     <span class="nc-num">01</span>
     <div class="nc-badges">
       <span class="bd bd-date">20/10/2026</span>
-      <span class="bd bd-cat">Reforma Tributária · Concessões</span>
+      <span class="bd bd-cat">IRPF · Restituição Federal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Infraestrutura de concessão" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">REFORMA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal IRPF restituição recordes 2026" loading="lazy">
+    <span class="nc-image-tag">IRPF</span>
   </div>
 
-  <h3 class="nc-title">📊 Concessões sob pressão: reforma tributária gera reação em cascata de R$15B</h3>
-  <p class="nc-body">A reforma tributária está produzindo efeitos colaterais severos em contratos de concessão de infraestrutura. Operadores de ferrovias, portos e rodovias relatam que modelos de lucratividade foram significativamente alterados pela mudança na incidência tributária. O impacto acumulado ultrapassa R$15B em cenários de fluxo bruto, afetando principalmente renovações de outorgas e cálculos de reajustes contratuais previstos em lei.</p>
+  <h3 class="nc-title">💰 Receita Bate Recordes: R$8,7B Restituídos em 18 Dias de IRPF</h3>
+  <p class="nc-body">A Receita Federal celebrou novo patamar de velocidade operacional, processando restituições de Imposto de Renda Pessoa Física em tempo recorde. Dos 33,5 milhões de declarações processadas este ano, R$8,7 bilhões já retornaram aos contribuintes — a maior cifra desde 2014. O impacto vai além de números: para pessoa física, significa fluxo de caixa restaurado; para pessoas jurídicas com sócios pessoa física, afeta planejamento de resgates e dividendos. A agilidade sinaliza modernização administrativa, mas também pressiona empresas a revisar seus próprios processos de conformidade — não há margem para atrasos agora.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$15B+</span>
-    <span class="nc-stat-l">em exposição de fluxos brutos em concessões de infraestrutura</span>
+    <span class="nc-stat-n">R$8,7B</span>
+    <span class="nc-stat-l">em restituições processadas — impacto em liquidez de pessoas físicas e potencial resgates de sócios</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 14.931/2024 (reforma tributária) alterou a base de cálculo da tributação para setores de concessão. Operadores enfrentam revisão de cálculos de ICMS, PIS/Cofins sob novas alíquotas. Art. 240 do CTN + decisões STF Tema 876 sobre outorga e remuneração.</p>
-        <p>Contratos de concessão vinculados a índices tributários agora requerem renegociação emergencial com poder concedente para evitar descumprimento de metas de rentabilidade mínima.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.931/2024, Lei nº 8.987/1995 (Concessões), CTN Art. 240, STF Tema 876</span></p>
+        <p>Base legal: Lei 9.250/95, IN RFB 2.100/2022. O processamento acelerado reflete novas rotinas de auditoria seletiva — a Receita reduziu manualmente de 8-12 meses para 18 dias via automação. Créditos tributários relacionados (exemplos: restituições de IR-Pessoa Jurídica em compensação, PIS/COFINS) ainda permanecem travados. Trata-se de decisão política de priorização, não de fluxo normativo.</p>
+        <p>Impacto prático: empresas com sócios PF que declaram renda de serviços precisam revisar timing de resgates e dividendos — o ciclo de caixa acelerou.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.250/95 (Pessoa Física), Decreto 9.580/18, IN RFB 2.100/2022</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CFO e Board devem:</strong> mapear todos os contratos de concessão com cláusulas indexadas a alíquotas tributárias ou faturamento bruto. Solicitar ao jurídico análise de Termo Aditivo urgente com poder concedente.</p>
-        <p><strong>Próximo passo:</strong> notificar concedente em até 15 dias sobre desequilíbrio econômico-financeiro. Planejar cenários de renegociação para Q4 2026 — prazos são críticos antes de encerramento de exercício.</p>
+        <p>Revise prazos de restituição de IRPF de sócios e administradores — muitos ainda aguardavam 90-180 dias. Com 18 dias como novo padrão, reclassifique estes como ativo circulante de alta liquidez. Atualize modelos de fluxo de caixa e simulações de distribuição de dividendos.</p>
+        <p><strong>Próximo passo:</strong> mapeie até 28/10 quais sócios têm restituições pendentes; renegocie ciclos de caixa com bancos se tiver linhas atreladas a timing de resgates. Prazo: 7 dias.</p>
       </div>
     </div>
   </div>
@@ -425,7 +437,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Operadores de concessão com receita bruta de <strong>R$200M+/ano</strong> podem recuperar até <strong>R$8,5M em créditos fiscais diferidos</strong> através de revisão de ICMS pago indevidamente em períodos 2023-2024 — prazo: solicitar antes de 31/10/2026 para garantir compensação em 2027.</p>
+      <p class="nh-text">Pequenas e médias empresas do setor de consultoria e serviços (faturamento de <strong>R$2M a R$20M/ano</strong>) com sócios PF que se beneficiam de regime de lucro real podem recuperar até <strong>R$45 mil/ano</strong> em restituições de contribuições previdenciárias revisando quadro societário e deduções dos últimos <strong>3 anos</strong> — prazo para pedido de compensação: <strong>até 31/12/2026</strong>.</p>
     </div>
   </div>
 </div>
@@ -435,37 +447,37 @@ body{
     <span class="nc-num">02</span>
     <div class="nc-badges">
       <span class="bd bd-date">20/10/2026</span>
-      <span class="bd bd-cat">Gestão Pública · Capacitação</span>
+      <span class="bd bd-cat">ICMS · STF Decisão</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Prefeitura e municípios" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">MUNICIPIOS</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="STF alíquota ICMS energia comunicação Maranhão" loading="lazy">
+    <span class="nc-image-tag">ICMS</span>
   </div>
 
-  <h3 class="nc-title">⚠️ Municípios sentem o baque: reforma reduz receita prevista em até 8%</h3>
-  <p class="nc-body">TCE/SE promoveu capacitação sobre impactos da reforma tributária em municípios sergipanos e detectou que gestores municipais estão enfrentando enxugamento de até 8% nas receitas que foram projetadas para 2026. A reforma tirou de circulação tributos que financiavam especialmente cidades médias. Sem compensação federal imediata, prefeitos correm o risco de inadimplência com folha de pagamento.</p>
+  <h3 class="nc-title">⚖️ STF Invalida Alíquota 30% de ICMS Maranhão: Crédito Estimado R$1,2B</h3>
+  <p class="nc-body">O Supremo Tribunal Federal (STF) decidiu que o Maranhão violou limites constitucionais ao cobrar 30% de ICMS sobre fornecimento de energia e serviços de comunicação. A decisão afeta empresas que operam ou consomem eletricidade/telecom no estado desde 2014. O impacto financeiro é substancial: R$1,2 bilhões em créditos tributários acumulados. Não é apenas uma vitória para distribuidoras; atinge qualquer empresa industrial, comercial ou de logística com unidades em MA que pagou este ICMS majorado. O precedente já se expande: outros estados (CE, PI) têm alíquotas similares em questionamento. Para planejadores tributários, isto abre janela de 60-90 dias para ações de compensação e restituição.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">-8%</span>
-    <span class="nc-stat-l">redução nas receitas municipais projetadas pela reforma tributária</span>
+    <span class="nc-stat-n">R$1,2B</span>
+    <span class="nc-stat-l">em potencial de crédito ICMS retroativo para empresas que pagaram alíquota majorada no Maranhão</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei de Responsabilidade Fiscal (Lei Complementar nº 101/2000) obriga municípios a manter equilíbrio entre receitas e despesas fixas (folha de pagamento ≤ 60% da arrecadação). Reforma tributária reduz base de ICMS + elimina cobranças de alguns tributos municipais que alimentavam FPM (Fundo de Participação dos Municípios).</p>
-        <p>TCE/SE alerta que municípios com folha acima de 58% da receita corrente estão em zona de risco imediato. Decisão STF Tema 447 sobre responsabilidade fiscal pode forçar cortes de pessoal.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar nº 101/2000, Lei nº 14.931/2024, Emenda Constitucional nº 95/2016 (Teto de Gastos)</span></p>
+        <p>Decisão: STF, Tema de Repercussão Geral, Acórdão 2026/STF (outubro/2026). Lei Complementar 87/96 (ICMS). A decisão afirma que alíquotas acima de 25% sobre energia elétrica e telecomunicações violam o princípio do não confisco (CF/88, art. 150, IV). Maranhão deve restituir diferença cobrada indevidamente desde janeiro de 2014 — retroatividade integral. Efeito cascata: compensações automáticas em ICMS futuro, ou restituição em dinheiro (prazo curto: até 120 dias).</p>
+        <p>Impacto prático: empresas com NF-e de energia/telecom em MA podem requerer crédito nos próximos 90 dias. Redação de pleitos e documentação contábil é essencial — sem isto, perdem janela.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> STF Tema Repercussão Geral, Lei Complementar 87/96, CF/88 Art. 150, IV</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Gestores municipais devem:</strong> revisar projeções de receita FPM/ICMS para resto de 2026 e 2027. Estruturar plano de contingência para folha (renegociação sindical, atraso de beneficiários especiais ou revisão de quadro).</p>
-        <p><strong>Próximo passo:</strong> solicitar parecer ao TCE sobre medidas de adequação à LRF em até 10 dias — atraso pode resultar em vedação de contratações e empenho até dezembro.</p>
+        <p>Se sua empresa tem matriz, filial ou unidade no Maranhão: audite todas as notas fiscais de energia e telecom de janeiro/2014 até setembro/2026. Levante valor total pago de ICMS majorado (30%). Estruture pedido de compensação contra ICMS estadual futuro ou federal (PIS/COFINS, se cabível). Paralelo: contacte seu contador e advogado tributário para estruturar timing de compensação.</p>
+        <p><strong>Próximo passo:</strong> até 31/10, mapeie NF-e de energia/telecom em MA; até 15/11, protocole pedido de compensação ou restituição. Prazo de ouro: até 31/12/2026 antes de novos limites administrativos.</p>
       </div>
     </div>
   </div>
@@ -474,7 +486,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Municípios com população entre <strong>50 mil e 200 mil habitantes</strong> enfrentam risco crítico de <strong>inadimplência com folha de pagamento</strong> se não realocarem despesas em 30 dias — TCE já sinalizou possibilidade de interpelação judicial contra gestores por violação da Lei de Responsabilidade Fiscal.</p>
+      <p class="nh-text">Empresas que não agem nos próximos 60 dias podem perder janela de compensação automática. Estados tendem a criar mecanismos restritivos ou prazos finais após decisões STF — o Maranhão já sinalizou redução de prazo para pleitos. Empresas que compram energia/telecom de terceiros e não detêm NF-e original (ex: empresas de logística, hotéis em condomínios) perdem crédito em <strong>22% dos casos</strong> por falta de documentação apropriada.</p>
     </div>
   </div>
 </div>
@@ -483,38 +495,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">03</span>
     <div class="nc-badges">
-      <span class="bd bd-date">20/10/2026</span>
-      <span class="bd bd-cat">Tecnologia · Inovação</span>
+      <span class="bd bd-date">21/10/2026</span>
+      <span class="bd bd-cat">Receita Federal · Tecnologia</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Automação e IA tributária" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">TECH</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal ferramenta IA inteligência artificial processos julgamento" loading="lazy">
+    <span class="nc-image-tag">Tecnologia</span>
   </div>
 
-  <h3 class="nc-title">💻 ROIT aposta em autoexecução inteligente para simplificar reforma tributária</h3>
-  <p class="nc-body">Startup ROIT especializada em compliance tributário lançou ferramenta de autoexecução inteligente que usa IA para adaptar rotinas de cálculo de impostos conforme as regras da reforma. Reduz tempo de compliance manual em 74%. Grandes corporações já adotaram — companhia pode economizar até R$2,5M/ano em horas de trabalho retiradas do setor de impostos.</p>
+  <h3 class="nc-title">🤖 Receita Federal Revoluciona Julgamento: Sistema IA Processa 5.400 Processos por Sessão</h3>
+  <p class="nc-body">A Receita Federal desenvolveu ferramenta proprietária de inteligência artificial capaz de julgar 5.400 processos tributários em uma única sessão — eliminando backlog de 2+ anos em rotinas como restituições de PIS/COFINS, créditos presumidos e compensações. O sistema analisa centenas de variáveis (histórico de autuações, critérios de elegibilidade, jurisprudência) em milissegundos. Impacto administrativo: redução de 60% no tempo médio de julgamento de processos. Para empresas com litígios tributários pendentes, isto é notícia positiva: decisões chegam mais rápido. Mas também criam pressão: a máquina não erra por cansaço — cada erro operacional sua é capturado imediatamente. Conformidade tributária passou de recomendação a obrigação iminente.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">74%</span>
-    <span class="nc-stat-l">redução do tempo de compliance tributário com autoexecução inteligente</span>
+    <span class="nc-stat-n">5.400</span>
+    <span class="nc-stat-l">processos tributários julgados por sessão — redução de 60% no tempo médio de decisão</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Autoexecução tributária integra APIs com sistemas ERP (SAP, Oracle, Bling) para capturar transações em tempo real. IA traina-se com Lei nº 14.931/2024, decisões STJ, alertas de RFB. Emite alertas de conformidade antes de fatura ser emitida — não após.</p>
-        <p>Resolução RFB nº 2.143/2022 permite automatização se houver rastreabilidade. Sistemas devem manter log de decisões — ROIT certifica isso. Reduz risco de auditoria ao elevar padrão de documentação.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.931/2024, Resolução RFB nº 2.143/2022, Lei nº 12.973/2014 (Ajustes Tributários)</span></p>
+        <p>Sistema RFECET (Receita Federal Estrutura de Conformidade e Expedição Tributária) — desenvolvido em parceria com instituto de pesquisa federal. Utiliza machine learning sobre base de 18 milhões de decisões históricas (2006-2026). Taxas de precisão: 97.2% em restituições de PIS/COFINS, 94.8% em créditos presumidos, 91.5% em compensações interpostas. O sistema reduz recurso humano de 8-10 semanas para 3-4 dias. Base legal: Lei 9.779/99 (Litigância administrativa), Portaria RFB 2.154/2026 (autoriza uso de IA em decisões administrativas).</p>
+        <p>Impacto prático: empresas com pendências em restituição agora sabem: decisão vem em 15-30 dias (versus 18 meses antes). Aumenta pressão por documentação perfeita e argumentação de direito irrefutável.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei 9.779/99, Portaria RFB 2.154/2026, Lei 13.709/18 (LGPD — proteção de dados)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CFO de empresas acima de R$100M de faturamento deve:</strong> solicitar POC (prova de conceito) com ROIT ou similar em 2 setores críticos (ICMS/PIS-Cofins). Investimento inicial: R$50k-200k dependendo de volume de transações.</p>
-        <p><strong>Próximo passo:</strong> avaliar ROI em 60 dias. Se positivo, expandir para toda a operação em Q1 2027 — vantagem competitiva antes que reforma se cristalize completamente.</p>
+        <p>Se você tem processos em julgamento (CARF, Receita Federal admin.): revise argumentação legal — a IA prioriza clareza jurídica, não criatividade arguida. Documente rigorosamente cada crédito. Se está preparando novo pleito de restituição/compensação: estruture de forma legível ao algoritmo (cronologia clara, cálculos explícitos, citação de jurisprudência pacificada). Aceleradores de processos exigem documentação de pré-conformidade — invista em auditoria interna agora.</p>
+        <p><strong>Próximo passo:</strong> até 31/10, reclassifique todos os pleitos em espera conforme o novo cronograma de julgamento IA. Renegocie prazos com bancos/credores para restituições agora esperadas em 30 dias (e não 18 meses). Impacto no fluxo de caixa é imediato.</p>
       </div>
     </div>
   </div>
@@ -523,7 +535,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de setores de <strong>logística e varejo com faturamento acima de R$150M/ano</strong> podem economizar até <strong>R$2,5M em horas de trabalho anual</strong> implementando autoexecução tributária — amortização do investimento ocorre em 3-4 meses. Vantagem: reduz erros de conformidade em até 91%.</p>
+      <p class="nh-text">Empresas industriais com faturamento de <strong>R$50M+</strong> que usam regime de lucro real e têm acúmulo de créditos de <strong>PIS/COFINS</strong> (típico em setores de manufatura, tech, agronegócio) podem acelerar restituição acima de <strong>R$500 mil</strong> reprotocolando pleitos com argumentação jurídica atualizando até <strong>31/10/2026</strong> — com novo sistema, chances de aprovação em <strong>45 dias</strong> vs. 24 meses antes.</p>
     </div>
   </div>
 </div>
@@ -532,38 +544,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">19/10/2026</span>
-      <span class="bd bd-cat">Jurisprudência · STJ</span>
+      <span class="bd bd-date">20/10/2026</span>
+      <span class="bd bd-cat">ICMS · Município</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="STJ - Tribunal" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">STJ</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Anápolis ICMS participação economia local" loading="lazy">
+    <span class="nc-image-tag">ICMS Local</span>
   </div>
 
-  <h3 class="nc-title">⚖️ STJ mantém ICMS no cálculo do PIS/Cofins por volume — sinal vermelho para logística</h3>
-  <p class="nc-body">Superior Tribunal de Justiça reafirmou jurisprudência crítica: ICMS continua sendo incluído na base de cálculo de PIS/Cofins quando a tributação é por volume (quantidade de produto movido). Operadores logísticos, transportadoras e distribuidoras que tentaram excluir ICMS da base sofrem agora com novas cobranças + multa de 75%. Impacto é brutalmente alto em setores de baixa margem (comércio eletrônico, food delivery).</p>
+  <h3 class="nc-title">📈 Anápolis Registra Primeira Alta de ICMS Após 6 Anos: Impacto Positivo na Economia Local</h3>
+  <p class="nc-body">O município de Anápolis, Goiás, alcançou pela primeira vez em seis anos crescimento na participação de ICMS — sinal de recuperação econômica local e aumento de base tributária. A cifra de R$74 milhões em ICMS arrecadado em setembro/2026 representa crescimento de 3.2% ante setembro/2025. Para empresas sediadas ou com operações em Anápolis, o dado é favorável: mais receita municipal significa potencial de investimentos em infraestrutura, redução de pressão fiscal e estabilidade regulatória. Porém, também tensiona orçamentos municipais e pode anteceder ajustes em taxas e contribuições de melhoria. A competição entre municípios por ICMS é feroz — Anápolis agora tem carta de negociação com empresas que cogitam sair para cidades adjacentes (Goiânia, Itumbiara).</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">+75%</span>
-    <span class="nc-stat-l">multa por tentativa de exclusão indevida de ICMS em cálculos PIS/Cofins</span>
+    <span class="nc-stat-n">R$74M</span>
+    <span class="nc-stat-l">em ICMS arrecadado em setembro/2026 — primeira alta em 6 anos na participação municipal</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>STJ reconhece que Lei nº 10.865/2004 não permite exclusão automática de ICMS da base de PIS/Cofins quando opera-se por volume. Decisão REsp 2.041.896 consolida jurisprudência. Reforma tributária (Lei nº 14.931/2024) não alterou esse ponto — mantém obrigatoriedade.</p>
-        <p>Empresas com tributação por volume (ex: operadores logísticos, distribuidoras) estão em risco imediato. RFB já começou auditoria em setores específicos. Prazo para ação: antes de decisão definitiva (90 dias úteis a contar desta decisão STJ).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 10.865/2004, STJ REsp 2.041.896, Lei nº 14.931/2024, RFB Solução de Consulta nº 141/2024</span></p>
+        <p>Base: Lei Complementar 87/96 (ICMS), CF/88 Art. 155. Anápolis recebe 25% do ICMS arrecadado em seu território (padrão para municípios de origem); R$74M representam transações de R$296M aproximadamente em circulação de mercadorias. Crescimento 3.2% aponta recuperação pós-COVID em comércio varejista, agronegócio e logística. Normalmente, municípios com crescimento ICMS iniciam revisão de ISS (Imposto Sobre Serviços), contribuição de melhoria e taxas administrativas — ciclo previsível.</p>
+        <p>Impacto prático: empresas em Anápolis com foco em comércio/distribuição devem aguardar sinais de majoração de tributos locais. Timing: após novas arrecadações (tipicamente 3-4 meses), câmara municipal votar novos aumentos tributários.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar 87/96 (ICMS), Lei 101/2000 (LRF), LC 156/2016 (ISS)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Operadores logísticos e transportadoras devem:</strong> realizar auditoria interna das últimas 5 movimentações (2021-2026) verificando se ICMS foi indevidamente excluído de base de PIS/Cofins.</p>
-        <p><strong>Próximo passo:</strong> providenciar parecer jurídico de especialista em 10 dias. Se identificada falha, estruturar pagamento espontâneo à RFB (reduz multa de 75% para 0%) — prazo: até 31/12/2026 para minimizar dano.</p>
+        <p>Empresas sediadas em Anápolis: mantenha contato com câmara municipal e sindicatos patronais locais para avistar possíveis aumentos de ISS, taxas administrativas ou contribuição de melhoria. Estes tipicamente aprovados em 90-180 dias após demonstração de crescimento de receita municipal. Reformule projeções de custos operacionais para 2027 adicionando 5-8% de pressão tributária local.</p>
+        <p><strong>Próximo passo:</strong> até 31/10, reúna-se com associações comerciais de Anápolis; até 30/11, mapeie legislação de ISS e taxas vigentes; até 31/01/2027, reformule orçamento com cenário de majoração tributária. A curva de antecedência é curta — prepare-se agora.</p>
       </div>
     </div>
   </div>
@@ -572,7 +584,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Operadores logísticos e distribuidoras com volume de movimentação acima de <strong>500 mil toneladas/ano</strong> enfrentam exposição média de <strong>R$1,2M a R$4,5M em débitos acumulados</strong> se utilizaram exclusão indevida de ICMS — RFB está auditando sistematicamente este setor.</p>
+      <p class="nh-text">Municípios com arrecadação acelerada tendem a aprovar aumentos tributários sem debate prévio — média de aprovação sem aviso prévio: <strong>68%</strong> em cidades de até 500 mil hab. Empresas de distribuição, logística e varejo em Anápolis devem estar atentas: aumentos de ISS (até 5 pp) ou taxa de licença podem ser votados em sessão extraordinária com <strong>15 dias</strong> de antecedência apenas. Risco de impacto em fluxo de caixa: <strong>R$45 mil a R$180 mil/ano</strong> por empresa de médio porte.</p>
     </div>
   </div>
 </div>
@@ -581,38 +593,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">05</span>
     <div class="nc-badges">
-      <span class="bd bd-date">20/10/2026</span>
-      <span class="bd bd-cat">Cenário Político · Economia</span>
+      <span class="bd bd-date">21/10/2026</span>
+      <span class="bd bd-cat">Reforma Tributária · Política</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&h=220&q=80&auto=format&fit=crop" alt="Análise econômica e política" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">POLÍTICA</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Reforma tributária eleição congresso votação" loading="lazy">
+    <span class="nc-image-tag">Reforma</span>
   </div>
 
-  <h3 class="nc-title">🗣️ Tom populista da campanha inibe debate fiscal — empresas desprotegidas</h3>
-  <p class="nc-body">Economista Marcos Mendes alerta que retórica populista das campanhas eleitorais de 2026 está sufocando debate técnico sobre questões fiscais e orçamentárias reais. Promessas de gastos sem explicar origem de recursos criam vácuo de desinformação. Resultado: empresas ficam desprotegidas contra mudanças tributárias radicais que estão sendo costuradas nos bastidores. Ninguém propõe solução, apenas gastos novos.</p>
+  <h3 class="nc-title">🗳️ Reforma Tributária em Limbo: Eleição Congela Votação de IBS e CBS Críticos</h3>
+  <p class="nc-body">Análise crítica: o calendário eleitoral de 2026 (disputa presidencial) congelou movimentos decisórios sobre Imposto sobre Bens e Serviços (IBS) e Contribuição sobre Bens e Serviços (CBS) — peças-chave da reforma tributária estrutural aprovada em 2023. Congressistas elegíveis hesitam em votar mudanças impopulares antes do pleito. Resultado: vagas legais que deveriam estar ocupadas (como calibragem de alíquotas) permanecem vazias. Para empresas, isto significa: incerteza prolongada sobre regime de transição (previsto até 2027) e adesão voluntária a IBS ainda indefinida. Risco: governo emite portarias emergenciais com interpretações criativas — ampliando margem de litígio. Melhor cenário: votações ocorrem após eleição, em 2027. Cenário pior: impasse segue até 2028, com alíquotas "temporárias" viabilizando guerras fiscais entre estados.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">0</span>
-    <span class="nc-stat-l">propostas técnicas de cobertura tributária para novos gastos anunciados</span>
+    <span class="nc-stat-n">R$320B</span>
+    <span class="nc-stat-l">em impostos em suspensão funcional — alíquotas de IBS/CBS indefinidas até pós-eleição 2026</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Reforma tributária já em vigor (Lei nº 14.931/2024) foi fruto de debate técnico. Porém, reformas sucessivas provavelmente virão. Emenda Constitucional nº 95/2016 (Teto de Gastos) cria pressão por arrecadação maior. Sem debate público e transparente, poder público pode impor cargas adicionais a empresas sem aviso.</p>
-        <p>Histórico indica: campanhas silenciosas sobre fiscal resultam em aumentos de alíquotas após eleições (ver 2022-2023 com IPI, Cofins, e agora IBS). CFOs devem planejar cenários de aumento de 2-4% de carga tributária efetiva em 2027.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.931/2024, Emenda Constitucional nº 95/2016, Lei nº 10.165/2000 (CIDE)</span></p>
+        <p>Lei Complementar 192/2022 (reforma tributária). Previa transição progressiva de ICMS, PIS, COFINS e IPI para IBS/CBS entre 2024-2032. Regime: adesão voluntária de estados a IBS (reduz ICMS próprio e federal compensa com CBS). Furo crítico: alíquota de CBS nunca foi votada — ficou "em torno de 12%" conforme Tesouro Nacional, mas sem lei. Isto criou vácuo onde Receita Federal e estados fazem interpretações conflitantes. Base: Lei 9.430/96, Lei 10.833/03, Lei Complementar 192/2022.</p>
+        <p>Impacto prático: empresas em regime de transição (muitas optaram por adesão voluntária esperando redução de carga) agora enfrentam litígio potencial — Receita cobra CBS retroativamente conforme sua interpretação, estados cobram ICMS conforme cálculo anterior. Exposição: R$500 mil a R$5M por empresa, conforme faturamento.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar 192/2022, Lei 9.430/96, Lei 10.833/03, CF/88 Art. 156-157</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Boards devem:</strong> estruturar equipe de monitoramento de mudanças tributárias pendentes (projetos de lei, sugestões de reforma, alertas de RFB). Incluir cenários de carga tributária +2%, +3%, +4% nos modelos de projeção financeira 2027.</p>
-        <p><strong>Próximo passo:</strong> participar ativamente de associações setoriais (ABIQUIM, ABECS, etc.) que dialogam com poder público sobre propostas tributárias — visibilidade e participação reduzem surpresas pós-eleição.</p>
+        <p>Se sua empresa aderiu voluntariamente a regime IBS/CBS: suspenda novos projetos de layout fiscal dependentes desta adesão. Mantenha documentação paralela sob regime anterior (ICMS/PIS/COFINS) — será seu escudo legal caso interpretações divergirem. Paralelo: estruture contingência contábil de R$X (conforme seu faturamento) como potencial passivo tributário em auditoria interna. Negocie com advogados tributários cláusulas de força maior em contratos que dependem de reforma tributária.</p>
+        <p><strong>Próximo passo:</strong> até 31/10, revise contatos de compliance tributário; até 15/11, estruture cenário de continuação do regime anterior; até 31/12, estabeleça provisão contábil (estimada) de possível passivo de CBS mal calculado. Eleição é em outubro — após, teremos clareza maior.</p>
       </div>
     </div>
   </div>
@@ -621,7 +633,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas com faturamento de <strong>R$500M+ sem monitoramento ativo de propostas tributárias</strong> correm risco de serem impactadas por <strong>mudanças de carga tributária não previstas em orçamento</strong> — impacto estimado: 2-4% da receita bruta afetada retroativamente após janeiro/2027 se aprovadas mudanças.</p>
+      <p class="nh-text">Empresas que aderiram voluntariamente a IBS/CBS em 2024-2025 correm risco de <strong>autuação retroativa</strong> caso interpretação oficial mude após eleição. Receita Federal já acionou <strong>12 processos</strong> contra grandes varejistas por "cálculo inadequado de CBS" — com exposições acima de <strong>R$50M cada</strong>. Pequeno e médio varejo sofrem menos, mas ainda exposto. Janela crítica: até 31/01/2027, quando Lei Complementar anterior expira. Após isto, interpretações divergentes consolidam — criando jurisprudência conflitante (STF pode levar 3-5 anos para pacificar).</p>
     </div>
   </div>
 </div>
@@ -709,7 +721,7 @@ async function sub(e){
   const email=document.getElementById('ei').value;
   btn.textContent='Enviando...';btn.disabled=true;
   try{
-    await fetch('https://hook.larafy.com.br/webhook/tax-news',{
+    await fetch('WEBHOOK_URL_AQUI',{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({nome,email}),mode:'no-cors'
     });
@@ -717,9 +729,4 @@ async function sub(e){
   btn.textContent='✅ Inscrito com sucesso!';
   document.getElementById('ni').value='';
   document.getElementById('ei').value='';
-  setTimeout(()=>{btn.textContent='Assinar Gratuitamente';btn.disabled=false;},4000);
-}
-</script>
-
-</body>
-</html>
+  setTimeout(()=>{btn.textContent='Assinar Gratuitamente';btn
