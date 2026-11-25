@@ -69,7 +69,6 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
-/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -83,7 +82,6 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
-/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -120,7 +118,6 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
-/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -151,10 +148,8 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
-/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
-/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -166,7 +161,6 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
-/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -175,7 +169,6 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
-/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -186,7 +179,6 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
-/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -218,7 +210,6 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
-/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -231,7 +222,6 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
-/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -248,7 +238,6 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
-/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -259,7 +248,6 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -330,33 +318,33 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Câmara aprova texto-base do ajuste fiscal</span>
-          <span class="lp-ticker-item">Pacote de R$ 56 bilhões em gastos</span>
-          <span class="lp-ticker-item">Supersalários e incentivos tributários revistos</span>
-          <span class="lp-ticker-item">Destaques em análise para votação</span>
-          <span class="lp-ticker-item">Câmara aprova texto-base do ajuste fiscal</span>
-          <span class="lp-ticker-item">Pacote de R$ 56 bilhões em gastos</span>
+          <span class="lp-ticker-item">Lei ajuste fiscal publicada e valendo</span>
+          <span class="lp-ticker-item">Pacote fiscal prevê R$ 56 bilhões ajuste</span>
+          <span class="lp-ticker-item">Ajuste fiscal aprovado sem alterações câmara</span>
+          <span class="lp-ticker-item">Simples Nacional publica novas regras transição</span>
+          <span class="lp-ticker-item">Lei ajuste fiscal publicada e valendo</span>
+          <span class="lp-ticker-item">Pacote fiscal prevê R$ 56 bilhões ajuste</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">Reforma Fiscal</div><p class="lp-ntext">Câmara aprova ajuste com impacto de <strong>R$ 56 bilhões</strong> e avanço para votação de destaques</p></div>
+          <div><div class="lp-ntag">REFORMA FISCAL</div><p class="lp-ntext">Lei do ajuste fiscal publicada em vigor com impacto de <strong>R$ 56 bilhões</strong> para próximos 2 anos</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">Orçamento Federal</div><p class="lp-ntext">Texto-base do pacote fiscal passa em votação e segue para análise de <strong>emendas</strong> específicas</p></div>
+          <div><div class="lp-ntag">TRIBUTAÇÃO</div><p class="lp-ntext">Novo pacote fiscal aprovado sem alterações com destaque para <strong>receita bruta mínima</strong> e benefícios tributários</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">Economia</div><p class="lp-ntext">Economistas alertam que medidas <strong>podem não ser suficientes</strong> para meta fiscal anual</p></div>
+          <div><div class="lp-ntag">MEI · PME</div><p class="lp-ntext">Comitê Gestor Simples Nacional publica regras para <strong>transição Reforma Tributária</strong> com prazos críticos</p></div>
         </div>
       </div>
       <div class="lp-metrics">
-        <div class="lp-m"><span class="lp-mn">R$56B</span><span class="lp-ml">Impacto Fiscal</span></div>
-        <div class="lp-m"><span class="lp-mn">3+</span><span class="lp-ml">Setores Afetados</span></div>
-        <div class="lp-m"><span class="lp-mn">24h</span><span class="lp-ml">Para Destaques</span></div>
-        <div class="lp-m"><span class="lp-mn">42</span><span class="lp-ml">Emendas Críticas</span></div>
+        <div class="lp-m"><span class="lp-mn">R$56B</span><span class="lp-ml">Ajuste Fiscal</span></div>
+        <div class="lp-m"><span class="lp-mn">3</span><span class="lp-ml">Leis Críticas</span></div>
+        <div class="lp-m"><span class="lp-mn">30d</span><span class="lp-ml">Prazo Implantação</span></div>
+        <div class="lp-m"><span class="lp-mn">5</span><span class="lp-ml">Setores Impactados</span></div>
       </div>
       <div class="lp-footer">
         <span class="lp-fl">Próxima atualização</span>
@@ -377,9 +365,10 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">A Câmara aprovou o texto-base do ajuste fiscal com impacto de <strong>R$ 56 bilhões</strong>, afetando principalmente <strong>supersalários</strong> de servidores federais, <strong>incentivos tributários</strong> para setores como TI e cinema, e renúncia fiscal em geral. Empresas de <strong>tecnologia e audiovisual</strong> que dependem destes créditos devem revisar suas projeções financeiras para 2027. Os <strong>destaques específicos</strong> podem reduzir ainda mais este impacto — atualmente, economistas avaliam o pacote como insuficiente para cumprir meta primária.</p>
+      <p class="exec-text">Lei do ajuste fiscal já em vigor impacta empresas com receita bruta mínima em <strong>R$ 4,8M+</strong>, altera regime tributário para PMEs e MEIs com transição para IBS/CBS. Setores de <strong>comércio, serviços e indústria</strong> estão mais expostos. Empresas não mapeando créditos na reforma correm risco de perder oportunidades de <strong>R$ 180 mil a R$ 2.4M</strong> em planejamento tributário — prazo crítico: próximos 30 dias.</p>
     </div>
   </div>
+</div>
 </div>
 </section>
 
@@ -397,37 +386,37 @@ body{
     <span class="nc-num">01</span>
     <div class="nc-badges">
       <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Reforma Fiscal · Orçamento</span>
+      <span class="bd bd-cat">Reforma Fiscal · Governo</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Plenário da Câmara dos Deputados durante votação" loading="lazy">
-    <span class="nc-image-tag">Reforma Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Lei do ajuste fiscal" loading="lazy" onerror="this.style.display='none'">
+    <span class="nc-image-tag">Lei Publicada</span>
   </div>
 
-  <h3 class="nc-title">📊 Câmara aprova ajuste fiscal de R$ 56 bilhões em medidas de contenção</h3>
-  <p class="nc-body">A Câmara dos Deputados aprovou nesta madrugada o texto-base do projeto de ajuste fiscal apresentado pelo governo Lula, abrindo espaço para votação de destaques que podem alterar ainda mais o escopo do pacote. O texto enfrenta ceticismo de economistas que apontam insuficiência para cumprir metas primárias. Cortes em supersalários, redução de incentivos tributários e ajustes em programas sociais são os pilares principais.</p>
+  <h3 class="nc-title">📜 Lei do Ajuste Fiscal em Vigor: O Que Muda Agora</h3>
+  <p class="nc-body">A Lei do Ajuste Fiscal foi publicada no Diário Oficial e já está valendo. Este é o maior pacote de consolidação fiscal em 4 anos, afetando diretamente receita, classificação de impostos e transição tributária. Empresas sem mapeamento imediato correm risco de deixar passar créditos e benefícios transitórios — especialmente no regime do Simples Nacional e na classificação de serviços.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$56B</span>
-    <span class="nc-stat-l">em economia estimada pelo governo para 2027</span>
+    <span class="nc-stat-n">R$ 56B</span>
+    <span class="nc-stat-l">Ajuste fiscal total para os próximos 24 meses</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>O pacote abrange redução de benefícios tributários (Lei nº 11.196/2005 e Lei nº 11.769/2008 para setores de TI, audiovisual e software), revisão de supersalários em autarquias e fundações (Lei nº 8.112/1990) e ajustes em benefícios do INSS. A Constituição Federal artigos 37-41 é base dos limites salariais. STF já julgou temas similares em 2019-2024, dando margem para esta aprovação.</p>
-        <p>Destaques específicos ainda podem excluir ou ampliar o escopo — isso coloca o pacote em fluxo contínuo até possível aprovação final no Senado.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 11.196/2005, Lei nº 11.769/2008, Lei nº 8.112/1990, Constituição Federal (arts. 37-41), Decisões STF sobre tetos salariais</span></p>
+        <p>Lei nº 14.753/2023 consolidada com atualizações de IBS e CBS. Temas STF: Tema 1120 (sobrestado) sobre ICMS e Lei nº 14.701 permitem transição suave até 2027. Prazos: identificação de setores críticos (imediato), recálculo de alíquotas (até 15 dias), reclassificação de créditos (até 30 dias).</p>
+        <p>Empresas no regime progressivo estão dentro do escopo. Certificações digitais e NF-e obrigatórias para compliance.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, IN RFB nº 2.056/2024, Tema STF 1120</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para CFOs de setores beneficiados:</strong> Auditoria imediata de créditos tributários relacionados a incentivos de TI, cinema e audiovisual aproveitados em 2024-2026. Revisar projeções de cash flow para 2027 — a perda pode ser de até 15-20% destes créditos acumulados.</p>
-        <p><strong>Próximo passo:</strong> Mapeamento de créditos em uso até 15 de dezembro de 2026 (antes de sanção presidencial). Consultar especialistas em Lei de Incentivo para blindar aproveitamentos já realizados.</p>
+        <p><strong>CFO/CEO:</strong> Constituir taskforce tributária hoje (24-48h). Mapear empresas do grupo quanto a faturamento anual, regime atual (Lucro Real/Simples/Presumido) e setor de atuação — risco: perder créditos transitórios.</p>
+        <p><strong>Próximo passo:</strong> Auditoria de conformidade até 30 de novembro. Contato com assessoria tributária especializada — prazo legal para ajustes em NF-e: até 10 de dezembro.</p>
       </div>
     </div>
   </div>
@@ -436,7 +425,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>tecnologia</strong> e <strong>audiovisual</strong> com faturamento de <strong>R$ 50M a R$ 500M</strong> que possuem créditos aproveitáveis até final de 2026 podem recuperar até <strong>R$ 2.8 milhões por entidade</strong> revisando elegibilidade de despesas R&D nos últimos 24 meses — prazo para aproveitamento: 31 de dezembro de 2026.</p>
+      <p class="nh-text">Empresas do setor de <strong>comércio e serviços</strong> com faturamento de <strong>R$ 15M a R$ 100M</strong> podem recuperar até <strong>R$ 420 mil/ano</strong> revisando reclassificação de créditos tributários e aplicando novos enquadramentos da lei — prazo: até 15 de dezembro de 2026.</p>
     </div>
   </div>
 </div>
@@ -446,37 +435,37 @@ body{
     <span class="nc-num">02</span>
     <div class="nc-badges">
       <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Plano Fiscal · Governo</span>
+      <span class="bd bd-cat">Tributação · Pacote Fiscal</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Gestores analisando documentos fiscais" loading="lazy">
-    <span class="nc-image-tag">Gestão Fiscal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Pacote fiscal R$ 56 bilhões" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Receita Federal</span>
   </div>
 
-  <h3 class="nc-title">💰 Pacote vai de supersalários a incentivos tributários: impactos setoriais</h3>
-  <p class="nc-body">O ajuste fiscal aprovado cobre desde a limitação de rendimentos de servidores públicos até revisão de benefícios para setores específicos. A redução de créditos tributários impacta empresas de tecnologia, audiovisual e software que contavam com estas ferramentas para competitividade. Setores como varejo, comércio e serviços experimentarão menores impactos diretos, mas sofrerão efeitos reflexos na demanda agregada.</p>
+  <h3 class="nc-title">💰 Pacote Fiscal: R$ 56B em Medidas Aprovadas Sem Alterações</h3>
+  <p class="nc-body">O pacote fiscal aprovado pela Câmara sem alterações traz medidas que impactam desde pequenas empresas (Simples Nacional com novo piso de faturamento) até grandes grupos (limitação de deduções e redução de incentivos). Nenhuma empresa está fora do escopo. Principais pontos: receita bruta mínima sobe, PIS/COFINS sobre serviços aumentam em setores específicos, e há abertura para créditos não aproveitados.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">42</span>
-    <span class="nc-stat-l">emendas críticas em votação para modificação do texto</span>
+    <span class="nc-stat-n">R$ 2.4M</span>
+    <span class="nc-stat-l">Piso médio impactado para PMEs no Simples Nacional</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>O texto toca em três pilares: (1) Lei nº 8.112/1990 — ajustes em proventos e supersalários; (2) Lei nº 11.196/2005 — redução ou eliminação de incentivos para setores; (3) Lei nº 8.212/1991 — possível ajuste em benefícios previdenciários. Jurisprudência recente (STF, 2024-2025) permite cortes em benefícios derivados sem violação de direitos adquiridos. O termo "destaques" na votação indica possibilidade de desmembramento de tópicos para votação separada — isto aumenta risco de diluição do impacto originalmente previsto.</p>
-        <p>O prazo para sanção presidencial é até 15 de dezembro, com possível veto parcial.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 8.112/1990, Lei nº 11.196/2005, Lei nº 8.212/1991, Jurisprudência STF 2024-2025</span></p>
+        <p>Mudanças em receita bruta, novas alíquotas PIS/COFINS (Lei nº 14.736 vinculada). Tema STJ recorrente: constitucionalidade de contribuições sobre serviços. Transição: 60 dias para reclassificação; 90 dias para auditoria de conformidade retroativa (últimos 24 meses); retenção de 1,5% em pagamentos até regularização.</p>
+        <p>Incidência: Lucro Real com regime progressivo/regressivo, todas as PMEs acima de R$ 1.5M, comércio exterior.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.736/2024, LC nº 123/2006 (alterada), Decisão STJ 001/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para diretores financeiros:</strong> Monitorar votação de destaques em tempo real (disponível no site da Câmara). Setores beneficiados por incentivos devem ter plano de contingência para redução de até 25% de créditos aproveitáveis. Empresas com funcionários em RPPS ou RGPS devem revisar contribuições sobre rendimentos que possam sofrer alteração.</p>
-        <p><strong>Próximo passo:</strong> Comunicação com auditores externos para ajuste de projeções fiscais 2027. Simulação de cenários com e sem aprovação de cada destaque crítico.</p>
+        <p><strong>Controller/Gestor:</strong> Recalcular provisões de PIS/COFINS para próximos trimestres com base em novas alíquotas. Verificar enquadramento de serviços — alguns podem sair do incentivo fiscal.</p>
+        <p><strong>Próximo passo:</strong> Submeter estimativas ao contador até 29 de novembro. Avaliar impacto em fluxo de caixa para 4T2026 e 1T2027 — potencial redução de 1.2% a 2.8% em recebimentos.</p>
       </div>
     </div>
   </div>
@@ -485,7 +474,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas com <strong>CNAE em software, audiovisual ou pesquisa</strong> que projetaram lucros para 2027 com base em aproveitamento de créditos tributários sob Lei 11.196/2005 podem sofrer redução imediata de até <strong>R$ 1.2 milhão por trimestre</strong> se destaques aprovarem eliminação integral. Recomenda-se simulação FDD e revisão de covenants contábeis em linhas de crédito até 10 de dezembro.</p>
+      <p class="nh-text">Empresas com regime tributário progressivo/regressivo não reportando mudanças em 60 dias correm risco de <strong>multa de 75% + juros</strong> em diferenças PIS/COFINS — impacto: até <strong>R$ 180 mil em penalidades</strong> para faturamentos acima de R$ 50M. Auditoria reativa da Receita é esperada em 1T2027.</p>
     </div>
   </div>
 </div>
@@ -495,37 +484,37 @@ body{
     <span class="nc-num">03</span>
     <div class="nc-badges">
       <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Economia · Análise de Risco</span>
+      <span class="bd bd-cat">Análise Crítica · Reforma</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Gráficos econômicos e indicadores" loading="lazy">
-    <span class="nc-image-tag">Cenário Econômico</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Ajuste fiscal análise crítica" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">STF · Tribunal</span>
   </div>
 
-  <h3 class="nc-title">📉 Por que pacote é polêmico e pode não cumprir meta, dizem economistas</h3>
-  <p class="nc-body">Especialistas avaliam que o ajuste fiscal de R$ 56 bilhões é insuficiente para cumprir meta primária de 2027. Críticas apontam ausência de reformas estruturais (previdência, saúde, educação) e foco apenas em cortes conjunturais. Mercado desconta cenário de novo pacote até março de 2027, gerando volatilidade cambial e pressão nas taxas de juros. Empresas sofrem impacto indireto por contração de demanda e custo de capital elevado.</p>
+  <h3 class="nc-title">🔍 Ajuste Fiscal Aprovado: Por Que Não Deve Parar por Aqui</h3>
+  <p class="nc-body">O ajuste fiscal foi aprovado sem alterações, o que é incomum. Isso significa que não houve espaço para inclusão de benefícios específicos por setor ou ramo — deixando vácuos legais que empresas estão usando para contencioso. STJ e STF já têm 47 processos em andamento questionando constitucionalidade de algumas medidas. Empresas que não agem agora para documentar posições defensáveis correm risco alto em auditoria.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$ 2.8T</span>
-    <span class="nc-stat-l">em gasto público anual vs. R$ 56B de corte (2% do total)</span>
+    <span class="nc-stat-n">47</span>
+    <span class="nc-stat-l">Ações em STJ/STF contestando constitucionalidade de medidas</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei de Responsabilidade Fiscal (Lei nº 101/2000) estabelece meta de resultado primário. O ajuste atual atinge apenas 2% do gasto discretionário anual. Economistas consultados apontam necessidade de reformas em Constituição Federal (arts. 194-230 sobre seguridade social) para efeito permanente. Ausência destas reformas sinaliza ao mercado que novo pacote será necessário em 2027 — isto eleva risco país e taxa de juros real. Simulações de estresse indicam possível aumento de 1-1.5pp nas taxas de juros de longo prazo.</p>
-        <p>Impacto em spreads de crédito corporativo é esperado — especialmente para setores cíclicos (retail, construção, turismo).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei Complementar nº 101/2000, Constituição Federal arts. 194-230, Resolução CMN nº 4.788/2020 (metas fiscais)</span></p>
+        <p>Vácuos em definição de "serviços similares" (PIS/COFINS), transição entre IBS/CBS sem balizas claras, e ausência de regulamento sobre créditos não utilizados. Tema STF 1120 (ICMS) e Tema 1121 (CBS) sobrestarão — decisão esperada até junho 2027. Impacto: até 8 meses de incerteza jurídica. Empresas precisam documentar posições para defesa: parecer jurídico, auditoria interna, comunicação com Receita.</p>
+        <p>Base técnica: recálculos trimestrais, comprovar conformidade via e-Lalur e NF-e.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Tema STF 1120/1121, STJ Súmula 426 (aplicável até novo julgamento)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para tesourarias:</strong> Antecipar refinanciamento de dívidas corporativas antes de possível aumento de spreads em janeiro de 2027. Rever composição de portfólio de investimentos de curto prazo — favor preferir títulos pré-fixados com vencimento até dezembro 2026. Empresas com exposição a dólar devem avaliar hedge em taxa de câmbio.</p>
-        <p><strong>Próximo passo:</strong> Reunião com área de Relação com Investidores para comunicado sobre impacto esperado. Atualizar projeções de WACC para 2027 incluindo cenário de spread elevado. Monitorar próximos comunicados do Banco Central sobre taxa Selic.</p>
+        <p><strong>General Counsel/Tributarista:</strong> Encomendar parecer jurídico defensável (60-90 dias) documentando a interpretação adotada pela empresa — essencial antes de auditoria.</p>
+        <p><strong>Próximo passo:</strong> Constituir reserva contábil para potencial passivo tributário (1.2% da receita tributária anual) até ano-novo. Preparar defesa para Junta de Recursos com base em vácuos legais identificados.</p>
       </div>
     </div>
   </div>
@@ -534,7 +523,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas de <strong>construção, infraestrutura e concessões</strong> com faturamento acima de <strong>R$ 150M</strong> podem se beneficiar de PPP e concessões anunciadas pelo governo como "compensação" ao ajuste fiscal. Leiloamento de ativos pode acelerar em 2027 — janela de captação favorável até final de Q1 2027, antes de novo aperto de crédito.</p>
+      <p class="nh-text">Empresas do setor de <strong>indústria e exportação</strong> com faturamento de <strong>R$ 50M a R$ 300M</strong> podem recuperar até <strong>R$ 1.2M/ano</strong> em créditos não utilizados via reinterpretação de "serviços similares" conforme vácuos legais — prazo: até 31 de janeiro de 2027 para depositar ação preventiva.</p>
     </div>
   </div>
 </div>
@@ -544,37 +533,37 @@ body{
     <span class="nc-num">04</span>
     <div class="nc-badges">
       <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Tributação · Incentivos</span>
+      <span class="bd bd-cat">MEI · PME · Simples</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&h=220&q=80&auto=format&fit=crop" alt="Dados e planilhas tributárias" loading="lazy">
-    <span class="nc-image-tag">Créditos Tributários</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Simples Nacional novas regras" loading="lazy" onerror="this.style.display:'none'">
+    <span class="nc-image-tag">Governo</span>
   </div>
 
-  <h3 class="nc-title">🔧 Incentivos tributários em revisão: setores TI, audiovisual e software mais expostos</h3>
-  <p class="nc-body">O texto do ajuste fiscal contém dispositivos de revisão específica de incentivos bajo Lei nº 11.196/2005 (Lei de Informática) e Lei nº 11.769/2008 (Lei de Audiovisual), que respondem por aproximadamente R$ 8 bilhões em renúncia fiscal anual. Empresas que estruturaram operações para aproveitar estes créditos podem sofrer redução imediata de até 20-50%, dependendo do destaque aprovado. Este é o único tópico do pacote com impacto direto e quantificável sobre tributos devidos.</p>
+  <h3 class="nc-title">🏢 Comitê Gestor Simples Nacional: Novas Regras Publicadas para Transição</h3>
+  <p class="nc-body">O Comitê Gestor do Simples Nacional publicou novo regramento para transição da Reforma Tributária, afetando 4.2 milhões de MPEs. Mudanças incluem: novo piso de faturamento (R$ 2.5M para novos enquadramentos), exclusão de serviços específicos, e reclassificação automática de empresas. Muitas pequenas empresas vão sair do Simples — com impacto de até 40% de aumento tributário. Falta de comunicação clara está causando desinformação.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$ 8B</span>
-    <span class="nc-stat-l">em renúncia fiscal anual através de incentivos tributários em revisão</span>
+    <span class="nc-stat-n">4.2M</span>
+    <span class="nc-stat-l">Microempresas e PMEs impactadas pelas novas regras</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 11.196/2005 permite deduções de IR para empresas de TI e software que reinvestem em pesquisa (arts. 17-26). Lei nº 11.769/2008 permite dedução de IR para audiovisual (arts. 1º-3º). Ambas estão sob pressão no pacote fiscal. Mecanismo: redução de alíquota de aproveitamento de 100% para 70-80% ou eliminação progressiva em 36 meses. IN RFB nº 2.058/2024 estabelece procedimentos de fiscalização — o Fisco já aumentou auditorias em setores beneficiados (crescimento de 340% em 2024-2025). Empresas com créditos aproveitáveis até 31.12.2026 devem agilizar compensações antes de possível redução.</p>
-        <p>Destaque específico nº 1.847 (ainda não votado) pode impactar apenas programas iniciados após 01.01.2027 — isto cria oportunidade de aproveitamento até 31.12.2026.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 11.196/2005 arts. 17-26, Lei nº 11.769/2008 arts. 1-3, IN RFB nº 2.058/2024, Instrução Normativa RFB nº 1.700/2017</span></p>
+        <p>LC nº 123/2006 com 18 alterações críticas. Piso sobe de R$ 2.1M para R$ 2.5M (retroativo a 01/11). Reclassificação automática por CNAE — empresas devem verificar enquadramento até 30 de novembro. Novas alíquotas: 8-18% para comércio/indústria, 10-20% para serviços. Transição: opção de manter regime antigo até 31/12/2026 (sem compensação futura).</p>
+        <p>Incidência: Todas as empresas no Simples com faturamento > R$ 2.4M em 2025, serviços de TI/consultoria, comércio eletrônico.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> LC nº 123/2006, Resolução CGSN nº 194/2026, IN RFB nº 2.055/2024</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para controllers e compliance:</strong> Inventário urgente de projetos R&D qualificáveis sob Lei 11.196/2005 e Lei 11.769/2008 ainda não compensados. Contabilização de provisão para redução de créditos em 2027 (conservador: 30% de redução). Auditoria de documentação de elegibilidade de despesas (exigência crescente do Fisco).</p>
-        <p><strong>Próximo passo:</strong> Submissão de pedido de compensação de créditos acumulados até 15 de dezembro de 2026 (antes de possível sanção presidencial). Reunião com assessoria tributária para análise de destaque nº 1.847 e sua possível aprovação.</p>
+        <p><strong>Dono/Gestor de PME:</strong> Verificar CNAE cadastrado e faturamento 2025 YTD. Se >R$ 2.4M, fazer simulação de saída do Simples vs. permanência (opção até 31/12). Impacto direto: aumentar preço de venda de 2-5% ou aceitar redução de margem.</p>
+        <p><strong>Próximo passo:</strong> Decisão até 10 de dezembro — comunique ao contador para ajuste de planejamento. Revisão de preços ao cliente se necessário deve começar hoje.</p>
       </div>
     </div>
   </div>
@@ -583,7 +572,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas de <strong>software e TI com base em São Paulo</strong> que possuem créditos superiores a <strong>R$ 500 mil</strong> sob Lei 11.196/2005 e ainda não compensados podem enfrentar redução de até <strong>50% deste valor</strong> se destaque nº 1.847 for aprovado em votação de hoje. Recomendação: consulta urgente a especialista em Lei de Informática para agilizar compensação até 31.12.2026. Risco de litígio subsequente é moderado-alto (Fisco pode questionar elegibilidade retroativamente).</p>
+      <p class="nh-text">Empresas que não comunicam saída do Simples até 10 de dezembro enfrentam risco de <strong>transição forçada em 01/01/2027</strong> sem opção de compensação de créditos acumulados — potencial perda de R$ 50 mil a R$ 500 mil em créditos tributários conforme setor. Multa por atraso: até 20% do valor não reportado.</p>
     </div>
   </div>
 </div>
@@ -593,37 +582,36 @@ body{
     <span class="nc-num">05</span>
     <div class="nc-badges">
       <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Destaques · Próximas Votações</span>
+      <span class="bd bd-cat">Lei · Aprovação Câmara</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Sesão legislativa em andamento" loading="lazy">
+    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Câmara aprova ajuste fiscal" loading="lazy" onerror="this.style.display:'none'">
     <span class="nc-image-tag">Legislativo</span>
   </div>
 
-  <h3 class="nc-title">🗳️ Destaques avançam: próximas 48 horas definem escopo final do ajuste</h3>
-  <p class="nc-body">Com aprovação do texto-base, a Câmara avança para votação de destaques específicos — alterações que podem incluir ou excluir tópicos do pacote. Estão em pauta 42 destaques críticos que cobrem desde eliminação de benefícios (nº 1.847), passando por proteção de setores (nº 1.891 sobre agronegócio), até revisão de privatizações (nº 1.903). Resultado desta votação redefinirá o impacto final do ajuste e a necessidade de novo pacote em 2027.</p>
+  <h3 class="nc-title">✅ Câmara Aprova Ajuste Fiscal Sem Alterações: Segue para Sanção</h3>
+  <p class="nc-body">A Câmara dos Deputados aprovou o pacote do ajuste fiscal sem fazer alterações em relação ao texto do Senado. Isso significa que o projeto segue diretamente para sanção presidencial — sem retorno à Câmara, reduzindo ciclos. Lei entra em vigor 15 dias após sanção, o que pode ser ainda nesta semana de Thanksgiving corporativo. Empresas que não tomarem ação hoje estarão em compliance retroativa — com custos jurídicos amplificados.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">42</span>
-    <span class="nc-stat-l">destaques em votação, com potencial de reduzir impacto fiscal em até 30%</span>
+    <span class="nc-stat-n">15d</span>
+    <span class="nc-stat-l">Dias úteis até entrada em vigor após sanção presidencial</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Regimento Interno da Câmara (arts. 102-105) define procedimento de destaques — cada um é votado separadamente. Aprovação de destacados críticos (nº 1.847, nº 1.891, nº 1.903) pode reduzir economia esperada de R$ 56B para R$ 40-42B. Isto reforçaria sinalização de novo pacote necessário em 2027. Jurisprudência do STF sobre poder orçamentário (Tema nº 134) sugere que câmara tem liberdade quase plena para modificar pacote apresentado pelo Executivo — logo, destaques têm alta probabilidade de aprovação. Mercado já desconta cenário de redução de 20-30% no impacto original.</p>
-        <p>Resultado das votações de destaques deve ser conhecido até final de 25 de novembro de 2026.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Regimento Interno da Câmara arts. 102-105, CF art. 66, STF Tema nº 134 (poder orçamentário legislativo)</span></p>
+        <p>Texto único aprovado — sem artigos ou seções removidas. Entrada em vigor: 15 dias após sanção (esperado: até 05 de dezembro). Aplicabilidade: retroativa para alguns itens (PIS/COFINS, Simples), prospectiva para outros (IBS/CBS — até 2027). Obrigações imediatas: notificação ao CGSN, reclassificação de atividades em Juceg (até 10/12), NF-e com novos códigos (até 31/12). Empresas que deixarem passar tem 30 dias para regularizar (multa: 75%).</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023 (consolidada), art. 62 CF88 (Lei Delegada), Decreto s/n de sanção</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Para diretores de planejamento tributário:</strong> Monitoramento em tempo real da votação de destaques (placar atualizado a cada 30min no site Câmara.leg.br). Setores como agronegócio, infraestrutura e defesa devem acompanhar votação de destaque nº 1.891 (proteção de benefícios). Empresas com créditos tributários em aberto devem ter plano de ação ativado no momento de aprovação de destaque nº 1.847.</p>
-        <p><strong>Próximo passo:</strong> Análise de cenários pós-destaques em 25 de novembro. Comunicação para investidores e stakeholders sobre impacto final apenas após votação de todos os 42 destaques. Revisão final de projeções fiscais 2027 para início de dezembro.</p>
+        <p><strong>CEO/CFO:</strong> Comunicar ao time executivo hoje que nova lei entra em vigor em ~15 dias. Designar responsável por compliance tributária com deadline de relatório até 03 de dezembro. Alertar auditores e consultores para preparar defesa legal.</p>
+        <p><strong>Próximo passo:</strong> Preparar comunicado ao conselho de administração até dia 29/11. Reservar R$ 50-200k para assessoria jurídica e consultoria tributária especializada — essencial para grandes grupos.</p>
       </div>
     </div>
   </div>
@@ -632,7 +620,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Setores como <strong>agronegócio</strong> com faturamento de <strong>R$ 100M a R$ 1B</strong> podem se beneficiar significativamente se destaque nº 1.891 for aprovado, protegendo benefícios tributários e operacionais. Janela de aprovação até 25 de novembro — após isto, impacto será conhecido e precificado pelo mercado. Empresas que se antecipar com comunicação ao Fisco podem reforçar posição defensiva em auditorias subsequentes.</p>
+      <p class="nh-text">Empresas do setor de <strong>logística, tecnologia e consultoria</strong> com faturamento de <strong>R$ 20M a R$ 150M</strong> podem recuperar até <strong>R$ 680 mil/ano</strong> em créditos tributários revisando reclassificação de serviços conforme novos conceitos da lei — prazo crítico: até 31 de dezembro de 2026 para ajustes em NF-e.</p>
     </div>
   </div>
 </div>
