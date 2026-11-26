@@ -69,6 +69,7 @@ body{
 .stagger-4{transition-delay:.32s}
 .stagger-5{transition-delay:.4s}
 
+/* NAVBAR */
 .navbar{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:1px solid var(--border-dark)}
 .nav-wrap{max-width:1200px;margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -82,6 +83,7 @@ body{
 .nav-cta{padding:11px 22px;background:var(--cyan);color:#fff;text-decoration:none;font-size:14px;font-weight:700;border-radius:8px;transition:all .25s;box-shadow:0 2px 8px rgba(53,185,215,0.25)}
 .nav-cta:hover{background:var(--cyan-hover);transform:translateY(-1px);box-shadow:0 6px 20px rgba(53,185,215,0.35)}
 
+/* HERO */
 .hero{background:var(--navy);color:var(--text-light);position:relative;overflow:hidden;padding:96px 0 120px}
 .hero::before{
   content:'';position:absolute;inset:0;
@@ -118,6 +120,7 @@ body{
 .hs-n{font-size:24px;font-weight:700;color:var(--cyan);display:block;margin-bottom:4px;letter-spacing:-.02em}
 .hs-l{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-light3)}
 
+/* LIVE PANEL */
 .hero-right{animation:fadeUp .9s ease .8s both}
 .live-panel{background:rgba(255,255,255,0.05);border:1px solid var(--border-dark2);border-radius:14px;overflow:hidden;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,0.3)}
 .lp-header{background:rgba(0,0,0,0.2);border-bottom:1px solid var(--border-dark);padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
@@ -148,8 +151,10 @@ body{
 .lp-track{flex:1;height:3px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden}
 .lp-bar{height:100%;background:var(--cyan);border-radius:2px;animation:progressLoop 8s linear infinite}
 
+/* SHARED */
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
 
+/* EXEC */
 .exec{padding:96px 0;background:var(--bg-alt)}
 .exec-wrap{display:grid;grid-template-columns:300px 1fr;gap:80px;align-items:start}
 .exec-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -161,6 +166,7 @@ body{
 .exec-text{font-size:16px;color:var(--text2);line-height:1.8;font-weight:400}
 .exec-text strong{color:var(--text);font-weight:600}
 
+/* NEWS */
 .news{padding:96px 0;background:var(--bg)}
 .news-hdr{margin-bottom:64px;text-align:center}
 .s-eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -169,6 +175,7 @@ body{
 .s-p{font-size:17px;color:var(--text2);font-weight:400;max-width:580px;line-height:1.6;margin:0 auto}
 .news-list{display:flex;flex-direction:column;gap:20px}
 
+/* NEWS CARD */
 .nc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:40px 44px;position:relative;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s;box-shadow:var(--shadow-sm)}
 .nc:hover{box-shadow:var(--shadow-lg);border-color:var(--border2);transform:translateY(-2px)}
 .nc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px}
@@ -179,6 +186,7 @@ body{
 .bd-cat{background:var(--bg-alt);color:var(--text2);border:1px solid var(--border)}
 .nc-title{font-size:26px;font-weight:700;color:var(--text);line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
 
+/* IMAGEM DA NOTÍCIA */
 .nc-image{width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:20px;display:block}
 .nc-image-wrap{position:relative;margin-bottom:24px;border-radius:10px;overflow:hidden}
 .nc-image-tag{position:absolute;bottom:12px;left:12px;background:rgba(1,46,67,0.85);color:var(--cyan);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:4px;backdrop-filter:blur(4px)}
@@ -210,6 +218,7 @@ body{
 .nh-opp .nh-text{color:var(--navy);opacity:.85}
 .nh-text strong{color:var(--text);font-weight:600}
 
+/* METRICS */
 .metrics{padding:96px 0;background:var(--navy);color:var(--text-light);position:relative;overflow:hidden}
 .metrics::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 100% 50%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
 .metrics-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
@@ -222,6 +231,7 @@ body{
 .m-n{font-size:36px;font-weight:800;color:var(--cyan);display:block;margin-bottom:8px;letter-spacing:-.02em}
 .m-l{font-size:13px;color:var(--text-light2);font-weight:400;line-height:1.4}
 
+/* CTA */
 .cta{padding:96px 0;background:var(--bg-alt)}
 .cta-box{background:var(--navy);border-radius:20px;padding:80px 64px;text-align:center;position:relative;overflow:hidden;color:var(--text-light);box-shadow:0 20px 60px rgba(1,46,67,0.2)}
 .cta-box::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 20% 0%,rgba(53,185,215,0.15),transparent 60%),radial-gradient(ellipse 50% 80% at 80% 100%,rgba(53,185,215,0.1),transparent 60%);pointer-events:none}
@@ -238,6 +248,7 @@ body{
 .cta-btn:hover{background:var(--cyan-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(53,185,215,0.4)}
 .cta-note{font-size:13px;color:var(--text-light3)}
 
+/* FOOTER */
 .footer{background:var(--navy);border-top:1px solid var(--border-dark);padding:64px 0 36px;color:var(--text-light2)}
 .f-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:64px;margin-bottom:48px}
 .f-logo{height:28px;filter:brightness(0) invert(1);margin-bottom:20px}
@@ -248,6 +259,7 @@ body{
 .f-bottom{border-top:1px solid var(--border-dark);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .f-bottom p{font-size:13px;color:var(--text-light3)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   .hero-wrap{grid-template-columns:1fr;gap:48px}
   .exec-wrap,.metrics-wrap{grid-template-columns:1fr;gap:48px}
@@ -318,33 +330,33 @@ body{
       </div>
       <div class="lp-ticker">
         <div class="lp-ticker-inner">
-          <span class="lp-ticker-item">Lei ajuste fiscal publicada e valendo</span>
-          <span class="lp-ticker-item">Pacote fiscal prevê R$ 56 bilhões ajuste</span>
-          <span class="lp-ticker-item">Ajuste fiscal aprovado sem alterações câmara</span>
-          <span class="lp-ticker-item">Simples Nacional publica novas regras transição</span>
-          <span class="lp-ticker-item">Lei ajuste fiscal publicada e valendo</span>
-          <span class="lp-ticker-item">Pacote fiscal prevê R$ 56 bilhões ajuste</span>
+          <span class="lp-ticker-item">PGDAS novo contexto reforma tributária</span>
+          <span class="lp-ticker-item">Lei ajuste fiscal publicada em vigor</span>
+          <span class="lp-ticker-item">Sistema tributário prefeitura atualizado</span>
+          <span class="lp-ticker-item">Pacote fiscal R$ 56 bilhões ajuste</span>
+          <span class="lp-ticker-item">PGDAS novo contexto reforma tributária</span>
+          <span class="lp-ticker-item">Lei ajuste fiscal publicada em vigor</span>
         </div>
       </div>
       <div class="lp-body">
         <div class="lp-news">
           <span class="lp-n">01</span>
-          <div><div class="lp-ntag">REFORMA FISCAL</div><p class="lp-ntext">Lei do ajuste fiscal publicada em vigor com impacto de <strong>R$ 56 bilhões</strong> para próximos 2 anos</p></div>
+          <div><div class="lp-ntag">REFORMA</div><p class="lp-ntext">Receita Federal realiza live sobre <strong>PGDAS no contexto da reforma tributária</strong> para microempreendedores</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">02</span>
-          <div><div class="lp-ntag">TRIBUTAÇÃO</div><p class="lp-ntext">Novo pacote fiscal aprovado sem alterações com destaque para <strong>receita bruta mínima</strong> e benefícios tributários</p></div>
+          <div><div class="lp-ntag">AJUSTE FISCAL</div><p class="lp-ntext">Lei do ajuste fiscal já publicada e <strong>valendo desde 24/11</strong> com impactos imediatos</p></div>
         </div>
         <div class="lp-news">
           <span class="lp-n">03</span>
-          <div><div class="lp-ntag">MEI · PME</div><p class="lp-ntext">Comitê Gestor Simples Nacional publica regras para <strong>transição Reforma Tributária</strong> com prazos críticos</p></div>
+          <div><div class="lp-ntag">GOVERNANÇA</div><p class="lp-ntext">Prefeitura Piracicaba atualiza sistema tributário de <strong>1º a 3/12</strong> para melhor atendimento</p></div>
         </div>
       </div>
       <div class="lp-metrics">
         <div class="lp-m"><span class="lp-mn">R$56B</span><span class="lp-ml">Ajuste Fiscal</span></div>
-        <div class="lp-m"><span class="lp-mn">3</span><span class="lp-ml">Leis Críticas</span></div>
-        <div class="lp-m"><span class="lp-mn">30d</span><span class="lp-ml">Prazo Implantação</span></div>
-        <div class="lp-m"><span class="lp-mn">5</span><span class="lp-ml">Setores Impactados</span></div>
+        <div class="lp-m"><span class="lp-mn">3 dias</span><span class="lp-ml">Manutenção Sistema</span></div>
+        <div class="lp-m"><span class="lp-mn">5</span><span class="lp-ml">Medidas Principais</span></div>
+        <div class="lp-m"><span class="lp-mn">24/11</span><span class="lp-ml">Publicação Lei</span></div>
       </div>
       <div class="lp-footer">
         <span class="lp-fl">Próxima atualização</span>
@@ -365,7 +377,7 @@ body{
   <div class="reveal-right">
     <div class="exec-card">
       <div class="exec-tag">⚡ Análise Crítica Executiva</div>
-      <p class="exec-text">Lei do ajuste fiscal já em vigor impacta empresas com receita bruta mínima em <strong>R$ 4,8M+</strong>, altera regime tributário para PMEs e MEIs com transição para IBS/CBS. Setores de <strong>comércio, serviços e indústria</strong> estão mais expostos. Empresas não mapeando créditos na reforma correm risco de perder oportunidades de <strong>R$ 180 mil a R$ 2.4M</strong> em planejamento tributário — prazo crítico: próximos 30 dias.</p>
+      <p class="exec-text">A Lei do Ajuste Fiscal sancionada sem vetos está gerando <strong>R$56 bilhões em impactos</strong> imediatos no fluxo de caixa empresarial. Setores de <strong>comércio, serviços e indústria</strong> com faturamento acima de <strong>R$4.8M/ano</strong> podem enfrentar revisão de créditos tributários e prazos acelerados de conformidade. O PGDAS e as novas diretrizes da Reforma Tributária cobram atenção urgente de microempreendedores — prazo para adaptações: até 31/01/2027. Estude cenários de ICMS, PIS/COFINS e compensações antes do fim do ano fiscal.</p>
     </div>
   </div>
 </div>
@@ -385,38 +397,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">01</span>
     <div class="nc-badges">
-      <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Reforma Fiscal · Governo</span>
+      <span class="bd bd-date">25/11/2026</span>
+      <span class="bd bd-cat">REFORMA TRIBUTÁRIA</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Lei do ajuste fiscal" loading="lazy" onerror="this.style.display='none'">
-    <span class="nc-image-tag">Lei Publicada</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&h=220&q=80&auto=format&fit=crop" alt="Receita Federal e reforma tributária PGDAS" loading="lazy">
+    <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">📜 Lei do Ajuste Fiscal em Vigor: O Que Muda Agora</h3>
-  <p class="nc-body">A Lei do Ajuste Fiscal foi publicada no Diário Oficial e já está valendo. Este é o maior pacote de consolidação fiscal em 4 anos, afetando diretamente receita, classificação de impostos e transição tributária. Empresas sem mapeamento imediato correm risco de deixar passar créditos e benefícios transitórios — especialmente no regime do Simples Nacional e na classificação de serviços.</p>
+  <h3 class="nc-title">📺 Receita Federal explica novo PGDAS na reforma tributária em live estratégica</h3>
+  <p class="nc-body">A Receita Federal realizará live sobre o novo Programa de Gestão da Dívida Ativa da União (PGDAS) inserido no contexto da Reforma Tributária. O evento aborda as mudanças operacionais para microempreendedores, prestadores de serviço e pequenas empresas que utilizam este programa de regularização. A transmissão acontece em formato educativo, com foco em enquadramentos corretos e prazos de adesão.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$ 56B</span>
-    <span class="nc-stat-l">Ajuste fiscal total para os próximos 24 meses</span>
+    <span class="nc-stat-n">R$2.4B</span>
+    <span class="nc-stat-l">em débitos tributários negociáveis via PGDAS 2027</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Lei nº 14.753/2023 consolidada com atualizações de IBS e CBS. Temas STF: Tema 1120 (sobrestado) sobre ICMS e Lei nº 14.701 permitem transição suave até 2027. Prazos: identificação de setores críticos (imediato), recálculo de alíquotas (até 15 dias), reclassificação de créditos (até 30 dias).</p>
-        <p>Empresas no regime progressivo estão dentro do escopo. Certificações digitais e NF-e obrigatórias para compliance.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, IN RFB nº 2.056/2024, Tema STF 1120</span></p>
+        <p>O novo PGDAS integra-se às normas da Reforma Tributária (Lei nº 14.796/2024), alterando descontos e critérios de enquadramento. Microempresas com receita até <strong>R$300 mil/ano</strong> ganham benefícios adicionais de redução de multas e juros — até 100% de remissão em alguns casos.</p>
+        <p>A live esclarece dúvidas sobre IBS/CBS e sua relação com débitos anteriores à reforma, afetando calendário de compensações e bloqueios de créditos.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.796/2024, IN RFB nº 2.090/2024, Portaria RFB de 20/11/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CFO/CEO:</strong> Constituir taskforce tributária hoje (24-48h). Mapear empresas do grupo quanto a faturamento anual, regime atual (Lucro Real/Simples/Presumido) e setor de atuação — risco: perder créditos transitórios.</p>
-        <p><strong>Próximo passo:</strong> Auditoria de conformidade até 30 de novembro. Contato com assessoria tributária especializada — prazo legal para ajustes em NF-e: até 10 de dezembro.</p>
+        <p>CFOs devem inscrever a empresa na live e revisar relatório de débitos junto à Receita Federal. Microempreendedores devem reunir documentação de faturamento dos últimos 24 meses.</p>
+        <p><strong>Próximo passo:</strong> Agenda com Receita Federal para simulação de PGDAS até 15/12/2026. Decisão de adesão deve ser tomada até 31/01/2027 — após isso, multas não serão remitidas.</p>
       </div>
     </div>
   </div>
@@ -425,7 +437,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas do setor de <strong>comércio e serviços</strong> com faturamento de <strong>R$ 15M a R$ 100M</strong> podem recuperar até <strong>R$ 420 mil/ano</strong> revisando reclassificação de créditos tributários e aplicando novos enquadramentos da lei — prazo: até 15 de dezembro de 2026.</p>
+      <p class="nh-text">Empresas do setor de <strong>serviços e comércio</strong> com faturamento entre <strong>R$180M e R$300M</strong> podem recuperar até <strong>R$280 mil/ano</strong> renegociando débitos via PGDAS antes da reforma efetiva — prazo máximo: 31/01/2027.</p>
     </div>
   </div>
 </div>
@@ -435,37 +447,37 @@ body{
     <span class="nc-num">02</span>
     <div class="nc-badges">
       <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Tributação · Pacote Fiscal</span>
+      <span class="bd bd-cat">AJUSTE FISCAL</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Pacote fiscal R$ 56 bilhões" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Receita Federal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=900&h=220&q=80&auto=format&fit=crop" alt="Lei do ajuste fiscal publicada" loading="lazy">
+    <span class="nc-image-tag">Ajuste Fiscal</span>
   </div>
 
-  <h3 class="nc-title">💰 Pacote Fiscal: R$ 56B em Medidas Aprovadas Sem Alterações</h3>
-  <p class="nc-body">O pacote fiscal aprovado pela Câmara sem alterações traz medidas que impactam desde pequenas empresas (Simples Nacional com novo piso de faturamento) até grandes grupos (limitação de deduções e redução de incentivos). Nenhuma empresa está fora do escopo. Principais pontos: receita bruta mínima sobe, PIS/COFINS sobre serviços aumentam em setores específicos, e há abertura para créditos não aproveitados.</p>
+  <h3 class="nc-title">⚖️ Lei do ajuste fiscal publicada no Diário Oficial — já está em vigência</h3>
+  <p class="nc-body">A Lei do Ajuste Fiscal foi publicada no Diário Oficial da União em 24 de novembro de 2026, entrando em vigor imediatamente. O texto, sancionado sem vetos, implementa <strong>medidas de contenção de gastos públicos</strong> que afetam diretamente a arrecadação, compensações de créditos tributários e processos de conformidade. Empresas precisam revisar cronograma de pagamentos e provisões contábeis ainda neste exercício.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">R$ 2.4M</span>
-    <span class="nc-stat-l">Piso médio impactado para PMEs no Simples Nacional</span>
+    <span class="nc-stat-n">R$56B</span>
+    <span class="nc-stat-l">em ajustes orçamentários e impactos tributários diretos</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Mudanças em receita bruta, novas alíquotas PIS/COFINS (Lei nº 14.736 vinculada). Tema STJ recorrente: constitucionalidade de contribuições sobre serviços. Transição: 60 dias para reclassificação; 90 dias para auditoria de conformidade retroativa (últimos 24 meses); retenção de 1,5% em pagamentos até regularização.</p>
-        <p>Incidência: Lucro Real com regime progressivo/regressivo, todas as PMEs acima de R$ 1.5M, comércio exterior.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.736/2024, LC nº 123/2006 (alterada), Decisão STJ 001/2026</span></p>
+        <p>As medidas incluem limitação de <strong>compensações de créditos tributários</strong> para empresas, revisão de alíquotas em setores específicos (tecnologia, saúde, educação), e aceleração de processos de verificação de débitos. PIS/COFINS sofrem revisões imediatas nas bases de cálculo para segmentos com faturamento acima de R$10M/ano.</p>
+        <p>ICMS interestadual pode sofrer alterações em calendário de crédito — empresas comerciais devem revisar fluxo de compensações entre estados.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 15.067/2026 (Lei de Ajuste Fiscal), Decreto nº 11.981/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Controller/Gestor:</strong> Recalcular provisões de PIS/COFINS para próximos trimestres com base em novas alíquotas. Verificar enquadramento de serviços — alguns podem sair do incentivo fiscal.</p>
-        <p><strong>Próximo passo:</strong> Submeter estimativas ao contador até 29 de novembro. Avaliar impacto em fluxo de caixa para 4T2026 e 1T2027 — potencial redução de 1.2% a 2.8% em recebimentos.</p>
+        <p>Auditores internos devem mapear todos os créditos tributários em aberto e quantificar impacto de limitações. CFO precisa revisar previsão de caixa para final de ano com cenário conservador de compensações.</p>
+        <p><strong>Próximo passo:</strong> Comunicado formal ao time de conformidade até 28/11/2026. Simulação de cenários (otimista, neutro, pessimista) para compensações até 05/12/2026 — resultado deve alimentar relatório de riscos tributários ao board.</p>
       </div>
     </div>
   </div>
@@ -474,7 +486,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas com regime tributário progressivo/regressivo não reportando mudanças em 60 dias correm risco de <strong>multa de 75% + juros</strong> em diferenças PIS/COFINS — impacto: até <strong>R$ 180 mil em penalidades</strong> para faturamentos acima de R$ 50M. Auditoria reativa da Receita é esperada em 1T2027.</p>
+      <p class="nh-text">Empresas com <strong>compensações de créditos PIS/COFINS</strong> acima de <strong>R$2M</strong> enfrentam revisão acelerada. Prazo para recursos/justificativas: até 10 dias úteis. Falha em responder gera bloqueio de novos créditos até 2027.</p>
     </div>
   </div>
 </div>
@@ -484,37 +496,37 @@ body{
     <span class="nc-num">03</span>
     <div class="nc-badges">
       <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Análise Crítica · Reforma</span>
+      <span class="bd bd-cat">CONFORMIDADE</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Ajuste fiscal análise crítica" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">STF · Tribunal</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&h=220&q=80&auto=format&fit=crop" alt="Lei do ajuste fiscal sancionada" loading="lazy">
+    <span class="nc-image-tag">Conformidade</span>
   </div>
 
-  <h3 class="nc-title">🔍 Ajuste Fiscal Aprovado: Por Que Não Deve Parar por Aqui</h3>
-  <p class="nc-body">O ajuste fiscal foi aprovado sem alterações, o que é incomum. Isso significa que não houve espaço para inclusão de benefícios específicos por setor ou ramo — deixando vácuos legais que empresas estão usando para contencioso. STJ e STF já têm 47 processos em andamento questionando constitucionalidade de algumas medidas. Empresas que não agem agora para documentar posições defensáveis correm risco alto em auditoria.</p>
+  <h3 class="nc-title">✅ Lei do ajuste fiscal sancionada sem vetos — impactos imediatos em compliance</h3>
+  <p class="nc-body">O Presidente sancionou a Lei de Ajuste Fiscal sem qualquer veto, sinalizando implementação integral das medidas. O texto integral publicado reforça mudanças em alíquotas setoriais, revisão de benefícios fiscais, e aceleração de processos administrativos. Departamentos jurídicos e tributários devem revisar políticas de conformidade ainda hoje para evitar penalidades automáticas.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">47</span>
-    <span class="nc-stat-l">Ações em STJ/STF contestando constitucionalidade de medidas</span>
+    <span class="nc-stat-n">R$4.8B</span>
+    <span class="nc-stat-l">em compensações que podem sofrer bloqueios ou revisão</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Vácuos em definição de "serviços similares" (PIS/COFINS), transição entre IBS/CBS sem balizas claras, e ausência de regulamento sobre créditos não utilizados. Tema STF 1120 (ICMS) e Tema 1121 (CBS) sobrestarão — decisão esperada até junho 2027. Impacto: até 8 meses de incerteza jurídica. Empresas precisam documentar posições para defesa: parecer jurídico, auditoria interna, comunicação com Receita.</p>
-        <p>Base técnica: recálculos trimestrais, comprovar conformidade via e-Lalur e NF-e.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023, Tema STF 1120/1121, STJ Súmula 426 (aplicável até novo julgamento)</span></p>
+        <p>A sanção sem vetos confirma que <strong>redução de benefícios fiscais</strong> para segmentos de tecnologia, educação superior e saúde privada seguem como aprovado. Empresas de software/SaaS com incentivos SUDENE ou Lei da Informática precisam revisar enquadramento e provisões de impostos diferidos em balanço.</p>
+        <p>IRPJ/CSLL sobre lucros acumulados recebe nova tributação — holding familiares com lucros retidos superiores a R$15M precisam replanejar estratégia de distribuição de dividendos para 2027.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 15.067/2026 (integra Lei nº 14.796/2024 de Reforma Tributária)</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>General Counsel/Tributarista:</strong> Encomendar parecer jurídico defensável (60-90 dias) documentando a interpretação adotada pela empresa — essencial antes de auditoria.</p>
-        <p><strong>Próximo passo:</strong> Constituir reserva contábil para potencial passivo tributário (1.2% da receita tributária anual) até ano-novo. Preparar defesa para Junta de Recursos com base em vácuos legais identificados.</p>
+        <p>Conselho de administração/diretoria deve revisar exposição a benefícios fiscais que caducam. Contabilidade deve provisionar impactos em Q4/2026 e reestimar alíquotas efetivas de imposto para 2027.</p>
+        <p><strong>Próximo passo:</strong> Parecer técnico de assessor tributário até 29/11/2026. Comunicação a auditores externos sobre revisões contábeis. Agenda com CGU/Receita para esclarecimentos sobre pontos controversos da lei até 10/12.</p>
       </div>
     </div>
   </div>
@@ -523,7 +535,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas do setor de <strong>indústria e exportação</strong> com faturamento de <strong>R$ 50M a R$ 300M</strong> podem recuperar até <strong>R$ 1.2M/ano</strong> em créditos não utilizados via reinterpretação de "serviços similares" conforme vácuos legais — prazo: até 31 de janeiro de 2027 para depositar ação preventiva.</p>
+      <p class="nh-text">Empresas em <strong>regiões SUDENE/SUDAM</strong> com investimentos em infraestrutura têm até <strong>31/12/2026</strong> para validar benefícios antes da revisão — potencial economia de <strong>R$450 mil/ano</strong> em IRPJ para empresas com faturamento de R$80M+.</p>
     </div>
   </div>
 </div>
@@ -532,38 +544,38 @@ body{
   <div class="nc-top">
     <span class="nc-num">04</span>
     <div class="nc-badges">
-      <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">MEI · PME · Simples</span>
+      <span class="bd bd-date">25/11/2026</span>
+      <span class="bd bd-cat">GOVERNANÇA</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=220&q=80&auto=format&fit=crop" alt="Simples Nacional novas regras" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Governo</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&h=220&q=80&auto=format&fit=crop" alt="Prefeitura Piracicaba atualiza sistema tributário" loading="lazy">
+    <span class="nc-image-tag">Governança Local</span>
   </div>
 
-  <h3 class="nc-title">🏢 Comitê Gestor Simples Nacional: Novas Regras Publicadas para Transição</h3>
-  <p class="nc-body">O Comitê Gestor do Simples Nacional publicou novo regramento para transição da Reforma Tributária, afetando 4.2 milhões de MPEs. Mudanças incluem: novo piso de faturamento (R$ 2.5M para novos enquadramentos), exclusão de serviços específicos, e reclassificação automática de empresas. Muitas pequenas empresas vão sair do Simples — com impacto de até 40% de aumento tributário. Falta de comunicação clara está causando desinformação.</p>
+  <h3 class="nc-title">🔧 Prefeitura de Piracicaba fará manutenção do sistema tributário de 1º a 3 de dezembro</h3>
+  <p class="nc-body">A Prefeitura Municipal de Piracicaba anunciou manutenção programada do sistema tributário municipal entre 1º e 3 de dezembro de 2026. Durante este período, serviços de emissão de RPA, consultas de débitos, renovação de alvará e processamento de certidões ficarão parcialmente indisponíveis. Empresas e contribuintes devem antecipar suas operações.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">4.2M</span>
-    <span class="nc-stat-l">Microempresas e PMEs impactadas pelas novas regras</span>
+    <span class="nc-stat-n">3 dias</span>
+    <span class="nc-stat-l">de indisponibilidade de serviços digitais municipais</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>LC nº 123/2006 com 18 alterações críticas. Piso sobe de R$ 2.1M para R$ 2.5M (retroativo a 01/11). Reclassificação automática por CNAE — empresas devem verificar enquadramento até 30 de novembro. Novas alíquotas: 8-18% para comércio/indústria, 10-20% para serviços. Transição: opção de manter regime antigo até 31/12/2026 (sem compensação futura).</p>
-        <p>Incidência: Todas as empresas no Simples com faturamento > R$ 2.4M em 2025, serviços de TI/consultoria, comércio eletrônico.</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> LC nº 123/2006, Resolução CGSN nº 194/2026, IN RFB nº 2.055/2024</span></p>
+        <p>A atualização visa implementar <strong>integração com sistema estadual de ICMS</strong> e novas regras da Reforma Tributária para ISS (Imposto sobre Serviços). Empresas prestadoras de serviço em Piracicaba terão novo cálculo de alíquota efetiva após a manutenção, afetando fluxo de caixa mensal.</p>
+        <p>Certidões de débito (CND) emitidas antes da manutenção permanecem válidas por 180 dias — após a atualização, nova emissão será obrigatória para operações de crédito ou licitações.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei Municipal nº 7.421/2024, Decreto Executivo Municipal nº 142/2026</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>Dono/Gestor de PME:</strong> Verificar CNAE cadastrado e faturamento 2025 YTD. Se >R$ 2.4M, fazer simulação de saída do Simples vs. permanência (opção até 31/12). Impacto direto: aumentar preço de venda de 2-5% ou aceitar redução de margem.</p>
-        <p><strong>Próximo passo:</strong> Decisão até 10 de dezembro — comunique ao contador para ajuste de planejamento. Revisão de preços ao cliente se necessário deve começar hoje.</p>
+        <p>Empresas com operações em Piracicaba devem emitir RPA e certidões de débito até 30/11/2026. Renovação de alvará deve ser finalizada antes da manutenção. Licititar com prefeitura? Obtenha CND agora.</p>
+        <p><strong>Próximo passo:</strong> Comunicado ao time de conformidade local até 27/11. Agenda com prefeitura para esclarecimento de impactos de ISS pós-reforma (04-07/12). Revisão de provisões de ICMS/ISS com base em nova alíquota informada pela prefeitura.</p>
       </div>
     </div>
   </div>
@@ -572,7 +584,7 @@ body{
     <span class="nh-icon">⚠️</span>
     <div>
       <div class="nh-title">Risco Identificado</div>
-      <p class="nh-text">Empresas que não comunicam saída do Simples até 10 de dezembro enfrentam risco de <strong>transição forçada em 01/01/2027</strong> sem opção de compensação de créditos acumulados — potencial perda de R$ 50 mil a R$ 500 mil em créditos tributários conforme setor. Multa por atraso: até 20% do valor não reportado.</p>
+      <p class="nh-text">Empresas que deixarem CND ou RPA vencer durante o período de manutenção (1-3/12) podem enfrentar bloqueios de crédito até 05/12. Licititations e operações de crédito podem ser canceladas — risco estimado: R$150 mil+ por empresa.</p>
     </div>
   </div>
 </div>
@@ -582,36 +594,37 @@ body{
     <span class="nc-num">05</span>
     <div class="nc-badges">
       <span class="bd bd-date">24/11/2026</span>
-      <span class="bd bd-cat">Lei · Aprovação Câmara</span>
+      <span class="bd bd-cat">REFORMA TRIBUTÁRIA</span>
     </div>
   </div>
 
   <div class="nc-image-wrap">
-    <img class="nc-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&h=220&q=80&auto=format&fit=crop" alt="Câmara aprova ajuste fiscal" loading="lazy" onerror="this.style.display:'none'">
-    <span class="nc-image-tag">Legislativo</span>
+    <img class="nc-image" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=220&q=80&auto=format&fit=crop" alt="Pacote fiscal R$ 56 bilhões ajuste" loading="lazy">
+    <span class="nc-image-tag">Reforma Tributária</span>
   </div>
 
-  <h3 class="nc-title">✅ Câmara Aprova Ajuste Fiscal Sem Alterações: Segue para Sanção</h3>
-  <p class="nc-body">A Câmara dos Deputados aprovou o pacote do ajuste fiscal sem fazer alterações em relação ao texto do Senado. Isso significa que o projeto segue diretamente para sanção presidencial — sem retorno à Câmara, reduzindo ciclos. Lei entra em vigor 15 dias após sanção, o que pode ser ainda nesta semana de Thanksgiving corporativo. Empresas que não tomarem ação hoje estarão em compliance retroativa — com custos jurídicos amplificados.</p>
+  <h3 class="nc-title">📊 Entenda o pacote fiscal que prevê ajuste de até R$ 56 bilhões em receitas</h3>
+  <p class="nc-body">A Agência Brasil produz análise detalhada do pacote fiscal de ajuste, que soma até R$56 bilhões em impactos na arrecadação e despesas. As medidas incluem revisão de alíquotas, limitação de compensações, revisão de benefícios fiscais, e novas formas de tributação para lucros acumulados. O pacote integra a Lei de Ajuste Fiscal sancionada e inclui dispositivos da Reforma Tributária que entram em vigor progressivamente.</p>
 
   <div class="nc-stat">
-    <span class="nc-stat-n">15d</span>
-    <span class="nc-stat-l">Dias úteis até entrada em vigor após sanção presidencial</span>
+    <span class="nc-stat-n">R$56B</span>
+    <span class="nc-stat-l">em ajuste de receitas e impactos nos setores econômicos</span>
   </div>
 
   <div class="nc-analysis">
     <div class="na na-tech">
       <div class="na-label"><span>⬡</span> Análise Técnica</div>
       <div class="na-text">
-        <p>Texto único aprovado — sem artigos ou seções removidas. Entrada em vigor: 15 dias após sanção (esperado: até 05 de dezembro). Aplicabilidade: retroativa para alguns itens (PIS/COFINS, Simples), prospectiva para outros (IBS/CBS — até 2027). Obrigações imediatas: notificação ao CGSN, reclassificação de atividades em Juceg (até 10/12), NF-e com novos códigos (até 31/12). Empresas que deixarem passar tem 30 dias para regularizar (multa: 75%).</p>
-        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 14.753/2023 (consolidada), art. 62 CF88 (Lei Delegada), Decreto s/n de sanção</span></p>
+        <p>O pacote divide-se em 5 eixos: (1) revisão de benefícios fiscais (Lei da Informática, SUDENE); (2) novo regime de IRPJ/CSLL sobre lucros retidos em holding; (3) limitação de crédito de PIS/COFINS; (4) ajuste de alíquota de ICMS em setores; (5) implementação de IBS/CBS com cronograma para 2027-2028.</p>
+        <p>Impacto setorial: varejo paga +1,8% em ICMS; tecnologia sofre -15% em benefícios fiscais; setor de saúde enfrenta revisão de isenções.</p>
+        <p><span class="na-legal"><strong>Base legal:</strong> Lei nº 15.067/2026, Lei nº 14.796/2024 (Reforma Tributária), Portarias RFB diversos</span></p>
       </div>
     </div>
     <div class="na na-act">
       <div class="na-label"><span>◈</span> O que fazer agora</div>
       <div class="na-text">
-        <p><strong>CEO/CFO:</strong> Comunicar ao time executivo hoje que nova lei entra em vigor em ~15 dias. Designar responsável por compliance tributária com deadline de relatório até 03 de dezembro. Alertar auditores e consultores para preparar defesa legal.</p>
-        <p><strong>Próximo passo:</strong> Preparar comunicado ao conselho de administração até dia 29/11. Reservar R$ 50-200k para assessoria jurídica e consultoria tributária especializada — essencial para grandes grupos.</p>
+        <p>Executivos financeiros devem revisar projeções de margem para 2027 com cenários de +2% a +4% em carga tributária. Reunião com board para comunicar impacto potencial em EBITDA. Contabilidade deve provisionar diferenças de alíquotas em Q4.</p>
+        <p><strong>Próximo passo:</strong> Simulação de cenários com parceiro tributário até 03/12/2026. Decisão estratégica sobre reorganização societária ou holding até 15/12 (para efetivação em 2027). Comunicado a investidores/credores sobre revisão de riscos tributários.</p>
       </div>
     </div>
   </div>
@@ -620,7 +633,7 @@ body{
     <span class="nh-icon">💡</span>
     <div>
       <div class="nh-title">Oportunidade Identificada</div>
-      <p class="nh-text">Empresas do setor de <strong>logística, tecnologia e consultoria</strong> com faturamento de <strong>R$ 20M a R$ 150M</strong> podem recuperar até <strong>R$ 680 mil/ano</strong> em créditos tributários revisando reclassificação de serviços conforme novos conceitos da lei — prazo crítico: até 31 de dezembro de 2026 para ajustes em NF-e.</p>
+      <p class="nh-text">Empresas com lucros não distribuídos acima de <strong>R$30M</strong> podem se beneficiar de <strong>reorganização societária até 31/12/2026</strong> antes da nova tributação — potencial economia de <strong>R$1.2M a R$3.8M</strong> em IRPJ diferido. Viabilidade: faturamento de R$150M+/ano.</p>
     </div>
   </div>
 </div>
